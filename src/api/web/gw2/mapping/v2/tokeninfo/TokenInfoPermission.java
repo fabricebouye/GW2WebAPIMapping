@@ -29,6 +29,10 @@ public enum TokenInfoPermission {
      */
     CHARACTERS("characters"), // NOI18N.
     /**
+     * Defines the inventories permission.
+     */
+    INVENTORIES("inventories"), // NOI18N.
+    /**
      * Defines the tradingpost permission.
      */
     TRADINGPOST("tradingpost"), // NOI18N.

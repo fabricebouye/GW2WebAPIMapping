@@ -48,6 +48,7 @@ public class TokenInfoUtilsTest {
         final String[] values = {
             "account", // NOI18N.
             "characters", // NOI18N.
+            "inventories", // NOI18N.
             "tradingpost", // NOI18N.
             null,
             "" // NOI18N.
@@ -55,6 +56,7 @@ public class TokenInfoUtilsTest {
         final TokenInfoPermission[] expResults = {
             TokenInfoPermission.ACCOUNT,
             TokenInfoPermission.CHARACTERS,
+            TokenInfoPermission.INVENTORIES,
             TokenInfoPermission.TRADINGPOST,
             TokenInfoPermission.UNKNOWN,
             TokenInfoPermission.UNKNOWN
