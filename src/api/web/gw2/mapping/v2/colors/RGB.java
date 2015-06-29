@@ -15,6 +15,7 @@ import api.web.gw2.mapping.v2.APIv2;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/colors") // NOI18N.
+@ImplementationSpecific
 public interface RGB {
 
     /**

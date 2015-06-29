@@ -7,6 +7,7 @@
  */
 package api.web.gw2.mapping.v2.colors;
 
+import api.web.gw2.mapping.core.ImplementationSpecific;
 import api.web.gw2.mapping.v2.APIv2;
 
 /**
@@ -20,6 +21,7 @@ public interface Material {
      * Gets the base rgb color of this material.
      * @return An {@code RGB} instance, never {@code null}.
      */
+    @ImplementationSpecific
     RGB getRGB();
 
     /**
