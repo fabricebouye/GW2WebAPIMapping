@@ -14,7 +14,7 @@ import java.util.Optional;
  * Utility class for characters.
  * @author Fabrice Bouyé
  */
-public enum CharacterUtils {
+public enum CharactersUtils {
 
     /**
      * Unique instance of this class.

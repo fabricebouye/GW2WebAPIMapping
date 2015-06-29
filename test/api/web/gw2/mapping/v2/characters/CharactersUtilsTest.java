@@ -19,9 +19,9 @@ import static org.junit.Assert.*;
  * Unit test.
  * @author Fabrice Bouyé
  */
-public class CharacterUtilsTest {
+public class CharactersUtilsTest {
 
-    public CharacterUtilsTest() {
+    public CharactersUtilsTest() {
     }
 
     @BeforeClass
@@ -41,7 +41,7 @@ public class CharacterUtilsTest {
     }
 
     /**
-     * Test of findCharacterRace method, of class CharacterUtils.
+     * Test of findCharacterRace method, of class CharactersUtils.
      */
     @Test
     public void testFindCharacterRace() {
@@ -68,7 +68,7 @@ public class CharacterUtilsTest {
                 forEach(index -> {
                     final String value = values[index];
                     final CharacterRace expResult = expResults[index];
-                    final CharacterRace result = CharacterUtils.findCharacterRace(value);
+                    final CharacterRace result = CharactersUtils.findCharacterRace(value);
                     assertEquals(expResult, result);
                 });
     }
@@ -109,7 +109,7 @@ public class CharacterUtilsTest {
                 forEach(index -> {
                     final String value = values[index];
                     final CharacterProfession expResult = expResults[index];
-                    final CharacterProfession result = CharacterUtils.findCharacterProfession(value);
+                    final CharacterProfession result = CharactersUtils.findCharacterProfession(value);
                     assertEquals(expResult, result);
                 });
     }
@@ -136,7 +136,7 @@ public class CharacterUtilsTest {
                 forEach(index -> {
                     final String value = values[index];
                     final CharacterGender expResult = expResults[index];
-                    final CharacterGender result = CharacterUtils.findCharacterGender(value);
+                    final CharacterGender result = CharactersUtils.findCharacterGender(value);
                     assertEquals(expResult, result);
                 });
     }
