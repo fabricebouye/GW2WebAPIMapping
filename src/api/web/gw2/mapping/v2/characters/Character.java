@@ -7,7 +7,13 @@
  */
 package api.web.gw2.mapping.v2.characters;
 
+import api.web.gw2.mapping.core.OptionalValue;
 import api.web.gw2.mapping.v2.APIv2;
+import api.web.gw2.mapping.v2.characters.inventory.Bag;
+import api.web.gw2.mapping.v2.characters.equipment.Equipment;
+import java.time.LocalDate;
+import java.util.List;
+import java.util.Optional;
 
 /**
  * Defines a character.
@@ -51,4 +57,38 @@ public interface Character {
      * @return A {@code String}, may be {@code null}.
      */
     String getGuild();
+    
+    /**
+     * Gets the creation date of this character.
+     * @return A {@code LocalDate} instance, never {@code null}.
+     */
+    LocalDate getCreated();
+    
+    /**
+     * Gets the age of this character (the amount of second the character was played).
+     * @return A {@code long}.
+     */
+    long getAge();
+    
+    /**
+     * Gets the number of deaths of this character.
+     * @return An {@code in}.
+     */
+    int getDeaths();
+    
+    /**
+     * Gets the equipment of this character.
+     * @return An {@code Optional<List<Equipment>>} instance, never {@code null}:
+     * If present, the list is non-modifiable and may be empty.
+     */
+    @OptionalValue
+    Optional<List<Equipment>> getEquipment();
+
+    /**
+     * Gets the inventory bags of this character.
+     * @return An {@code Optional<List<Bag>>} instance, never {@code null}:
+     * If present, the list is non-modifiable and may be empty.
+     */
+    @OptionalValue
+    Optional<List<Bag>> getBags();
 }

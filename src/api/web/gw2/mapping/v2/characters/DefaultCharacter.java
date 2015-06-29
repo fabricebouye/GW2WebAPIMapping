@@ -7,6 +7,12 @@
  */
 package api.web.gw2.mapping.v2.characters;
 
+import api.web.gw2.mapping.v2.characters.inventory.Bag;
+import api.web.gw2.mapping.v2.characters.equipment.Equipment;
+import java.time.LocalDate;
+import java.util.List;
+import java.util.Optional;
+
 /**
  * Default implementation of a character.
  * @author Fabrice Bouyé
@@ -19,6 +25,11 @@ final class DefaultCharacter implements Character {
     CharacterGender gender;
     int level;
     String guild;
+    LocalDate created;
+    long age;
+    int deaths;
+    Optional<List<Equipment>> equipment = Optional.empty();
+    Optional<List<Bag>> bags = Optional.empty();
 
     /**
      * Creates a new empty instance.
@@ -56,4 +67,28 @@ final class DefaultCharacter implements Character {
         return guild;
     }
 
+    @Override
+    public LocalDate getCreated() {
+        return created;
+    }
+
+    @Override
+    public long getAge() {
+        return age;
+    }
+
+    @Override
+    public int getDeaths() {
+        return deaths;
+    }
+
+    @Override
+    public Optional<List<Equipment>> getEquipment() {
+        return equipment;
+    }
+
+    @Override
+    public Optional<List<Bag>> getBags() {
+        return bags;
+    }
 }
