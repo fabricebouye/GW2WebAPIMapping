@@ -7,6 +7,7 @@
  */
 package api.web.gw2.mapping.v2.account;
 
+import java.util.Collections;
 import java.util.Set;
 
 /**
@@ -15,10 +16,10 @@ import java.util.Set;
  */
 final class DefaultAccount implements Account {
 
-    String id;
-    String name;
-    int world;
-    Set<String> guilds;
+    String id = "";
+    String name = "";
+    int world = -1;
+    Set<String> guilds = Collections.EMPTY_SET;
 
     /**
      * Creates an empty instance.
