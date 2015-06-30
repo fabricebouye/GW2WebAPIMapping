@@ -8,6 +8,7 @@
 package api.web.gw2.mapping.v2.colors;
 
 import api.web.gw2.mapping.core.ImplementationSpecific;
+import api.web.gw2.mapping.core.LocalizedResource;
 import api.web.gw2.mapping.v2.APIv2;
 
 /**
@@ -27,6 +28,7 @@ public interface Dye {
      * Gets the localized name of this dye.
      * @return A {@code String} instance, never {@code null}.
      */
+    @LocalizedResource
     String getName();
 
     /**
@@ -34,7 +36,7 @@ public interface Dye {
      * @return An {@code RGB} instance, never {@code null}.
      */
     @ImplementationSpecific
-    RGB getBase();
+    RGB getBaseRGB();
 
     /**
      * Gets the cloth material for this dye.

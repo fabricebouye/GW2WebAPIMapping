@@ -35,4 +35,22 @@ public interface Material {
      * @return A {@code double}.
      */
     double getContrast();
+
+    /**
+     * Gets the hue of this material.
+     * @return An {@code int}.
+     */
+    int getHue();
+
+    /**
+     * Gets the saturation of this material.
+     * @return A {@code double}.
+     */
+    double getSaturation();
+
+    /**
+     * Gets the lightness of this material.
+     * @return A {@code double}.
+     */
+    double getLightness();
 }

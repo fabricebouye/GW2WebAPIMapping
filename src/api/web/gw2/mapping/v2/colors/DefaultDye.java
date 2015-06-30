@@ -13,9 +13,9 @@ package api.web.gw2.mapping.v2.colors;
  */
 public final class DefaultDye implements Dye {
 
-    int id;
-    String name;
-    RGB base;
+    int id = -1;
+    String name = "";
+    RGB baseRGB;
     Material cloth;
     Material leather;
     Material metal;
@@ -37,8 +37,8 @@ public final class DefaultDye implements Dye {
     }
 
     @Override
-    public RGB getBase() {
-        return base;
+    public RGB getBaseRGB() {
+        return baseRGB;
     }
 
     @Override

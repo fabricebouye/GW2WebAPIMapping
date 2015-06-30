@@ -14,8 +14,11 @@ package api.web.gw2.mapping.v2.colors;
 final class DefaultMaterial implements Material {
 
     RGB rgb;
-    int brightness;
-    double contrast;
+    int brightness = -1;
+    double contrast = -1;
+    int hue = -1;
+    double saturation = -1;
+    double lightness = -1;
 
     /**
      * Creates a new empty instance.
@@ -36,5 +39,20 @@ final class DefaultMaterial implements Material {
     @Override
     public RGB getRGB() {
         return rgb;
+    }
+    
+    @Override
+    public int getHue() {
+        return hue;
+    }
+
+    @Override
+    public double getSaturation() {
+        return saturation;
+    }
+
+    @Override
+    public double getLightness() {
+        return lightness;
     }
 }

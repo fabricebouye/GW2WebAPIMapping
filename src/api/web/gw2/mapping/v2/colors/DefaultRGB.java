@@ -14,8 +14,8 @@ final class DefaultRGB implements RGB {
     short[] rgb;
 
     /**
-    * Creates a new empty instance.
-    */
+     * Creates a new empty instance.
+     */
     DefaultRGB() {
     }
 
