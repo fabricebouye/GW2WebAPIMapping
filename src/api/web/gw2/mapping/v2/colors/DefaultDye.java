@@ -11,7 +11,7 @@ package api.web.gw2.mapping.v2.colors;
  * Default implementation of a dye.
  * @author Fabrice Bouyé
  */
-public final class DefaultDye implements Dye {
+final class DefaultDye implements Dye {
 
     int id = -1;
     String name = "";
