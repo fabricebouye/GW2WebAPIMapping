@@ -7,6 +7,7 @@
  */
 package api.web.gw2.mapping.v2.items;
 
+import api.web.gw2.mapping.core.CoinValue;
 import api.web.gw2.mapping.core.LocalizedResource;
 import api.web.gw2.mapping.core.OptionalValue;
 import api.web.gw2.mapping.v2.APIv2;
@@ -61,9 +62,10 @@ public interface Item {
     ItemRarity getRarity();
 
     /**
-     * Gets the vendor value of this item.
+     * Gets the vendor value of this item in coins.
      * @return An {@code int}.
      */
+    @CoinValue
     int getVendorValue();
 
     /**
