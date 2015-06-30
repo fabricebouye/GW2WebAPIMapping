@@ -34,7 +34,7 @@ public enum ExchangeResource {
 
     final String value;
 
-    private ExchangeResource(String value) {
+    private ExchangeResource(final String value) {
         this.value = value;
     }
 }
