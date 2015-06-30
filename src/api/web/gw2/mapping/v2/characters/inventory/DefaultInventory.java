@@ -13,8 +13,8 @@ package api.web.gw2.mapping.v2.characters.inventory;
  */
 final class DefaultInventory implements Inventory {
 
-    int id;
-    int count;
+    int id = -1;
+    short count = -1;
 
     /**
      * Creates a new empty instance.
@@ -28,7 +28,7 @@ final class DefaultInventory implements Inventory {
     }
 
     @Override
-    public int getCount() {
+    public short getCount() {
         return count;
     }
 }

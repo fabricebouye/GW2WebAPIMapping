@@ -15,7 +15,9 @@ import java.util.Optional;
  * @author Fabrice Bouyé
  */
 public enum EquipmentUtils {
-
+    /**
+    * The unique instance of this class.
+    */
     INSTANCE;
 
     /**

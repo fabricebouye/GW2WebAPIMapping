@@ -19,15 +19,15 @@ import java.util.Optional;
  */
 final class DefaultCharacter implements Character {
 
-    String name;
-    CharacterRace race;
-    CharacterProfession profession;
-    CharacterGender gender;
-    int level;
-    String guild;
-    LocalDate created;
-    long age;
-    int deaths;
+    String name = "";
+    CharacterRace race = CharacterRace.UNKNOWN;
+    CharacterProfession profession = CharacterProfession.UNKNOWN;
+    CharacterGender gender = CharacterGender.UNKNOWN;
+    int level = -1;
+    String guild = null;
+    LocalDate created = LocalDate.MIN;
+    long age = -1;
+    int deaths = -1;
     Optional<List<Equipment>> equipment = Optional.empty();
     Optional<List<Bag>> bags = Optional.empty();
 

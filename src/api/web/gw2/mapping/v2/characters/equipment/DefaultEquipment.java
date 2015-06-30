@@ -16,11 +16,11 @@ import java.util.Optional;
  */
 final class DefaultEquipment implements Equipment {
 
-    int id;
-    EquipmentSlot slot;
+    int id = -1;
+    EquipmentSlot slot = EquipmentSlot.UNKNOWN;
     Optional<List<Integer>> upgrades = Optional.empty();
     Optional<List<Integer>> infusions = Optional.empty();
-    int skin;
+    int skin = -1;
 
     /**
      * Creates a new empty instance.

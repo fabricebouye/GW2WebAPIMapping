@@ -79,7 +79,7 @@ public class EquipmentUtilsTest {
             EquipmentSlot.BOOTS,
             EquipmentSlot.GLOVES,
             EquipmentSlot.HELM,
-            EquipmentSlot.LEGGINS,
+            EquipmentSlot.LEGGINGS,
             EquipmentSlot.SHOULDERS,
             EquipmentSlot.ACCESSORY_1,
             EquipmentSlot.ACCESSORY_2,

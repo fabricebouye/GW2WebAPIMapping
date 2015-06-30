@@ -7,6 +7,7 @@
  */
 package api.web.gw2.mapping.v2.characters.inventory;
 
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -15,9 +16,9 @@ import java.util.List;
  */
 final class DefaultBag implements Bag {
 
-    int id;
-    int size;
-    List<Inventory> inventory;
+    int id = -1;
+    int size = 0;
+    List<Inventory> inventory = Collections.EMPTY_LIST;
 
     /**
      * Creates a new instance.

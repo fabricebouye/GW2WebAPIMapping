@@ -25,7 +25,7 @@ public interface Inventory {
 
     /**
      * Gets the number of this object in inventory.
-     * @return An {@code int}.
+     * @return A {@code short}.
      */
-    int getCount();
+    short getCount();
 }
