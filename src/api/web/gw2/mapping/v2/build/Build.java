@@ -7,10 +7,13 @@
  */
 package api.web.gw2.mapping.v2.build;
 
+import api.web.gw2.mapping.v2.APIv2;
+
 /**
  * Defines a build (the build id of the game).
  * @author Fabrice Bouyé
  */
+@APIv2(endpoint = "v2/build") // NOI18N.
 public interface Build {
     /**
      * Gets the id of the build 

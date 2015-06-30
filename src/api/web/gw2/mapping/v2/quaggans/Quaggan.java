@@ -7,10 +7,13 @@
  */
 package api.web.gw2.mapping.v2.quaggans;
 
+import api.web.gw2.mapping.v2.APIv2;
+
 /**
  * Defines a guaggan image.
  * @author Fabrice Bouyé
  */
+@APIv2(endpoint = "v2/quaggans") // NOI18N.
 public interface Quaggan {
 
     /**
