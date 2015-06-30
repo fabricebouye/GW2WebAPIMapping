@@ -28,7 +28,7 @@ final class DefaultQuaggan implements Quaggan {
     }
 
     @Override
-    public String getURl() {
+    public String getUrl() {
         return url;
     }
 
