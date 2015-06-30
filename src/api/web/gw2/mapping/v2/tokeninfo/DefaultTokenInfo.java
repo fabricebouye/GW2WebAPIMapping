@@ -7,6 +7,7 @@
  */
 package api.web.gw2.mapping.v2.tokeninfo;
 
+import java.util.Collections;
 import java.util.Set;
 
 /**
@@ -15,9 +16,9 @@ import java.util.Set;
  */
 final class DefaultTokenInfo implements TokenInfo {
 
-    String id;
-    String name;
-    Set<TokenInfoPermission> permissions;
+    String id = "";
+    String name = "";
+    Set<TokenInfoPermission> permissions = Collections.EMPTY_SET;
 
     /**
      * Creates an empty instance.
