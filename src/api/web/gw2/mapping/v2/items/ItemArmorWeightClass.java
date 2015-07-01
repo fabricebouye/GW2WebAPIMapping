@@ -40,7 +40,7 @@ public enum ItemArmorWeightClass {
     UNKNOWN(null);
     final String value;
 
-    ItemArmorWeightClass(final String value) {
+    private ItemArmorWeightClass(final String value) {
         this.value = value;
     }
 }

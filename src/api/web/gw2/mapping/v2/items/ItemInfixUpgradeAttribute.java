@@ -53,7 +53,7 @@ public enum ItemInfixUpgradeAttribute {
 
     final String value;
 
-    ItemInfixUpgradeAttribute(final String value) {
+    private ItemInfixUpgradeAttribute(final String value) {
         this.value = value;
     }
 }

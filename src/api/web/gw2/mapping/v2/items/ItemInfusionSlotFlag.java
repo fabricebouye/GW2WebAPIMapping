@@ -42,7 +42,7 @@ public enum ItemInfusionSlotFlag {
 
     final String value;
 
-    ItemInfusionSlotFlag(final String value) {
+    private ItemInfusionSlotFlag(final String value) {
         this.value = value;
     }
 }

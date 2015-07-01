@@ -101,7 +101,7 @@ public enum ItemWeaponType {
 
     final String value;
 
-    ItemWeaponType(final String value) {
+    private ItemWeaponType(final String value) {
         this.value = value;
     }
 }

@@ -42,6 +42,7 @@ public enum SkinRestriction {
      */
     @ImplementationSpecific
     UNKNOWN(null);
+    
     final String value;
 
     private SkinRestriction(final String value) {

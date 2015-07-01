@@ -99,7 +99,7 @@ public enum SkinWeaponType {
 
     final String value;
 
-    SkinWeaponType(final String value) {
+    private SkinWeaponType(final String value) {
         this.value = value;
     }
 }

@@ -113,7 +113,7 @@ public enum ItemUpgradeComponentFlag {
     UNKNOWN(null);
     final String value;
 
-    ItemUpgradeComponentFlag(final String value) {
+    private ItemUpgradeComponentFlag(final String value) {
         this.value = value;
     }
 }

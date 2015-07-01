@@ -34,6 +34,7 @@ public enum SkinFlags {
      */
     @ImplementationSpecific
     UNKNOWN(null);
+
     final String value;
 
     private SkinFlags(final String value) {

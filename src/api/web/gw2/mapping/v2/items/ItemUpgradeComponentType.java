@@ -17,9 +17,21 @@ import api.web.gw2.mapping.v2.APIv2;
 @APIv2(endpoint = "v2/items") // NOI18N.
 public enum ItemUpgradeComponentType {
 
+    /**
+     * Defines the default upgrade component type.
+     */
     DEFAULT("Default"), // NOI18N.
+    /**
+     * Defines the gem upgrade component type.
+     */
     GEM("Gem"), // NOI18N.
+    /**
+     * Defines the sigil upgrade component type.
+     */
     SIGIL("Sigil"), // NOI18N.
+    /**
+     * Defines the run upgrade component type.
+     */
     RUNE("Rune"), // NOI18N.
     /**
      * Fail safe value.
@@ -29,7 +41,7 @@ public enum ItemUpgradeComponentType {
 
     final String value;
 
-    ItemUpgradeComponentType(final String value) {
+    private ItemUpgradeComponentType(final String value) {
         this.value = value;
     }
 }

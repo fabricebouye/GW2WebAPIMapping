@@ -53,7 +53,7 @@ public enum ItemArmorType {
 
     final String value;
 
-    ItemArmorType(final String value) {
+    private ItemArmorType(final String value) {
         this.value = value;
     }
 }
