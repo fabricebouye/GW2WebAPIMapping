@@ -67,32 +67,32 @@ public enum SkinsUtils {
     }
 
     /**
-     * Gets the skin armor weight for given value.
+     * Gets the skin armor weight class for given value.
      * @param value The source value.
-     * @return A {@code SkinArmorWeight} instance, never {@code null}.
-     * <br>If no corresponding value is found, {@code SkinArmorWeight.UNKNOWN} is returned.
-     * @see SkinWeightClass
+     * @return A {@code SkinArmorWeightClass} instance, never {@code null}.
+     * <br>If no corresponding value is found, {@code SkinArmorWeightClass.UNKNOWN} is returned.
+     * @see SkinArmorWeightClass
      */
-    public static SkinWeightClass findSkinArmorWeight(final String value) {
-        final Optional<SkinWeightClass> resultOptional = Arrays.stream(SkinWeightClass.values())
+    public static SkinArmorWeightClass findSkinArmorWeightClass(final String value) {
+        final Optional<SkinArmorWeightClass> resultOptional = Arrays.stream(SkinArmorWeightClass.values())
                 .filter(toTest -> value != null && value.equals(toTest.value))
                 .findFirst();
-        final SkinWeightClass result = resultOptional.isPresent() ? resultOptional.get() : SkinWeightClass.UNKNOWN;
+        final SkinArmorWeightClass result = resultOptional.isPresent() ? resultOptional.get() : SkinArmorWeightClass.UNKNOWN;
         return result;
     }
 
     /**
      * Gets the skin damage type for given value.
      * @param value The source value.
-     * @return A {@code SkinDamageType} instance, never {@code null}.
-     * <br>If no corresponding value is found, {@code SkinDamageType.UNKNOWN} is returned.
-     * @see SkinDamageType
+     * @return A {@code SkinWeaponDamageType} instance, never {@code null}.
+     * <br>If no corresponding value is found, {@code SkinWeaponDamageType.UNKNOWN} is returned.
+     * @see SkinWeaponDamageType
      */
-    public static SkinDamageType findSkinDamageType(final String value) {
-        final Optional<SkinDamageType> resultOptional = Arrays.stream(SkinDamageType.values())
+    public static SkinWeaponDamageType findSkinWeaponDamageType(final String value) {
+        final Optional<SkinWeaponDamageType> resultOptional = Arrays.stream(SkinWeaponDamageType.values())
                 .filter(toTest -> value != null && value.equals(toTest.value))
                 .findFirst();
-        final SkinDamageType result = resultOptional.isPresent() ? resultOptional.get() : SkinDamageType.UNKNOWN;
+        final SkinWeaponDamageType result = resultOptional.isPresent() ? resultOptional.get() : SkinWeaponDamageType.UNKNOWN;
         return result;
     }
 }

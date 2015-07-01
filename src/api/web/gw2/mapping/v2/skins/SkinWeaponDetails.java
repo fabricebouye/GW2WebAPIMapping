@@ -21,7 +21,7 @@ public interface SkinWeaponDetails extends SkinDetails {
 
     /**
      * Gets the damage type of the weapon.
-     * @return A {@code SkinDamageType} instance, never {@code null}.
+     * @return A {@code SkinWeaponDamageType} instance, never {@code null}.
      */
-    SkinDamageType getDamageType();
+    SkinWeaponDamageType getDamageType();
 }

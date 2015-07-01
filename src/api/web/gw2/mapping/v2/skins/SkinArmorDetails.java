@@ -21,7 +21,7 @@ public interface SkinArmorDetails extends SkinDetails {
 
     /**
      * Gets the weight of the armor.
-     * @return A {@code SkinArmorWeight} instance, never {@code null}.
+     * @return A {@code SkinArmorWeightClass} instance, never {@code null}.
      */
-    SkinWeightClass getWeightClass();
+    SkinArmorWeightClass getWeightClass();
 }

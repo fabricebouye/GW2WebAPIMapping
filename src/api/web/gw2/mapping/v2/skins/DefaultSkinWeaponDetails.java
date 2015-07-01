@@ -14,7 +14,7 @@ package api.web.gw2.mapping.v2.skins;
 final class DefaultSkinWeaponDetails implements SkinWeaponDetails {
 
     SkinWeaponType type = SkinWeaponType.UNKNOWN;
-    SkinDamageType damageType = SkinDamageType.UNKNOWN;
+    SkinWeaponDamageType damageType = SkinWeaponDamageType.UNKNOWN;
 
     /**
      * Creates a new empty instance.
@@ -28,7 +28,7 @@ final class DefaultSkinWeaponDetails implements SkinWeaponDetails {
     }
 
     @Override
-    public SkinDamageType getDamageType() {
+    public SkinWeaponDamageType getDamageType() {
         return damageType;
     }
 }

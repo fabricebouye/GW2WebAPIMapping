@@ -14,7 +14,7 @@ package api.web.gw2.mapping.v2.skins;
 final class DefaultSkinArmorDetails implements SkinArmorDetails {
 
     SkinArmorType type = SkinArmorType.UNKNOWN;
-    SkinWeightClass weightClass = SkinWeightClass.UNKNOWN;
+    SkinArmorWeightClass weightClass = SkinArmorWeightClass.UNKNOWN;
 
     /**
      * Creates a new empty instance.
@@ -28,7 +28,7 @@ final class DefaultSkinArmorDetails implements SkinArmorDetails {
     }
 
     @Override
-    public SkinWeightClass getWeightClass() {
+    public SkinArmorWeightClass getWeightClass() {
         return weightClass;
     }
 }

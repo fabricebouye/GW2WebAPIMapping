@@ -11,24 +11,28 @@ import api.web.gw2.mapping.core.ImplementationSpecific;
 import api.web.gw2.mapping.v2.APIv2;
 
 /**
- * Defines all armor weights for skins.
+ * Defines all damage types for skins.
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/skins") // NOI18N.
-public enum SkinWeightClass {
+public enum SkinWeaponDamageType {
 
     /**
-     * Defines the heavy armor weight.
+     * Defines the fire damage type.
      */
-    HEAVY("Heavy"),
+    FIRE("Fire"),
     /**
-     * Defines the light armor weight.
+     * Defines the ice damage type.
      */
-    LIGHT("Light"),
+    ICE("Ice"),
     /**
-     * Defines the medium armor weight.
+     * Defines the lightning damage type.
      */
-    MEDIUM("Medium"),
+    LIGHTNING("Lightning"),
+    /**
+     * Defines the physical damage type.
+     */
+    PHYSICAL("Physical"),
     /**
      * Fail safe value.
      */
@@ -37,7 +41,7 @@ public enum SkinWeightClass {
 
     final String value;
 
-    private SkinWeightClass(final String value) {
+    private SkinWeaponDamageType(final String value) {
         this.value = value;
     }
 }
