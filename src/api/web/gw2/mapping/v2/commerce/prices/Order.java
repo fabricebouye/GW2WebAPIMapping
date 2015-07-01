@@ -12,7 +12,7 @@ import api.web.gw2.mapping.v2.APIv2;
 
 /**
  * Defines an order.
- * <br/>This interface is used for both:
+ * <br>This interface is used for both:
  * <ul>
  * <li>buys;</li>
  * <li>sells;</li>
@@ -24,14 +24,14 @@ public interface Order {
 
     /**
      * Gets the highest buy order or lowest sell offer price in coins.
-     * @return An {@int}.
+     * @return An {@code int}.
      */
     @CoinValue
     int getUnitPrice();
 
     /**
      * Gets the amount of items being sold/bought.
-     * @return An {@code int}
+     * @return An {@code int}.
      */
     int getQuantity();
 }

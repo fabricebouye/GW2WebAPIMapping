@@ -17,7 +17,7 @@ import api.web.gw2.mapping.v2.APIv2;
 public interface Build {
     /**
      * Gets the id of the build 
-     * @return 
+     * @return An {@code int}.
      */
     int getId();
 }

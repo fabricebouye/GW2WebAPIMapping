@@ -22,9 +22,10 @@ import java.lang.annotation.Target;
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface APIv2Container {
+
     /**
-    * Values in this container.
-    * @return An {@code APIv2[]} instance.
-    */
+     * Values in this container.
+     * @return An {@code APIv2[]} instance.
+     */
     APIv2[] value();
 }
