@@ -8,22 +8,25 @@
 package api.web.gw2.mapping.v2.items;
 
 import api.web.gw2.mapping.core.LocalizedResource;
+import api.web.gw2.mapping.v2.APIv2;
 
 /**
- * Defines a buff.
+ * Defines an item buff.
  * @author Fabrice Bouyé
  */
-public interface Buff {
+@APIv2(endpoint = "v2/items") // NOI18N.
+public interface ItemBuff {
+
     /**
-    * Gets the id of the skill of this buff.
-    * @return An {@code int}
-    */
+     * Gets the id of the skill of this buff.
+     * @return An {@code int}
+     */
     int getSkillId();
 
     /**
-    * Gets the localized description of this buff.
-    * @return A {@code String} instance, never {@code null}.
-    */
+     * Gets the localized description of this buff.
+     * @return A {@code String} instance, never {@code null}.
+     */
     @LocalizedResource
-    String getDescription();    
+    String getDescription();
 }

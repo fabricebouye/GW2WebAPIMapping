@@ -11,7 +11,7 @@ package api.web.gw2.mapping.v2.items;
  * Default implementation of a buff.
  * @author Fabrice Bouyé
  */
-final class DefaultBuff implements Buff {
+final class DefaultItemBuff implements ItemBuff {
 
     int skillId = -1;
     String description = "";
@@ -19,7 +19,7 @@ final class DefaultBuff implements Buff {
     /**
      * Creates a new empty instance.
      */
-    DefaultBuff() {
+    DefaultItemBuff() {
     }
 
     @Override

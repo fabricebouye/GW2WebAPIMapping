@@ -72,6 +72,7 @@ public interface Item {
      * Gets the id of the default skin of this item.
      * @return An {@code OptionalInt} instance, never {@code null}.
      */
+    @OptionalValue
     OptionalInt getDefaultSkin();
 
     /**
@@ -103,5 +104,6 @@ public interface Item {
      * @param <T> The type of the details.
      * @return An {@code Optional<T>} instance, never {@code null}. 
      */
-    <T extends Details> Optional<T> getDetails();
+    @OptionalValue
+    <T extends ItemDetails> Optional<T> getDetails();
 }

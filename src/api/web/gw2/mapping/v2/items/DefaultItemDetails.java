@@ -11,7 +11,7 @@ package api.web.gw2.mapping.v2.items;
  * Base type for all item details implementations.
  * @author Fabrice Bouyé
  */
-abstract class DefaultDetails implements Details {
+abstract class DefaultItemDetails implements ItemDetails {
 
     private final ItemType itemType;
 
@@ -19,7 +19,7 @@ abstract class DefaultDetails implements Details {
      * Creates a new instance.
      * @param itemType The item type.
      */
-    DefaultDetails(final ItemType itemType) {
+    DefaultItemDetails(final ItemType itemType) {
         this.itemType = itemType;
     }
 

@@ -30,7 +30,7 @@ final class DefaultItem implements Item {
     Set<ItemGameType> gameTypes = Collections.EMPTY_SET;
     Set<ItemRestriction> restrictions = Collections.EMPTY_SET;
     String icon = "";
-    Optional<Details> details = Optional.empty();
+    Optional<ItemDetails> details = Optional.empty();
 
     /**
      * Creates a new empty instance.
@@ -99,7 +99,7 @@ final class DefaultItem implements Item {
     }
 
     @Override
-    public Optional<Details> getDetails() {
+    public Optional<ItemDetails> getDetails() {
         return details;
     }
 }
