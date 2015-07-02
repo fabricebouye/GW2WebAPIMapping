@@ -254,4 +254,412 @@ public class ItemsUtilsTest {
                     assertEquals(expResult, result);
                 });
     }
+
+    /**
+     * Test of findArmorType method, of class ItemsUtils.
+     */
+    @Test
+    public void testFindItemArmorType() {
+        System.out.println("findArmorType");
+        final String[] values = {
+            "Boots", // NOI18N.
+            "Coat", // NOI18N.
+            "Gloves", // NOI18N.
+            "Helm", // NOI18N.
+            "HelmAquatic", // NOI18N.
+            "Leggings", // NOI18N.
+            "Shoulders", // NOI18N.
+            null,
+            "" // NOI18N.
+        };
+        final ItemArmorType[] expResults = {
+            ItemArmorType.BOOTS,
+            ItemArmorType.COAT,
+            ItemArmorType.GLOVES,
+            ItemArmorType.HELM,
+            ItemArmorType.HELM_AQUATIC,
+            ItemArmorType.LEGGINGS,
+            ItemArmorType.SHOULDERS,
+            ItemArmorType.UNKNOWN,
+            ItemArmorType.UNKNOWN
+        };
+        IntStream.range(0, values.length).
+                forEach(index -> {
+                    final String value = values[index];
+                    final ItemArmorType expResult = expResults[index];
+                    final ItemArmorType result = ItemsUtils.findItemArmorType(value);
+                    assertEquals(expResult, result);
+                });
+    }
+
+    /**
+     * Test of findArmorWeightClass method, of class ItemsUtils.
+     */
+    @Test
+    public void testFindItemArmorWeightClass() {
+        System.out.println("findArmorWeightClass");
+        final String[] values = {
+            "Clothing", // NOI18N.
+            "Heavy", // NOI18N.
+            "Light", // NOI18N.
+            "Medium", // NOI18N.
+            null,
+            "" // NOI18N.
+        };
+        final ItemArmorWeightClass[] expResults = {
+            ItemArmorWeightClass.CLOTHING,
+            ItemArmorWeightClass.HEAVY,
+            ItemArmorWeightClass.LIGHT,
+            ItemArmorWeightClass.MEDIUM,
+            ItemArmorWeightClass.UNKNOWN,
+            ItemArmorWeightClass.UNKNOWN
+        };
+        IntStream.range(0, values.length).
+                forEach(index -> {
+                    final String value = values[index];
+                    final ItemArmorWeightClass expResult = expResults[index];
+                    final ItemArmorWeightClass result = ItemsUtils.findItemArmorWeightClass(value);
+                    assertEquals(expResult, result);
+                });
+    }
+
+    /**
+     * Test of findWeaponType method, of class ItemsUtils.
+     */
+    @Test
+    public void testFindItemWeaponType() {
+        System.out.println("findWeaponType");
+        final String[] values = {
+            "Axe", // NOI18N.
+            "Dagger", // NOI18N.
+            "Focus", // NOI18N.
+            "Greatsword", // NOI18N.
+            "Hammer", // NOI18N.
+            "Harpoon", // NOI18N.
+            "LongBow", // NOI18N.
+            "Mace", // NOI18N.
+            "Pistol", // NOI18N.
+            "Rifle", // NOI18N.
+            "Scepter", // NOI18N.
+            "Shield", // NOI18N.
+            "ShortBow", // NOI18N.
+            "Speargun", // NOI18N.
+            "Staff", // NOI18N.
+            "Sword", // NOI18N.
+            "Torch", // NOI18N.
+            "Trident", // NOI18N.
+            "Warhorn", // NOI18N.
+            null,
+            "" // NOI18N.
+        };
+        final ItemWeaponType[] expResults = {
+            ItemWeaponType.AXE,
+            ItemWeaponType.DAGGER,
+            ItemWeaponType.FOCUS,
+            ItemWeaponType.GREATSWORD,
+            ItemWeaponType.HAMMER,
+            ItemWeaponType.HARPOON,
+            ItemWeaponType.LONG_BOW,
+            ItemWeaponType.MACE,
+            ItemWeaponType.PISTOL,
+            ItemWeaponType.RIFLE,
+            ItemWeaponType.SCEPTER,
+            ItemWeaponType.SHIELD,
+            ItemWeaponType.SHORT_BOW,
+            ItemWeaponType.SPEARGUN,
+            ItemWeaponType.STAFF,
+            ItemWeaponType.SWORD,
+            ItemWeaponType.TORCH,
+            ItemWeaponType.TRIDENT,
+            ItemWeaponType.WARHORN,
+            ItemWeaponType.UNKNOWN,
+            ItemWeaponType.UNKNOWN
+        };
+        IntStream.range(0, values.length).
+                forEach(index -> {
+                    final String value = values[index];
+                    final ItemWeaponType expResult = expResults[index];
+                    final ItemWeaponType result = ItemsUtils.findItemWeaponType(value);
+                    assertEquals(expResult, result);
+                });
+    }
+
+    /**
+     * Test of findItemWeaponDamageType method, of class ItemsUtils.
+     */
+    @Test
+    public void testFindItemWeaponDamageType() {
+        System.out.println("findWeaponDamageType");
+        final String[] values = {
+            "Fire", // NOI18N.
+            "Ice", // NOI18N.
+            "Lightning", // NOI18N.
+            "Physical", // NOI18N.
+            null,
+            "" // NOI18N.
+        };
+        final ItemWeaponDamageType[] expResults = {
+            ItemWeaponDamageType.FIRE,
+            ItemWeaponDamageType.ICE,
+            ItemWeaponDamageType.LIGHTNING,
+            ItemWeaponDamageType.PHYSICAL,
+            ItemWeaponDamageType.UNKNOWN,
+            ItemWeaponDamageType.UNKNOWN
+        };
+        IntStream.range(0, values.length).
+                forEach(index -> {
+                    final String value = values[index];
+                    final ItemWeaponDamageType expResult = expResults[index];
+                    final ItemWeaponDamageType result = ItemsUtils.findItemWeaponDamageType(value);
+                    assertEquals(expResult, result);
+                });
+    }
+
+    /**
+     * Test of findInfusionSlotFlag method, of class ItemsUtils.
+     */
+    @Test
+    public void testFindItemInfusionSlotFlag() {
+        System.out.println("findInfusionSlotFlag");
+        final String[] values = {
+            "", // NOI18N.
+            "Defense", // NOI18N.
+            "Offense", // NOI18N.
+            "Utility", // NOI18N.
+            null
+        };
+        final ItemInfusionSlotFlag[] expResults = {
+            ItemInfusionSlotFlag.AGONY,
+            ItemInfusionSlotFlag.DEFENSE,
+            ItemInfusionSlotFlag.OFFENSE,
+            ItemInfusionSlotFlag.UTILITY,
+            ItemInfusionSlotFlag.UNKNOWN
+        };
+        IntStream.range(0, values.length).
+                forEach(index -> {
+                    final String value = values[index];
+                    final ItemInfusionSlotFlag expResult = expResults[index];
+                    final ItemInfusionSlotFlag result = ItemsUtils.findItemInfusionSlotFlag(value);
+                    assertEquals(expResult, result);
+                });
+    }
+
+    /**
+     * Test of findItemInfixUpgradeAttribute method, of class ItemsUtils.
+     */
+    @Test
+    public void testFindItemInfixUpgradeAttribute() {
+        System.out.println("findInfixUpgradeAttribute");
+        final String[] values = {
+            "ConditionDamage", // NOI18N.
+            "CritDamage", // NOI18N.
+            "Healing", // NOI18N.
+            "Power", // NOI18N.
+            "Precision", // NOI18N.
+            "Toughness", // NOI18N.
+            "Vitality", // NOI18N.
+            null,
+            "" // NOI18N.
+        };
+        final ItemInfixUpgradeAttribute[] expResults = {
+            ItemInfixUpgradeAttribute.CONDITION_DAMAGE,
+            ItemInfixUpgradeAttribute.CRIT_DAMAGE,
+            ItemInfixUpgradeAttribute.HEALING,
+            ItemInfixUpgradeAttribute.POWER,
+            ItemInfixUpgradeAttribute.PRECISION,
+            ItemInfixUpgradeAttribute.TOUGHNESS,
+            ItemInfixUpgradeAttribute.VITALITY,
+            ItemInfixUpgradeAttribute.UNKNOWN,
+            ItemInfixUpgradeAttribute.UNKNOWN
+        };
+        IntStream.range(0, values.length).
+                forEach(index -> {
+                    final String value = values[index];
+                    final ItemInfixUpgradeAttribute expResult = expResults[index];
+                    final ItemInfixUpgradeAttribute result = ItemsUtils.findItemInfixUpgradeAttribute(value);
+                    assertEquals(expResult, result);
+                });
+    }
+
+    /**
+     * Test of findItemUpgradeComponentFlag method, of class ItemsUtils.
+     */
+    @Test
+    public void testFindItemUpgradeComponentFlag() {
+        System.out.println("findUpgradeComponentFlag");
+        final String[] values = {
+            "Axe", // NOI18N.
+            "Dagger", // NOI18N.
+            "Focus", // NOI18N.
+            "Greatsword", // NOI18N.
+            "Hammer", // NOI18N.
+            "Harpoon", // NOI18N.
+            "LongBow", // NOI18N.
+            "Mace", // NOI18N.
+            "Pistol", // NOI18N.
+            "Rifle", // NOI18N.
+            "Scepter", // NOI18N.
+            "Shield", // NOI18N.
+            "ShortBow", // NOI18N.
+            "Speargun", // NOI18N.
+            "Staff", // NOI18N.
+            "Sword", // NOI18N.
+            "Torch", // NOI18N.
+            "Trident", // NOI18N.
+            "Warhorn", // NOI18N.
+            "HeavyArmor", // NOI18N.
+            "LightArmor", // NOI18N.
+            "MediumArmor", // NOI18N.
+            "Trinket", // NOI18N.
+            null,
+            "" // NOI18N.
+        };
+        final ItemUpgradeComponentFlag[] expResults = {
+            ItemUpgradeComponentFlag.AXE,
+            ItemUpgradeComponentFlag.DAGGER,
+            ItemUpgradeComponentFlag.FOCUS,
+            ItemUpgradeComponentFlag.GREATSWORD,
+            ItemUpgradeComponentFlag.HAMMER,
+            ItemUpgradeComponentFlag.HARPOON,
+            ItemUpgradeComponentFlag.LONG_BOW,
+            ItemUpgradeComponentFlag.MACE,
+            ItemUpgradeComponentFlag.PISTOL,
+            ItemUpgradeComponentFlag.RIFLE,
+            ItemUpgradeComponentFlag.SCEPTER,
+            ItemUpgradeComponentFlag.SHIELD,
+            ItemUpgradeComponentFlag.SHORT_BOW,
+            ItemUpgradeComponentFlag.SPEARGUN,
+            ItemUpgradeComponentFlag.STAFF,
+            ItemUpgradeComponentFlag.SWORD,
+            ItemUpgradeComponentFlag.TORCH,
+            ItemUpgradeComponentFlag.TRIDENT,
+            ItemUpgradeComponentFlag.WARHORN,
+            ItemUpgradeComponentFlag.HEAVY_ARMOR,
+            ItemUpgradeComponentFlag.LIGHT_ARMOR,
+            ItemUpgradeComponentFlag.MEDIUM_ARMOR,
+            ItemUpgradeComponentFlag.TRINKET,
+            ItemUpgradeComponentFlag.UNKNOWN,
+            ItemUpgradeComponentFlag.UNKNOWN
+        };
+        IntStream.range(0, values.length)
+                .forEach(index -> {
+                    final String value = values[index];
+                    final ItemUpgradeComponentFlag expResult = expResults[index];
+                    final ItemUpgradeComponentFlag result = ItemsUtils.findItemUpgradeComponentFlag(value);
+                    assertEquals(expResult, result);
+                });
+    }
+
+    /**
+     * Test of findItemUpgradeComponentType method, of class ItemsUtils.
+     */
+    @Test
+    public void testFindItemUpgradeComponentType() {
+        System.out.println("findUpgradeComponentType");
+        final String[] values = {
+            "Default", // NOI18N.
+            "Gem", // NOI18N.
+            "Rune", // NOI18N.
+            "Sigil", // NOI18N.
+            null,
+            "" // NOI18N.
+        };
+        final ItemUpgradeComponentType[] expResults = {
+            ItemUpgradeComponentType.DEFAULT,
+            ItemUpgradeComponentType.GEM,
+            ItemUpgradeComponentType.RUNE,
+            ItemUpgradeComponentType.SIGIL,
+            ItemUpgradeComponentType.UNKNOWN,
+            ItemUpgradeComponentType.UNKNOWN
+        };
+        IntStream.range(0, values.length).
+                forEach(index -> {
+                    final String value = values[index];
+                    final ItemUpgradeComponentType expResult = expResults[index];
+                    final ItemUpgradeComponentType result = ItemsUtils.findItemUpgradeComponentType(value);
+                    assertEquals(expResult, result);
+                });
+    }
+
+    /**
+     * Test of findItemConsumableType method, of class ItemsUtils.
+     */
+    @Test
+    public void testFindItemConsumableType() {
+        System.out.println("findConsumableType");
+        final String[] values = {
+            "AppearanceChange", // NOI18N.
+            "Booze", // NOI18N.
+            "ContractNpc", // NOI18N.
+            "Food", // NOI18N.
+            "Generic", // NOI18N.
+            "Halloween", // NOI18N.
+            "Immediate", // NOI18N.
+            "Transmutation", // NOI18N.
+            "Unlock", // NOI18N.
+            "UpgradeRemoval", // NOI18N.
+            "Utility", // NOI18N.
+            null,
+            "" // NOI18N.
+        };
+        final ItemConsumableType[] expResults = {
+            ItemConsumableType.APPEARANCE_CHANGE,
+            ItemConsumableType.BOOZE,
+            ItemConsumableType.CONTRACT_NPC,
+            ItemConsumableType.FOOD,
+            ItemConsumableType.GENERIC,
+            ItemConsumableType.HALLOWEEN,
+            ItemConsumableType.IMMEDIATE,
+            ItemConsumableType.TRANSMUTATION,
+            ItemConsumableType.UNLOCK,
+            ItemConsumableType.UPGRADE_REMOVAL,
+            ItemConsumableType.UTILITY,
+            ItemConsumableType.UNKNOWN,
+            ItemConsumableType.UNKNOWN
+        };
+        IntStream.range(0, values.length).
+                forEach(index -> {
+                    final String value = values[index];
+                    final ItemConsumableType expResult = expResults[index];
+                    final ItemConsumableType result = ItemsUtils.findItemConsumableType(value);
+                    assertEquals(expResult, result);
+                });
+    }
+
+    /**
+     * Test of findItemConsumableUnlockType method, of class ItemsUtils.
+     */
+    @Test
+    public void testFindItemConsumableUnlockType() {
+        System.out.println("findConsumableUnlockType");
+        final String[] values = {
+            "BagSlot", // NOI18N.
+            "BankTab", // NOI18N.
+            "CollectibleCapacity", // NOI18N.
+            "Content", // NOI18N.
+            "CraftingRecipe", // NOI18N.
+            "Dye", // NOI18N.
+            "Unknown", // NOI18N.
+            null,
+            "" // NOI18N.
+        };
+        final ItemConsumableUnlockType[] expResults = {
+            ItemConsumableUnlockType.BAG_SLOT,
+            ItemConsumableUnlockType.BANK_TAB,
+            ItemConsumableUnlockType.COLLECTIBLE_CAPACITY,
+            ItemConsumableUnlockType.CONTENT,
+            ItemConsumableUnlockType.CRAFTING_RECIPE,
+            ItemConsumableUnlockType.DYE,
+            ItemConsumableUnlockType.OUTFIT,
+            ItemConsumableUnlockType.UNKNOWN,
+            ItemConsumableUnlockType.UNKNOWN
+        };
+        IntStream.range(0, values.length).
+                forEach(index -> {
+                    final String value = values[index];
+                    final ItemConsumableUnlockType expResult = expResults[index];
+                    final ItemConsumableUnlockType result = ItemsUtils.findItemConsumableUnlockType(value);
+                    assertEquals(expResult, result);
+                });
+    }
 }
