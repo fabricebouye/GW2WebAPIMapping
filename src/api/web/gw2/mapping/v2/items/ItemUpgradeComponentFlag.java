@@ -65,6 +65,9 @@ public enum ItemUpgradeComponentFlag {
      * Defines the shield flag.
      */
     SHIELD("Shield"), // NOI18N.
+    /**
+     * Defines the short bow flag.
+     */
     SHORT_BOW("ShortBow"), // NOI18N.
     /**
      * Defines the speargun flag.
