@@ -662,4 +662,147 @@ public class ItemsUtilsTest {
                     assertEquals(expResult, result);
                 });
     }
+
+    /**
+     * Test of findItemContainerType method, of class ItemsUtils.
+     */
+    @Test
+    public void testFindItemContainerType() {
+        System.out.println("findContainerType");
+        final String[] values = {
+            "Default", // NOI18N.
+            "GiftBox", // NOI18N.
+            "OpenUI", // NOI18N.
+            null,
+            "" // NOI18N.
+        };
+        final ItemContainerType[] expResults = {
+            ItemContainerType.DEFAULT,
+            ItemContainerType.GIFT_BOX,
+            ItemContainerType.OPEN_UI,
+            ItemContainerType.UNKNOWN,
+            ItemContainerType.UNKNOWN
+        };
+        IntStream.range(0, values.length).
+                forEach(index -> {
+                    final String value = values[index];
+                    final ItemContainerType expResult = expResults[index];
+                    final ItemContainerType result = ItemsUtils.findItemContainerType(value);
+                    assertEquals(expResult, result);
+                });
+    }
+
+    /**
+     * Test of findItemGatheringType method, of class ItemsUtils.
+     */
+    @Test
+    public void testFindItemGatheringType() {
+        System.out.println("findGatheringType");
+        final String[] values = {
+            "Foraging", // NOI18N.
+            "Logging", // NOI18N.
+            "Mining", // NOI18N.
+            null,
+            "" // NOI18N.
+        };
+        final ItemGatheringType[] expResults = {
+            ItemGatheringType.FORAGING,
+            ItemGatheringType.LOGGING,
+            ItemGatheringType.MINING,
+            ItemGatheringType.UNKNOWN,
+            ItemGatheringType.UNKNOWN
+        };
+        IntStream.range(0, values.length).
+                forEach(index -> {
+                    final String value = values[index];
+                    final ItemGatheringType expResult = expResults[index];
+                    final ItemGatheringType result = ItemsUtils.findItemGatheringType(value);
+                    assertEquals(expResult, result);
+                });
+    }
+
+    /**
+     * Test of findItemToolType method, of class ItemsUtils.
+     */
+    @Test
+    public void testFindItemToolType() {
+        System.out.println("findToolType");
+        final String[] values = {
+            "Salvage", // NOI18N.
+            null,
+            "" // NOI18N.
+        };
+        final ItemToolType[] expResults = {
+            ItemToolType.SALVAGE,
+            ItemToolType.UNKNOWN,
+            ItemToolType.UNKNOWN
+        };
+        IntStream.range(0, values.length).
+                forEach(index -> {
+                    final String value = values[index];
+                    final ItemToolType expResult = expResults[index];
+                    final ItemToolType result = ItemsUtils.findItemToolType(value);
+                    assertEquals(expResult, result);
+                });
+    }
+
+    /**
+     * Test of findItemTrinketType method, of class ItemsUtils.
+     */
+    @Test
+    public void testFindItemTrinketType() {
+        System.out.println("findTrinketType");
+        final String[] values = {
+            "Accessory", // NOI18N.
+            "Amulet", // NOI18N.
+            "Ring", // NOI18N.
+            null,
+            "" // NOI18N.
+        };
+        final ItemTrinketType[] expResults = {
+            ItemTrinketType.ACCESSORY,
+            ItemTrinketType.AMULET,
+            ItemTrinketType.RING,
+            ItemTrinketType.UNKNOWN,
+            ItemTrinketType.UNKNOWN
+        };
+        IntStream.range(0, values.length).
+                forEach(index -> {
+                    final String value = values[index];
+                    final ItemTrinketType expResult = expResults[index];
+                    final ItemTrinketType result = ItemsUtils.findItemTrinketType(value);
+                    assertEquals(expResult, result);
+                });
+    }
+
+    /**
+     * Test of findItemGizmoType method, of class ItemsUtils.
+     */
+    @Test
+    public void testFindItemGizmoType() {
+        System.out.println("findGizmoType");
+        final String[] values = {
+            "ContainerKey", // NOI18N.
+            "Default", // NOI18N.
+            "RentableContractNpc", // NOI18N.
+            "UnlimitedConsumable", // NOI18N.
+            null,
+            "" // NOI18N.
+        };
+        final ItemGizmoType[] expResults = {
+            ItemGizmoType.CONTAINER_KEY,
+            ItemGizmoType.DEFAULT,
+            ItemGizmoType.RENTABLE_CONTRACT_NPC,
+            ItemGizmoType.UNLIMITED_CONSUMABLE,
+            ItemGizmoType.UNKNOWN,
+            ItemGizmoType.UNKNOWN
+        };
+        IntStream.range(0, values.length).
+                forEach(index -> {
+                    final String value = values[index];
+                    final ItemGizmoType expResult = expResults[index];
+                    final ItemGizmoType result = ItemsUtils.findItemGizmoType(value);
+                    assertEquals(expResult, result);
+                });
+    }
 }
