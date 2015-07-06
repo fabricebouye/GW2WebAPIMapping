@@ -13,7 +13,7 @@ package api.web.gw2.mapping.v2.quaggans;
  */
 final class DefaultQuaggan implements Quaggan {
 
-    int id = -1;
+    String id = "";
     String url = "";
 
     /**
@@ -23,7 +23,7 @@ final class DefaultQuaggan implements Quaggan {
     }
 
     @Override
-    public int getId() {
+    public String getId() {
         return id;
     }
 

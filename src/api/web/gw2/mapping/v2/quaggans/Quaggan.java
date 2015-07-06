@@ -18,9 +18,9 @@ public interface Quaggan {
 
     /**
      * Gets the id of this guaggan image.
-     * @return An {@code int}.
+     * @return A {@code String} instance, never {@code null}.
      */
-    int getId();
+    String getId();
 
     /**
      * Gets the URL of the image of this guaggan image.
