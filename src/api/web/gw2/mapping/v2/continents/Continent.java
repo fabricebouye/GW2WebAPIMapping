@@ -7,7 +7,7 @@
  */
 package api.web.gw2.mapping.v2.continents;
 
-import api.web.gw2.mapping.core.ImplementationSpecific;
+import api.web.gw2.mapping.core.ContinentDimension;
 import api.web.gw2.mapping.core.LocalizedResource;
 import api.web.gw2.mapping.v2.APIv2;
 import java.util.Set;
@@ -33,18 +33,10 @@ public interface Continent {
     String getName();
 
     /**
-     * Gets the width of the area defined by this continent.
-     * @return An {@code int}
+     * Gets the dimensions of the area defined by this continent.
+     * @return A {@code ContinentDimension<Integer>} instance, never {@code null}.
      */
-    @ImplementationSpecific
-    int getWidth();
-
-    /**
-     * Gets the height of the area defined by this continent.
-     * @return An {@code int}
-     */
-    @ImplementationSpecific
-    int getHeight();
+    ContinentDimension<Integer> getContinentDims();
 
     /**
      * Gets the minimum zoom level support for this continent.

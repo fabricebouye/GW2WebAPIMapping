@@ -7,6 +7,7 @@
  */
 package api.web.gw2.mapping.v2.continents;
 
+import api.web.gw2.mapping.core.ContinentDimension;
 import java.util.Set;
 
 /**
@@ -17,8 +18,7 @@ final class DefaultContinent implements Continent {
 
     String id;
     String name;
-    int width;
-    int height;
+    ContinentDimension<Integer> continentDims;
     int minZoom;
     int maxZoom;
     Set<Integer> floors;
@@ -40,15 +40,10 @@ final class DefaultContinent implements Continent {
     }
 
     @Override
-    public int getWidth() {
-        return width;
+    public ContinentDimension<Integer> getContinentDims() {
+        return continentDims;
     }
-
-    @Override
-    public int getHeight() {
-        return height;
-    }
-
+    
     @Override
     public int getMinZoom() {
         return minZoom;
