@@ -16,14 +16,37 @@ import api.web.gw2.mapping.v2.APIv2;
  */
 @APIv2(endpoint = "v2/recipes") // NOI18N.
 public enum RecipeCraftingDiscipline {
-
+    /**
+    * Defines the artificier discipline.
+    */
     ARTIFICIER("Artificier"), // NOI18N.
+    /**
+    * Defines the armorsmith discipline.
+    */
     ARMORSMITH("Armorsmith"), // NOI18N.
+    /**
+    * Defines the chef discipline.
+    */
     CHEF("Chef"), // NOI18N.
+    /**
+    * Defines the huntsman discipline.
+    */
     HUNTSMAN("Huntsman"), // NOI18N.
+    /**
+    * Defines the jeweler discipline.
+    */
     JEWELER("Jeweler"), // NOI18N.
+    /**
+    * Defines the leatherworker discipline.
+    */
     LEATHERWORKER("Leatherworker"), // NOI18N.
+    /**
+    * Defines the tailor discipline.
+    */
     TAILOR("Tailor"), // NOI18N.
+    /**
+    * Defines the weaponsmith discipline.
+    */
     WEAPONSMITH("Weaponsmith"), // NOI18N.
     /**
      * Fail safe value.

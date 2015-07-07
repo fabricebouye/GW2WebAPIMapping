@@ -129,25 +129,85 @@ public enum RecipeType {
      * Defines the ring recipe type.
      */
     RING("Ring"), // NOI18N.
+    /**
+     * Defines the dessert recipe type.
+     */
     DESSERT("Dessert"), // NOI18N.
+    /**
+     * Defines the feast (ie: feast, plate, cauldron, etc.) recipe type.
+     */
     FEAST("Feast"), // NOI18N.
+    /**
+     * Defines the cooking ingredient recipe type.
+     */
     INGREDIENT_COOKING("IngredientCooking"), // NOI18N.
+    /**
+     * Defines the meal recipe type.
+     */
     MEAL("Meal"), // NOI18N.
+    /**
+     * Defines the seasoning recipe type.
+     */
     SEASONING("Seasoning"), // NOI18N.
+    /**
+     * Defines the snack recipe type.
+     */
     SNACK("Snack"), // NOI18N.
+    /**
+     * Defines the soup recipe type.
+     */
     SOUP("Soup"), // NOI18N.
+    /**
+     * Defines the component recipe type.
+     */
     COMPONENT("Component"), // NOI18N.
+    /**
+     * Defines the inscription recipe type.
+     */
     INSCRIPTION("Inscription"), // NOI18N.
+    /**
+     * Defines the insignia recipe type.
+     */
     INSIGNIA("Insignia"), // NOI18N.
+    /**
+     * Defines the refinement recipe type.
+     */
     REFINEMENT("Refinement"), // NOI18N.
+    /**
+     * Defines the glob of ectoplasm refinement recipe type.
+     */
     REFINEMENT_ECTOPLASM("RefinementEctoplasm"), // NOI18N.
+    /**
+     * Defines the obsidian shard refinement recipe type.
+     */
     REFINEMENT_OBSIDIAN("RefinementObsidian"), // NOI18N.
+    /**
+     * Defines the backpack recipe type.
+     */
     BACKPACK("Backpack"), // NOI18N.
+    /**
+     * Defines the bag recipe type.
+     */
     BAG("Bag"), // NOI18N.
+    /**
+     * Defines the bulk recipe type.
+     */
     BULK("Bulk"), // NOI18N.
+    /**
+     * Defines the consumable recipe type.
+     */
     CONSUMABLE("Consumable"), // NOI18N.
+    /**
+     * Defines the dye recipe type.
+     */
     DYE("Dye"), // NOI18N.
+    /**
+     * Defines the potion recipe type.
+     */
     POTION("Potion"), // NOI18N.
+    /**
+     * Defines the upgrade component recipe type.
+     */
     UPGRADE_COMPONENT("UpgradeComponent"), // NOI18N.
     /**
      * Fail safe value.

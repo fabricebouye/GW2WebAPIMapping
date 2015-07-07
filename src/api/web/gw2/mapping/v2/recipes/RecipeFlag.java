@@ -16,8 +16,13 @@ import api.web.gw2.mapping.v2.APIv2;
  */
 @APIv2(endpoint = "v2/recipes") // NOI18N.
 public enum RecipeFlag {
-
+    /**
+    * Defines the auto-learned flag.
+    */
     AUTO_LEARNED("AutoLearned"), // NOI18N.
+    /**
+    * Defines the learned from item flag.
+    */
     LEARNED_FROM_ITEM("LearedFromItem"), // NOI18N.
     /**
      * Fail safe value.

@@ -50,7 +50,7 @@ public enum RecipesUtils {
         final RecipeFlag result = resultOptional.isPresent() ? resultOptional.get() : RecipeFlag.UNKNOWN;
         return result;
     }
-    
+
     /**
      * Gets the recipe crafting discipline for given value.
      * @param value The source value.
