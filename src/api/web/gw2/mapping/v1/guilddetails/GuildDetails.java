@@ -7,6 +7,7 @@
  */
 package api.web.gw2.mapping.v1.guilddetails;
 
+import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.v1.APIv1;
 
 /**
@@ -20,12 +21,13 @@ public interface GuildDetails {
      * Gets the id of the guild.
      * @return  A {@code String} instance, never {@code null}.
      */
+    @IdValue
     String getGuildId();
 
     /**
      * Gets the name of the guild.
      * @return  A {@code String} instance, never {@code null}.
-     */
+     */    
     String getGuildName();
 
     /**
