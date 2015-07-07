@@ -20,31 +20,31 @@ public enum ItemArmorType {
     /**
      * Defines the boots armor type.
      */
-    BOOTS("Boots"),
+    BOOTS("Boots"), // NOI18N.
     /**
      * Defines the coat (breast plate) armor type.
      */
-    COAT("Coat"),
+    COAT("Coat"), // NOI18N.
     /**
      * Defines the gloves armor type.
      */
-    GLOVES("Gloves"),
+    GLOVES("Gloves"), // NOI18N.
     /**
      * Defines the helm armor type.
      */
-    HELM("Helm"),
+    HELM("Helm"), // NOI18N.
     /**
      * Defines the underwater breather armor type.
      */
-    HELM_AQUATIC("HelmAquatic"),
+    HELM_AQUATIC("HelmAquatic"), // NOI18N.
     /**
      * Defines the leggings armor type.
      */
-    LEGGINGS("Leggings"),
+    LEGGINGS("Leggings"), // NOI18N.
     /**
      * Defines the shoulders armor type.
      */
-    SHOULDERS("Shoulders"),
+    SHOULDERS("Shoulders"), // NOI18N.
     /**
      * Fail safe value.
      */
