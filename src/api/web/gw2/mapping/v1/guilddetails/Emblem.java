@@ -7,6 +7,7 @@
  */
 package api.web.gw2.mapping.v1.guilddetails;
 
+import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.v1.APIv1;
 import java.util.Set;
 
@@ -21,30 +22,35 @@ public interface Emblem {
      * Gets the id of the background image of this emblem.
      * @return An {@code int} &ge; 0.
      */
+    @IdValue
     int getBackgroundId();
 
     /**
      * Gets the id of the background color of this emblem.
      * @return An {@code int} &ge; 0.
      */
+    @IdValue
     int getBackgroundColorId();
 
     /**
      * Gets the id of the foreground image of this emblem.
      * @return An {@code int} &ge; 0.
      */
+    @IdValue
     int getForegroundId();
 
     /**
      * Gets the id of the foreground primary color of this emblem.
      * @return An {@code int} &ge; 0.
      */
+    @IdValue
     int getForegroundPrimaryColorId();
 
     /**
      * Gets the id of the foreground secondary color of this emblem.
      * @return An {@code int} &ge; 0.
      */
+    @IdValue
     int getForegroundSecondaryColorId();
 
     /**

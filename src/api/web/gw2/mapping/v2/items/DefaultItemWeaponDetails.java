@@ -19,12 +19,12 @@ final class DefaultItemWeaponDetails extends DefaultItemDetails implements ItemW
 
     ItemWeaponType type = ItemWeaponType.UNKNOWN;
     ItemWeaponDamageType damageType = ItemWeaponDamageType.UNKNOWN;
-    int minPower;
-    int maxPower;
-    int defense;
+    int minPower = -1;
+    int maxPower = -1;
+    int defense = -1;
     List<ItemInfusionSlot> infusionSlots = Collections.EMPTY_LIST;
     Optional<ItemInfixUpgrade> infixUpgrade = Optional.empty();
-    int suffixItemId;
+    int suffixItemId = -1;
     String secondarySuffixItemId = "";
 
     /**

@@ -8,6 +8,7 @@
 package api.web.gw2.mapping.v2.commerce.listings;
 
 import api.web.gw2.mapping.core.CoinValue;
+import api.web.gw2.mapping.core.QuantityValue;
 import api.web.gw2.mapping.v2.APIv2;
 
 /**
@@ -26,6 +27,7 @@ public interface Listing {
     * If two different players buy/sell the same item for the same price, they will end up being aggregated in the same listing.
     * @return An {@code int}.
     */
+    @QuantityValue
     int getListings();
 
     /**
@@ -39,5 +41,6 @@ public interface Listing {
      * Gets the amount of items being sold/bought.
      * @return An {@code int}.
      */
+    @QuantityValue
     int getQuantity();
 }

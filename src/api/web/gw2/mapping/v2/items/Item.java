@@ -8,8 +8,11 @@
 package api.web.gw2.mapping.v2.items;
 
 import api.web.gw2.mapping.core.CoinValue;
+import api.web.gw2.mapping.core.IdValue;
+import api.web.gw2.mapping.core.LevelValue;
 import api.web.gw2.mapping.core.LocalizedResource;
 import api.web.gw2.mapping.core.OptionalValue;
+import api.web.gw2.mapping.core.URLValue;
 import api.web.gw2.mapping.v2.APIv2;
 import java.util.Optional;
 import java.util.OptionalInt;
@@ -26,6 +29,7 @@ public interface Item {
      * Gets the id of this item.
      * @return An {@code int}.
      */
+    @IdValue
     int getId();
 
     /**
@@ -53,6 +57,7 @@ public interface Item {
      * Gets the required level to use this item.
      * @return A {@code short}.
      */
+    @LevelValue
     short getLevel();
 
     /**
@@ -73,6 +78,7 @@ public interface Item {
      * @return An {@code OptionalInt} instance, never {@code null}.
      */
     @OptionalValue
+    @IdValue
     OptionalInt getDefaultSkin();
 
     /**
@@ -97,6 +103,7 @@ public interface Item {
      * Gets the URL to the icon of this item.
      * @return A {@code String} instance, never {@code null}. 
      */
+    @URLValue
     String getIcon();
 
     /**

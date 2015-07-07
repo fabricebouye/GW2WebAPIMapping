@@ -17,7 +17,7 @@ import java.util.List;
 final class DefaultBag implements Bag {
 
     int id = -1;
-    int size = 0;
+    int size = -1;
     List<Inventory> inventory = Collections.EMPTY_LIST;
 
     /**

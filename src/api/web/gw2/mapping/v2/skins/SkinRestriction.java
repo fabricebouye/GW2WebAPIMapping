@@ -20,23 +20,23 @@ public enum SkinRestriction {
     /**
      * Defines the asura restriction.
      */
-    ASURA("Asura"),
+    ASURA("Asura"), // NOI18N.
     /**
      * Defines the charr restriction.
      */
-    CHARR("Charr"),
+    CHARR("Charr"), // NOI18N.
     /**
      * Defines the human restriction.
      */
-    HUMAN("Human"),
+    HUMAN("Human"), // NOI18N.
     /**
      * Defines the norn restriction.
      */
-    NORN("Norn"),
+    NORN("Norn"), // NOI18N.
     /**
      * Defines the sylvari restriction.
      */
-    SYLVARI("Sylvari"),
+    SYLVARI("Sylvari"), // NOI18N.
     /**
      * Fail safe value.
      */

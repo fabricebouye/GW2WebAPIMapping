@@ -16,7 +16,7 @@ import java.util.Set;
  */
 final class DefaultListingResponse implements ListingResponse {
 
-    int id;
+    int id = -1;
     Set<Listing> buys = Collections.EMPTY_SET;
     Set<Listing> sells = Collections.EMPTY_SET;
 

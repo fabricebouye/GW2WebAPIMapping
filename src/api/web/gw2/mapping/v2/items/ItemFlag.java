@@ -18,59 +18,53 @@ import api.web.gw2.mapping.v2.APIv2;
 public enum ItemFlag {
 
     /**
-    * Define the account bind on use flag.
-    *//**
-    * Define the account bind on use flag.
-    *//**
-    * Define the account bind on use flag.
-    *//**
-    * Define the account bind on use flag.
-    */
-    ACCOUNT_BIND_ON_USE("AccountBindOnUse"),
+     * Define the account bind on use flag.
+     */
+    ACCOUNT_BIND_ON_USE("AccountBindOnUse"), // NOI18N.
     /**
-    * Define the account bound flag.
-    */
-    ACCOUNT_BOUND("AccountBound"),
+     * Define the account bound flag.
+     */
+    ACCOUNT_BOUND("AccountBound"), // NOI18N.
     /**
-    * Define the hide suffix flag.
-    */
-    HIDE_SUFFIX("HideSuffix"),
+     * Define the hide suffix flag.
+     */
+    HIDE_SUFFIX("HideSuffix"), // NOI18N.
     /**
-    * Define the monster only flag.
-    */
-    MONSTER_ONLY("MonsterOnly"),
+     * Define the monster only flag.
+     */
+    MONSTER_ONLY("MonsterOnly"), // NOI18N.
     /**
-    * Define the no mystic forge flag.
-    */
-    NO_MYSTIC_FORGE("NoMysticForge"),
+     * Define the no mystic forge flag.
+     */
+    NO_MYSTIC_FORGE("NoMysticForge"), // NOI18N.
     /**
-    * Define the no salvage flag.
-    */
-    NO_SALVAGE("NoSalvage"),
+     * Define the no salvage flag.
+     */
+    NO_SALVAGE("NoSalvage"), // NOI18N.
     /**
-    * Define the no sell flag.
-    */
-    NO_SELL("NoSell"),
+     * Define the no sell flag.
+     */
+    NO_SELL("NoSell"), // NOI18N.
     /**
-    * Define the not upgradeable flag.
-    */
-    NOT_UPGRADEABLE("NotUpgradeable"),
+     * Define the not upgradeable flag.
+     */
+    NOT_UPGRADEABLE("NotUpgradeable"), // NOI18N.
     /**
-    * Define the no underwater flag.
-    */
-    NO_UNDERWATER("NoUnderwater"),
+     * Define the no underwater flag.
+     */
+    NO_UNDERWATER("NoUnderwater"), // NOI18N.
     /**
-    * Define the soulbind on acquire flag.
-    */
-    SOUL_BIND_ON_ACQUIRE("SoulBindOnAcquire"),
+     * Define the soulbind on acquire flag.
+     */
+    SOUL_BIND_ON_ACQUIRE("SoulBindOnAcquire"), // NOI18N.
     /**
-    * Define the souldbind on use flag.
-    */
-    SOUL_BIND_ON_USE("SoulBindOnUse"),
+     * Define the souldbind on use flag.
+     */
+    SOUL_BIND_ON_USE("SoulBindOnUse"), // NOI18N.
     /**
-    * Define the unique flag.
-    */
-    UNIQUE("Unique"),
+     * Define the unique flag.
+     */
+    UNIQUE("Unique"), // NOI18N.
     /**
      * Fail safe value.
      */

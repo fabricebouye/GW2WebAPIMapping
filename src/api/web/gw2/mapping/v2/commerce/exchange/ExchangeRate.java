@@ -8,6 +8,7 @@
 package api.web.gw2.mapping.v2.commerce.exchange;
 
 import api.web.gw2.mapping.core.CoinValue;
+import api.web.gw2.mapping.core.QuantityValue;
 import api.web.gw2.mapping.v2.APIv2;
 
 /**
@@ -34,5 +35,6 @@ public interface ExchangeRate {
      * The returned quantity.
      * @return An {@code int}.
      */
+    @QuantityValue
     int getQuantity();
 }

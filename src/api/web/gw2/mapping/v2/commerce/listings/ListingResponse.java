@@ -7,6 +7,7 @@
  */
 package api.web.gw2.mapping.v2.commerce.listings;
 
+import api.web.gw2.mapping.core.IdValue;
 import java.util.Set;
 
 /**
@@ -18,6 +19,7 @@ public interface ListingResponse {
      * Gets the id of the item.
      * @return And {@code int}.
      */
+    @IdValue
     int getId();
 
     /**

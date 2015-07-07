@@ -20,35 +20,35 @@ public enum ItemRarity {
     /**
      * Defines the junk rarity.
      */
-    JUNK("Junk"),
+    JUNK("Junk"), // NOI18N.
     /**
      * Defines the basic rarity.
      */
-    BASIC("Basic"),
+    BASIC("Basic"), // NOI18N.
     /**
      * Defines the fine rarity.
      */
-    FINE("Fine"),
+    FINE("Fine"), // NOI18N.
     /**
      * Defines the masterwork rarity.
      */
-    MASTERWORK("Masterwork"),
+    MASTERWORK("Masterwork"), // NOI18N.
     /**
      * Defines the rare rarity.
      */
-    RARE("Rare"),
+    RARE("Rare"), // NOI18N.
     /**
      * Defines the exotic rarity.
      */
-    EXOTIC("Exotic"),
+    EXOTIC("Exotic"), // NOI18N.
     /**
      * Defines the ascended rarity.
      */
-    ASCENDED("Ascended"),
+    ASCENDED("Ascended"), // NOI18N.
     /**
      * Defines the legendary rarity.
      */
-    LEGENDARY("Legendary"),
+    LEGENDARY("Legendary"), // NOI18N.
     /**
      * Fail safe value.
      */

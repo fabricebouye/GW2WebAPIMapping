@@ -20,31 +20,31 @@ public enum ItemInfixUpgradeAttribute {
     /**
      * Defines the condition damage attribute.
      */
-    CONDITION_DAMAGE("ConditionDamage"),
+    CONDITION_DAMAGE("ConditionDamage"), // NOI18N.
     /**
      * Defines the critical strike damage attribute.
      */
-    CRIT_DAMAGE("CritDamage"),
+    CRIT_DAMAGE("CritDamage"), // NOI18N.
     /**
      * Defines the healing power attribute.
      */
-    HEALING("Healing"),
+    HEALING("Healing"), // NOI18N.
     /**
      * Defines the power attribute.
      */
-    POWER("Power"),
+    POWER("Power"), // NOI18N.
     /**
      * Defines the precision attribute.
      */
-    PRECISION("Precision"),
+    PRECISION("Precision"), // NOI18N.
     /**
      * Defines the toughness attribute.
      */
-    TOUGHNESS("Toughness"),
+    TOUGHNESS("Toughness"), // NOI18N.
     /**
      * Defines the vitality attribute.
      */
-    VITALITY("Vitality"),
+    VITALITY("Vitality"), // NOI18N.
     /**
      * Fail safe value.
      */

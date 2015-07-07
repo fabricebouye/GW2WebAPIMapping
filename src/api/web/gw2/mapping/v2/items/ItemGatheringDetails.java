@@ -7,10 +7,13 @@
  */
 package api.web.gw2.mapping.v2.items;
 
+import api.web.gw2.mapping.v2.APIv2;
+
 /**
  * Defines a gathering tool details.
  * @author Fabrice Bouyé
  */
+@APIv2(endpoint = "v2/items") // NOI18N.
 public interface ItemGatheringDetails {
 
     /**

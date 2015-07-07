@@ -7,6 +7,7 @@
  */
 package api.web.gw2.mapping.v2.colors;
 
+import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.ImplementationSpecific;
 import api.web.gw2.mapping.core.LocalizedResource;
 import api.web.gw2.mapping.v2.APIv2;
@@ -22,6 +23,7 @@ public interface Dye {
      * Gets the id of this dye.
      * @return An {@code int}.
      */
+    @IdValue
     int getId();
 
     /**

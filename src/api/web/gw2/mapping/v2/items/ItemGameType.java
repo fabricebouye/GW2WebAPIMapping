@@ -20,27 +20,27 @@ public enum ItemGameType {
     /**
      * Defines the activity (keg brawl, sanctum sprint, etc.) game mode.
      */
-    ACTIVITY("Activity"),
+    ACTIVITY("Activity"), // NOI18N.
     /**
      * Defines the dungeon game mode.
      */
-    DUNGEON("Dungeon"),
+    DUNGEON("Dungeon"), // NOI18N.
     /**
      * Defines the PvE (Player vs. Environment) game mode.
      */
-    PVE("Pve"),
+    PVE("Pve"), // NOI18N.
     /**
      * Defines the PvP (Player vs. Player) game mode.
      */
-    PVP("Pvp"),
+    PVP("Pvp"), // NOI18N.
     /**
      * Defines the PvP Lobby (Heart of the Mists) game mode.
      */
-    PVP_LOBBY("PvpLobby"),
+    PVP_LOBBY("PvpLobby"), // NOI18N.
     /**
      * Defines the WvW (World vs. World) game mode.
      */
-    WVW("Wvw"),
+    WVW("Wvw"), // NOI18N.
     /**
      * Fail safe value.
      */

@@ -20,15 +20,15 @@ public enum SkinArmorWeightClass {
     /**
      * Defines the heavy armor weight.
      */
-    HEAVY("Heavy"),
+    HEAVY("Heavy"), // NOI18N.
     /**
      * Defines the light armor weight.
      */
-    LIGHT("Light"),
+    LIGHT("Light"), // NOI18N.
     /**
      * Defines the medium armor weight.
      */
-    MEDIUM("Medium"),
+    MEDIUM("Medium"), // NOI18N.
     /**
      * Fail safe value.
      */

@@ -14,6 +14,11 @@ package api.web.gw2.mapping.core;
  */
 public final class ContinentDimension<T extends Number> {
 
+    /**
+     * A single empty instance.
+     */
+    public static final ContinentDimension<Integer> EMPTY = new ContinentDimension(0, 0, 0, 0);
+
     private final Point<T> nwCorner;
     private final Point<T> seCorner;
 

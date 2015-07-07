@@ -11,7 +11,7 @@ package api.web.gw2.mapping.v2.colors;
  */
 final class DefaultRGB implements RGB {
 
-    short[] rgb;
+    final short[] rgb = new short[3];
 
     /**
      * Creates a new empty instance.

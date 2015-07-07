@@ -12,8 +12,8 @@ package api.web.gw2.mapping.v2.files;
  * @author Fabrice Bouyé
  */
 final class DefaultFile implements File {
-    String id;
-    String icon;
+    String id = "";
+    String icon = "";
 
     /**
     * Creates a new empty instance.

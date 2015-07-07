@@ -20,19 +20,19 @@ public enum ItemArmorWeightClass {
     /**
      * Defines the heavy weight class.
      */
-    HEAVY("Heavy"),
+    HEAVY("Heavy"), // NOI18N.
     /**
      * Defines the medium weight class.
      */
-    MEDIUM("Medium"),
+    MEDIUM("Medium"), // NOI18N.
     /**
      * Defines the light weight class.
      */
-    LIGHT("Light"),
+    LIGHT("Light"), // NOI18N.
     /**
      * Defines the clothing weight class.
      */
-    CLOTHING("Clothing"),
+    CLOTHING("Clothing"), // NOI18N.
     /**
      * Fail safe value.
      */

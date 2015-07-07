@@ -7,6 +7,7 @@
  */
 package api.web.gw2.mapping.v2.worlds;
 
+import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.LocalizedResource;
 import api.web.gw2.mapping.v2.APIv2;
 
@@ -21,6 +22,7 @@ public interface World {
      * Gets the id of this world.
      * @return An {@code int}.
      */
+    @IdValue
     int getId();
 
     /**

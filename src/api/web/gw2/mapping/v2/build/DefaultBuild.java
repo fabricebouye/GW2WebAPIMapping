@@ -13,7 +13,7 @@ package api.web.gw2.mapping.v2.build;
  */
 final class DefaultBuild implements Build {
 
-    int id;
+    int id = -1;
 
     /**
      * Creates a new empty instance.

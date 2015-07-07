@@ -20,15 +20,15 @@ public enum ItemInfusionSlotFlag {
     /**
      * Defines the defense flag.
      */
-    DEFENSE("Defense"),
+    DEFENSE("Defense"), // NOI18N.
     /**
      * Defines the offense flag.
      */
-    OFFENSE("Offense"),
+    OFFENSE("Offense"), // NOI18N.
     /**
      * Defines the utility flag.
      */
-    UTILITY("Utility"),
+    UTILITY("Utility"), // NOI18N.
     /**
      * Defines the agony resistance flag.
      */

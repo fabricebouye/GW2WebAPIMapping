@@ -7,6 +7,7 @@
  */
 package api.web.gw2.mapping.v2.items;
 
+import api.web.gw2.mapping.core.QuantityValue;
 import api.web.gw2.mapping.v2.APIv2;
 
 /**
@@ -26,5 +27,6 @@ public interface ItemToolDetails {
      * Gets the number of charges on this tool.
      * @return An {@code int}.
      */
+    @QuantityValue
     int getCharges();
 }

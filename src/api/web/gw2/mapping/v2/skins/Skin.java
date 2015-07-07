@@ -7,8 +7,10 @@
  */
 package api.web.gw2.mapping.v2.skins;
 
+import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.LocalizedResource;
 import api.web.gw2.mapping.core.OptionalValue;
+import api.web.gw2.mapping.core.URLValue;
 import java.util.Optional;
 import java.util.Set;
 
@@ -22,6 +24,7 @@ public interface Skin {
      * Gets the id of this skin.
      * @return An {@code int}.
      */
+    @IdValue
     int getId();
 
     /**
@@ -53,13 +56,15 @@ public interface Skin {
      * Gets the URL to the icon of this skin.
      * @return A {@code String} instance, never {@code null}.
      */
+    @URLValue
     String getUrl();
 
     /**
-     * Gets the URL to the icon of this skin.
+     * Gets the localized description of this skin.
      * @return An {@code Optional<String>} instance, never {@code null}.
      */
     @OptionalValue
+    @LocalizedResource
     Optional<String> getDescription();
 
     /**

@@ -7,6 +7,9 @@
  */
 package api.web.gw2.mapping.v2.items;
 
+import api.web.gw2.mapping.core.DurationValue;
+import api.web.gw2.mapping.core.IdValue;
+import api.web.gw2.mapping.core.LocalizedResource;
 import api.web.gw2.mapping.core.OptionalValue;
 import api.web.gw2.mapping.v2.APIv2;
 import java.util.Optional;
@@ -31,6 +34,7 @@ public interface ItemConsumableDetails {
      * @return An {@code Optional<String>} instance, never {@code null}.
      */
     @OptionalValue
+    @LocalizedResource
     Optional<String> getDescription();
 
     /**
@@ -38,6 +42,7 @@ public interface ItemConsumableDetails {
      * @return An {@code OptionalLong} instance, never {@code null}.
      */
     @OptionalValue
+    @DurationValue
     OptionalLong getDuration();
 
     /**
@@ -52,6 +57,7 @@ public interface ItemConsumableDetails {
      * @return An {@code OptionalInt} instance, never {@code null}.
      */
     @OptionalValue
+    @IdValue
     OptionalInt getColorId();
 
     /**
@@ -59,5 +65,6 @@ public interface ItemConsumableDetails {
      * @return An {@code OptionalInt} instance, never {@code null}.
      */
     @OptionalValue
+    @IdValue
     OptionalInt getRecipeId();
 }

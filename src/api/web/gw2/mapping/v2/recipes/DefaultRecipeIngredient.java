@@ -13,8 +13,8 @@ package api.web.gw2.mapping.v2.recipes;
  */
 final class DefaultRecipeIngredient implements RecipeIngredient {
 
-    int itemId;
-    int count;
+    int itemId = -1;
+    int count = -1;
 
     /**
      * Creates a new empty instance.

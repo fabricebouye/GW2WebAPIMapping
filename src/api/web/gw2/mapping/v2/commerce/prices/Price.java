@@ -7,6 +7,7 @@
  */
 package api.web.gw2.mapping.v2.commerce.prices;
 
+import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.v2.APIv2;
 
 /**
@@ -21,6 +22,7 @@ public interface Price {
      * Gets the id of the item.
      * @return And {@code int}.
      */
+    @IdValue
     int getId();
 
     /**

@@ -1,17 +1,21 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/* 
+ * Copyright (C) 2015 Fabrice Bouyé
+ * All rights reserved.
+ *
+ * This software may be modified and distributed under the terms
+ * of the BSD license.  See the LICENSE file for details.
  */
 package api.web.gw2.mapping.v2.items;
 
+import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.OptionalValue;
+import api.web.gw2.mapping.core.QuantityValue;
 import java.util.List;
 import java.util.Optional;
 
 /**
- *
- * @author FabriceB
+ * Defines a weapon details.
+ * @author Fabrice Bouyé
  */
 public interface ItemWeaponDetails {
 
@@ -31,18 +35,21 @@ public interface ItemWeaponDetails {
      * Gets the min power of this weapon.
      * @return An {@code int}.
      */
+    @QuantityValue
     int getMinPower();
 
     /**
      * Gets the max power of this weapon.
      * @return An {@code int}.
      */
+    @QuantityValue
     int getMaxPower();
 
     /**
      * Gets the defense value of this weapon.
      * @return An {@code int}
      */
+    @QuantityValue
     int getDefense();
 
     /**
@@ -62,11 +69,13 @@ public interface ItemWeaponDetails {
      * Gets the ide of the suffix item (ie: sigil) on this weapon.
      * @return An {@code int}.
      */
+    @IdValue
     int getSuffixItemId();
 
     /**
      * Gets the id of the secondary suffix item on this armor.
      * @return A {@code String} instance, never {@code null}.
      */
+    @IdValue
     String getSecondarySuffixItemId();
 }

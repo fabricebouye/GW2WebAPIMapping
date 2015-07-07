@@ -13,6 +13,10 @@ package api.web.gw2.mapping.core;
  * @param <T> The type to use.
  */
 public final class MapDimension<T extends Number> {
+    /**
+    * A single empty instance.
+    */
+    public static final MapDimension<Integer> EMPTY = new MapDimension(0, 0, 0, 0);
 
     private final Point<T> swCorner;
     private final Point<T> neCorner;

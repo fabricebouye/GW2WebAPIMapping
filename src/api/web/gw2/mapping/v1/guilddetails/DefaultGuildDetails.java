@@ -13,10 +13,10 @@ package api.web.gw2.mapping.v1.guilddetails;
  */
 final class DefaultGuildDetails implements GuildDetails {
 
-    String guildId;
-    String guildName;
-    String tag;
-    Emblem emblem;
+    String guildId = "";
+    String guildName = "";
+    String tag = "";
+    Emblem emblem = null;
 
     /**
      * Creates a new empty instance.

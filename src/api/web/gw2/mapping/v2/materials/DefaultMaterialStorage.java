@@ -7,6 +7,7 @@
  */
 package api.web.gw2.mapping.v2.materials;
 
+import java.util.Collections;
 import java.util.Set;
 
 /**
@@ -15,9 +16,9 @@ import java.util.Set;
  */
 final class DefaultMaterialStorage implements MaterialStorage {
 
-    int id;
-    String name;
-    Set<Integer> items;
+    int id = -1;
+    String name = "";
+    Set<Integer> items = Collections.EMPTY_SET;
 
     /**
      * Creates a new empty instance.

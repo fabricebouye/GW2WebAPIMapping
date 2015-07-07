@@ -21,11 +21,11 @@ public enum ExchangeResource {
     /**
      * Defines the coins exchange resource.
      */
-    COINS("Coins"),
+    COINS("Coins"), // NOI18N.
     /**
      * Defines the gems exchange resource.
      */
-    GEMS("Gems"),
+    GEMS("Gems"), // NOI18N.
     /**
      * Fail safe value.
      */

@@ -7,6 +7,7 @@
  */
 package api.web.gw2.mapping.v2.account;
 
+import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.v2.APIv2;
 import java.util.Set;
 
@@ -21,6 +22,7 @@ public interface Account {
      * Gets the id of this account.
      * @return A {@code String}, never {@code null}.
      */
+    @IdValue
     String getId();
 
     /**
@@ -33,11 +35,13 @@ public interface Account {
      * Gets the id of the account's world.
      * @return An {@code int}.
      */
+    @IdValue
     int getWorld();
 
     /**
      * Gets a set of guilds attached to this account.
      * @return A non-modifiable {@code Set<String>} instance, never {@code null}, may be empty.
      */
+    @IdValue
     Set<String> getGuilds();
 }

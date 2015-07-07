@@ -8,7 +8,9 @@
 package api.web.gw2.mapping.v2.commerce.transactions;
 
 import api.web.gw2.mapping.core.CoinValue;
+import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.OptionalValue;
+import api.web.gw2.mapping.core.QuantityValue;
 import api.web.gw2.mapping.v2.APIv2;
 import java.time.LocalDate;
 import java.util.Optional;
@@ -24,12 +26,14 @@ public interface Transaction {
      * Gets the id of the transaction.
      * @return An {@code int}.
      */
+    @IdValue
     int getId();
 
     /**
      * Gets the id of the item.
      * @return An {@code int}.
      */
+    @IdValue
     int getItemId();
 
     /**
@@ -43,6 +47,7 @@ public interface Transaction {
      * Gets the quantity of the item.
      * @return An {@code int}.
      */
+    @QuantityValue
     int getQuantity();
 
     /**

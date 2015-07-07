@@ -7,6 +7,8 @@
  */
 package api.web.gw2.mapping.v2.files;
 
+import api.web.gw2.mapping.core.IdValue;
+import api.web.gw2.mapping.core.URLValue;
 import api.web.gw2.mapping.v2.APIv2;
 
 /**
@@ -20,11 +22,13 @@ public interface File {
      * Gets the id of this file.
      * @return A {@code String} instance, never {@code null}.
      */
+    @IdValue
     String getId();
 
     /**
      * Gets the URL of the icon of this file.
      * @return A {@code String} instance, never {@code null}.
      */
+    @URLValue
     String getIcon();
 }

@@ -7,6 +7,7 @@
  */
 package api.web.gw2.mapping.v2.build;
 
+import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.v2.APIv2;
 
 /**
@@ -15,9 +16,11 @@ import api.web.gw2.mapping.v2.APIv2;
  */
 @APIv2(endpoint = "v2/build") // NOI18N.
 public interface Build {
+
     /**
      * Gets the id of the build 
      * @return An {@code int}.
      */
+    @IdValue
     int getId();
 }

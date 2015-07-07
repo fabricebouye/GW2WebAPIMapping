@@ -7,6 +7,7 @@
  */
 package api.web.gw2.mapping.v2.items;
 
+import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.OptionalValue;
 import api.web.gw2.mapping.v2.APIv2;
 import java.util.List;
@@ -38,12 +39,14 @@ public interface ItemTrinketDetails {
      * @return An {@code OptionalInt}, never {@code null}.
      */
     @OptionalValue
+    @IdValue
     OptionalInt getSuffixItemId();
 
     /**
      * Gets the id of the secondary suffix item on this trinket.
      * @return A {@code String} instance, never {@code null}.
      */
+    @IdValue
     String getSecondarySuffixItemId();
 
 }

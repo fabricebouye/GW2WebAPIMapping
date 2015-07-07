@@ -7,7 +7,9 @@
  */
 package api.web.gw2.mapping.v2.items;
 
+import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.OptionalValue;
+import api.web.gw2.mapping.core.QuantityValue;
 import java.util.List;
 import java.util.Optional;
 import java.util.OptionalInt;
@@ -34,6 +36,7 @@ public interface ItemArmorDetails extends ItemDetails {
      * Gets the defense value of this armor.
      * @return An {@code int}.
      */
+    @QuantityValue
     int getDefense();
 
     /**
@@ -54,11 +57,13 @@ public interface ItemArmorDetails extends ItemDetails {
      * @return An {@code OptionalInt}, never {@code null}.
      */
     @OptionalValue
+    @IdValue
     OptionalInt getSuffixItemId();
 
     /**
      * Gets the id of the secondary suffix item on this armor.
      * @return A {@code String} instance, never {@code null}.
      */
+    @IdValue
     String getSecondarySuffixItemId();
 }

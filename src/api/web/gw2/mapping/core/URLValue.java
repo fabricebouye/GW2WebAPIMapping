@@ -14,11 +14,11 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * The JSON value defines a duration in seconds or milliseconds.
+ * The JSON value defines an URL value.
  * @author Fabrice Bouyé
  */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.FIELD, ElementType.METHOD})
-public @interface DurationValue {
+public @interface URLValue {
 }

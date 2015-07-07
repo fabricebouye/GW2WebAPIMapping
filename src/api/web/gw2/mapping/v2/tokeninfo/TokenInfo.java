@@ -7,6 +7,7 @@
  */
 package api.web.gw2.mapping.v2.tokeninfo;
 
+import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.v2.APIv2;
 import java.util.Set;
 
@@ -21,6 +22,7 @@ public interface TokenInfo {
      * Gets the id of this token info.
      * @return A {@code String} instance, never {@code null}.
      */
+    @IdValue
     String getId();
 
     /**

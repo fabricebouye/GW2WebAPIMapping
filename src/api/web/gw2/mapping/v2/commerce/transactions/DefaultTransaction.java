@@ -16,11 +16,11 @@ import java.util.Optional;
  */
 final class DefaultTransaction implements Transaction {
 
-    int id;
-    int itemId;
-    int price;
-    int quantity;
-    LocalDate created;
+    int id = -1;
+    int itemId = -1;
+    int price = -1;
+    int quantity = -1;
+    LocalDate created = LocalDate.MIN;
     Optional<LocalDate> purchased = Optional.empty();
 
     @Override

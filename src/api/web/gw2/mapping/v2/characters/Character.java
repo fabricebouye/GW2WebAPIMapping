@@ -7,7 +7,11 @@
  */
 package api.web.gw2.mapping.v2.characters;
 
+import api.web.gw2.mapping.core.DurationValue;
+import api.web.gw2.mapping.core.IdValue;
+import api.web.gw2.mapping.core.LevelValue;
 import api.web.gw2.mapping.core.OptionalValue;
+import api.web.gw2.mapping.core.QuantityValue;
 import api.web.gw2.mapping.v2.APIv2;
 import api.web.gw2.mapping.v2.characters.inventory.Bag;
 import api.web.gw2.mapping.v2.characters.equipment.Equipment;
@@ -50,32 +54,36 @@ public interface Character {
      * Gets the level of this character.
      * @return An {@code int} &ge; 1 and &le; 80.
      */
+    @LevelValue
     int getLevel();
 
     /**
      * Gets the id of the guild of this character.
      * @return A {@code String}, may be {@code null}.
      */
+    @IdValue
     String getGuild();
-    
+
     /**
      * Gets the creation date of this character.
      * @return A {@code LocalDate} instance, never {@code null}.
      */
     LocalDate getCreated();
-    
+
     /**
      * Gets the age of this character (the amount of second the character was played).
      * @return A {@code long}.
      */
+    @DurationValue
     long getAge();
-    
+
     /**
      * Gets the number of deaths of this character.
      * @return An {@code in}.
      */
+    @QuantityValue
     int getDeaths();
-    
+
     /**
      * Gets the equipment of this character.
      * @return An {@code Optional<List<Equipment>>} instance, never {@code null}:

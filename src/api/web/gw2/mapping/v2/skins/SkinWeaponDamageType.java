@@ -20,19 +20,19 @@ public enum SkinWeaponDamageType {
     /**
      * Defines the fire damage type.
      */
-    FIRE("Fire"),
+    FIRE("Fire"), // NOI18N.
     /**
      * Defines the ice damage type.
      */
-    ICE("Ice"),
+    ICE("Ice"), // NOI18N.
     /**
      * Defines the lightning damage type.
      */
-    LIGHTNING("Lightning"),
+    LIGHTNING("Lightning"), // NOI18N.
     /**
      * Defines the physical damage type.
      */
-    PHYSICAL("Physical"),
+    PHYSICAL("Physical"), // NOI18N.
     /**
      * Fail safe value.
      */

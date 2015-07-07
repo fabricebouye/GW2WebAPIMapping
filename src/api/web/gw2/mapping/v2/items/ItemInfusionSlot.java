@@ -7,6 +7,7 @@
  */
 package api.web.gw2.mapping.v2.items;
 
+import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.OptionalValue;
 import api.web.gw2.mapping.v2.APIv2;
 import java.util.OptionalInt;
@@ -31,5 +32,6 @@ public interface ItemInfusionSlot {
      * @return An {@code OptionalInt}, never {@code null}.
      */
     @OptionalValue
+    @IdValue
     OptionalInt getItemId();
 }

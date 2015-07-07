@@ -8,6 +8,7 @@
 package api.web.gw2.mapping.v2.continents;
 
 import api.web.gw2.mapping.core.ContinentDimension;
+import java.util.Collections;
 import java.util.Set;
 
 /**
@@ -16,12 +17,12 @@ import java.util.Set;
  */
 final class DefaultContinent implements Continent {
 
-    String id;
-    String name;
-    ContinentDimension<Integer> continentDims;
-    int minZoom;
-    int maxZoom;
-    Set<Integer> floors;
+    String id = "";
+    String name = "";
+    ContinentDimension<Integer> continentDims = ContinentDimension.EMPTY;
+    int minZoom = -1;
+    int maxZoom = -1;
+    Set<Integer> floors = Collections.EMPTY_SET;
 
     /**
      * Creates a new empty instance.

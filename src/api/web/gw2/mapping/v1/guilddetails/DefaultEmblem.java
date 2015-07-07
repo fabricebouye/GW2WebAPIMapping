@@ -7,6 +7,7 @@
  */
 package api.web.gw2.mapping.v1.guilddetails;
 
+import java.util.Collections;
 import java.util.Set;
 
 /**
@@ -15,12 +16,12 @@ import java.util.Set;
  */
 final class DefaultEmblem implements Emblem {
 
-    int backgroundId;
-    int foregroundId;
-    Set<EmblemFlag> flags;
-    int backgroundColorId;
-    int foregroundPrimaryColorId;
-    int foregroundSecondaryColorId;
+    int backgroundId = -1;
+    int foregroundId = -1;
+    Set<EmblemFlag> flags = Collections.EMPTY_SET;
+    int backgroundColorId = -1;
+    int foregroundPrimaryColorId = -1;
+    int foregroundSecondaryColorId = -1;
 
     /**
      * Creates a new empty instance.

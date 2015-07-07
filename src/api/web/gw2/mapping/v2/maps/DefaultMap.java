@@ -9,6 +9,7 @@ package api.web.gw2.mapping.v2.maps;
 
 import api.web.gw2.mapping.core.ContinentDimension;
 import api.web.gw2.mapping.core.MapDimension;
+import java.util.Collections;
 import java.util.Set;
 
 /**
@@ -17,18 +18,18 @@ import java.util.Set;
  */
 final class DefaultMap implements Map {
 
-    int id;
-    String name;
-    int minLevel;
-    int maxLevel;
-    int defaultFloor;
-    Set<Integer> floors;
-    int regionId;
-    String regionName;
-    int continentId;
-    String continentName;
-    MapDimension<Integer> mapRect;
-    ContinentDimension<Integer> continentRect;
+    int id = -1;
+    String name = "";
+    int minLevel = -1;
+    int maxLevel = -1;
+    int defaultFloor = -1;
+    Set<Integer> floors = Collections.EMPTY_SET;
+    int regionId = -1;
+    String regionName = "";
+    int continentId = -1;
+    String continentName = "";
+    MapDimension<Integer> mapRect = MapDimension.EMPTY;
+    ContinentDimension<Integer> continentRect = ContinentDimension.EMPTY;
 
     /**
      * Creates a new empty instance.

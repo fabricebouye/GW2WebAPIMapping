@@ -7,6 +7,7 @@
  */
 package api.web.gw2.mapping.v2.characters.equipment;
 
+import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.OptionalValue;
 import api.web.gw2.mapping.v2.APIv2;
 import java.util.List;
@@ -23,6 +24,7 @@ public interface Equipment {
      * Gets the Id of this equipment.
      * @return An {@code int}.
      */
+    @IdValue
     int getId();
 
     /**
@@ -32,11 +34,12 @@ public interface Equipment {
     EquipmentSlot getSlot();
 
     /**
-     * Gets the list of upgrades on this equipment.
+     * Gets the list of upgrades Ids on this equipment.
      * @return An {@code Optional<List<Integer>>} instance, never {@code null}:
      * If present, the list is non-modifiable and may be empty.
      */
     @OptionalValue
+    @IdValue
     Optional<List<Integer>> getUpgrades();
 
     /**
@@ -48,8 +51,9 @@ public interface Equipment {
     Optional<List<Integer>> getInfusions();
 
     /**
-     * Gets the skin of this equipment.
+     * Gets the skin id of this equipment.
      * @return An {@code int}.
      */
+    @IdValue
     int getSkin();
 }

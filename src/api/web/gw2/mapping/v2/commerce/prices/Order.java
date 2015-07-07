@@ -8,6 +8,7 @@
 package api.web.gw2.mapping.v2.commerce.prices;
 
 import api.web.gw2.mapping.core.CoinValue;
+import api.web.gw2.mapping.core.QuantityValue;
 import api.web.gw2.mapping.v2.APIv2;
 
 /**
@@ -33,5 +34,6 @@ public interface Order {
      * Gets the amount of items being sold/bought.
      * @return An {@code int}.
      */
+    @QuantityValue
     int getQuantity();
 }

@@ -20,63 +20,63 @@ public enum ItemType {
     /**
      * Defines the armor type.
      */
-    ARMOR("Armor"),
+    ARMOR("Armor"), // NOI18N.
     /**
      * Defines the backpiece type.
      */
-    BACK("Back"),
+    BACK("Back"), // NOI18N.
     /**
      * Defines the bag type.
      */
-    BAG("Bag"),
+    BAG("Bag"), // NOI18N.
     /**
      * Defines the consumable type.
      */
-    CONSUMABLE("Consumable"),
+    CONSUMABLE("Consumable"), // NOI18N.
     /**
      * Defines the container type.
      */
-    CONTAINER("Container"),
+    CONTAINER("Container"), // NOI18N.
     /**
      * Defines the crafting material type.
      */
-    CRAFTING_MATERIAL("CraftingMaterial"),
+    CRAFTING_MATERIAL("CraftingMaterial"), // NOI18N.
     /**
      * Defines the gathering tool type.
      */
-    GATHERING("Gathering"),
+    GATHERING("Gathering"), // NOI18N.
     /**
      * Defines the gizmo type.
      */
-    GIZMO("Gizmo"),
+    GIZMO("Gizmo"), // NOI18N.
     /**
      * Defines the mini pet type.
      */
-    MINI_PET("MiniPet"),
+    MINI_PET("MiniPet"), // NOI18N.
     /**
      * Defines the tool type.
      */
-    TOOL("Tool"),
+    TOOL("Tool"), // NOI18N.
     /**
      * Defines the trait type.
      */
-    TRAIT("Trait"),
+    TRAIT("Trait"), // NOI18N.
     /**
      * Defines the trinket type.
      */
-    TRINKET("Trinket"),
+    TRINKET("Trinket"), // NOI18N.
     /**
      * Defines the trophy type.
      */
-    TROPHY("Trophy"),
+    TROPHY("Trophy"), // NOI18N.
     /**
      * Defines the upgrade component type.
      */
-    UPGRADE_COMPONENT("UpgradeComponent"),
+    UPGRADE_COMPONENT("UpgradeComponent"), // NOI18N.
     /**
      * Defines the weapon type.
      */
-    WEAPON("Weapon"),
+    WEAPON("Weapon"), // NOI18N.
     /**
      * Fail safe value.
      */

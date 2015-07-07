@@ -20,23 +20,23 @@ public enum CharacterRace {
     /**
      * Defines asura race.
      */
-    ASURA("Asura"),
+    ASURA("Asura"), // NOI18N.
     /**
      * Defines charr race.
      */
-    CHARR("Charr"),
+    CHARR("Charr"), // NOI18N.
     /**
      * Defines human race.
      */
-    HUMAN("Human"),
+    HUMAN("Human"), // NOI18N.
     /**
      * Defines norn race.
      */
-    NORN("Norn"),
+    NORN("Norn"), // NOI18N.
     /**
      * Defines sylvari race.
      */
-    SYLVARI("Sylvari"),
+    SYLVARI("Sylvari"), // NOI18N.
     /**
      * Fail safe value.
      */
