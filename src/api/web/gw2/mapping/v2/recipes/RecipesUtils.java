@@ -35,4 +35,34 @@ public enum RecipesUtils {
         final RecipeType result = resultOptional.isPresent() ? resultOptional.get() : RecipeType.UNKNOWN;
         return result;
     }
+
+    /**
+     * Gets the recipe flag for given value.
+     * @param value The source value.
+     * @return A {@code RecipeFlag} instance, never {@code null}.
+     * <br>If no corresponding value is found, {@code RecipeFlag.UNKNOWN} is returned.
+     * @see RecipeFlag
+     */
+    public static RecipeFlag findRecipeFlag(final String value) {
+        final Optional<RecipeFlag> resultOptional = Arrays.stream(RecipeFlag.values())
+                .filter(toTest -> value != null && value.equals(toTest.value))
+                .findFirst();
+        final RecipeFlag result = resultOptional.isPresent() ? resultOptional.get() : RecipeFlag.UNKNOWN;
+        return result;
+    }
+    
+    /**
+     * Gets the recipe crafting discipline for given value.
+     * @param value The source value.
+     * @return A {@code RecipeCraftingDiscipline} instance, never {@code null}.
+     * <br>If no corresponding value is found, {@code RecipeCraftingDiscipline.UNKNOWN} is returned.
+     * @see RecipeCraftingDiscipline
+     */
+    public static RecipeCraftingDiscipline findRecipeCraftingDiscipline(final String value) {
+        final Optional<RecipeCraftingDiscipline> resultOptional = Arrays.stream(RecipeCraftingDiscipline.values())
+                .filter(toTest -> value != null && value.equals(toTest.value))
+                .findFirst();
+        final RecipeCraftingDiscipline result = resultOptional.isPresent() ? resultOptional.get() : RecipeCraftingDiscipline.UNKNOWN;
+        return result;
+    }
 }
