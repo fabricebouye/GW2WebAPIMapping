@@ -17,9 +17,21 @@ import api.web.gw2.mapping.v1.APIv1;
 @APIv1(endpoint = "v1/wvw/match_details.json") // NOI18N.
 public enum MatchDetailsMapType {
 
+    /**
+     * Defines the red borderland.
+     */
     RED_HOME("RedHome"), // NOI18N.
+    /**
+     * Defines the blue borderland.
+     */
     BLUE_HOME("BlueHome"), // NOI18N.
+    /**
+     * Defines the green borderland.
+     */
     GREEN_HOME("GreenHome"), // NOI18N.
+    /**
+     * Defines the eternal battlegrounds.
+     */
     CENTER("Center"), // NOI18N.
     /**
      * Fail safe value.

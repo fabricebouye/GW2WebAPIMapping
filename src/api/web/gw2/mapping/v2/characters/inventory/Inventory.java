@@ -14,7 +14,7 @@ import api.web.gw2.mapping.v2.APIv2;
 /**
  * Defines an inventory object within a bag.
  * @author Fabrice Bouyé
- * @see Bag
+ * @see InventoryBag
  */
 @APIv2(endpoint = "v2/characters/<name>/inventory", requiresAuthentication = true) // NOI18N.
 public interface Inventory {

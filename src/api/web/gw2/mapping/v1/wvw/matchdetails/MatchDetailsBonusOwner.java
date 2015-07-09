@@ -16,9 +16,17 @@ import api.web.gw2.mapping.v1.APIv1;
  */
 @APIv1(endpoint = "v1/wvw/match_details.json") // NOI18N.
 public enum MatchDetailsBonusOwner {
-
+    /**
+    * Defines the red faction owner.
+    */
     RED("Red"), // NOI18N.
+    /**
+    * Defines the blue faction owner.
+    */
     BLUE("Blue"), // NOI18N.
+    /**
+    * Defines the green faction owner.
+    */
     GREEN("Green"), // NOI18N.
     /**
      * Fail safe value.
