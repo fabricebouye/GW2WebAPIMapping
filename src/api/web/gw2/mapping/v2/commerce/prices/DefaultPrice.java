@@ -14,8 +14,8 @@ package api.web.gw2.mapping.v2.commerce.prices;
 final class DefaultPrice implements Price {
 
     int id = -1;
-    Order buys;
-    Order sells;
+    PriceOrder buys = PriceOrder.EMPTY;
+    PriceOrder sells = PriceOrder.EMPTY;
 
     @Override
     public int getId() {
@@ -23,12 +23,12 @@ final class DefaultPrice implements Price {
     }
 
     @Override
-    public Order getBuys() {
+    public PriceOrder getBuys() {
         return buys;
     }
 
     @Override
-    public Order getSells() {
+    public PriceOrder getSells() {
         return sells;
     }
 }

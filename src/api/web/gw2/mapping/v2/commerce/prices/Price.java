@@ -27,13 +27,13 @@ public interface Price {
 
     /**
      * Gets the buy order on this item.
-     * @return An {@code Order} instance, never {@code null}.
+     * @return An {@code PriceOrder} instance, never {@code null}.
      */
-    Order getBuys();
+    PriceOrder getBuys();
 
     /**
      * Gets the sell offer on this item.
-     * @return An {@code Order} instance, never {@code null}.
+     * @return An {@code PriceOrder} instance, never {@code null}.
      */
-    Order getSells();
+    PriceOrder getSells();
 }
