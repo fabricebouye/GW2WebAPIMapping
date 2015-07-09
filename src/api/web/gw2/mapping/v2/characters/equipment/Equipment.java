@@ -34,7 +34,7 @@ public interface Equipment {
     EquipmentSlot getSlot();
 
     /**
-     * Gets the list of upgrades Ids on this equipment.
+     * Gets the list of upgrades ids on this equipment.
      * @return An {@code Optional<List<Integer>>} instance, never {@code null}:
      * If present, the list is non-modifiable and may be empty.
      */
@@ -43,11 +43,12 @@ public interface Equipment {
     Optional<List<Integer>> getUpgrades();
 
     /**
-     * Gets the list of infusions on this equipment.
+     * Gets the list of infusions ids on this equipment.
      * @return An {@code Optional<List<Integer>>} instance, never {@code null}:
      * If present, the list is non-modifiable and may be empty.
      */
     @OptionalValue
+    @IdValue
     Optional<List<Integer>> getInfusions();
 
     /**
