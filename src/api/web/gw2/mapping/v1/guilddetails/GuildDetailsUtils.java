@@ -23,15 +23,15 @@ public enum GuildDetailsUtils {
     /**
      * Gets the emblem flag for given value.
      * @param value The source value. 
-     * @return An {@code EmblemFlag} instance, never {@code null}.
-     * <br>If no corresponding value is found, {@code EmblemFlag.UNKNOWN} is returned.
-     * @see EmblemFlag
+     * @return An {@code GuildDetailsEmblemFlag} instance, never {@code null}.
+     * <br>If no corresponding value is found, {@code GuildDetailsEmblemFlag.UNKNOWN} is returned.
+     * @see GuildDetailsEmblemFlag
      */
-    public static EmblemFlag findEmblemFlag(final String value) {
-        final Optional<EmblemFlag> resultOptional = Arrays.stream(EmblemFlag.values())
+    public static GuildDetailsEmblemFlag findGuildDetailsEmblemFlag(final String value) {
+        final Optional<GuildDetailsEmblemFlag> resultOptional = Arrays.stream(GuildDetailsEmblemFlag.values())
                 .filter(toTest -> value != null && value.equals(toTest.value))
                 .findFirst();
-        final EmblemFlag result = resultOptional.isPresent() ? resultOptional.get() : EmblemFlag.UNKNOWN;
+        final GuildDetailsEmblemFlag result = resultOptional.isPresent() ? resultOptional.get() : GuildDetailsEmblemFlag.UNKNOWN;
         return result;
     }
 }

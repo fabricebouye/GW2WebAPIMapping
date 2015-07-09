@@ -40,5 +40,5 @@ public interface GuildDetails {
      * Gets the description of the emblem of the guild.
      * @return A {@code Emblem} instance, never {@code null}.
      */
-    Emblem getEmblem();
+    GuildDetailsEmblem getEmblem();
 }

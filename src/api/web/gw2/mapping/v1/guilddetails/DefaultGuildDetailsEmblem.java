@@ -14,11 +14,11 @@ import java.util.Set;
  * Default implementation of a guild emblem.
  * @author Fabrice Bouyé
  */
-final class DefaultEmblem implements Emblem {
+final class DefaultGuildDetailsEmblem implements GuildDetailsEmblem {
 
     int backgroundId = -1;
     int foregroundId = -1;
-    Set<EmblemFlag> flags = Collections.EMPTY_SET;
+    Set<GuildDetailsEmblemFlag> flags = Collections.EMPTY_SET;
     int backgroundColorId = -1;
     int foregroundPrimaryColorId = -1;
     int foregroundSecondaryColorId = -1;
@@ -26,7 +26,7 @@ final class DefaultEmblem implements Emblem {
     /**
      * Creates a new empty instance.
      */
-    DefaultEmblem() {
+    DefaultGuildDetailsEmblem() {
     }
 
     @Override
@@ -40,7 +40,7 @@ final class DefaultEmblem implements Emblem {
     }
 
     @Override
-    public Set<EmblemFlag> getFlags() {
+    public Set<GuildDetailsEmblemFlag> getFlags() {
         return flags;
     }
 

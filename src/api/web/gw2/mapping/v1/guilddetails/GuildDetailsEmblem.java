@@ -16,7 +16,7 @@ import java.util.Set;
  * @author Fabrice Bouyé
  */
 @APIv1(endpoint = "v1/guild_details") // NOI18N.
-public interface Emblem {
+public interface GuildDetailsEmblem {
 
     /**
      * Gets the id of the background image of this emblem.
@@ -55,7 +55,7 @@ public interface Emblem {
 
     /**
      * Gets a set of flags applied to this emblem.
-     * @return A non-modifiable {@code Set<EmblemFlag>}, never {@code null}, may be empty.
+     * @return A non-modifiable {@code Set<GuildDetailsEmblemFlag>}, never {@code null}, may be empty.
      */
-    Set<EmblemFlag> getFlags();
+    Set<GuildDetailsEmblemFlag> getFlags();
 }

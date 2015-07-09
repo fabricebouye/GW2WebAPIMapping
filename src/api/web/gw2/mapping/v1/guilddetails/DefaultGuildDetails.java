@@ -16,7 +16,7 @@ final class DefaultGuildDetails implements GuildDetails {
     String guildId = "";
     String guildName = "";
     String tag = "";
-    Emblem emblem = null;
+    GuildDetailsEmblem emblem = null;
 
     /**
      * Creates a new empty instance.
@@ -40,7 +40,7 @@ final class DefaultGuildDetails implements GuildDetails {
     }
 
     @Override
-    public Emblem getEmblem() {
+    public GuildDetailsEmblem getEmblem() {
         return emblem;
     }
 }

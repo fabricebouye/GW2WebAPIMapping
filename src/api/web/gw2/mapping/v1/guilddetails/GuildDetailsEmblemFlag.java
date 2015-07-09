@@ -15,7 +15,7 @@ import api.web.gw2.mapping.core.ImplementationSpecific;
  * @author Fabrice Bouyé
  */
 @APIv1(endpoint = "v1/guild_details") // NOI18N.
-public enum EmblemFlag {
+public enum GuildDetailsEmblemFlag {
 
     /**
      * The background image of the emblem is flipped horizontally.
@@ -41,7 +41,7 @@ public enum EmblemFlag {
 
     final String value;
 
-    EmblemFlag(final String value) {
+    GuildDetailsEmblemFlag(final String value) {
         this.value = value;
     }
 }
