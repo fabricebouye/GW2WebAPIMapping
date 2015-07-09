@@ -7,7 +7,7 @@
  */
 package api.web.gw2.mapping.v2.characters;
 
-import api.web.gw2.mapping.v2.characters.inventory.Bag;
+import api.web.gw2.mapping.v2.characters.inventory.InventoryBag;
 import api.web.gw2.mapping.v2.characters.equipment.Equipment;
 import java.time.LocalDate;
 import java.util.List;
@@ -29,7 +29,7 @@ final class DefaultCharacter implements Character {
     long age = -1;
     int deaths = -1;
     Optional<List<Equipment>> equipment = Optional.empty();
-    Optional<List<Bag>> bags = Optional.empty();
+    Optional<List<InventoryBag>> bags = Optional.empty();
 
     /**
      * Creates a new empty instance.
@@ -88,7 +88,7 @@ final class DefaultCharacter implements Character {
     }
 
     @Override
-    public Optional<List<Bag>> getBags() {
+    public Optional<List<InventoryBag>> getBags() {
         return bags;
     }
 }

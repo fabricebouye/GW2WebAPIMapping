@@ -13,7 +13,7 @@ import api.web.gw2.mapping.core.LevelValue;
 import api.web.gw2.mapping.core.OptionalValue;
 import api.web.gw2.mapping.core.QuantityValue;
 import api.web.gw2.mapping.v2.APIv2;
-import api.web.gw2.mapping.v2.characters.inventory.Bag;
+import api.web.gw2.mapping.v2.characters.inventory.InventoryBag;
 import api.web.gw2.mapping.v2.characters.equipment.Equipment;
 import java.time.LocalDate;
 import java.util.List;
@@ -98,5 +98,5 @@ public interface Character {
      * If present, the list is non-modifiable and may be empty.
      */
     @OptionalValue
-    Optional<List<Bag>> getBags();
+    Optional<List<InventoryBag>> getBags();
 }

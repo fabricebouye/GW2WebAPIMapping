@@ -14,7 +14,7 @@ import java.util.List;
  * Default implementation of a bag.
  * @author Fabrice Bouyé
  */
-final class DefaultBag implements Bag {
+final class DefaultInventoryBag implements InventoryBag {
 
     int id = -1;
     int size = -1;
@@ -23,7 +23,7 @@ final class DefaultBag implements Bag {
     /**
      * Creates a new instance.
      */
-    DefaultBag() {
+    DefaultInventoryBag() {
     }
 
     @Override

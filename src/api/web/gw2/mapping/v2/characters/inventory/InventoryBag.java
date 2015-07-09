@@ -17,7 +17,7 @@ import java.util.List;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/characters/<name>/inventory", requiresAuthentication = true) // NOI18N.
-public interface Bag {
+public interface InventoryBag {
 
     /**
      * Gets the Id of this bag.
