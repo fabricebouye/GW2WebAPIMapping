@@ -13,11 +13,11 @@ import api.web.gw2.mapping.core.LocalizedResource;
 import api.web.gw2.mapping.v2.APIv2;
 
 /**
- * Defines a dye.
+ * Defines a color or dye.
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/colors") // NOI18N.
-public interface Dye {
+public interface ColorDye {
 
     /**
      * Gets the id of this dye.
@@ -35,26 +35,26 @@ public interface Dye {
 
     /**
      * Gets the base rgb color of this dye.
-     * @return An {@code RGB} instance, never {@code null}.
+     * @return A {@code ColorRGB} instance, never {@code null}.
      */
     @ImplementationSpecific
-    RGB getBaseRGB();
+    ColorRGB getBaseRGB();
 
     /**
      * Gets the cloth material for this dye.
-     * @return A {@code Material} instance, never {@code null}.
+     * @return A {@code ColorMaterial} instance, never {@code null}.
      */
-    Material getCloth();
+    ColorMaterial getCloth();
 
     /**
      * Gets the leather material for this dye.
-     * @return A {@code Material} instance, never {@code null}.
+     * @return A {@code ColorMaterial} instance, never {@code null}.
      */
-    Material getLeather();
+    ColorMaterial getLeather();
 
     /**
      * Gets the metal material for this dye.
-     * @return A {@code Material} instance, never {@code null}.
+     * @return A {@code ColorMaterial} instance, never {@code null}.
      */
-    Material getMetal();
+    ColorMaterial getMetal();
 }

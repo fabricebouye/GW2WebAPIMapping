@@ -9,14 +9,14 @@ package api.web.gw2.mapping.v2.colors;
  * Default implementation of an RGB color storage.
  * @author Fabrice Bouyé
  */
-final class DefaultRGB implements RGB {
+final class DefaultColorRGB implements ColorRGB {
 
     final short[] rgb = new short[3];
 
     /**
      * Creates a new empty instance.
      */
-    DefaultRGB() {
+    DefaultColorRGB() {
     }
 
     @Override

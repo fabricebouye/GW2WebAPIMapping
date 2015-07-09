@@ -11,19 +11,19 @@ package api.web.gw2.mapping.v2.colors;
  * Default implementation of a color material.
  * @author Fabrice Bouyé
  */
-final class DefaultMaterial implements Material {
+final class DefaultColorMaterial implements ColorMaterial {
 
-    RGB rgb;
-    int brightness = -1;
-    double contrast = -1;
-    int hue = -1;
-    double saturation = -1;
-    double lightness = -1;
+    ColorRGB rgb = ColorRGB.EMPTY;
+    int brightness = 0;
+    double contrast = 0;
+    int hue = 0;
+    double saturation = 0;
+    double lightness = 0;
 
     /**
      * Creates a new empty instance.
      */
-    DefaultMaterial() {
+    DefaultColorMaterial() {
     }
 
     @Override
@@ -37,7 +37,7 @@ final class DefaultMaterial implements Material {
     }
 
     @Override
-    public RGB getRGB() {
+    public ColorRGB getRGB() {
         return rgb;
     }
     

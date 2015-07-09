@@ -11,19 +11,19 @@ package api.web.gw2.mapping.v2.colors;
  * Default implementation of a dye.
  * @author Fabrice Bouyé
  */
-final class DefaultDye implements Dye {
+final class DefaultColorDye implements ColorDye {
 
     int id = -1;
     String name = "";
-    RGB baseRGB;
-    Material cloth;
-    Material leather;
-    Material metal;
+    ColorRGB baseRGB = ColorRGB.EMPTY;
+    ColorMaterial cloth = ColorMaterial.EMPTY;
+    ColorMaterial leather = ColorMaterial.EMPTY;
+    ColorMaterial metal = ColorMaterial.EMPTY;
 
     /**
      * Creates a new empty instance.
      */
-    DefaultDye() {
+    DefaultColorDye() {
     }
 
     @Override
@@ -37,22 +37,22 @@ final class DefaultDye implements Dye {
     }
 
     @Override
-    public RGB getBaseRGB() {
+    public ColorRGB getBaseRGB() {
         return baseRGB;
     }
 
     @Override
-    public Material getCloth() {
+    public ColorMaterial getCloth() {
         return cloth;
     }
 
     @Override
-    public Material getLeather() {
+    public ColorMaterial getLeather() {
         return leather;
     }
 
     @Override
-    public Material getMetal() {
+    public ColorMaterial getMetal() {
         return metal;
     }
 }

@@ -8,6 +8,7 @@
 package api.web.gw2.mapping.v2.colors;
 
 import api.web.gw2.mapping.core.ImplementationSpecific;
+import api.web.gw2.mapping.core.QuantityValue;
 import api.web.gw2.mapping.v2.APIv2;
 
 /**
@@ -16,13 +17,19 @@ import api.web.gw2.mapping.v2.APIv2;
  */
 @APIv2(endpoint = "v2/colors") // NOI18N.
 @ImplementationSpecific
-public interface RGB {
+public interface ColorRGB {
+
+    /**
+     * A singleton instance that represents the empty or black color.
+     */
+    public static final ColorRGB EMPTY = new DefaultColorRGB();
 
     /**
      * Gets the red component of this RGB color.
      * @return An {@code int}.
      */
     @ImplementationSpecific
+    @QuantityValue
     int getRed();
 
     /**
@@ -30,6 +37,7 @@ public interface RGB {
      * @return An {@code int}.
      */
     @ImplementationSpecific
+    @QuantityValue
     int getGreen();
 
     /**
@@ -37,5 +45,6 @@ public interface RGB {
      * @return An {@code int}.
      */
     @ImplementationSpecific
+    @QuantityValue
     int getBlue();
 }

@@ -15,14 +15,19 @@ import api.web.gw2.mapping.v2.APIv2;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/colors") // NOI18N.
-public interface Material {
+public interface ColorMaterial {
+
+    /**
+     * A singleton instance that represents the black material.
+     */
+    public static final ColorMaterial EMPTY = new DefaultColorMaterial();
 
     /**
      * Gets the base rgb color of this material.
-     * @return An {@code RGB} instance, never {@code null}.
+     * @return A {@code ColorRGB} instance, never {@code null}.
      */
     @ImplementationSpecific
-    RGB getRGB();
+    ColorRGB getRGB();
 
     /**
      * Gets the brightness of this material.
