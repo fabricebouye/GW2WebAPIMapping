@@ -20,7 +20,7 @@ public interface QuagganFactory {
      * Creates a new quaggan instance.
      * @param basecode The source URL.
      * @return A {@code Quaggan} instance, never {@code null}.
-     * @throws NullPointerException If (@code basecode} is {@code null}.
+     * @throws NullPointerException If {@code basecode} is {@code null}.
      * @throws IOException In case of IO error.
      */
     Quaggan create(final String basecode) throws NullPointerException, IOException;
