@@ -41,11 +41,11 @@ public class GuildDetailsUtilsTest {
     }
 
     /**
-     * Test of findEmblemFlag method, of class GuildDetailsUtils.
+     * Test of findGuildDetailsEmblemFlag method, of class GuildDetailsUtils.
      */
     @Test
-    public void testFindEmblemFlag() {
-        System.out.println("findEmblemFlag"); // NOI18N.
+    public void testFindGuildDetailsEmblemFlag() {
+        System.out.println("findGuildDetailsEmblemFlag"); // NOI18N.
         final String[] values = {
             "FlipBackgroundHorizontal", // NOI18N.
             "FlipBackgroundVertical", // NOI18N.
@@ -54,19 +54,20 @@ public class GuildDetailsUtilsTest {
             null,
             "" // NOI18N.
         };
-        final EmblemFlag[] expResults = {
-            EmblemFlag.FLIP_BACKGROUND_HORIZONTAL,
-            EmblemFlag.FLIP_BACKGROUND_VERTICAL,
-            EmblemFlag.FLIP_FOREGROUND_HORIZONTAL,
-            EmblemFlag.FLIP_FOREGROUND_VERTICAL,
-            EmblemFlag.UNKNOWN,
-            EmblemFlag.UNKNOWN
+        final GuildDetailsEmblemFlag[] expResults = {
+            GuildDetailsEmblemFlag.FLIP_BACKGROUND_HORIZONTAL,
+            GuildDetailsEmblemFlag.FLIP_BACKGROUND_VERTICAL,
+            GuildDetailsEmblemFlag.FLIP_FOREGROUND_HORIZONTAL,
+            GuildDetailsEmblemFlag.FLIP_FOREGROUND_VERTICAL,
+            GuildDetailsEmblemFlag.UNKNOWN,
+            GuildDetailsEmblemFlag.UNKNOWN
         };
+        assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
                 forEach(index -> {
                     final String value = values[index];
-                    final EmblemFlag expResult = expResults[index];
-                    final EmblemFlag result = GuildDetailsUtils.findEmblemFlag(value);
+                    final GuildDetailsEmblemFlag expResult = expResults[index];
+                    final GuildDetailsEmblemFlag result = GuildDetailsUtils.findGuildDetailsEmblemFlag(value);
                     assertEquals(expResult, result);
                 });
     }
