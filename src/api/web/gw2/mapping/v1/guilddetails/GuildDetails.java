@@ -14,7 +14,7 @@ import api.web.gw2.mapping.v1.APIv1;
  * Defines the details of a guild.
  * @author Fabrice Bouyé
  */
-@APIv1(endpoint = "v1/guild_details") // NOI18N.
+@APIv1(endpoint = "v1/guild_details.json") // NOI18N.
 public interface GuildDetails {
 
     /**

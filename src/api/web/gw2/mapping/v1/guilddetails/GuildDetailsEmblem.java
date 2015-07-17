@@ -15,7 +15,7 @@ import java.util.Set;
  * Defines the emblem of a guild.
  * @author Fabrice Bouyé
  */
-@APIv1(endpoint = "v1/guild_details") // NOI18N.
+@APIv1(endpoint = "v1/guild_details.json") // NOI18N.
 public interface GuildDetailsEmblem {
 
     /**
