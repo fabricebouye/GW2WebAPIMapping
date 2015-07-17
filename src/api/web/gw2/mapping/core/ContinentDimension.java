@@ -19,8 +19,8 @@ public final class ContinentDimension<T extends Number> {
      */
     public static final ContinentDimension<Integer> EMPTY = new ContinentDimension(0, 0, 0, 0);
 
-    private final Point<T> nwCorner;
-    private final Point<T> seCorner;
+    private final Point2D<T> nwCorner;
+    private final Point2D<T> seCorner;
 
     /**
      * Creates a new instance.
@@ -31,15 +31,15 @@ public final class ContinentDimension<T extends Number> {
      * @throws NullPointerException If either {@code nwX}, {@code nwY}, {@code seX} or {@code seY} is {@code null}.    
      */
     public ContinentDimension(final T nwX, final T nwY, final T seX, final T seY) throws NullPointerException {
-        nwCorner = new Point(nwX, nwY);
-        seCorner = new Point(seX, seY);
+        nwCorner = new Point2D(nwX, nwY);
+        seCorner = new Point2D(seX, seY);
     }
 
     /**
      * Gets the point that defines the upper-left (NW) corner.
      * @return A {@code Point<T>} instance, never {@code null}.
      */
-    public Point<T> getNwCorner() {
+    public Point2D<T> getNwCorner() {
         return nwCorner;
     }
 
@@ -47,7 +47,7 @@ public final class ContinentDimension<T extends Number> {
      * Gets the point that defines the lower-right (SE) corner.
      * @return A {@code Point<T>} instance, never {@code null}.
      */
-    public Point<T> getSeCorner() {
+    public Point2D<T> getSeCorner() {
         return seCorner;
     }
 }

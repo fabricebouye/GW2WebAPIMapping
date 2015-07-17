@@ -18,8 +18,8 @@ public final class MapDimension<T extends Number> {
     */
     public static final MapDimension<Integer> EMPTY = new MapDimension(0, 0, 0, 0);
 
-    private final Point<T> swCorner;
-    private final Point<T> neCorner;
+    private final Point2D<T> swCorner;
+    private final Point2D<T> neCorner;
 
     /**
      * Creates a new instance.
@@ -30,15 +30,15 @@ public final class MapDimension<T extends Number> {
      * @throws NullPointerException If either {@code swX}, {@code swY}, {@code neX} or {@code neY} is {@code null}.
      */
     public MapDimension(final T swX, final T swY, final T neX, final T neY) throws NullPointerException {
-        swCorner = new Point(swX, swY);
-        neCorner = new Point(neX, neY);
+        swCorner = new Point2D(swX, swY);
+        neCorner = new Point2D(neX, neY);
     }
 
     /**
      * Gets the point that defines the lower-left (SW) corner.
      * @return A {@code Point<T>} instance, never {@code null}.
      */
-    public Point<T> getSwCorner() {
+    public Point2D<T> getSwCorner() {
         return swCorner;
     }
 
@@ -46,7 +46,7 @@ public final class MapDimension<T extends Number> {
      * Gets the point that defines the upper-right (NE) corner.
      * @return A {@code Point<T>} instance, never {@code null}.
      */
-    public Point<T> getNeCorner() {
+    public Point2D<T> getNeCorner() {
         return neCorner;
     }
 }
