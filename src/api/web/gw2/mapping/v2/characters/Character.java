@@ -59,10 +59,11 @@ public interface Character {
 
     /**
      * Gets the id of the guild of this character.
-     * @return A {@code String}, may be {@code null}.
+     * @return An {@code Optional<String>} instance, never {@code null}.
      */
     @IdValue
-    String getGuild();
+    @OptionalValue
+    Optional<String> getGuild();
 
     /**
      * Gets the creation date of this character.

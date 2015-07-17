@@ -24,10 +24,10 @@ final class DefaultCharacter implements Character {
     CharacterProfession profession = CharacterProfession.UNKNOWN;
     CharacterGender gender = CharacterGender.UNKNOWN;
     int level = -1;
-    String guild = null;
+    Optional<String> guild = Optional.empty();
     LocalDate created = LocalDate.MIN;
-    long age = -1;
-    int deaths = -1;
+    long age = 0;
+    int deaths = 0;
     Optional<List<Equipment>> equipment = Optional.empty();
     Optional<List<InventoryBag>> bags = Optional.empty();
 
@@ -63,7 +63,7 @@ final class DefaultCharacter implements Character {
     }
 
     @Override
-    public String getGuild() {
+    public Optional<String> getGuild() {
         return guild;
     }
 
