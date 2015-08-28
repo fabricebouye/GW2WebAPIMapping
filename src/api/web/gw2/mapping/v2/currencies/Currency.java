@@ -14,7 +14,7 @@ import api.web.gw2.mapping.v2.APIv2;
  * Defines a currency.
  * @author Fabrice Bouyé
  */
-@APIv2
+@APIv2(endpoint = "v2/currencies") // NOI18N.
 public interface Currency {
 
     /**
