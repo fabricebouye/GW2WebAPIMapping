@@ -50,6 +50,10 @@ public class TokenInfoUtilsTest {
             "characters", // NOI18N.
             "inventories", // NOI18N.
             "tradingpost", // NOI18N.
+            "builds", // NOI18N.
+            "unlocks", // NOI18N.
+            "pvp", // NOI18N.
+            "wallet", // NOI18N.
             null,
             "" // NOI18N.
         };
@@ -58,9 +62,14 @@ public class TokenInfoUtilsTest {
             TokenInfoPermission.CHARACTERS,
             TokenInfoPermission.INVENTORIES,
             TokenInfoPermission.TRADINGPOST,
+            TokenInfoPermission.BUILDS,
+            TokenInfoPermission.UNLOCKS,
+            TokenInfoPermission.PVP,
+            TokenInfoPermission.WALLET,
             TokenInfoPermission.UNKNOWN,
             TokenInfoPermission.UNKNOWN
         };
+        assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
                 forEach(index -> {
                     final String value = values[index];

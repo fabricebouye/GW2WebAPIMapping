@@ -11,15 +11,12 @@ import api.web.gw2.mapping.core.ImplementationSpecific;
 import api.web.gw2.mapping.v2.APIv2;
 
 /**
- * Defines permissions on a token info..
+ * Defines permissions on a token info.
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/tokeninfo", requiresAuthentication = true)
 public enum TokenInfoPermission {
 
-    /**
-     * Defines the account permission.
-     */
     /**
      * Defines the account permission.
      */
@@ -36,6 +33,22 @@ public enum TokenInfoPermission {
      * Defines the tradingpost permission.
      */
     TRADINGPOST("tradingpost"), // NOI18N.
+    /**
+     * Defines the wallet permission.
+     */
+    WALLET("wallet"), // NOI18N.
+    /**
+     * Defines the unlocks permission.
+     */
+    UNLOCKS("unlocks"), // NOI18N.
+    /**
+     * Defines the pvp permission.
+     */
+    PVP("pvp"), // NOI18N.
+    /**
+     * Defines the builds permission.
+     */
+    BUILDS("builds"), // NOI18N.
     /**
      * Fail safe value.
      */
