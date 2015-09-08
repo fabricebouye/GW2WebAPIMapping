@@ -12,6 +12,7 @@ import api.web.gw2.mapping.core.LocalizedResource;
 import api.web.gw2.mapping.v2.APIv2;
 import api.web.gw2.mapping.v2.characters.CharacterProfession;
 import java.net.URL;
+import java.util.Set;
 
 /**
  * Defines a specialization.
@@ -51,13 +52,13 @@ public interface Specialization {
      * @return A {@code URL} instance, never {@code null}.
      */
     URL getIcon();
-    
+
     /**
      * Gets the ids of minor traits for this specialization.
      * @return A non-modifiable {@code Set<Integer>}, never {@code null}.
      */
     Set<Integer> getMinorTraits();
-    
+
     /**
      * Gets the ids of major traits for this specialization.
      * @return A non-modifiable {@code Set<Integer>}, never {@code null}.
