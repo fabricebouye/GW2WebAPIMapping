@@ -45,6 +45,7 @@ public class TokenInfoUtilsTest {
      */
     @Test
     public void testFindTokenInfoPermission() {
+        System.out.println("findTokenInfoPermission");
         final String[] values = {
             "account", // NOI18N.
             "characters", // NOI18N.

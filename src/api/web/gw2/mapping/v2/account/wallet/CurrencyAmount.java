@@ -17,13 +17,14 @@ import api.web.gw2.mapping.v2.APIv2;
  */
 @APIv2(endpoint = "v2/account/wallet", requiresAuthentication = true) // NOI18N.
 public interface CurrencyAmount {
+
     /**
      * The id of the currency.
      * @return An {@code int}.
      */
     @IdValue
     public int getId();
-    
+
     /**
      * Gets the amount of this currency.
      * @return An {@code int}.
