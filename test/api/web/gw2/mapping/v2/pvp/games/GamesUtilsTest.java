@@ -19,9 +19,9 @@ import static org.junit.Assert.*;
  * Unit test.
  * @author Fabrice Bouyé
  */
-public class GameUtilsTest {
+public class GamesUtilsTest {
 
-    public GameUtilsTest() {
+    public GamesUtilsTest() {
     }
 
     @BeforeClass
@@ -41,7 +41,7 @@ public class GameUtilsTest {
     }
 
     /**
-     * Test of findGameTeam method, of class GameUtils.
+     * Test of findGameTeam method, of class GamesUtils.
      */
     @Test
     public void testFindGameTeam() {
@@ -67,13 +67,13 @@ public class GameUtilsTest {
                 forEach(index -> {
                     final String value = values[index];
                     final GameTeam expResult = expResults[index];
-                    final GameTeam result = GameUtils.findGameTeam(value);
+                    final GameTeam result = GamesUtils.findGameTeam(value);
                     assertEquals(expResult, result);
                 });
     }
 
     /**
-     * Test of findGameResult method, of class GameUtils.
+     * Test of findGameResult method, of class GamesUtils.
      */
     @Test
     public void testFindGameResult() {
@@ -95,7 +95,7 @@ public class GameUtilsTest {
                 forEach(index -> {
                     final String value = values[index];
                     final GameResult expResult = expResults[index];
-                    final GameResult result = GameUtils.findGameResult(value);
+                    final GameResult result = GamesUtils.findGameResult(value);
                     assertEquals(expResult, result);
                 });
     }

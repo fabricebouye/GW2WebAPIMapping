@@ -14,7 +14,7 @@ import java.util.Optional;
  * Utility class for PvP games.
  * @author Fabrice Bouyé
  */
-public enum GameUtils {
+public enum GamesUtils {
 
     /**
      * Unique instance of this class.
