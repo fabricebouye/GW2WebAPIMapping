@@ -10,7 +10,6 @@ package api.web.gw2.mapping.v2.pvp.games;
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.v2.APIv2;
 import api.web.gw2.mapping.v2.characters.CharacterProfession;
-import com.oracle.webservices.internal.api.databinding.DatabindingMode;
 import java.time.LocalDateTime;
 import java.util.Map;
 
