@@ -11,7 +11,7 @@ import java.util.Arrays;
 import java.util.Optional;
 
 /**
- * Utility class for recipes.
+ * Utility class for PvP games.
  * @author Fabrice Bouyé
  */
 public enum GameUtils {
