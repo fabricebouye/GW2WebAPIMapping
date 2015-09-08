@@ -41,7 +41,7 @@ public class GameUtilsTest {
     }
 
     /**
-     * Test of findGameTeam method, of class TokenInfoUtils.
+     * Test of findGameTeam method, of class GameUtils.
      */
     @Test
     public void testFindGameTeam() {
@@ -73,7 +73,7 @@ public class GameUtilsTest {
     }
 
     /**
-     * Test of findGameResult method, of class TokenInfoUtils.
+     * Test of findGameResult method, of class GameUtils.
      */
     @Test
     public void testFindGameResult() {
