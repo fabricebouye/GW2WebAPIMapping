@@ -7,6 +7,7 @@
  */
 package api.web.gw2.mapping.v2.commerce.transactions;
 
+import api.web.gw2.mapping.core.CoinAmount;
 import api.web.gw2.mapping.core.CoinValue;
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.OptionalValue;
@@ -38,10 +39,10 @@ public interface Transaction {
 
     /**
      * Gets the price in coins.
-     * @return An {@code int}.
+     * @return A {@code CoinAmount} instance, never {@code null}.
      */
     @CoinValue
-    int getPrice();
+    CoinAmount getPrice();
 
     /**
      * Gets the quantity of the item.

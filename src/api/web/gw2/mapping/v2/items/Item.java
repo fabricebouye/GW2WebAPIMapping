@@ -7,6 +7,7 @@
  */
 package api.web.gw2.mapping.v2.items;
 
+import api.web.gw2.mapping.core.CoinAmount;
 import api.web.gw2.mapping.core.CoinValue;
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.LevelValue;
@@ -68,10 +69,10 @@ public interface Item {
 
     /**
      * Gets the vendor value of this item in coins.
-     * @return An {@code int}.
+     * @return A {@code CoinAmount} instance, never {@code null}.
      */
     @CoinValue
-    int getVendorValue();
+    CoinAmount getVendorValue();
 
     /**
      * Gets the id of the default skin of this item.

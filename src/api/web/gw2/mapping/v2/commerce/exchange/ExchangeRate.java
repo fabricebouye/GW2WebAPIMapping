@@ -7,6 +7,7 @@
  */
 package api.web.gw2.mapping.v2.commerce.exchange;
 
+import api.web.gw2.mapping.core.CoinAmount;
 import api.web.gw2.mapping.core.CoinValue;
 import api.web.gw2.mapping.core.QuantityValue;
 import api.web.gw2.mapping.v2.APIv2;
@@ -26,10 +27,10 @@ public interface ExchangeRate {
 
     /**
      * Gets the number of coins you get for a single gem.
-     * @return An {@code int}
+     * @return A {@code CoinAmount} instance, never {@code null}.
      */
     @CoinValue
-    int getCoinsPerGem();
+    CoinAmount getCoinsPerGem();
 
     /**
      * The returned quantity.

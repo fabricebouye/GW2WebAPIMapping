@@ -7,6 +7,7 @@
  */
 package api.web.gw2.mapping.v2.commerce.prices;
 
+import api.web.gw2.mapping.core.CoinAmount;
 import api.web.gw2.mapping.core.CoinValue;
 import api.web.gw2.mapping.core.QuantityValue;
 import api.web.gw2.mapping.v2.APIv2;
@@ -29,10 +30,10 @@ public interface PriceOrder {
 
     /**
      * Gets the highest buy order or lowest sell offer price in coins.
-     * @return An {@code int}.
+     * @return A {@code CoinAmount} instance, never {@code null}.
      */
     @CoinValue
-    int getUnitPrice();
+    CoinAmount getUnitPrice();
 
     /**
      * Gets the amount of items being sold/bought.

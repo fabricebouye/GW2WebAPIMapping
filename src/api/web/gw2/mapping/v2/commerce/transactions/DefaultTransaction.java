@@ -7,6 +7,8 @@
  */
 package api.web.gw2.mapping.v2.commerce.transactions;
 
+import api.web.gw2.mapping.core.CoinAmount;
+import api.web.gw2.mapping.core.CoinValue;
 import java.time.LocalDate;
 import java.util.Optional;
 
@@ -18,7 +20,8 @@ final class DefaultTransaction implements Transaction {
 
     int id = -1;
     int itemId = -1;
-    int price = -1;
+    @CoinValue
+    CoinAmount price = CoinAmount.ZERO;
     int quantity = -1;
     LocalDate created = LocalDate.MIN;
     Optional<LocalDate> purchased = Optional.empty();
@@ -34,7 +37,7 @@ final class DefaultTransaction implements Transaction {
     }
 
     @Override
-    public int getPrice() {
+    public CoinAmount getPrice() {
         return price;
     }
 

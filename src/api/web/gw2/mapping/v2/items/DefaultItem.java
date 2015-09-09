@@ -7,6 +7,8 @@
  */
 package api.web.gw2.mapping.v2.items;
 
+import api.web.gw2.mapping.core.CoinAmount;
+import api.web.gw2.mapping.core.CoinValue;
 import java.util.Collections;
 import java.util.Optional;
 import java.util.OptionalInt;
@@ -24,7 +26,8 @@ final class DefaultItem implements Item {
     ItemType type = ItemType.WEAPON;
     short level = -1;
     ItemRarity rarity = ItemRarity.UNKNOWN;
-    int vendorValue = -1;
+    @CoinValue
+    CoinAmount vendorValue = CoinAmount.ZERO;
     OptionalInt defaultSkin = OptionalInt.empty();
     Set<ItemFlag> flags = Collections.EMPTY_SET;
     Set<ItemGameType> gameTypes = Collections.EMPTY_SET;
@@ -69,7 +72,7 @@ final class DefaultItem implements Item {
     }
 
     @Override
-    public int getVendorValue() {
+    public CoinAmount getVendorValue() {
         return vendorValue;
     }
 

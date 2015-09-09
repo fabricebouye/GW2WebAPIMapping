@@ -7,28 +7,33 @@
  */
 package api.web.gw2.mapping.v2.commerce.listings;
 
+import api.web.gw2.mapping.core.CoinAmount;
+import api.web.gw2.mapping.core.CoinValue;
+
 /**
  * Default implementation of a listing
  * @author Fabrice Bouyé
  */
 final class DefaultListing implements Listing {
+
     int listing = -1;
-    int unitPrice = -1;
+    @CoinValue
+    CoinAmount unitPrice = CoinAmount.ZERO;
     int quantity = -1;
 
     /**
-    * Creates a new empty instance.
-    */
-    DefaultListing() {        
+     * Creates a new empty instance.
+     */
+    DefaultListing() {
     }
-    
+
     @Override
     public int getListings() {
         return listing;
     }
 
     @Override
-    public int getUnitPrice() {
+    public CoinAmount getUnitPrice() {
         return unitPrice;
     }
 

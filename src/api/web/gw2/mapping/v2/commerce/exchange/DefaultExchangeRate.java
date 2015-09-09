@@ -7,13 +7,17 @@
  */
 package api.web.gw2.mapping.v2.commerce.exchange;
 
+import api.web.gw2.mapping.core.CoinAmount;
+import api.web.gw2.mapping.core.CoinValue;
+
 /**
  * Default implementation of an exchange rate.
  * @author Fabrice Bouyé
  */
 final class DefaultExchangeRate implements ExchangeRate {
 
-    int coinsPerGem = -1;
+    @CoinValue
+    CoinAmount coinsPerGem = CoinAmount.ZERO;
     int quantity = -1;
 
     /**
@@ -23,7 +27,7 @@ final class DefaultExchangeRate implements ExchangeRate {
     }
 
     @Override
-    public int getCoinsPerGem() {
+    public CoinAmount getCoinsPerGem() {
         return coinsPerGem;
     }
 

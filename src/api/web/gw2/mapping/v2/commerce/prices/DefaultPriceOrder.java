@@ -7,13 +7,17 @@
  */
 package api.web.gw2.mapping.v2.commerce.prices;
 
+import api.web.gw2.mapping.core.CoinAmount;
+import api.web.gw2.mapping.core.CoinValue;
+
 /**
  * Default implementation of an order.
  * @author Fabrice Bouyé
  */
 final class DefaultPriceOrder implements PriceOrder {
 
-    int unitPrice = 0;
+    @CoinValue
+    CoinAmount unitPrice = CoinAmount.ZERO;
     int quantity = 0;
 
     /**
@@ -23,7 +27,7 @@ final class DefaultPriceOrder implements PriceOrder {
     }
 
     @Override
-    public int getUnitPrice() {
+    public CoinAmount getUnitPrice() {
         return unitPrice;
     }
 
