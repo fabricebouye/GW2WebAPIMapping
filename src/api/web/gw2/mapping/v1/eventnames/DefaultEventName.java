@@ -11,7 +11,7 @@ package api.web.gw2.mapping.v1.eventnames;
  * Default implementation of the name of an event.
  * @author Fabrice Bouyé
  */
-final class DefaultEventDetails implements EventName {
+final class DefaultEventName implements EventName {
 
     String id = "";
     String name = "";
@@ -19,7 +19,7 @@ final class DefaultEventDetails implements EventName {
     /**
      * Creates a new empty instance.
      */
-    DefaultEventDetails() {
+    DefaultEventName() {
     }
 
     @Override
