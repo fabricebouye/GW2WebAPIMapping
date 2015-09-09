@@ -11,7 +11,8 @@ import java.util.Objects;
 
 /**
  * Contains a value in copper coins.
- * This class does not support negative values.
+ * <br/>This class does not support negative values. Negative values will be returned as {@code CoinAmount.ZERO}.
+ * <br/>Instance of this class are not mutable.
  * @author Fabrice Bouyé
  */
 public final class CoinAmount implements Comparable<CoinAmount> {
@@ -51,7 +52,7 @@ public final class CoinAmount implements Comparable<CoinAmount> {
     }
 
     @Override
-    public boolean equals(Object obj) {
+    public boolean equals(final Object obj) {
         return (obj instanceof CoinAmount) ? value == ((CoinAmount) obj).value : false;
     }
 
@@ -61,8 +62,9 @@ public final class CoinAmount implements Comparable<CoinAmount> {
     }
 
     @Override
-    public int compareTo(CoinAmount o) {
-        return Long.compare(value, o.value);
+    public int compareTo(final CoinAmount obj) {
+        Objects.requireNonNull(obj);
+        return Long.compare(value, obj.value);
     }
 
     /**
