@@ -8,8 +8,11 @@
 package api.web.gw2.mapping.v2.traits;
 
 import api.web.gw2.mapping.core.LocalizedResource;
+import api.web.gw2.mapping.core.OptionalValue;
+import api.web.gw2.mapping.core.URLValue;
 import api.web.gw2.mapping.v2.APIv2;
 import java.net.URL;
+import java.util.Optional;
 
 /**
  * Defines a trait prefix.
@@ -27,9 +30,11 @@ public interface TraitPrefix {
 
     /**
      * Gets the URL to the icon of this fact.
-     * @return A {@code URL} instance, never {@code null}.
+     * @return An {@code Optional<URL>} instance, never {@code null}.
      */
-    URL getIcon();
+    @OptionalValue
+    @URLValue
+    Optional<URL> getIcon();
 
     @LocalizedResource
     String getStatus();

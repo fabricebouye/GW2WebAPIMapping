@@ -9,9 +9,12 @@ package api.web.gw2.mapping.v2.specializations;
 
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.LocalizedResource;
+import api.web.gw2.mapping.core.OptionalValue;
+import api.web.gw2.mapping.core.URLValue;
 import api.web.gw2.mapping.v2.APIv2;
 import api.web.gw2.mapping.v2.characters.CharacterProfession;
 import java.net.URL;
+import java.util.Optional;
 import java.util.Set;
 
 /**
@@ -49,9 +52,11 @@ public interface Specialization {
 
     /**
      * Gets the URL for the icon of this specializatoin.
-     * @return A {@code URL} instance, never {@code null}.
+     * @return An {@code Optional<URL>} instance, never {@code null}.
      */
-    URL getIcon();
+    @OptionalValue
+    @URLValue
+    Optional<URL> getIcon();
 
     /**
      * Gets the ids of minor traits for this specialization.

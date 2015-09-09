@@ -9,6 +9,7 @@ package api.web.gw2.mapping.v2.items;
 
 import api.web.gw2.mapping.core.CoinAmount;
 import api.web.gw2.mapping.core.CoinValue;
+import java.net.URL;
 import java.util.Collections;
 import java.util.Optional;
 import java.util.OptionalInt;
@@ -32,7 +33,7 @@ final class DefaultItem implements Item {
     Set<ItemFlag> flags = Collections.EMPTY_SET;
     Set<ItemGameType> gameTypes = Collections.EMPTY_SET;
     Set<ItemRestriction> restrictions = Collections.EMPTY_SET;
-    String icon = "";
+    Optional<URL> icon = Optional.empty();
     Optional<ItemDetails> details = Optional.empty();
 
     /**
@@ -97,7 +98,7 @@ final class DefaultItem implements Item {
     }
 
     @Override
-    public String getIcon() {
+    public Optional<URL> getIcon() {
         return icon;
     }
 

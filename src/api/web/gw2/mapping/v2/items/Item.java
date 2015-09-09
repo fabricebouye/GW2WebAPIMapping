@@ -15,6 +15,7 @@ import api.web.gw2.mapping.core.LocalizedResource;
 import api.web.gw2.mapping.core.OptionalValue;
 import api.web.gw2.mapping.core.URLValue;
 import api.web.gw2.mapping.v2.APIv2;
+import java.net.URL;
 import java.util.Optional;
 import java.util.OptionalInt;
 import java.util.Set;
@@ -102,10 +103,11 @@ public interface Item {
 
     /**
      * Gets the URL to the icon of this item.
-     * @return A {@code String} instance, never {@code null}. 
+     * @return An {@code Optional<URL>} instance, never {@code null}.
      */
+    @OptionalValue
     @URLValue
-    String getIcon();
+    Optional<URL> getIcon();
 
     /**
      * Gets the details of this object.

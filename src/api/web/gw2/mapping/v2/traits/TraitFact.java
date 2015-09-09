@@ -9,6 +9,7 @@ package api.web.gw2.mapping.v2.traits;
 
 import api.web.gw2.mapping.core.LocalizedResource;
 import api.web.gw2.mapping.core.OptionalValue;
+import api.web.gw2.mapping.core.URLValue;
 import java.net.URL;
 import java.util.Optional;
 
@@ -37,5 +38,6 @@ public interface TraitFact {
      * @return An {@code Optional<URL>} instance, never {@code null}.
      */
     @OptionalValue
+    @URLValue
     Optional<URL> getIcon();
 }

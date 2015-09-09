@@ -7,17 +7,25 @@
  */
 package api.web.gw2.mapping.v2.files;
 
+import api.web.gw2.mapping.core.OptionalValue;
+import api.web.gw2.mapping.core.URLValue;
+import java.net.URL;
+import java.util.Optional;
+
 /**
  * Default implementation of a file.
  * @author Fabrice Bouyé
  */
 final class DefaultFile implements File {
+
     String id = "";
-    String icon = "";
+    @OptionalValue
+    @URLValue
+    Optional<URL> icon = Optional.empty();
 
     /**
-    * Creates a new empty instance.
-    */
+     * Creates a new empty instance.
+     */
     DefaultFile() {
     }
 
@@ -27,7 +35,7 @@ final class DefaultFile implements File {
     }
 
     @Override
-    public String getIcon() {
+    public Optional<URL> getIcon() {
         return icon;
     }
 }
