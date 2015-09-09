@@ -51,6 +51,16 @@ public final class CoinAmount implements Comparable<CoinAmount> {
     }
 
     @Override
+    public boolean equals(Object obj) {
+        return (obj instanceof CoinAmount) ? value == ((CoinAmount) obj).value : false;
+    }
+
+    @Override
+    public int hashCode() {
+        return Long.hashCode(value);
+    }
+
+    @Override
     public int compareTo(CoinAmount o) {
         return Long.compare(value, o.value);
     }
@@ -241,6 +251,6 @@ public final class CoinAmount implements Comparable<CoinAmount> {
         if (amount == 0) {
             return this;
         }
-        return ofCopper(amount * GOLD_VALUE);
+        return ofCopper(value - amount * GOLD_VALUE);
     }
 }

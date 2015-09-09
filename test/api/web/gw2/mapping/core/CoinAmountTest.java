@@ -1,10 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/* 
+ * Copyright (C) 2015 Fabrice Bouyé
+ * All rights reserved.
+ *
+ * This software may be modified and distributed under the terms
+ * of the BSD license.  See the LICENSE file for details.
  */
 package api.web.gw2.mapping.core;
 
+import java.util.stream.IntStream;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -13,8 +16,8 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
- *
- * @author Fabrice
+ * Unit test.
+ * @author Fabrice Bouyé
  */
 public class CoinAmountTest {
 
@@ -42,10 +45,41 @@ public class CoinAmountTest {
      */
     @Test
     public void testToString() {
-        CoinAmount instance = CoinAmount.ofCopper(15704);
-        String expResult = "1G57S04C";
-        String result = instance.toString();
+        final CoinAmount instance = CoinAmount.ofCopper(15704);
+        final String expResult = "1G57S04C";
+        final String result = instance.toString();
         assertEquals(expResult, result);
+    }
+
+    /**
+     * Test of equals method, of class CoinAmount.
+     */
+    @Test
+    public void testEquals() {
+        System.out.println("equals");
+        final CoinAmount instance = CoinAmount.ofCopper(15704);
+        final CoinAmount[] values = {
+            CoinAmount.ofCopper(0),
+            CoinAmount.ofCopper(1),
+            CoinAmount.ofCopper(15704),
+            CoinAmount.ofCopper(Integer.MAX_VALUE),
+            null
+        };
+        final boolean expResults[] = {
+            false,
+            false,
+            true,
+            false,
+            false
+        };
+        assertEquals(values.length, expResults.length);
+        IntStream.range(0, values.length)
+                .forEach(index -> {
+                    final CoinAmount value = values[index];
+                    final boolean expResult = expResults[index];
+                    final boolean result = instance.equals(value);
+                    assertEquals(expResult, result);
+                });
     }
 
     /**
@@ -54,13 +88,27 @@ public class CoinAmountTest {
     @Test
     public void testCompareTo() {
         System.out.println("compareTo");
-        CoinAmount o = null;
-        CoinAmount instance = null;
-        int expResult = 0;
-        int result = instance.compareTo(o);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        final CoinAmount instance = CoinAmount.ofCopper(15704);
+        final CoinAmount[] values = {
+            CoinAmount.ofCopper(0),
+            CoinAmount.ofCopper(1),
+            CoinAmount.ofCopper(15704),
+            CoinAmount.ofCopper(Integer.MAX_VALUE)
+        };
+        final int expResults[] = {
+            1,
+            1,
+            0,
+            -1
+        };
+        assertEquals(values.length, expResults.length);
+        IntStream.range(0, values.length)
+                .forEach(index -> {
+                    final CoinAmount value = values[index];
+                    final int expResult = expResults[index];
+                    final int result = instance.compareTo(value);
+                    assertEquals(expResult, result);
+                });
     }
 
     /**
@@ -69,12 +117,26 @@ public class CoinAmountTest {
     @Test
     public void testToCopper() {
         System.out.println("toCopper");
-        CoinAmount instance = null;
-        long expResult = 0L;
-        long result = instance.toCopper();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        final CoinAmount[] instances = {
+            CoinAmount.ofCopper(0),
+            CoinAmount.ofCopper(1),
+            CoinAmount.ofCopper(15704),
+            CoinAmount.ofCopper(Integer.MAX_VALUE)
+        };
+        final long expResults[] = {
+            0,
+            1,
+            15704,
+            Integer.MAX_VALUE
+        };
+        assertEquals(instances.length, expResults.length);
+        IntStream.range(0, instances.length)
+                .forEach(index -> {
+                    final CoinAmount values = instances[index];
+                    final long expResult = expResults[index];
+                    final long result = values.toCopper();
+                    assertEquals(expResult, result);
+                });
     }
 
     /**
@@ -83,12 +145,26 @@ public class CoinAmountTest {
     @Test
     public void testToSilver() {
         System.out.println("toSilver");
-        CoinAmount instance = null;
-        long expResult = 0L;
-        long result = instance.toSilver();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        final CoinAmount[] instances = {
+            CoinAmount.ofCopper(0),
+            CoinAmount.ofCopper(1),
+            CoinAmount.ofCopper(15704),
+            CoinAmount.ofCopper(Integer.MAX_VALUE)
+        };
+        final long expResults[] = {
+            0,
+            1 / 100L,
+            15704 / 100L,
+            Integer.MAX_VALUE / 100L
+        };
+        assertEquals(instances.length, expResults.length);
+        IntStream.range(0, instances.length)
+                .forEach(index -> {
+                    final CoinAmount values = instances[index];
+                    final long expResult = expResults[index];
+                    final long result = values.toSilver();
+                    assertEquals(expResult, result);
+                });
     }
 
     /**
@@ -97,12 +173,26 @@ public class CoinAmountTest {
     @Test
     public void testToGold() {
         System.out.println("toGold");
-        CoinAmount instance = null;
-        long expResult = 0L;
-        long result = instance.toGold();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        final CoinAmount[] instances = {
+            CoinAmount.ofCopper(0),
+            CoinAmount.ofCopper(1),
+            CoinAmount.ofCopper(15704),
+            CoinAmount.ofCopper(Integer.MAX_VALUE)
+        };
+        final long expResults[] = {
+            0,
+            1 / 10000L,
+            15704 / 10000L,
+            Integer.MAX_VALUE / 10000L
+        };
+        assertEquals(instances.length, expResults.length);
+        IntStream.range(0, instances.length)
+                .forEach(index -> {
+                    final CoinAmount values = instances[index];
+                    final long expResult = expResults[index];
+                    final long result = values.toGold();
+                    assertEquals(expResult, result);
+                });
     }
 
     /**
@@ -111,12 +201,30 @@ public class CoinAmountTest {
     @Test
     public void testOfCopper() {
         System.out.println("ofCopper");
-        long amount = 0L;
-        CoinAmount expResult = null;
-        CoinAmount result = CoinAmount.ofCopper(amount);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        final CoinAmount[] instances = {
+            CoinAmount.ofCopper(0),
+            CoinAmount.ofCopper(1),
+            CoinAmount.ofCopper(15704),
+            CoinAmount.ofCopper(Integer.MAX_VALUE),
+            CoinAmount.ofCopper(-1),
+            CoinAmount.ofCopper(Integer.MIN_VALUE)
+        };
+        final long expResults[] = {
+            0,
+            1,
+            15704,
+            Integer.MAX_VALUE,
+            0,
+            0
+        };
+        assertEquals(instances.length, expResults.length);
+        IntStream.range(0, instances.length)
+                .forEach(index -> {
+                    final CoinAmount values = instances[index];
+                    final long expResult = expResults[index];
+                    final long result = values.toCopper();
+                    assertEquals(expResult, result);
+                });
     }
 
     /**
@@ -125,12 +233,30 @@ public class CoinAmountTest {
     @Test
     public void testOfSilver() {
         System.out.println("ofSilver");
-        long amount = 0L;
-        CoinAmount expResult = null;
-        CoinAmount result = CoinAmount.ofSilver(amount);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        final CoinAmount[] instances = {
+            CoinAmount.ofSilver(0),
+            CoinAmount.ofSilver(1),
+            CoinAmount.ofSilver(15704),
+            CoinAmount.ofSilver(Integer.MAX_VALUE),
+            CoinAmount.ofSilver(-1),
+            CoinAmount.ofSilver(Integer.MIN_VALUE)
+        };
+        final long expResults[] = {
+            0,
+            1 * 100L,
+            15704 * 100L,
+            Integer.MAX_VALUE * 100L,
+            0,
+            0
+        };
+        assertEquals(instances.length, expResults.length);
+        IntStream.range(0, instances.length)
+                .forEach(index -> {
+                    final CoinAmount values = instances[index];
+                    final long expResult = expResults[index];
+                    final long result = values.toCopper();
+                    assertEquals(expResult, result);
+                });
     }
 
     /**
@@ -139,12 +265,30 @@ public class CoinAmountTest {
     @Test
     public void testOfGold() {
         System.out.println("ofGold");
-        long amount = 0L;
-        CoinAmount expResult = null;
-        CoinAmount result = CoinAmount.ofGold(amount);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        final CoinAmount[] instances = {
+            CoinAmount.ofGold(0),
+            CoinAmount.ofGold(1),
+            CoinAmount.ofGold(15704),
+            CoinAmount.ofGold(Integer.MAX_VALUE),
+            CoinAmount.ofGold(-1),
+            CoinAmount.ofGold(Integer.MIN_VALUE)
+        };
+        final long expResults[] = {
+            0,
+            1 * 10000L,
+            15704 * 10000L,
+            Integer.MAX_VALUE * 10000L,
+            0,
+            0
+        };
+        assertEquals(instances.length, expResults.length);
+        IntStream.range(0, instances.length)
+                .forEach(index -> {
+                    final CoinAmount values = instances[index];
+                    final long expResult = expResults[index];
+                    final long result = values.toCopper();
+                    assertEquals(expResult, result);
+                });
     }
 
     /**
@@ -153,13 +297,31 @@ public class CoinAmountTest {
     @Test
     public void testDividedBy() {
         System.out.println("dividedBy");
-        long divisor = 0L;
-        CoinAmount instance = null;
-        CoinAmount expResult = null;
-        CoinAmount result = instance.dividedBy(divisor);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        final CoinAmount instance = CoinAmount.ofCopper(15704);
+        final long[] values = {
+            //            0,
+            2,
+            15704,
+            Integer.MAX_VALUE,
+            -1,
+            Integer.MIN_VALUE
+        };
+        final CoinAmount[] expResults = {
+            //            CoinAmount.ofCopper(0),
+            CoinAmount.ofCopper(15704 / (long) 2),
+            CoinAmount.ofCopper(15704 / (long) 15704),
+            CoinAmount.ofCopper(15704 / (long) Integer.MAX_VALUE),
+            CoinAmount.ofCopper(0),
+            CoinAmount.ofCopper(0)
+        };
+        assertEquals(values.length, expResults.length);
+        IntStream.range(0, values.length)
+                .forEach(index -> {
+                    final long value = values[index];
+                    final CoinAmount expResult = expResults[index];
+                    final CoinAmount result = instance.dividedBy(value);
+                    assertEquals(expResult, result);
+                });
     }
 
     /**
@@ -168,13 +330,31 @@ public class CoinAmountTest {
     @Test
     public void testMultiplyBy() {
         System.out.println("multiplyBy");
-        long multiplicand = 0L;
-        CoinAmount instance = null;
-        CoinAmount expResult = null;
-        CoinAmount result = instance.multiplyBy(multiplicand);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        final CoinAmount instance = CoinAmount.ofCopper(15704);
+        final long[] values = {
+            0,
+            2,
+            15704,
+            Integer.MAX_VALUE,
+            -1,
+            Integer.MIN_VALUE
+        };
+        final CoinAmount[] expResults = {
+            CoinAmount.ofCopper(0),
+            CoinAmount.ofCopper(15704 * (long) 2),
+            CoinAmount.ofCopper(15704 * (long) 15704),
+            CoinAmount.ofCopper(15704 * (long) Integer.MAX_VALUE),
+            CoinAmount.ofCopper(0),
+            CoinAmount.ofCopper(0)
+        };
+        assertEquals(values.length, expResults.length);
+        IntStream.range(0, values.length)
+                .forEach(index -> {
+                    final long value = values[index];
+                    final CoinAmount expResult = expResults[index];
+                    final CoinAmount result = instance.multiplyBy(value);
+                    assertEquals(expResult, result);
+                });
     }
 
     /**
@@ -183,13 +363,31 @@ public class CoinAmountTest {
     @Test
     public void testPlus() {
         System.out.println("plus");
-        CoinAmount amount = null;
-        CoinAmount instance = null;
-        CoinAmount expResult = null;
-        CoinAmount result = instance.plus(amount);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        final CoinAmount instance = CoinAmount.ofCopper(15704);
+        final CoinAmount[] values = {
+            CoinAmount.ofCopper(0),
+            CoinAmount.ofCopper(2),
+            CoinAmount.ofCopper(15704),
+            CoinAmount.ofCopper(Integer.MAX_VALUE),
+            CoinAmount.ofCopper(-1),
+            CoinAmount.ofCopper(Integer.MIN_VALUE)
+        };
+        final CoinAmount[] expResults = {
+            CoinAmount.ofCopper(15704 + 0),
+            CoinAmount.ofCopper(15704 + 2),
+            CoinAmount.ofCopper(15704 + 15704),
+            CoinAmount.ofCopper(15704 + (long) Integer.MAX_VALUE),
+            CoinAmount.ofCopper(15704 + 0),
+            CoinAmount.ofCopper(15704 + 0)
+        };
+        assertEquals(values.length, expResults.length);
+        IntStream.range(0, values.length)
+                .forEach(index -> {
+                    final CoinAmount value = values[index];
+                    final CoinAmount expResult = expResults[index];
+                    final CoinAmount result = instance.plus(value);
+                    assertEquals(expResult, result);
+                });
     }
 
     /**
@@ -198,13 +396,31 @@ public class CoinAmountTest {
     @Test
     public void testPlusCopper() {
         System.out.println("plusCopper");
-        long amount = 0L;
-        CoinAmount instance = null;
-        CoinAmount expResult = null;
-        CoinAmount result = instance.plusCopper(amount);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        final CoinAmount instance = CoinAmount.ofCopper(15704);
+        final long[] values = {
+            0,
+            2,
+            15704,
+            Integer.MAX_VALUE,
+            -1,
+            Integer.MIN_VALUE
+        };
+        final CoinAmount[] expResults = {
+            CoinAmount.ofCopper(15704 + 0),
+            CoinAmount.ofCopper(15704 + 2),
+            CoinAmount.ofCopper(15704 + 15704),
+            CoinAmount.ofCopper(15704 + (long) Integer.MAX_VALUE),
+            CoinAmount.ofCopper(15704 - 1),
+            CoinAmount.ofCopper(0)
+        };
+        assertEquals(values.length, expResults.length);
+        IntStream.range(0, values.length)
+                .forEach(index -> {
+                    final long value = values[index];
+                    final CoinAmount expResult = expResults[index];
+                    final CoinAmount result = instance.plusCopper(value);
+                    assertEquals(expResult, result);
+                });
     }
 
     /**
@@ -213,13 +429,31 @@ public class CoinAmountTest {
     @Test
     public void testPlusSilver() {
         System.out.println("plusSilver");
-        long amount = 0L;
-        CoinAmount instance = null;
-        CoinAmount expResult = null;
-        CoinAmount result = instance.plusSilver(amount);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        final CoinAmount instance = CoinAmount.ofCopper(15704);
+        final long[] values = {
+            0,
+            2,
+            15704,
+            Integer.MAX_VALUE,
+            -1,
+            Integer.MIN_VALUE
+        };
+        final CoinAmount[] expResults = {
+            CoinAmount.ofCopper(15704 + 0),
+            CoinAmount.ofCopper(15704 + 2 * 100L),
+            CoinAmount.ofCopper(15704 + 15704 * 100L),
+            CoinAmount.ofCopper(15704 + Integer.MAX_VALUE * 100L),
+            CoinAmount.ofCopper(15704 - 1 * 100L),
+            CoinAmount.ofCopper(0)
+        };
+        assertEquals(values.length, expResults.length);
+        IntStream.range(0, values.length)
+                .forEach(index -> {
+                    final long value = values[index];
+                    final CoinAmount expResult = expResults[index];
+                    final CoinAmount result = instance.plusSilver(value);
+                    assertEquals(expResult, result);
+                });
     }
 
     /**
@@ -228,13 +462,31 @@ public class CoinAmountTest {
     @Test
     public void testPlusGold() {
         System.out.println("plusGold");
-        long amount = 0L;
-        CoinAmount instance = null;
-        CoinAmount expResult = null;
-        CoinAmount result = instance.plusGold(amount);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        final CoinAmount instance = CoinAmount.ofCopper(15704);
+        final long[] values = {
+            0,
+            2,
+            15704,
+            Integer.MAX_VALUE,
+            -1,
+            Integer.MIN_VALUE
+        };
+        final CoinAmount[] expResults = {
+            CoinAmount.ofCopper(15704 + 0),
+            CoinAmount.ofCopper(15704 + 2 * 10000L),
+            CoinAmount.ofCopper(15704 + 15704 * 10000L),
+            CoinAmount.ofCopper(15704 + Integer.MAX_VALUE * 10000L),
+            CoinAmount.ofCopper(15704 - 1 * 10000L),
+            CoinAmount.ofCopper(0)
+        };
+        assertEquals(values.length, expResults.length);
+        IntStream.range(0, values.length)
+                .forEach(index -> {
+                    final long value = values[index];
+                    final CoinAmount expResult = expResults[index];
+                    final CoinAmount result = instance.plusGold(value);
+                    assertEquals(expResult, result);
+                });
     }
 
     /**
@@ -243,13 +495,31 @@ public class CoinAmountTest {
     @Test
     public void testMinus() {
         System.out.println("minus");
-        CoinAmount amount = null;
-        CoinAmount instance = null;
-        CoinAmount expResult = null;
-        CoinAmount result = instance.minus(amount);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        final CoinAmount instance = CoinAmount.ofCopper(15704);
+        final CoinAmount[] values = {
+            CoinAmount.ofCopper(0),
+            CoinAmount.ofCopper(2),
+            CoinAmount.ofCopper(15704),
+            CoinAmount.ofCopper(Integer.MAX_VALUE),
+            CoinAmount.ofCopper(-1),
+            CoinAmount.ofCopper(Integer.MIN_VALUE)
+        };
+        final CoinAmount[] expResults = {
+            CoinAmount.ofCopper(15704),
+            CoinAmount.ofCopper(15704 - 2),
+            CoinAmount.ofCopper(0),
+            CoinAmount.ofCopper(0),
+            CoinAmount.ofCopper(15704),
+            CoinAmount.ofCopper(15704)
+        };
+        assertEquals(values.length, expResults.length);
+        IntStream.range(0, values.length)
+                .forEach(index -> {
+                    final CoinAmount value = values[index];
+                    final CoinAmount expResult = expResults[index];
+                    final CoinAmount result = instance.minus(value);
+                    assertEquals(expResult, result);
+                });
     }
 
     /**
@@ -258,13 +528,30 @@ public class CoinAmountTest {
     @Test
     public void testMinusCopper() {
         System.out.println("minusCopper");
-        long amount = 0L;
-        CoinAmount instance = null;
-        CoinAmount expResult = null;
-        CoinAmount result = instance.minusCopper(amount);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        final CoinAmount instance = CoinAmount.ofCopper(15704);
+        final long[] values = {
+            0,
+            2,
+            15704,
+            Integer.MAX_VALUE,
+            -1,
+            Integer.MIN_VALUE
+        };
+        final CoinAmount[] expResults = {
+            CoinAmount.ofCopper(15704),
+            CoinAmount.ofCopper(15704 - 2),
+            CoinAmount.ofCopper(15704 - 15704),
+            CoinAmount.ofCopper(15704 - (long) Integer.MAX_VALUE),
+            CoinAmount.ofCopper(15704 - -1),
+            CoinAmount.ofCopper(15704 - (long) Integer.MIN_VALUE)
+        };
+        assertEquals(values.length, expResults.length);
+        IntStream.range(0, values.length)
+                .forEach(index -> {
+                    final long value = values[index];
+                    final CoinAmount expResult = expResults[index];
+                    final CoinAmount result = instance.minusCopper(value);
+                });
     }
 
     /**
@@ -273,13 +560,31 @@ public class CoinAmountTest {
     @Test
     public void testMinusSilver() {
         System.out.println("minusSilver");
-        long amount = 0L;
-        CoinAmount instance = null;
-        CoinAmount expResult = null;
-        CoinAmount result = instance.minusSilver(amount);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        final CoinAmount instance = CoinAmount.ofCopper(15704);
+        final long[] values = {
+            0,
+            2,
+            15704,
+            Integer.MAX_VALUE,
+            -1,
+            Integer.MIN_VALUE
+        };
+        final CoinAmount[] expResults = {
+            CoinAmount.ofCopper(15704),
+            CoinAmount.ofCopper(15704 - 2 * 100L),
+            CoinAmount.ofCopper(15704 - 15704 * 100L),
+            CoinAmount.ofCopper(15704 - Integer.MAX_VALUE * 100L),
+            CoinAmount.ofCopper(15704 - -1 * 100L),
+            CoinAmount.ofCopper(15704 - Integer.MIN_VALUE * 100L)
+        };
+        assertEquals(values.length, expResults.length);
+        IntStream.range(0, values.length)
+                .forEach(index -> {
+                    final long value = values[index];
+                    final CoinAmount expResult = expResults[index];
+                    final CoinAmount result = instance.minusSilver(value);
+                    assertEquals(expResult, result);
+                });
     }
 
     /**
@@ -288,13 +593,30 @@ public class CoinAmountTest {
     @Test
     public void testMinusGold() {
         System.out.println("minusGold");
-        long amount = 0L;
-        CoinAmount instance = null;
-        CoinAmount expResult = null;
-        CoinAmount result = instance.minusGold(amount);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        final CoinAmount instance = CoinAmount.ofCopper(15704);
+        final long[] values = {
+            0,
+            2,
+            15704,
+            Integer.MAX_VALUE,
+            -1,
+            Integer.MIN_VALUE
+        };
+        final CoinAmount[] expResults = {
+            CoinAmount.ofCopper(15704),
+            CoinAmount.ofCopper(15704 - 2 * 10000L),
+            CoinAmount.ofCopper(15704 - 15704 * 10000L),
+            CoinAmount.ofCopper(15704 - Integer.MAX_VALUE * 10000L),
+            CoinAmount.ofCopper(15704 - -1 * 10000L),
+            CoinAmount.ofCopper(15704 - Integer.MIN_VALUE * 10000L)
+        };
+        assertEquals(values.length, expResults.length);
+        IntStream.range(0, values.length)
+                .forEach(index -> {
+                    final long value = values[index];
+                    final CoinAmount expResult = expResults[index];
+                    final CoinAmount result = instance.minusGold(value);
+                    assertEquals(expResult, result);
+                });
     }
-
 }
