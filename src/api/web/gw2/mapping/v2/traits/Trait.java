@@ -39,7 +39,7 @@ public interface Trait {
     String getName();
 
     /**
-     * Gets the URL for the icon of this specializatoin.
+     * Gets the URL for the icon of this trait.
      * @return An {@code Optional<URL>} instance, never {@code null}.
      */
     @OptionalValue
