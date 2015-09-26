@@ -33,7 +33,7 @@ public interface Trait {
 
     /**
      * Gets the localized name of this trait.
-     * @return A {@code String}, never {@code null].
+     * @return A {@code String}, never {@code null}.
      */
     @LocalizedResource
     String getName();
@@ -48,7 +48,7 @@ public interface Trait {
 
     /**
      * Gets the localized description of this trait.
-     * @return A {@code String}, never {@code null].
+     * @return A {@code String}, never {@code null}.
      */
     @LocalizedResource
     String getDescription();

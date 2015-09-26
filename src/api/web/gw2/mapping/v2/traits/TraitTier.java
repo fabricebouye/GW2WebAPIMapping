@@ -19,7 +19,7 @@ public enum TraitTier {
 
     /**
      * Defines tier 0.
-     * <br/> Only used by elite specializations.
+     * <br> Only used by elite specializations.
      */
     TIER_0(0),
     /**

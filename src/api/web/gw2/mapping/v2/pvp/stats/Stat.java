@@ -34,7 +34,7 @@ public interface Stat {
     /**
      * Gets the result for each ingame profession for the account.
      * @return A non-modifiable {@code Map<CharacterProfession, StatResult>}, never {@code null}.
-     * <br/>Professions that haven't been played in PvP, will have their result set to {@code StatResult.EMPTY}.
+     * <br>Professions that haven't been played in PvP, will have their result set to {@code StatResult.EMPTY}.
      * @see StatResult#EMPTY
      */
     Map<CharacterProfession, StatResult> getProfessions();
@@ -42,7 +42,7 @@ public interface Stat {
     /**
      * Gets the result for each ingame ladder mode for the account.
      * @return A non-modifiable {@code Map<PvPLadder, StatResult>}, never {@code null}.
-     * <br/>Ladder modes that haven't been played in PvP, will have their result set to {@code StatResult.EMPTY}.
+     * <br>Ladder modes that haven't been played in PvP, will have their result set to {@code StatResult.EMPTY}.
      * @see StatResult#EMPTY
      */
     Map<PvPLadder, StatResult> getLadders();

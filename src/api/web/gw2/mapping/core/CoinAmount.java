@@ -11,8 +11,8 @@ import java.util.Objects;
 
 /**
  * Contains a value in copper coins.
- * <br/>This class does not support negative values. Negative values will be returned as {@code CoinAmount.ZERO}.
- * <br/>Instance of this class are not mutable.
+ * <br>This class does not support negative values. Negative values will be returned as {@code CoinAmount.ZERO}.
+ * <br>Instance of this class are not mutable.
  * @author Fabrice Bouyé
  */
 public final class CoinAmount implements Comparable<CoinAmount> {

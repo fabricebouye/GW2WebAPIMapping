@@ -12,7 +12,7 @@ import java.util.Objects;
 /**
  * Defines a 3D point.
  * <br>Defined a point class so we do not rely on either Java3D or JavaFX.
- * <br/>Instance of this class are not mutable.
+ * <br>Instance of this class are not mutable.
  * @author Fabrice Bouyé
  * @param <T> The type to use.
  */

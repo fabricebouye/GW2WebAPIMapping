@@ -33,7 +33,7 @@ public interface Specialization {
 
     /**
      * Gets the localized name of this specialization.
-     * @return A {@code String}, never {@code null].
+     * @return A {@code String}, never {@code null}.
      */
     @LocalizedResource
     String getName();
