@@ -7,8 +7,6 @@
  */
 package api.web.gw2.mapping.v2.traits;
 
-import api.web.gw2.mapping.v2.pvp.PvPLadder;
-import api.web.gw2.mapping.v2.pvp.PvPUtils;
 import java.util.stream.IntStream;
 import org.junit.After;
 import org.junit.AfterClass;

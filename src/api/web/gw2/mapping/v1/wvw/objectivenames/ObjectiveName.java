@@ -7,11 +7,12 @@
  */
 package api.web.gw2.mapping.v1.wvw.objectivenames;
 
+import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.LocalizedResource;
 import api.web.gw2.mapping.v1.APIv1;
 
 /**
- * Defines a WvW match.
+ * Defines a WvW objective name.
  * @author Fabrice Bouyé
  */
 @APIv1(endpoint = "v1/wvw/objective_names.json") // NOI18N.
@@ -21,6 +22,7 @@ public interface ObjectiveName {
      * Gets the id of this objective.
      * @return A {@code String} instance, never {@code null}.
      */
+    @IdValue
     String getId();
 
     /**
