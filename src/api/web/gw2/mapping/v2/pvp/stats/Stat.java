@@ -16,7 +16,7 @@ import java.util.Map;
  * Defines the PvP stats of an account.
  * @author Fabrice Bouyé
  */
-@APIv2(endpoint = "v2/pvp/stats", requiresAuthentication = true) // NOI18N.
+@APIv2(endpoint = "v2/pvp/stats", requiresAuthentication = true, scope = "pvp") // NOI18N.
 public interface Stat {
 
     /**

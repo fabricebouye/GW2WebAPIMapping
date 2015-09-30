@@ -15,7 +15,7 @@ import api.web.gw2.mapping.v2.APIv2;
  * Defines a win/loss object.
  * @author Fabrice Bouyé
  */
-@APIv2(endpoint = "v2/pvp/stats", requiresAuthentication = true) // NOI18N.
+@APIv2(endpoint = "v2/pvp/stats", requiresAuthentication = true, scope = "pvp") // NOI18N.
 public interface StatResult {
 
     /**

@@ -14,7 +14,7 @@ import api.web.gw2.mapping.v2.APIv2;
  * Defines all results a PvP match.
  * @author Fabrice Bouyé
  */
-@APIv2(endpoint = "v2/traits")
+@APIv2(endpoint = "v2/pvp/games", requiresAuthentication = true, scope = "pvp") // NOI18N.
 public enum GameResult {
 
     /**
