@@ -35,6 +35,7 @@ public interface MaterialStorage {
      * Gets a set of item ids contained in this material storage.
      * @return A {@code Set<Integer>} instance, never {@code null}.
      */
+    @IdValue
     Set<Integer> getItems();
 
 }
