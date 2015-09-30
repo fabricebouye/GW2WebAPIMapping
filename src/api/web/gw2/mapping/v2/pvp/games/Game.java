@@ -17,7 +17,7 @@ import java.util.Map;
  * Defines a PvP game.
  * @author Fabrice Bouyé
  */
-@APIv2(endpoint = "v2/pvp/games", requiresAuthentication = true) // NOI18N.
+@APIv2(endpoint = "v2/pvp/games", requiresAuthentication = true, scope = "pvp") // NOI18N.
 public interface Game {
 
     /**
