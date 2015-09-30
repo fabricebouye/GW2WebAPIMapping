@@ -13,7 +13,7 @@ import api.web.gw2.mapping.core.QuantityValue;
 import api.web.gw2.mapping.v2.APIv2;
 import java.util.Optional;
 import java.util.OptionalInt;
-import java.util.Set;
+import java.util.List;
 
 /**
  * Defines an account bank slot.
@@ -46,18 +46,18 @@ public interface BankSlot {
     OptionalInt getSkin();
 
     /**
-     * Gets a set containing the item ids for each rune or signet applied to the item (if any).
-     * @return An non-modifiable {@code Optional<Set<Integer>>}, never {@code null}.
+     * Gets a list containing the item ids for each rune or signet applied to the item (if any).
+     * @return An non-modifiable {@code Optional<List<Integer>>}, never {@code null}.
      */
     @IdValue
     @OptionalValue
-    Optional<Set<Integer>> getUpgrades();
+    Optional<List<Integer>> getUpgrades();
 
     /**
-     * Gets a set containing the item ids for each rune or signet applied to the item (if any).
-     * @return An non-modifiable {@code Optional<Set<Integer>>}, never {@code null}.
+     * Gets a list containing the item ids for each rune or signet applied to the item (if any).
+     * @return An non-modifiable {@code Optional<List<Integer>>}, never {@code null}.
      */
     @IdValue
     @OptionalValue
-    Optional<Set<Integer>> getInfusions();
+    Optional<List<Integer>> getInfusions();
 }
