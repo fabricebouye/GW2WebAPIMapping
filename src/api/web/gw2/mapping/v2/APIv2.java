@@ -38,7 +38,7 @@ public @interface APIv2 {
 
     /**
      * This endpoint requires a specific application key scope.
-     * @return A {@code String}, never {@code null}.
+     * @return A {@code String[]}, never {@code null}.
      */
-    String scope() default ""; // NOI18N.
+    String[] scope() default {}; // NOI18N.
 }
