@@ -14,7 +14,7 @@ import api.web.gw2.mapping.v2.APIv2;
  * Defines the character race.
  * @author Fabrice Bouyé
  */
-@APIv2(endpoint = "v2/characters", requiresAuthentication = true) // NOI18N.
+@APIv2(endpoint = "v2/characters", requiresAuthentication = true, scope = "characters") // NOI18N.
 public enum CharacterRace {
 
     /**

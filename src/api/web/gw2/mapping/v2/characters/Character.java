@@ -23,7 +23,7 @@ import java.util.Optional;
  * Defines a character.
  * @author Fabrice Bouyé
  */
-@APIv2(endpoint = "v2/characters", requiresAuthentication = true) // NOI18N.
+@APIv2(endpoint = "v2/characters", requiresAuthentication = true, scope = "characters") // NOI18N.
 public interface Character {
 
     /**
