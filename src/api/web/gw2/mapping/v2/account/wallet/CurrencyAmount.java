@@ -15,7 +15,7 @@ import api.web.gw2.mapping.v2.APIv2;
  * Defines a currency quantity in the account wallet.
  * @author Fabrice Bouyé
  */
-@APIv2(endpoint = "v2/account/wallet", requiresAuthentication = true) // NOI18N.
+@APIv2(endpoint = "v2/account/wallet", requiresAuthentication = true, scope = "wallet") // NOI18N.
 public interface CurrencyAmount {
 
     /**
