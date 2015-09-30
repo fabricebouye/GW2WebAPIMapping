@@ -35,4 +35,10 @@ public @interface APIv2 {
      * @return {@code true} if the property is verified, {@code false} otherwise.
      */
     boolean requiresAuthentication() default false;
+
+    /**
+     * This endpoint requires a specific application key scope.
+     * @return A {@code String}, never {@code null}.
+     */
+    String scope() default ""; // NOI18N.
 }
