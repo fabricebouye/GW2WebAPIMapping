@@ -14,7 +14,7 @@ import api.web.gw2.mapping.v2.APIv2;
  * Defines permissions on a token info.
  * @author Fabrice Bouyé
  */
-@APIv2(endpoint = "v2/tokeninfo", requiresAuthentication = true)
+@APIv2(endpoint = "v2/tokeninfo", requiresAuthentication = true, scope = "account")
 public enum TokenInfoPermission {
 
     /**

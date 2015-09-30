@@ -15,7 +15,7 @@ import java.util.Set;
  * Defines a token info.
  * @author Fabrice Bouyé
  */
-@APIv2(endpoint = "v2/tokeninfo", requiresAuthentication = true) // NOI18N.
+@APIv2(endpoint = "v2/tokeninfo", requiresAuthentication = true, scope = "account") // NOI18N.
 public interface TokenInfo {
 
     /**
