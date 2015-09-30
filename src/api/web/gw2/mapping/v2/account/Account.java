@@ -15,7 +15,7 @@ import java.util.Set;
  * Defines an account.
  * @author Fabrice Bouyé
  */
-@APIv2(endpoint = "v2/account", requiresAuthentication = true) // NOI18N.
+@APIv2(endpoint = "v2/account", requiresAuthentication = true, scope = "account") // NOI18N.
 public interface Account {
 
     /**
