@@ -17,7 +17,7 @@ import java.util.Optional;
  * Defines the equipment of a character.
  * @author Fabrice Bouyé
  */
-@APIv2(endpoint = "v2/characters/<name>/equipment", requiresAuthentication = true) // NOI18N.
+@APIv2(endpoint = "v2/characters/<name>/equipment", requiresAuthentication = true, scope = {"inventories", "builds"}) // NOI18N.
 public interface Equipment {
 
     /**

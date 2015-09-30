@@ -14,7 +14,7 @@ import api.web.gw2.mapping.v2.APIv2;
  * Defines the equipment slots of a character.
  * @author Fabrice Bouyé
  */
-@APIv2(endpoint = "v2/characters/<name>/equipment", requiresAuthentication = true) // NOI18N.
+@APIv2(endpoint = "v2/characters/<name>/equipment", requiresAuthentication = true, scope = {"inventories", "builds"}) // NOI18N.
 public enum EquipmentSlot {
 
     /**
