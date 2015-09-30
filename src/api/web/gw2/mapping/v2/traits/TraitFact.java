@@ -10,6 +10,7 @@ package api.web.gw2.mapping.v2.traits;
 import api.web.gw2.mapping.core.LocalizedResource;
 import api.web.gw2.mapping.core.OptionalValue;
 import api.web.gw2.mapping.core.URLValue;
+import api.web.gw2.mapping.v2.APIv2;
 import java.net.URL;
 import java.util.Optional;
 
@@ -17,6 +18,7 @@ import java.util.Optional;
  * Defines the base type of trait facts.
  * @author Fabrice Bouyé
  */
+@APIv2(endpoint = "v2/traits") // NOI18N.
 public interface TraitFact {
 
     /**

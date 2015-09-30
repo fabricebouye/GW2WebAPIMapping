@@ -9,12 +9,14 @@ package api.web.gw2.mapping.v2.traits;
 
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.OptionalValue;
+import api.web.gw2.mapping.v2.APIv2;
 import java.util.OptionalInt;
 
 /**
  * Defines a trait traited fact.
  * @author Fabrice Bouyé
  */
+@APIv2(endpoint = "v2/traits") // NOI18N.
 public interface TraitTraitedFact {
 
     /**
