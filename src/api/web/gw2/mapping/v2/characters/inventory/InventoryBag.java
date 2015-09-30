@@ -16,7 +16,7 @@ import java.util.List;
  * Defines a bag carried by a character.
  * @author Fabrice Bouyé
  */
-@APIv2(endpoint = "v2/characters/<name>/inventory", requiresAuthentication = true) // NOI18N.
+@APIv2(endpoint = "v2/characters/<name>/inventory", requiresAuthentication = true, scope = "inventories") // NOI18N.
 public interface InventoryBag {
 
     /**
