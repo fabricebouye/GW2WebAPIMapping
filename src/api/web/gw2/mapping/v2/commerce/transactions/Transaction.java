@@ -20,7 +20,7 @@ import java.util.Optional;
  * Defines a transaction.
  * @author Fabrice Bouyé
  */
-@APIv2(endpoint = "v2/commerce/transactions", requiresAuthentication = true) // NOI18N.
+@APIv2(endpoint = "v2/commerce/transactions", requiresAuthentication = true, scope = "tradingpost") // NOI18N.
 public interface Transaction {
 
     /**
