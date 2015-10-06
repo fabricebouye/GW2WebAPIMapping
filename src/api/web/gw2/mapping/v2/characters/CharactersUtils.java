@@ -30,7 +30,7 @@ public enum CharactersUtils {
      */
     public static CharacterRace findCharacterRace(final String value) {
         final Optional<CharacterRace> resultOptional = Arrays.stream(CharacterRace.values())
-                .filter(toTest -> value != null && value.equals(toTest.value))
+                .filter(toTest -> value != null && value.equalsIgnoreCase(toTest.value))
                 .findFirst();
         final CharacterRace result = resultOptional.isPresent() ? resultOptional.get() : CharacterRace.UNKNOWN;
         return result;
@@ -45,7 +45,7 @@ public enum CharactersUtils {
      */
     public static CharacterProfession findCharacterProfession(final String value) {
         final Optional<CharacterProfession> resultOptional = Arrays.stream(CharacterProfession.values())
-                .filter(toTest -> value != null && value.equals(toTest.value))
+                .filter(toTest -> value != null && value.equalsIgnoreCase(toTest.value))
                 .findFirst();
         final CharacterProfession result = resultOptional.isPresent() ? resultOptional.get() : CharacterProfession.UNKNOWN;
         return result;
@@ -60,9 +60,24 @@ public enum CharactersUtils {
      */
     public static CharacterGender findCharacterGender(final String value) {
         final Optional<CharacterGender> resultOptional = Arrays.stream(CharacterGender.values())
-                .filter(toTest -> value != null && value.equals(toTest.value))
+                .filter(toTest -> value != null && value.equalsIgnoreCase(toTest.value))
                 .findFirst();
         final CharacterGender result = resultOptional.isPresent() ? resultOptional.get() : CharacterGender.UNKNOWN;
+        return result;
+    }
+
+    /**
+     * Gets the character game type for given value.
+     * @param value The source value.
+     * @return A {@code CharacterGameType} instance, never {@code null}.
+     * <br>If no corresponding value is found, {@code CharacterGameType.UNKNOWN} is returned.
+     * @see CharacterGameType
+     */
+    public static CharacterGameType findCharacterGameType(final String value) {
+        final Optional<CharacterGameType> resultOptional = Arrays.stream(CharacterGameType.values())
+                .filter(toTest -> value != null && value.equalsIgnoreCase(toTest.value))
+                .findFirst();
+        final CharacterGameType result = resultOptional.isPresent() ? resultOptional.get() : CharacterGameType.UNKNOWN;
         return result;
     }
 }

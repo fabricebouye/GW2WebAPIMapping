@@ -9,9 +9,12 @@ package api.web.gw2.mapping.v2.characters;
 
 import api.web.gw2.mapping.v2.characters.inventory.InventoryBag;
 import api.web.gw2.mapping.v2.characters.equipment.Equipment;
+import api.web.gw2.mapping.v2.specializations.Specialization;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
+import java.util.Set;
 
 /**
  * Default implementation of a character.
@@ -23,13 +26,15 @@ final class DefaultCharacter implements Character {
     CharacterRace race = CharacterRace.UNKNOWN;
     CharacterProfession profession = CharacterProfession.UNKNOWN;
     CharacterGender gender = CharacterGender.UNKNOWN;
-    int level = -1;
+    int level = 0;
     Optional<String> guild = Optional.empty();
     LocalDate created = LocalDate.MIN;
     long age = 0;
     int deaths = 0;
     Optional<List<Equipment>> equipment = Optional.empty();
     Optional<List<InventoryBag>> bags = Optional.empty();
+    Optional<Set<CharacterCrafting>> crafting = Optional.empty();
+    Optional<Map<CharacterGameType, Specialization>> specializations = Optional.empty();
 
     /**
      * Creates a new empty instance.
@@ -91,4 +96,15 @@ final class DefaultCharacter implements Character {
     public Optional<List<InventoryBag>> getBags() {
         return bags;
     }
+
+    @Override
+    public Optional<Set<CharacterCrafting>> getCrafting() {
+        return crafting;
+    }
+
+    @Override
+    public Optional<Map<CharacterGameType, Specialization>> getSpecialisations() {
+        return specializations;
+    }
+
 }
