@@ -29,7 +29,7 @@ public enum GuildDetailsUtils {
      */
     public static GuildDetailsEmblemFlag findGuildDetailsEmblemFlag(final String value) {
         final Optional<GuildDetailsEmblemFlag> resultOptional = Arrays.stream(GuildDetailsEmblemFlag.values())
-                .filter(toTest -> value != null && value.equals(toTest.value))
+                .filter(toTest -> value != null && value.equalsIgnoreCase(toTest.value))
                 .findFirst();
         final GuildDetailsEmblemFlag result = resultOptional.isPresent() ? resultOptional.get() : GuildDetailsEmblemFlag.UNKNOWN;
         return result;

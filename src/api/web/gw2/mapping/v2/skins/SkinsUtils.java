@@ -30,7 +30,7 @@ public enum SkinsUtils {
      */
     public static SkinType findSkinType(final String value) {
         final Optional<SkinType> resultOptional = Arrays.stream(SkinType.values())
-                .filter(toTest -> value != null && value.equals(toTest.value))
+                .filter(toTest -> value != null && value.equalsIgnoreCase(toTest.value))
                 .findFirst();
         final SkinType result = resultOptional.isPresent() ? resultOptional.get() : SkinType.UNKNOWN;
         return result;
@@ -45,7 +45,7 @@ public enum SkinsUtils {
      */
     public static SkinArmorType findSkinArmorType(final String value) {
         final Optional<SkinArmorType> resultOptional = Arrays.stream(SkinArmorType.values())
-                .filter(toTest -> value != null && value.equals(toTest.value))
+                .filter(toTest -> value != null && value.equalsIgnoreCase(toTest.value))
                 .findFirst();
         final SkinArmorType result = resultOptional.isPresent() ? resultOptional.get() : SkinArmorType.UNKNOWN;
         return result;
@@ -60,7 +60,7 @@ public enum SkinsUtils {
      */
     public static SkinWeaponType findSkinWeaponType(final String value) {
         final Optional<SkinWeaponType> resultOptional = Arrays.stream(SkinWeaponType.values())
-                .filter(toTest -> value != null && value.equals(toTest.value))
+                .filter(toTest -> value != null && value.equalsIgnoreCase(toTest.value))
                 .findFirst();
         final SkinWeaponType result = resultOptional.isPresent() ? resultOptional.get() : SkinWeaponType.UNKNOWN;
         return result;
@@ -75,7 +75,7 @@ public enum SkinsUtils {
      */
     public static SkinArmorWeightClass findSkinArmorWeightClass(final String value) {
         final Optional<SkinArmorWeightClass> resultOptional = Arrays.stream(SkinArmorWeightClass.values())
-                .filter(toTest -> value != null && value.equals(toTest.value))
+                .filter(toTest -> value != null && value.equalsIgnoreCase(toTest.value))
                 .findFirst();
         final SkinArmorWeightClass result = resultOptional.isPresent() ? resultOptional.get() : SkinArmorWeightClass.UNKNOWN;
         return result;
@@ -90,7 +90,7 @@ public enum SkinsUtils {
      */
     public static SkinWeaponDamageType findSkinWeaponDamageType(final String value) {
         final Optional<SkinWeaponDamageType> resultOptional = Arrays.stream(SkinWeaponDamageType.values())
-                .filter(toTest -> value != null && value.equals(toTest.value))
+                .filter(toTest -> value != null && value.equalsIgnoreCase(toTest.value))
                 .findFirst();
         final SkinWeaponDamageType result = resultOptional.isPresent() ? resultOptional.get() : SkinWeaponDamageType.UNKNOWN;
         return result;

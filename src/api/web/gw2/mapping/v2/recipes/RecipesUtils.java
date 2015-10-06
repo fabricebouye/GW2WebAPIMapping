@@ -30,7 +30,7 @@ public enum RecipesUtils {
      */
     public static RecipeType findRecipeType(final String value) {
         final Optional<RecipeType> resultOptional = Arrays.stream(RecipeType.values())
-                .filter(toTest -> value != null && value.equals(toTest.value))
+                .filter(toTest -> value != null && value.equalsIgnoreCase(toTest.value))
                 .findFirst();
         final RecipeType result = resultOptional.isPresent() ? resultOptional.get() : RecipeType.UNKNOWN;
         return result;
@@ -45,7 +45,7 @@ public enum RecipesUtils {
      */
     public static RecipeFlag findRecipeFlag(final String value) {
         final Optional<RecipeFlag> resultOptional = Arrays.stream(RecipeFlag.values())
-                .filter(toTest -> value != null && value.equals(toTest.value))
+                .filter(toTest -> value != null && value.equalsIgnoreCase(toTest.value))
                 .findFirst();
         final RecipeFlag result = resultOptional.isPresent() ? resultOptional.get() : RecipeFlag.UNKNOWN;
         return result;
@@ -60,7 +60,7 @@ public enum RecipesUtils {
      */
     public static RecipeCraftingDiscipline findRecipeCraftingDiscipline(final String value) {
         final Optional<RecipeCraftingDiscipline> resultOptional = Arrays.stream(RecipeCraftingDiscipline.values())
-                .filter(toTest -> value != null && value.equals(toTest.value))
+                .filter(toTest -> value != null && value.equalsIgnoreCase(toTest.value))
                 .findFirst();
         final RecipeCraftingDiscipline result = resultOptional.isPresent() ? resultOptional.get() : RecipeCraftingDiscipline.UNKNOWN;
         return result;

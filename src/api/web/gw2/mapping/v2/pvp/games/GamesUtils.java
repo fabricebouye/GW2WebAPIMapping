@@ -45,7 +45,7 @@ public enum GamesUtils {
      */
     public static GameResult findGameResult(final String value) {
         final Optional<GameResult> resultOptional = Arrays.stream(GameResult.values())
-                .filter(toTest -> value != null && value.equals(toTest.value))
+                .filter(toTest -> value != null && value.equalsIgnoreCase(toTest.value))
                 .findFirst();
         final GameResult result = resultOptional.isPresent() ? resultOptional.get() : GameResult.UNKNOWN;
         return result;

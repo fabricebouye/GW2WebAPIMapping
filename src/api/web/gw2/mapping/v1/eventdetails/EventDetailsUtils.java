@@ -30,7 +30,7 @@ public enum EventDetailsUtils {
      */
     public static EventDetailsFlag findEventDetailsFlag(final String value) {
         final Optional<EventDetailsFlag> resultOptional = Arrays.stream(EventDetailsFlag.values())
-                .filter(toTest -> value != null && value.equals(toTest.value))
+                .filter(toTest -> value != null && value.equalsIgnoreCase(toTest.value))
                 .findFirst();
         final EventDetailsFlag result = resultOptional.isPresent() ? resultOptional.get() : EventDetailsFlag.UNKNOWN;
         return result;
@@ -45,7 +45,7 @@ public enum EventDetailsUtils {
      */
     public static EventDetailsLocationType findEventDetailsLocationType(final String value) {
         final Optional<EventDetailsLocationType> resultOptional = Arrays.stream(EventDetailsLocationType.values())
-                .filter(toTest -> value != null && value.equals(toTest.value))
+                .filter(toTest -> value != null && value.equalsIgnoreCase(toTest.value))
                 .findFirst();
         final EventDetailsLocationType result = resultOptional.isPresent() ? resultOptional.get() : EventDetailsLocationType.UNKNOWN;
         return result;

@@ -30,7 +30,7 @@ public enum ItemsUtils {
      */
     public static ItemType findItemType(final String value) {
         final Optional<ItemType> resultOptional = Arrays.stream(ItemType.values())
-                .filter(toTest -> value != null && value.equals(toTest.value))
+                .filter(toTest -> value != null && value.equalsIgnoreCase(toTest.value))
                 .findFirst();
         final ItemType result = resultOptional.isPresent() ? resultOptional.get() : ItemType.UNKNOWN;
         return result;
@@ -45,7 +45,7 @@ public enum ItemsUtils {
      */
     public static ItemRarity findItemRarity(final String value) {
         final Optional<ItemRarity> resultOptional = Arrays.stream(ItemRarity.values())
-                .filter(toTest -> value != null && value.equals(toTest.value))
+                .filter(toTest -> value != null && value.equalsIgnoreCase(toTest.value))
                 .findFirst();
         final ItemRarity result = resultOptional.isPresent() ? resultOptional.get() : ItemRarity.UNKNOWN;
         return result;
@@ -60,7 +60,7 @@ public enum ItemsUtils {
      */
     public static ItemGameType findItemGameType(final String value) {
         final Optional<ItemGameType> resultOptional = Arrays.stream(ItemGameType.values())
-                .filter(toTest -> value != null && value.equals(toTest.value))
+                .filter(toTest -> value != null && value.equalsIgnoreCase(toTest.value))
                 .findFirst();
         final ItemGameType result = resultOptional.isPresent() ? resultOptional.get() : ItemGameType.UNKNOWN;
         return result;
@@ -75,7 +75,7 @@ public enum ItemsUtils {
      */
     public static ItemFlag findItemFlag(final String value) {
         final Optional<ItemFlag> resultOptional = Arrays.stream(ItemFlag.values())
-                .filter(toTest -> value != null && value.equals(toTest.value))
+                .filter(toTest -> value != null && value.equalsIgnoreCase(toTest.value))
                 .findFirst();
         final ItemFlag result = resultOptional.isPresent() ? resultOptional.get() : ItemFlag.UNKNOWN;
         return result;
@@ -90,7 +90,7 @@ public enum ItemsUtils {
      */
     public static ItemRestriction findItemRestriction(final String value) {
         final Optional<ItemRestriction> resultOptional = Arrays.stream(ItemRestriction.values())
-                .filter(toTest -> value != null && value.equals(toTest.value))
+                .filter(toTest -> value != null && value.equalsIgnoreCase(toTest.value))
                 .findFirst();
         final ItemRestriction result = resultOptional.isPresent() ? resultOptional.get() : ItemRestriction.UNKNOWN;
         return result;
@@ -105,7 +105,7 @@ public enum ItemsUtils {
      */
     public static ItemArmorType findItemArmorType(final String value) {
         final Optional<ItemArmorType> resultOptional = Arrays.stream(ItemArmorType.values())
-                .filter(toTest -> value != null && value.equals(toTest.value))
+                .filter(toTest -> value != null && value.equalsIgnoreCase(toTest.value))
                 .findFirst();
         final ItemArmorType result = resultOptional.isPresent() ? resultOptional.get() : ItemArmorType.UNKNOWN;
         return result;
@@ -120,7 +120,7 @@ public enum ItemsUtils {
      */
     public static ItemArmorWeightClass findItemArmorWeightClass(final String value) {
         final Optional<ItemArmorWeightClass> resultOptional = Arrays.stream(ItemArmorWeightClass.values())
-                .filter(toTest -> value != null && value.equals(toTest.value))
+                .filter(toTest -> value != null && value.equalsIgnoreCase(toTest.value))
                 .findFirst();
         final ItemArmorWeightClass result = resultOptional.isPresent() ? resultOptional.get() : ItemArmorWeightClass.UNKNOWN;
         return result;
@@ -135,7 +135,7 @@ public enum ItemsUtils {
      */
     public static ItemWeaponType findItemWeaponType(final String value) {
         final Optional<ItemWeaponType> resultOptional = Arrays.stream(ItemWeaponType.values())
-                .filter(toTest -> value != null && value.equals(toTest.value))
+                .filter(toTest -> value != null && value.equalsIgnoreCase(toTest.value))
                 .findFirst();
         final ItemWeaponType result = resultOptional.isPresent() ? resultOptional.get() : ItemWeaponType.UNKNOWN;
         return result;
@@ -150,7 +150,7 @@ public enum ItemsUtils {
      */
     public static ItemWeaponDamageType findItemWeaponDamageType(final String value) {
         final Optional<ItemWeaponDamageType> resultOptional = Arrays.stream(ItemWeaponDamageType.values())
-                .filter(toTest -> value != null && value.equals(toTest.value))
+                .filter(toTest -> value != null && value.equalsIgnoreCase(toTest.value))
                 .findFirst();
         final ItemWeaponDamageType result = resultOptional.isPresent() ? resultOptional.get() : ItemWeaponDamageType.UNKNOWN;
         return result;
@@ -165,7 +165,7 @@ public enum ItemsUtils {
      */
     public static ItemInfusionSlotFlag findItemInfusionSlotFlag(final String value) {
         final Optional<ItemInfusionSlotFlag> resultOptional = Arrays.stream(ItemInfusionSlotFlag.values())
-                .filter(toTest -> value != null && value.equals(toTest.value))
+                .filter(toTest -> value != null && value.equalsIgnoreCase(toTest.value))
                 .findFirst();
         final ItemInfusionSlotFlag result = resultOptional.isPresent() ? resultOptional.get() : ItemInfusionSlotFlag.UNKNOWN;
         return result;
@@ -180,7 +180,7 @@ public enum ItemsUtils {
      */
     public static ItemInfixUpgradeAttribute findItemInfixUpgradeAttribute(final String value) {
         final Optional<ItemInfixUpgradeAttribute> resultOptional = Arrays.stream(ItemInfixUpgradeAttribute.values())
-                .filter(toTest -> value != null && value.equals(toTest.value))
+                .filter(toTest -> value != null && value.equalsIgnoreCase(toTest.value))
                 .findFirst();
         final ItemInfixUpgradeAttribute result = resultOptional.isPresent() ? resultOptional.get() : ItemInfixUpgradeAttribute.UNKNOWN;
         return result;
@@ -195,7 +195,7 @@ public enum ItemsUtils {
      */
     public static ItemUpgradeComponentFlag findItemUpgradeComponentFlag(final String value) {
         final Optional<ItemUpgradeComponentFlag> resultOptional = Arrays.stream(ItemUpgradeComponentFlag.values())
-                .filter(toTest -> value != null && value.equals(toTest.value))
+                .filter(toTest -> value != null && value.equalsIgnoreCase(toTest.value))
                 .findFirst();
         final ItemUpgradeComponentFlag result = resultOptional.isPresent() ? resultOptional.get() : ItemUpgradeComponentFlag.UNKNOWN;
         return result;
@@ -210,7 +210,7 @@ public enum ItemsUtils {
      */
     public static ItemUpgradeComponentType findItemUpgradeComponentType(final String value) {
         final Optional<ItemUpgradeComponentType> resultOptional = Arrays.stream(ItemUpgradeComponentType.values())
-                .filter(toTest -> value != null && value.equals(toTest.value))
+                .filter(toTest -> value != null && value.equalsIgnoreCase(toTest.value))
                 .findFirst();
         final ItemUpgradeComponentType result = resultOptional.isPresent() ? resultOptional.get() : ItemUpgradeComponentType.UNKNOWN;
         return result;
@@ -225,7 +225,7 @@ public enum ItemsUtils {
      */
     public static ItemConsumableType findItemConsumableType(final String value) {
         final Optional<ItemConsumableType> resultOptional = Arrays.stream(ItemConsumableType.values())
-                .filter(toTest -> value != null && value.equals(toTest.value))
+                .filter(toTest -> value != null && value.equalsIgnoreCase(toTest.value))
                 .findFirst();
         final ItemConsumableType result = resultOptional.isPresent() ? resultOptional.get() : ItemConsumableType.UNKNOWN;
         return result;
@@ -240,7 +240,7 @@ public enum ItemsUtils {
      */
     public static ItemConsumableUnlockType findItemConsumableUnlockType(final String value) {
         final Optional<ItemConsumableUnlockType> resultOptional = Arrays.stream(ItemConsumableUnlockType.values())
-                .filter(toTest -> value != null && value.equals(toTest.value))
+                .filter(toTest -> value != null && value.equalsIgnoreCase(toTest.value))
                 .findFirst();
         final ItemConsumableUnlockType result = resultOptional.isPresent() ? resultOptional.get() : ItemConsumableUnlockType.UNKNOWN;
         return result;
@@ -255,7 +255,7 @@ public enum ItemsUtils {
      */
     public static ItemContainerType findItemContainerType(final String value) {
         final Optional<ItemContainerType> resultOptional = Arrays.stream(ItemContainerType.values())
-                .filter(toTest -> value != null && value.equals(toTest.value))
+                .filter(toTest -> value != null && value.equalsIgnoreCase(toTest.value))
                 .findFirst();
         final ItemContainerType result = resultOptional.isPresent() ? resultOptional.get() : ItemContainerType.UNKNOWN;
         return result;
@@ -270,7 +270,7 @@ public enum ItemsUtils {
      */
     public static ItemGatheringType findItemGatheringType(final String value) {
         final Optional<ItemGatheringType> resultOptional = Arrays.stream(ItemGatheringType.values())
-                .filter(toTest -> value != null && value.equals(toTest.value))
+                .filter(toTest -> value != null && value.equalsIgnoreCase(toTest.value))
                 .findFirst();
         final ItemGatheringType result = resultOptional.isPresent() ? resultOptional.get() : ItemGatheringType.UNKNOWN;
         return result;
@@ -285,7 +285,7 @@ public enum ItemsUtils {
      */
     public static ItemToolType findItemToolType(final String value) {
         final Optional<ItemToolType> resultOptional = Arrays.stream(ItemToolType.values())
-                .filter(toTest -> value != null && value.equals(toTest.value))
+                .filter(toTest -> value != null && value.equalsIgnoreCase(toTest.value))
                 .findFirst();
         final ItemToolType result = resultOptional.isPresent() ? resultOptional.get() : ItemToolType.UNKNOWN;
         return result;
@@ -300,7 +300,7 @@ public enum ItemsUtils {
      */
     public static ItemTrinketType findItemTrinketType(final String value) {
         final Optional<ItemTrinketType> resultOptional = Arrays.stream(ItemTrinketType.values())
-                .filter(toTest -> value != null && value.equals(toTest.value))
+                .filter(toTest -> value != null && value.equalsIgnoreCase(toTest.value))
                 .findFirst();
         final ItemTrinketType result = resultOptional.isPresent() ? resultOptional.get() : ItemTrinketType.UNKNOWN;
         return result;
@@ -315,7 +315,7 @@ public enum ItemsUtils {
      */
     public static ItemGizmoType findItemGizmoType(final String value) {
         final Optional<ItemGizmoType> resultOptional = Arrays.stream(ItemGizmoType.values())
-                .filter(toTest -> value != null && value.equals(toTest.value))
+                .filter(toTest -> value != null && value.equalsIgnoreCase(toTest.value))
                 .findFirst();
         final ItemGizmoType result = resultOptional.isPresent() ? resultOptional.get() : ItemGizmoType.UNKNOWN;
         return result;

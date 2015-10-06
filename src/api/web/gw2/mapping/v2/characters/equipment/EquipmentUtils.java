@@ -29,7 +29,7 @@ public enum EquipmentUtils {
      */
     public static EquipmentSlot findEquipmentSlot(final String value) {
         final Optional<EquipmentSlot> resultOptional = Arrays.stream(EquipmentSlot.values())
-                .filter(toTest -> value != null && value.equals(toTest.value))
+                .filter(toTest -> value != null && value.equalsIgnoreCase(toTest.value))
                 .findFirst();
         final EquipmentSlot result = resultOptional.isPresent() ? resultOptional.get() : EquipmentSlot.UNKNOWN;
         return result;

@@ -29,7 +29,7 @@ public enum TokenInfoUtils {
      */
     public static TokenInfoPermission findTokenInfoPermission(final String value) {
         final Optional<TokenInfoPermission> resultOptional = Arrays.stream(TokenInfoPermission.values())
-                .filter(toTest -> value != null && value.equals(toTest.value))
+                .filter(toTest -> value != null && value.equalsIgnoreCase(toTest.value))
                 .findFirst();
         final TokenInfoPermission result = resultOptional.isPresent() ? resultOptional.get() : TokenInfoPermission.UNKNOWN;
         return result;

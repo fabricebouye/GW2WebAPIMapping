@@ -30,7 +30,7 @@ public enum ExchangeUtils {
      */
     public static ExchangeResource findExchangeResource(final String value) {
         final Optional<ExchangeResource> resultOptional = Arrays.stream(ExchangeResource.values())
-                .filter(toTest -> value != null && value.equals(toTest.value))
+                .filter(toTest -> value != null && value.equalsIgnoreCase(toTest.value))
                 .findFirst();
         final ExchangeResource result = resultOptional.isPresent() ? resultOptional.get() : ExchangeResource.UNKNOWN;
         return result;

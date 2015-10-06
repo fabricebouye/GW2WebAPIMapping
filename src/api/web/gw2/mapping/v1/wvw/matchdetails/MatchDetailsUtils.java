@@ -30,7 +30,7 @@ public enum MatchDetailsUtils {
      */
     public static MatchDetailsMapType findMatchDetailsMapType(final String value) {
         final Optional<MatchDetailsMapType> resultOptional = Arrays.stream(MatchDetailsMapType.values())
-                .filter(toTest -> value != null && value.equals(toTest.value))
+                .filter(toTest -> value != null && value.equalsIgnoreCase(toTest.value))
                 .findFirst();
         final MatchDetailsMapType result = resultOptional.isPresent() ? resultOptional.get() : MatchDetailsMapType.UNKNOWN;
         return result;
@@ -45,7 +45,7 @@ public enum MatchDetailsUtils {
      */
     public static MatchDetailsBonusOwner findMatchDetailsBonusOwner(final String value) {
         final Optional<MatchDetailsBonusOwner> resultOptional = Arrays.stream(MatchDetailsBonusOwner.values())
-                .filter(toTest -> value != null && value.equals(toTest.value))
+                .filter(toTest -> value != null && value.equalsIgnoreCase(toTest.value))
                 .findFirst();
         final MatchDetailsBonusOwner result = resultOptional.isPresent() ? resultOptional.get() : MatchDetailsBonusOwner.UNKNOWN;
         return result;
@@ -60,7 +60,7 @@ public enum MatchDetailsUtils {
      */
     public static MatchDetailsObjectiveOwner findMatchDetailsObjectiveOwner(final String value) {
         final Optional<MatchDetailsObjectiveOwner> resultOptional = Arrays.stream(MatchDetailsObjectiveOwner.values())
-                .filter(toTest -> value != null && value.equals(toTest.value))
+                .filter(toTest -> value != null && value.equalsIgnoreCase(toTest.value))
                 .findFirst();
         final MatchDetailsObjectiveOwner result = resultOptional.isPresent() ? resultOptional.get() : MatchDetailsObjectiveOwner.UNKNOWN;
         return result;
