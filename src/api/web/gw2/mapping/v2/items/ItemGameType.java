@@ -11,7 +11,7 @@ import api.web.gw2.mapping.core.ImplementationSpecific;
 import api.web.gw2.mapping.v2.APIv2;
 
 /**
- * Defines the game modes allowed in which an item can be used.
+ * Defines the game modes in which an item is allowed to be used.
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/items") // NOI18N.
