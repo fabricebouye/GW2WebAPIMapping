@@ -7,10 +7,11 @@
  */
 package api.web.gw2.mapping.v2.pvp.games;
 
+import api.web.gw2.mapping.core.DateValue;
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.v2.APIv2;
 import api.web.gw2.mapping.v2.characters.CharacterProfession;
-import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
 import java.util.Map;
 
 /**
@@ -36,15 +37,17 @@ public interface Game {
 
     /**
      * Gets the time on which the game has started.
-     * @return A {@code LocalDateTime} instance, never {@code null}.
+     * @return A {@code ZonedDateTime} instance, never {@code null}.
      */
-    LocalDateTime getStarted();
+    @DateValue
+    ZonedDateTime getStarted();
 
     /**
      * Gets the time on which the game has ended.
-     * @return A {@code LocalDateTime} instance, never {@code null}.
+     * @return A {@code ZonedDateTime} instance, never {@code null}.
      */
-    LocalDateTime getEnded();
+    @DateValue
+    ZonedDateTime getEnded();
 
     /**
      * Gets the result of the game.
