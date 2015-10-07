@@ -7,8 +7,11 @@
  */
 package api.web.gw2.mapping.v2.account;
 
+import api.web.gw2.mapping.core.DateValue;
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.v2.APIv2;
+import java.time.ZonedDateTime;
+import java.time.LocalTime;
 import java.util.Set;
 
 /**
@@ -44,4 +47,11 @@ public interface Account {
      */
     @IdValue
     Set<String> getGuilds();
+
+    /**
+     * Gets the creation date of this account.
+     * @return A {@code ZonedDateTime} instance,
+     */
+    @DateValue
+    ZonedDateTime getCreated();
 }
