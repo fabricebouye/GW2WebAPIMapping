@@ -38,7 +38,7 @@ public enum AchievementFlag {
      * Fail safe value.
      */
     UNKNOWN(null);
-    
+
     final String value;
 
     private AchievementFlag(final String value) {

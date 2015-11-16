@@ -30,7 +30,7 @@ public enum AchievementType {
      * Fail safe value.
      */
     UNKNOWN(null);
-    
+
     final String value;
 
     private AchievementType(final String value) {
