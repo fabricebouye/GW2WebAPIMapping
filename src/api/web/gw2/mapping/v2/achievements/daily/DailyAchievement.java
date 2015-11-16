@@ -8,11 +8,13 @@
 package api.web.gw2.mapping.v2.achievements.daily;
 
 import api.web.gw2.mapping.core.IdValue;
+import api.web.gw2.mapping.v2.APIv2;
 
 /**
  * Defines a daily achievements.
  * @author Fabrice Bouyé
  */
+@APIv2(endpoint = "v2/achievements/daily") // NOI18N.
 public interface DailyAchievement {
 
     /**
