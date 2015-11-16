@@ -55,6 +55,7 @@ public class TokenInfoUtilsTest {
             "unlocks", // NOI18N.
             "pvp", // NOI18N.
             "wallet", // NOI18N.
+            "progression", //NOI18N.
             null,
             "" // NOI18N.
         };
@@ -67,6 +68,7 @@ public class TokenInfoUtilsTest {
             TokenInfoPermission.UNLOCKS,
             TokenInfoPermission.PVP,
             TokenInfoPermission.WALLET,
+            TokenInfoPermission.PROGRESSION,
             TokenInfoPermission.UNKNOWN,
             TokenInfoPermission.UNKNOWN
         };

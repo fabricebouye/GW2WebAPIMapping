@@ -50,6 +50,10 @@ public enum TokenInfoPermission {
      */
     BUILDS("builds"), // NOI18N.
     /**
+     * Defines the progression permission.
+     */
+    PROGRESSION("progression"), // NOI18N.
+    /**
      * Fail safe value.
      */
     @ImplementationSpecific
