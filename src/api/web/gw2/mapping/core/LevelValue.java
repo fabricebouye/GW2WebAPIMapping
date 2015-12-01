@@ -21,4 +21,15 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.FIELD, ElementType.METHOD})
 public @interface LevelValue {
+
+    /**
+     * The minimum level in the game: {@value}.
+     */
+    // @todo Configure this from an external property file.
+    public static final int MIN_LEVEL = 1;
+    /**
+     * The maximum level in the game: {@value}.
+     */
+    // @todo Configure this from an external property file.
+    public static final int MAX_LEVEL = 80;
 }
