@@ -44,7 +44,7 @@ public interface Achievement {
      * Indicates if this achievement is done.
      * @return A {@code boolean}.
      */
-    boolean getDone();
+    boolean isDone();
 
     /**
      * Gets the list of bits for this achievemnt.
