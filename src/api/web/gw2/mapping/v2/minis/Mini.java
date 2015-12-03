@@ -16,7 +16,7 @@ import java.net.URL;
 import java.util.Optional;
 
 /**
- * Defines an miniature.
+ * Defines a miniature.
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/minis") // NOI18N.
