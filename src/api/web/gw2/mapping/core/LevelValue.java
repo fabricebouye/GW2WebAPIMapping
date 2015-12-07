@@ -23,12 +23,13 @@ import java.lang.annotation.Target;
 public @interface LevelValue {
 
     /**
-     * The minimum level in the game: {@value}.
+     * The minimum level in the game for characters: {@value}.
      */
     // @todo Configure this from an external property file.
     public static final int MIN_LEVEL = 1;
     /**
-     * The maximum level in the game: {@value}.
+     * The maximum level in the game for characters: {@value}.
+     * <br>Note: ingame NPCs, creatures or structures may exceed this level.
      */
     // @todo Configure this from an external property file.
     public static final int MAX_LEVEL = 80;
