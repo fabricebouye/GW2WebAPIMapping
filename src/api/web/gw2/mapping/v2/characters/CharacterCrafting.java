@@ -23,11 +23,11 @@ public interface CharacterCrafting {
     RecipeCraftingDiscipline getDiscipline();
 
     /**
-     * Gets the character's level in this discipline.
+     * Gets the character's rating (level in this discipline).
      * @return An {@code int}.
      */
     @CraftingLevelValue
-    int getLevel();
+    int getRating();
 
     /**
      * Indicates whether this discipline is active.
