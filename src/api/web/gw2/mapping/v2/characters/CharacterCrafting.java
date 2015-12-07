@@ -7,7 +7,7 @@
  */
 package api.web.gw2.mapping.v2.characters;
 
-import api.web.gw2.mapping.core.LevelValue;
+import api.web.gw2.mapping.core.CraftingLevelValue;
 import api.web.gw2.mapping.v2.recipes.RecipeCraftingDiscipline;
 
 /**
@@ -26,7 +26,7 @@ public interface CharacterCrafting {
      * Gets the character's level in this discipline.
      * @return An {@code int}.
      */
-    @LevelValue
+    @CraftingLevelValue
     int getLevel();
 
     /**
