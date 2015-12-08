@@ -22,7 +22,7 @@ public interface TokenInfo {
      * Gets the id of this token info.
      * @return A {@code String} instance, never {@code null}.
      */
-    @IdValue
+    @IdValue(flavor = IdValue.Flavor.STRING)
     String getId();
 
     /**

@@ -26,7 +26,7 @@ public interface MatchMapObjective {
      * Gets the id of this objective.
      * @return A {@code String} instance, never {@code null}.
      */
-    @IdValue
+    @IdValue(flavor = IdValue.Flavor.STRING)
     String getId();
 
     /**

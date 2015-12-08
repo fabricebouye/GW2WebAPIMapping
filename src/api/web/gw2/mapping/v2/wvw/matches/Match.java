@@ -24,7 +24,7 @@ public interface Match {
      * Gets the id of this WvW match.
      * @return A {@code String} instance, never {@code null}.
      */
-    @IdValue
+    @IdValue(flavor = IdValue.Flavor.STRING)
     String getId();
 
     /**

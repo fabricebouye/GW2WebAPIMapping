@@ -21,4 +21,33 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.FIELD, ElementType.METHOD})
 public @interface IdValue {
+
+    /**
+     * The flavor of this id.
+     * <br>As of now ids in the GW2 API can be of 2 flavors:
+     * <ul>
+     * <li>{@code STRING} - for accounts, guilds, tokens, continents, maps, files, events, PvP matches, WvW objectives;</li>
+     * <li>{@code INTEGER} - Pretty much for anything else.</li>
+     * </ul>
+     * @author Fabrice Bouyé
+     */
+    public enum Flavor {
+        /**
+         * The id is stored as a {@code String}.
+         */
+        STRING,
+        /**
+         * The id is stored as an {@code int} or an {@code Integer}.
+         */
+        INTEGER;
+    }
+
+    /**
+     * The flavor of this id.
+     * <br>Default value is {@code IdValue.Flavor.INTEGER}.
+     * @return An {@code IdValue.Flavor} instance, never {@code null}.
+     * @see IdValue.Flavor#INTEGER
+     * @see IdValue.Flavor#STRING
+     */
+    public Flavor flavor() default Flavor.INTEGER;
 }

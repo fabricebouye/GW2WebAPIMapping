@@ -11,7 +11,6 @@ import api.web.gw2.mapping.core.DateValue;
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.v2.APIv2;
 import java.time.ZonedDateTime;
-import java.time.LocalTime;
 import java.util.Set;
 
 /**
@@ -25,7 +24,7 @@ public interface Account {
      * Gets the id of this account.
      * @return A {@code String}, never {@code null}.
      */
-    @IdValue
+    @IdValue(flavor = IdValue.Flavor.STRING)
     String getId();
 
     /**

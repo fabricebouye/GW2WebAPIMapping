@@ -20,7 +20,7 @@ public interface EventName {
      * Gets the id of this event.
      * @return A {@code String} instance, never {@code null}.
      */
-    @IdValue
+    @IdValue(flavor = IdValue.Flavor.STRING)
     String getId();
 
     /**

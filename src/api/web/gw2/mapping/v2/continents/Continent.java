@@ -25,7 +25,7 @@ public interface Continent {
      * Gets the id of this continent.
      * @return A {@code String} instance, never {@code null}.
      */
-    @IdValue
+    @IdValue(flavor = IdValue.Flavor.STRING)
     String getId();
 
     /**
