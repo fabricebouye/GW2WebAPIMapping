@@ -7,7 +7,7 @@
  */
 package api.web.gw2.mapping.v2.account;
 
-import java.time.LocalDateTime;
+import api.web.gw2.mapping.core.DateValue;
 import java.time.ZonedDateTime;
 import java.util.Collections;
 import java.util.Set;
@@ -22,7 +22,7 @@ final class DefaultAccount implements Account {
     String name = "";
     int world = -1;
     Set<String> guilds = Collections.EMPTY_SET;
-    ZonedDateTime created = ZonedDateTime.parse("1970-01-01T00:00:00Z"); // NOI18N.
+    ZonedDateTime created = DateValue.DEFAULT;
 
     /**
      * Creates an empty instance.

@@ -12,6 +12,7 @@ import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
+import java.time.ZonedDateTime;
 
 /**
  * The JSON value defines a date.
@@ -21,4 +22,9 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.FIELD, ElementType.METHOD})
 public @interface DateValue {
+
+    /**
+     * Default date value.
+     */
+    public static final ZonedDateTime DEFAULT = ZonedDateTime.parse("1970-01-01T00:00:00Z"); // NOI18N.
 }

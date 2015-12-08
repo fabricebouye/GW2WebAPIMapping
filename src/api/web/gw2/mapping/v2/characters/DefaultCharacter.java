@@ -7,10 +7,12 @@
  */
 package api.web.gw2.mapping.v2.characters;
 
+import api.web.gw2.mapping.core.DateValue;
 import api.web.gw2.mapping.v2.characters.inventory.InventoryBag;
 import api.web.gw2.mapping.v2.characters.equipment.Equipment;
 import api.web.gw2.mapping.v2.specializations.Specialization;
 import java.time.LocalDate;
+import java.time.ZonedDateTime;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -28,7 +30,7 @@ final class DefaultCharacter implements Character {
     CharacterGender gender = CharacterGender.UNKNOWN;
     int level = 0;
     Optional<String> guild = Optional.empty();
-    LocalDate created = LocalDate.MIN;
+    ZonedDateTime created = DateValue.DEFAULT;
     long age = 0;
     int deaths = 0;
     Optional<List<Equipment>> equipment = Optional.empty();
@@ -73,7 +75,7 @@ final class DefaultCharacter implements Character {
     }
 
     @Override
-    public LocalDate getCreated() {
+    public ZonedDateTime getCreated() {
         return created;
     }
 

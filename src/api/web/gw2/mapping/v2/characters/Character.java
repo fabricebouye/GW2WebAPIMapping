@@ -17,6 +17,7 @@ import api.web.gw2.mapping.v2.characters.inventory.InventoryBag;
 import api.web.gw2.mapping.v2.characters.equipment.Equipment;
 import api.web.gw2.mapping.v2.specializations.Specialization;
 import java.time.LocalDate;
+import java.time.ZonedDateTime;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -70,9 +71,9 @@ public interface Character {
 
     /**
      * Gets the creation date of this character.
-     * @return A {@code LocalDate} instance, never {@code null}.
+     * @return A {@code ZonedDateTime} instance, never {@code null}.
      */
-    LocalDate getCreated();
+    ZonedDateTime getCreated();
 
     /**
      * Gets the age of this character (the amount of second the character was played).
