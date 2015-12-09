@@ -24,26 +24,26 @@ public interface MatchDetailsScore {
 
     /**
      * Gets the score of the red faction.
-     * @return A {@code short}
+     * @return An {@code int}.
      */
     @ImplementationSpecific
     @QuantityValue
-    short getRedScore();
+    int getRedScore();
 
     /**
      * Gets the score of the blue faction.
-     * @return A {@code short}
+     * @return An {@code int}.
      */
     @ImplementationSpecific
     @QuantityValue
-    short getBlueScore();
+    int getBlueScore();
 
     /**
      * Gets the score of the green faction.
-     * @return A {@code short}
+     * @return An {@code int}.
      */
     @ImplementationSpecific
     @QuantityValue
-    short getGreenScore();
+    int getGreenScore();
 
 }

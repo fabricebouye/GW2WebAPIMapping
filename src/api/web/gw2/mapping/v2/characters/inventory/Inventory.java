@@ -28,8 +28,8 @@ public interface Inventory {
 
     /**
      * Gets the number of this object in inventory.
-     * @return A {@code short}.
+     * @return An {@code int}.
      */
     @QuantityValue
-    short getCount();
+    int getCount();
 }

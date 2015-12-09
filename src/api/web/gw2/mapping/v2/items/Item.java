@@ -57,10 +57,10 @@ public interface Item {
 
     /**
      * Gets the required level to use this item.
-     * @return A {@code short}.
+     * @return An {@code int}.
      */
     @LevelValue
-    short getLevel();
+    int getLevel();
 
     /**
      * Gets the rarity of this item.

@@ -13,7 +13,7 @@ package api.web.gw2.mapping.v1.wvw.matchdetails;
  */
 final class DefaultMatchDetailsScore implements MatchDetailsScore {
 
-    final short[] scores = new short[3];
+    final int[] scores = new int[3];
 
     /**
      * Creates a new empty instance;
@@ -22,17 +22,17 @@ final class DefaultMatchDetailsScore implements MatchDetailsScore {
     }
 
     @Override
-    public short getRedScore() {
+    public int getRedScore() {
         return scores[0];
     }
 
     @Override
-    public short getBlueScore() {
+    public int getBlueScore() {
         return scores[1];
     }
 
     @Override
-    public short getGreenScore() {
+    public int getGreenScore() {
         return scores[2];
     }
 }

@@ -9,6 +9,7 @@ package api.web.gw2.mapping.v2.items;
 
 import api.web.gw2.mapping.core.CoinAmount;
 import api.web.gw2.mapping.core.CoinValue;
+import api.web.gw2.mapping.core.LevelValue;
 import java.net.URL;
 import java.util.Collections;
 import java.util.Optional;
@@ -25,7 +26,7 @@ final class DefaultItem implements Item {
     String name = "";
     Optional<String> description = Optional.empty();
     ItemType type = ItemType.WEAPON;
-    short level = -1;
+    int level = LevelValue.MIN_LEVEL;
     ItemRarity rarity = ItemRarity.UNKNOWN;
     @CoinValue
     CoinAmount vendorValue = CoinAmount.ZERO;
@@ -63,7 +64,7 @@ final class DefaultItem implements Item {
     }
 
     @Override
-    public short getLevel() {
+    public int getLevel() {
         return level;
     }
 
