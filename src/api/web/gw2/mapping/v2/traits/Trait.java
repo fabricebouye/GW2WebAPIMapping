@@ -73,26 +73,26 @@ public interface Trait {
     TraitSlotType getSlot();
 
     /**
-     * Gets the profession this trait belongs to.
-     * @return A {@code CharacterProfession} instance, never {@code null}.
-     */
-    CharacterProfession getProfession();
+    * Gets the set of facts that may be triggered by this trait.
+    * @return An {@code Optional<Set<TraitFact>>} instance, never {@code null}.
+    * <br>If present, the underlying set is non-modifiable and can be empty.
+    */
+    @OptionalValue
+    Optional<Set<TraitFact>> getFacts();
 
     /**
-     * Indicates whether this trait is a elite.
-     * @return {@code True} if this trait is a elite; {@code false} otherwise.
-     */
-    boolean isElite();
+    * Gets the set of traited facts that may be triggered by this trait.
+    * @return An {@code Optional<Set<TraitTraitedFact>>} instance, never {@code null}.
+    * <br>If present, the underlying set is non-modifiable and can be empty.
+    */
+    @OptionalValue
+    Optional<Set<TraitTraitedFact>> getTraitedFacts();
 
     /**
-     * Gets the ids of minor traits for this trait.
-     * @return A non-modifiable {@code Set<Integer>}, never {@code null}.
-     */
-    Set<Integer> getMinorTraits();
-
-    /**
-     * Gets the ids of major traits for this trait.
-     * @return A non-modifiable {@code Set<Integer>}, never {@code null}.
-     */
-    Set<Integer> getMajorTraits();
+    * Gets the set of skills that may be triggered by this trait.
+    * @return An {@code Optional<Set<TraitSkill>>} instance, never {@code null}.
+    * <br>If present, the underlying set is non-modifiable and can be empty.
+    */
+    @OptionalValue
+    Optional<Set<TraitSkill>> getSkills();
 }

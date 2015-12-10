@@ -103,6 +103,17 @@ public enum TraitsUtils {
      * <br>If no corresponding value is found, {@code TraitTier.UNKNOWN} is returned.
      * @see TraitTier
      */
+    public static TraitTier findTraitTier(final Integer value) {
+        return findTraitTier(value.intValue());
+    }
+    
+    /**
+     * Gets the trait tier for given value.
+     * @param value The source value.
+     * @return A {@code TraitTier} instance, never {@code null}.
+     * <br>If no corresponding value is found, {@code TraitTier.UNKNOWN} is returned.
+     * @see TraitTier
+     */
     public static TraitTier findTraitTier(final int value) {
         final Optional<TraitTier> resultOptional = Arrays.stream(TraitTier.values())
                 .filter(toTest -> value == toTest.value)
