@@ -51,12 +51,21 @@ public interface Specialization {
     boolean isElite();
 
     /**
-     * Gets the URL for the icon of this specializatoin.
+     * Gets the URL for the icon of this specialization.
      * @return An {@code Optional<URL>} instance, never {@code null}.
      */
     @OptionalValue
     @URLValue
     Optional<URL> getIcon();
+
+    /**
+     * Gets the URL for the background image of this specialization.
+     * <br>Note: background image may need to be cropped/clipped before it's been used.
+     * @return An {@code Optional<URL>} instance, never {@code null}.
+     */
+    @OptionalValue
+    @URLValue
+    Optional<URL> getBackground();
 
     /**
      * Gets the ids of minor traits for this specialization.
