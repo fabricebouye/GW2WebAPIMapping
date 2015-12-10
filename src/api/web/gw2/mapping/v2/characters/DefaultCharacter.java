@@ -10,8 +10,6 @@ package api.web.gw2.mapping.v2.characters;
 import api.web.gw2.mapping.core.DateValue;
 import api.web.gw2.mapping.v2.characters.inventory.InventoryBag;
 import api.web.gw2.mapping.v2.characters.equipment.Equipment;
-import api.web.gw2.mapping.v2.specializations.Specialization;
-import java.time.LocalDate;
 import java.time.ZonedDateTime;
 import java.util.List;
 import java.util.Map;
@@ -36,7 +34,7 @@ final class DefaultCharacter implements Character {
     Optional<List<Equipment>> equipment = Optional.empty();
     Optional<List<InventoryBag>> bags = Optional.empty();
     Optional<Set<CharacterCrafting>> crafting = Optional.empty();
-    Optional<Map<CharacterGameType, Specialization>> specializations = Optional.empty();
+    Optional<Map<CharacterGameType, CharacterSpecialization>> specializations = Optional.empty();
 
     /**
      * Creates a new empty instance.
@@ -105,7 +103,7 @@ final class DefaultCharacter implements Character {
     }
 
     @Override
-    public Optional<Map<CharacterGameType, Specialization>> getSpecialisations() {
+    public Optional<Map<CharacterGameType, CharacterSpecialization>> getSpecialisations() {
         return specializations;
     }
 
