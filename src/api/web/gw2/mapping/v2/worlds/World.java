@@ -31,4 +31,10 @@ public interface World {
      */
     @LocalizedResource
     String getName();
+    
+    /**
+     * Gets the population level of this world.
+     * @return A {@code WorldPopulation} instance, never {@code null}.
+     */
+    WorldPopulation getPopulation();
 }

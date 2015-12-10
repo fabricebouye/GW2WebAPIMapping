@@ -15,6 +15,7 @@ final class DefaultWorld implements World {
 
     int id = -1;
     String name = "";
+    WorldPopulation population = WorldPopulation.UNKNOWN;
 
     /**
      * Creates a new empty instance.
@@ -30,5 +31,10 @@ final class DefaultWorld implements World {
     @Override
     public String getName() {
         return name;
+    }
+
+    @Override
+    public WorldPopulation getPopulation() {
+        return population;
     }
 }
