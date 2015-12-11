@@ -20,7 +20,32 @@ import java.util.Optional;
  */
 @APIv2(endpoint = "v2/traits") // NOI18N.
 public interface TraitPrefix {
-    
+
+    /**
+     * An empty instance.
+     */
+    public static final TraitPrefix EMPTY = new TraitPrefix() {
+        @Override
+        public String getText() {
+            return "";
+        }
+
+        @Override
+        public Optional<URL> getIcon() {
+            return Optional.empty();
+        }
+
+        @Override
+        public String getStatus() {
+            return "";
+        }
+
+        @Override
+        public String getDescription() {
+            return "";
+        }
+    };
+
     /**
      * Gets the localized text of this fact.
      * @return A {@code String} instance, never {@code null}.
