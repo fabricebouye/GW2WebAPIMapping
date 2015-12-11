@@ -27,7 +27,7 @@ public interface TraitTraitedFact {
     int getRequiresTrait();
 
     /**
-     * Gets index of the [@code TraitFact} that is overriden.
+     * Gets index of the [@code TraitFact} that is overridden.
      * @return An {@code OptionalInt} instance, never {@code null}.
      */
     @OptionalValue
