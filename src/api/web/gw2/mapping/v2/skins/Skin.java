@@ -11,6 +11,7 @@ import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.LocalizedResource;
 import api.web.gw2.mapping.core.OptionalValue;
 import api.web.gw2.mapping.core.URLValue;
+import java.net.URL;
 import java.util.Optional;
 import java.util.Set;
 
@@ -44,7 +45,7 @@ public interface Skin {
      * Gets a set of flags of this skin.
      * @return A non-modifiable {@code Set<SkinFlags>} instance, never {@code null}.
      */
-    Set<SkinFlags> getFlags();
+    Set<SkinFlag> getFlags();
 
     /**
      * Gets a set of restrictions of this skin.
@@ -54,10 +55,11 @@ public interface Skin {
 
     /**
      * Gets the URL to the icon of this skin.
-     * @return A {@code String} instance, never {@code null}.
+     * @return An {@code Optional<URL>} instance, never {@code null}.
      */
+    @OptionalValue
     @URLValue
-    String getUrl();
+    Optional<URL> getIcon();
 
     /**
      * Gets the localized description of this skin.

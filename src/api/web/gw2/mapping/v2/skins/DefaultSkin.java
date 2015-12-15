@@ -7,6 +7,7 @@
  */
 package api.web.gw2.mapping.v2.skins;
 
+import java.net.URL;
 import java.util.Collections;
 import java.util.Optional;
 import java.util.Set;
@@ -20,9 +21,9 @@ final class DefaultSkin implements Skin {
     int id = -1;
     String name = "";
     SkinType type = SkinType.UNKNOWN;
-    Set<SkinFlags> flags = Collections.EMPTY_SET;
+    Set<SkinFlag> flags = Collections.EMPTY_SET;
     Set<SkinRestriction> restrictions = Collections.EMPTY_SET;
-    String url = "";
+    Optional<URL> icon = Optional.empty();
     Optional<String> description = Optional.empty();
     Optional<SkinDetails> details = Optional.empty();
 
@@ -48,7 +49,7 @@ final class DefaultSkin implements Skin {
     }
 
     @Override
-    public Set<SkinFlags> getFlags() {
+    public Set<SkinFlag> getFlags() {
         return flags;
     }
 
@@ -58,8 +59,8 @@ final class DefaultSkin implements Skin {
     }
 
     @Override
-    public String getUrl() {
-        return url;
+    public Optional<URL> getIcon() {
+        return icon;
     }
 
     @Override
