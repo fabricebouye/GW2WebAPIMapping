@@ -15,7 +15,7 @@ import api.web.gw2.mapping.v2.APIv2;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/skins") // NOI18N.
-public enum SkinFlags {
+public enum SkinFlag {
 
     /**
      * The skin is listed in the account wardrobe.
@@ -37,7 +37,7 @@ public enum SkinFlags {
 
     final String value;
 
-    private SkinFlags(final String value) {
+    private SkinFlag(final String value) {
         this.value = value;
     }
 }
