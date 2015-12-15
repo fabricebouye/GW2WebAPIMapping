@@ -22,13 +22,14 @@ public enum SkinType {
      */
     ARMOR("Armor"), // NOI18N.
     /**
-     * Defines the back skin type.
+     * Defines the back item skin type.
      */
     BACK("Back"), // NOI18N.
     /**
      * Defines the weapon skin type.
      */
     WEAPON("Weapon"), // NOI18N.
+    // @todo There should be glider skins now?
     /**
      * Fail safe value.
      */
