@@ -37,6 +37,21 @@ public enum SkinsUtils {
     }
 
     /**
+     * Gets the skin flag for given value.
+     * @param value The source value.
+     * @return A {@code SkinFlag} instance, never {@code null}.
+     * <br>If no corresponding value is found, {@code SkinFlag.UNKNOWN} is returned.
+     * @see SkinFlag
+     */
+    public static SkinFlag findSkinFlag(final String value) {
+        final Optional<SkinFlag> resultOptional = Arrays.stream(SkinFlag.values())
+                .filter(toTest -> value != null && value.equalsIgnoreCase(toTest.value))
+                .findFirst();
+        final SkinFlag result = resultOptional.isPresent() ? resultOptional.get() : SkinFlag.UNKNOWN;
+        return result;
+    }
+
+    /**
      * Gets the skin armor type for given value.
      * @param value The source value.
      * @return A {@code SkinArmorType} instance, never {@code null}.
