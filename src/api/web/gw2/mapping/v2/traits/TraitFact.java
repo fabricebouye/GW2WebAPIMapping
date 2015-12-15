@@ -7,12 +7,14 @@
  */
 package api.web.gw2.mapping.v2.traits;
 
+import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.LocalizedResource;
 import api.web.gw2.mapping.core.OptionalValue;
 import api.web.gw2.mapping.core.URLValue;
 import api.web.gw2.mapping.v2.APIv2;
 import java.net.URL;
 import java.util.Optional;
+import java.util.OptionalInt;
 
 /**
  * Defines the base type of trait facts.
@@ -42,4 +44,19 @@ public interface TraitFact {
     @OptionalValue
     @URLValue
     Optional<URL> getIcon();
+
+    /**
+     * Gets the trait that has to be selected for this fact to take effect.
+    * @return An {@code OptionalInt} instance, never {@code null}.
+     */
+    @OptionalValue
+    @IdValue
+    OptionalInt getRequiresTrait();
+
+    /**
+     * Gets index of the [@code TraitFact} that is overridden.
+     * @return An {@code OptionalInt} instance, never {@code null}.
+     */
+    @OptionalValue
+    OptionalInt getOverrides();
 }

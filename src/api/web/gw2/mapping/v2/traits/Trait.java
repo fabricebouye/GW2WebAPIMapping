@@ -82,11 +82,11 @@ public interface Trait {
 
     /**
     * Gets the set of traited facts that may be triggered by this trait.
-    * @return An {@code Optional<Set<TraitTraitedFact>>} instance, never {@code null}.
+    * @return An {@code Optional<Set<TraitFact>>} instance, never {@code null}.
     * <br>If present, the underlying set is non-modifiable and can be empty.
     */
     @OptionalValue
-    Optional<Set<TraitTraitedFact>> getTraitedFacts();
+    Optional<Set<TraitFact>> getTraitedFacts();
 
     /**
     * Gets the set of skills that may be triggered by this trait.
