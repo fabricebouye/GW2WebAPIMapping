@@ -9,9 +9,12 @@ package api.web.gw2.mapping.v2.traits;
 
 import api.web.gw2.mapping.core.DurationValue;
 import api.web.gw2.mapping.core.LocalizedResource;
+import api.web.gw2.mapping.core.OptionalValue;
 import api.web.gw2.mapping.core.QuantityValue;
 import api.web.gw2.mapping.v2.APIv2;
 import java.time.Duration;
+import java.util.Optional;
+import java.util.OptionalInt;
 
 /**
  * Defines a buff fact.
@@ -31,10 +34,11 @@ public interface TraitBuffFact extends TraitFact {
 
     /**
      * Gets the duration of this buff.
-     * @return A {@code Duration} instance, never {@code null}.
+     * @return An {@code Optional<Duration>} instance, never {@code null}.
      */
+    @OptionalValue
     @DurationValue
-    Duration getDuration();
+    Optional<Duration> getDuration();
 
     /**
      * Gets the localized status of this fact.
@@ -45,15 +49,18 @@ public interface TraitBuffFact extends TraitFact {
 
     /**
      * Gets the localized description of this fact.
-     * @return A {@code String} instance, never {@code null}.
+     * @return A {@code Optional<String>} instance, never {@code null}.
      */
+    @OptionalValue
     @LocalizedResource
-    String getDescription();
+    Optional<String> getDescription();
 
     /**
      * Gets the number of stack applied.
-     * @return An {@code int} &ge; 0
+     * @return A {@code OptionalInt} instance, never {@code null}.
+    * <br>If present, the value is &ge; 0.
      */
+    @OptionalValue
     @QuantityValue
-    int getApplyCount();
+    OptionalInt getApplyCount();
 }
