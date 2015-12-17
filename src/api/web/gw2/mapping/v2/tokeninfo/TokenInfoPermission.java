@@ -54,6 +54,10 @@ public enum TokenInfoPermission {
      */
     PROGRESSION("progression"), // NOI18N.
     /**
+     * Defines the guilds permission.
+     */
+    GUILDS("guilds"), // NOI18N.
+    /**
      * Fail safe value.
      */
     @ImplementationSpecific
