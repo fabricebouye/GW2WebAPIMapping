@@ -14,7 +14,7 @@ import api.web.gw2.mapping.v2.APIv2;
  * Defines existing guild permissions ids.
  * @author Fabrice Bouyé
  */
-@APIv2(endpoint = "v2/guid/permissions") // NOI18N.
+@APIv2(endpoint = "v2/guild/permissions") // NOI18N.
 public enum PermissionId {
     /**
      * Allows to administrate lower ranks.

@@ -9,12 +9,13 @@ package api.web.gw2.mapping.v2.guild.permissions;
 
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.LocalizedResource;
+import api.web.gw2.mapping.v2.APIv2;
 
 /**
  * Defines a guild permission.
  * @author Fabrice Bouyé
  */
-@APIv2(endpoint = "v2/guid/permission") // NOI18N.
+@APIv2(endpoint = "v2/guild/permissions") // NOI18N.
 public interface Permission {
     /**
     * Gets this permission's id.
