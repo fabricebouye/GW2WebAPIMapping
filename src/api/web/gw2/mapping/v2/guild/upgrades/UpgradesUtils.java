@@ -34,4 +34,19 @@ public enum UpgradesUtils {
         final UpgradeType result = resultOptional.isPresent() ? resultOptional.get() : UpgradeType.UNKNOWN;
         return result;
     }
+
+    /**
+     * Gets the upgrade cost type for given value.
+     * @param value The source value.
+     * @return A {@code UpgradeCostType} instance, never {@code null}.
+     * <br>If no corresponding value is found, {@code UpgradeCostType.UNKNOWN} is returned.
+     * @see UpgradeCostType
+     */
+    public static UpgradeCostType findUpgradeCostType(final String value) {
+        final Optional<UpgradeCostType> resultOptional = Arrays.stream(UpgradeCostType.values())
+                .filter(toTest -> value != null && value.equalsIgnoreCase(toTest.value))
+                .findFirst();
+        final UpgradeCostType result = resultOptional.isPresent() ? resultOptional.get() : UpgradeCostType.UNKNOWN;
+        return result;
+    }
 }
