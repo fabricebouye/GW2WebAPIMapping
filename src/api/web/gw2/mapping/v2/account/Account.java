@@ -9,6 +9,7 @@ package api.web.gw2.mapping.v2.account;
 
 import api.web.gw2.mapping.core.DateValue;
 import api.web.gw2.mapping.core.IdValue;
+import api.web.gw2.mapping.core.LevelValue;
 import api.web.gw2.mapping.v2.APIv2;
 import java.time.ZonedDateTime;
 import java.util.Set;
@@ -49,8 +50,22 @@ public interface Account {
 
     /**
      * Gets the creation date of this account.
-     * @return A {@code ZonedDateTime} instance,
+     * @return A {@code ZonedDateTime} instance, never {@code null}.
      */
     @DateValue
     ZonedDateTime getCreated();
+
+    /**
+     * Gets the acess type of this account.
+     * @return A {@code AccountAccessType} instance, never {@code null}.
+     */
+    AccountAccessType getAccess();
+
+    /**
+     * Gets the fractal level of this account.
+     * @return An {@code int} &gt; 0.
+     */
+    // @todo Maybe create a FractalLevelValue.
+    @LevelValue
+    int getFractalLevel();
 }
