@@ -14,6 +14,7 @@ import api.web.gw2.mapping.core.LocalizedResource;
  * Defines a guild permission.
  * @author Fabrice Bouyé
  */
+@APIv2(endpoint = "v2/guid/permission") // NOI18N.
 public interface Permission {
     /**
     * Gets this permission's id.

@@ -8,11 +8,13 @@
 package api.web.gw2.mapping.v2.guild.permissions;
 
 import api.web.gw2.mapping.core.ImplementationSpecific;
+import api.web.gw2.mapping.v2.APIv2;
 
 /**
  * Defines existing guild permissions ids.
  * @author Fabrice Bouyé
  */
+@APIv2(endpoint = "v2/guid/permissions") // NOI18N.
 public enum PermissionId {
     /**
      * Allows to administrate lower ranks.
@@ -26,6 +28,7 @@ public enum PermissionId {
      * Allows to edit guild anthem.
      */
     EDIT_ANTHEM("EditAnthem"),
+    // @todo Query the endpoint to find out more!
     /**
      * Fail safe value.
      */
