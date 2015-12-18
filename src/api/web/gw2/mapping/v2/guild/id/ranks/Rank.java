@@ -17,7 +17,7 @@ import java.util.Set;
  * Defines a guild rank.
  * @author Fabrice Bouyé
  */
-@APIv2(endpoint = "v2/guid/:id/ranks", requiresAuthentication = true) // NOI18N.
+@APIv2(endpoint = "v2/guid/:id/ranks", requiresAuthentication = true, scope = "guilds") // NOI18N.
 public interface Rank {
 
     /**

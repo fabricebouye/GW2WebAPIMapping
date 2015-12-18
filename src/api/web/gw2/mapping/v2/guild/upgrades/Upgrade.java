@@ -92,15 +92,15 @@ public interface Upgrade {
      * Gets the maximum number item slots for this bank tab.
      * @return An {@code OptionalInt}, never {@code null}.
      */
-    @QuantityValue
     @OptionalValue
+    @QuantityValue
     OptionalInt getBagMaxItems();
 
     /**
      * Gets the maximum number of coins for this bank tab.
      * @return An {@code Optional<CoinAmount>}, never {@code null}.
      */
-    @CoinValue
     @OptionalValue
+    @CoinValue
     Optional<CoinAmount> getBagMaxCoins();
 }
