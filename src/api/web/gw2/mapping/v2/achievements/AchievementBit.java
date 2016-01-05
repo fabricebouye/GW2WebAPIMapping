@@ -7,9 +7,11 @@
  */
 package api.web.gw2.mapping.v2.achievements;
 
+import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.OptionalValue;
 import api.web.gw2.mapping.v2.APIv2;
 import java.util.Optional;
+import java.util.OptionalInt;
 
 /**
  * Defines an achievement's bit.
@@ -26,10 +28,11 @@ public interface AchievementBit {
 
     /**
      * Gets the id of the item, minipet or skin if applicable.
-     * @return An {@code Optional<Integer>}, never {@code null}.
+     * @return An {@code OptionalInt}, never {@code null}.
      */
+    @IdValue
     @OptionalValue
-    Optional<Integer> getId();
+    OptionalInt getId();
 
     /**
      * Gets the text of the bit.
