@@ -100,4 +100,60 @@ public class AchievementsUtilsTest {
                     assertEquals(expResult, result);
                 });
     }
+
+    /**
+     * Test of AchievementRewardType.
+     */
+    @Test
+    public void testFindAchievementRewardType() {
+        System.out.println("findAchievementRewardType"); // NOI18N.
+        final String[] values = {
+            "Item", // NOI18N.
+            "Mastery", // NOI18N.
+            null,
+            "" // NOI18N.
+        };
+        final AchievementRewardType[] expResults = {
+            AchievementRewardType.ITEM,
+            AchievementRewardType.MASTERY,
+            AchievementRewardType.UNKNOWN,
+            AchievementRewardType.UNKNOWN
+        };
+        assertEquals(values.length, expResults.length);
+        IntStream.range(0, values.length).
+                forEach(index -> {
+                    final String value = values[index];
+                    final AchievementRewardType expResult = expResults[index];
+                    final AchievementRewardType result = EnumValueFactory.INSTANCE.mapEnumValue(AchievementRewardType.class, value);
+                    assertEquals(expResult, result);
+                });
+    }
+
+    /**
+     * Test of AchievementRewardRegion.
+     */
+    @Test
+    public void testFindAchievementRewardRegion() {
+        System.out.println("findAchievementRewardRegion"); // NOI18N.
+        final String[] values = {
+            "Maguuma", // NOI18N.
+            "Tyria", // NOI18N.
+            null,
+            "" // NOI18N.
+        };
+        final AchievementRewardRegion[] expResults = {
+            AchievementRewardRegion.MAGUUMA,
+            AchievementRewardRegion.TYRIA,
+            AchievementRewardRegion.UNKNOWN,
+            AchievementRewardRegion.UNKNOWN
+        };
+        assertEquals(values.length, expResults.length);
+        IntStream.range(0, values.length).
+                forEach(index -> {
+                    final String value = values[index];
+                    final AchievementRewardRegion expResult = expResults[index];
+                    final AchievementRewardRegion result = EnumValueFactory.INSTANCE.mapEnumValue(AchievementRewardRegion.class, value);
+                    assertEquals(expResult, result);
+                });
+    }
 }

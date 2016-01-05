@@ -76,4 +76,12 @@ public interface Achievement {
      * @return A non-modifiable {@code Set<AchievementTier>} instance, never {@code null}.
      */
     Set<AchievementTier> getTiers();
+
+    /**
+     * Gets the rewards for this achievement.
+     * @return An {@code Optional<Set<AchievementReward>>} instance, never {@code null}.
+     * <br>If present the contained set is not modifiable.
+     */
+    @OptionalValue
+    Optional<Set<AchievementReward>> getRewards();
 }
