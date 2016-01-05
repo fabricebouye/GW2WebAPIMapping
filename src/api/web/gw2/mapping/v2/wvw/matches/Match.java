@@ -12,6 +12,7 @@ import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.v2.APIv2;
 import java.time.ZonedDateTime;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * Defines a WvW match.
@@ -65,4 +66,10 @@ public interface Match {
      * @return A {@code Map<MatchTeam, Integer>}, never {@code null}, may be empty.
      */
     Map<MatchTeam, Integer> getKills();
+
+    /**
+     * Gets detailed information about each map during this match.
+     * @return A non-modifiable {@code Set<MatchMap>}, never {@code null}.
+     */
+    Set<MatchMap> getMaps();
 }
