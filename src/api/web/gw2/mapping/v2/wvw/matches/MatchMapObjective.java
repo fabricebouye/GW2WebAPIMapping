@@ -57,10 +57,10 @@ public interface MatchMapObjective {
     Optional<String> getClaimedBy();
 
     /**
-     * ?.
-     * @return An {@code Optional<String>} instance, never {@code null}.
+     * Gets the time that this objective was clained at.
+     * @return An {@code Optional<ZonedDateTime>} instance, never {@code null}.
      */
     @OptionalValue
-    @IdValue
-    Optional<String> getClaimedAt();
+    @DateValue
+    Optional<ZonedDateTime> getClaimedAt();
 }
