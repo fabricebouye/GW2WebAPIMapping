@@ -7,6 +7,8 @@
  */
 package api.web.gw2.mapping.v2.traits;
 
+import api.web.gw2.mapping.core.EnumValueFactory;
+import api.web.gw2.mapping.v2.tokeninfo.TokenInfoPermission;
 import java.util.stream.IntStream;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -41,7 +43,7 @@ public class TraitsUtilsTest {
     }
 
     /**
-     * Test of findTraitAttribute method, of class TraitsUtils.
+     * Test of TraitAttribute.
      */
     @Test
     public void testFindTraitAttribute() {
@@ -75,13 +77,13 @@ public class TraitsUtilsTest {
                 forEach(index -> {
                     final String value = values[index];
                     final TraitAttribute expResult = expResults[index];
-                    final TraitAttribute result = TraitsUtils.findTraitAttribute(value);
+                    final TraitAttribute result = EnumValueFactory.INSTANCE.mapEnumValue(TraitAttribute.class, value);
                     assertEquals(expResult, result);
                 });
     }
 
     /**
-     * Test of findTraitComboFieldType method, of class TraitsUtils.
+     * Test of TraitComboFieldType.
      */
     @Test
     public void testFindTraitComboFieldType() {
@@ -119,13 +121,13 @@ public class TraitsUtilsTest {
                 forEach(index -> {
                     final String value = values[index];
                     final TraitComboFieldType expResult = expResults[index];
-                    final TraitComboFieldType result = TraitsUtils.findTraitComboFieldType(value);
+                    final TraitComboFieldType result = EnumValueFactory.INSTANCE.mapEnumValue(TraitComboFieldType.class, value);
                     assertEquals(expResult, result);
                 });
     }
 
     /**
-     * Test of findTraitComboFinisherType method, of class TraitsUtils.
+     * Test of TraitComboFinisherType.
      */
     @Test
     public void testFindTraitComboFinisherType() {
@@ -151,13 +153,13 @@ public class TraitsUtilsTest {
                 forEach(index -> {
                     final String value = values[index];
                     final TraitComboFinisherType expResult = expResults[index];
-                    final TraitComboFinisherType result = TraitsUtils.findTraitComboFinisherType(value);
+                    final TraitComboFinisherType result = EnumValueFactory.INSTANCE.mapEnumValue(TraitComboFinisherType.class, value);
                     assertEquals(expResult, result);
                 });
     }
 
     /**
-     * Test of findTraitFactType method, of class TraitsUtils.
+     * Test of TraitFactType.
      */
     @Test
     public void testFindTraitFactType() {
@@ -207,13 +209,13 @@ public class TraitsUtilsTest {
                 forEach(index -> {
                     final String value = values[index];
                     final TraitFactType expResult = expResults[index];
-                    final TraitFactType result = TraitsUtils.findTraitFactType(value);
+                    final TraitFactType result = EnumValueFactory.INSTANCE.mapEnumValue(TraitFactType.class, value);
                     assertEquals(expResult, result);
                 });
     }
 
     /**
-     * Test of findTraitSlotType method, of class TraitsUtils.
+     * Test of TraitSlotType.
      */
     @Test
     public void testFindTraitSlotType() {
@@ -235,13 +237,13 @@ public class TraitsUtilsTest {
                 forEach(index -> {
                     final String value = values[index];
                     final TraitSlotType expResult = expResults[index];
-                    final TraitSlotType result = TraitsUtils.findTraitSlotType(value);
+                    final TraitSlotType result = EnumValueFactory.INSTANCE.mapEnumValue(TraitSlotType.class, value);
                     assertEquals(expResult, result);
                 });
     }
 
     /**
-     * Test of findTraitTier method, of class TraitsUtils.
+     * Test of TraitTier.
      */
     @Test
     public void testFindTraitTier() {
@@ -267,7 +269,7 @@ public class TraitsUtilsTest {
                 forEach(index -> {
                     final int value = values[index];
                     final TraitTier expResult = expResults[index];
-                    final TraitTier result = TraitsUtils.findTraitTier(value);
+                    final TraitTier result = EnumValueFactory.INSTANCE.mapEnumValue(TraitTier.class, value);
                     assertEquals(expResult, result);
                 });
     }

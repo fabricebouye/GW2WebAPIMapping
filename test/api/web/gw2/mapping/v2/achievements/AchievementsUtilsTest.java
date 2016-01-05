@@ -7,6 +7,7 @@
  */
 package api.web.gw2.mapping.v2.achievements;
 
+import api.web.gw2.mapping.core.EnumValueFactory;
 import java.util.stream.IntStream;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -41,7 +42,7 @@ public class AchievementsUtilsTest {
     }
 
     /**
-     * Test of findAchievementType method, of class AchievementsUtils.
+     * Test of AchievementType.
      */
     @Test
     public void testFindAchievementType() {
@@ -63,13 +64,13 @@ public class AchievementsUtilsTest {
                 forEach(index -> {
                     final String value = values[index];
                     final AchievementType expResult = expResults[index];
-                    final AchievementType result = AchievementsUtils.findAchievementType(value);
+                    final AchievementType result = EnumValueFactory.INSTANCE.mapEnumValue(AchievementType.class, value);
                     assertEquals(expResult, result);
                 });
     }
 
     /**
-     * Test of findAchievementFlag method, of class AchievementsUtils.
+     * Test of AchievementFlag.
      */
     @Test
     public void testFindAchievementFlag() {
@@ -95,9 +96,8 @@ public class AchievementsUtilsTest {
                 forEach(index -> {
                     final String value = values[index];
                     final AchievementFlag expResult = expResults[index];
-                    final AchievementFlag result = AchievementsUtils.findAchievementFlag(value);
+                    final AchievementFlag result = EnumValueFactory.INSTANCE.mapEnumValue(AchievementFlag.class, value);
                     assertEquals(expResult, result);
                 });
     }
-
 }

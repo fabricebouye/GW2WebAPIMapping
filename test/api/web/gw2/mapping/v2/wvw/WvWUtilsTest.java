@@ -7,6 +7,7 @@
  */
 package api.web.gw2.mapping.v2.wvw;
 
+import api.web.gw2.mapping.core.EnumValueFactory;
 import java.util.stream.IntStream;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -41,7 +42,7 @@ public class WvWUtilsTest {
     }
 
     /**
-     * Test of findMapType method, of class WvWUtils.
+     * Test of MapType.
      */
     @Test
     public void testFindMapType() {
@@ -69,7 +70,7 @@ public class WvWUtilsTest {
                 forEach(index -> {
                     final String value = values[index];
                     final MapType expResult = expResults[index];
-                    final MapType result = WvWUtils.findMapType(value);
+                    final MapType result = EnumValueFactory.INSTANCE.mapEnumValue(MapType.class, value);
                     assertEquals(expResult, result);
                 });
     }

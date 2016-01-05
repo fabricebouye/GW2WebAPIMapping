@@ -7,6 +7,7 @@
  */
 package api.web.gw2.mapping.v2.characters.equipment;
 
+import api.web.gw2.mapping.core.EnumValueFactory;
 import java.util.stream.IntStream;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -41,7 +42,7 @@ public class EquipmentUtilsTest {
     }
 
     /**
-     * Test of findEquipmentSlot method, of class InventoriesUtils.
+     * Test of EquipmentSlot.
      */
     @Test
     public void testFindEquipmentSlot() {
@@ -98,11 +99,12 @@ public class EquipmentUtilsTest {
             EquipmentSlot.UNKNOWN,
             EquipmentSlot.UNKNOWN
         };
+        assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
                 forEach(index -> {
                     final String value = values[index];
                     final EquipmentSlot expResult = expResults[index];
-                    final EquipmentSlot result = EquipmentUtils.findEquipmentSlot(value);
+                    final EquipmentSlot result = EnumValueFactory.INSTANCE.mapEnumValue(EquipmentSlot.class, value);
                     assertEquals(expResult, result);
                 });
     }

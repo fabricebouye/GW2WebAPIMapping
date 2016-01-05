@@ -7,6 +7,7 @@
  */
 package api.web.gw2.mapping.v2.pvp;
 
+import api.web.gw2.mapping.core.EnumValueFactory;
 import java.util.stream.IntStream;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -41,7 +42,7 @@ public class PvPUtilsTest {
     }
 
     /**
-     * Test of findPvPLadder method, of class PvPUtils.
+     * Test of PvPLadder.
      */
     @Test
     public void testFindPvPLadder() {
@@ -63,7 +64,8 @@ public class PvPUtilsTest {
                 forEach(index -> {
                     final String value = values[index];
                     final PvPLadder expResult = expResults[index];
-                    final PvPLadder result = PvPUtils.findPvPLadder(value);
+                    final PvPLadder result = EnumValueFactory.INSTANCE.mapEnumValue(PvPLadder.class, value);
+                    assertEquals(expResult, result);
                     assertEquals(expResult, result);
                 });
     }

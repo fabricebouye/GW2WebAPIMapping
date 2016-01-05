@@ -7,6 +7,7 @@
  */
 package api.web.gw2.mapping.v2.items;
 
+import api.web.gw2.mapping.core.EnumValueFactory;
 import java.util.stream.IntStream;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -41,7 +42,7 @@ public class ItemsUtilsTest {
     }
 
     /**
-     * Test of findItemType method, of class ItemsUtils.
+     * Test of ItemType.
      */
     @Test
     public void testFindItemType() {
@@ -84,17 +85,18 @@ public class ItemsUtilsTest {
             ItemType.UNKNOWN,
             ItemType.UNKNOWN
         };
+        assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
                 forEach(index -> {
                     final String value = values[index];
                     final ItemType expResult = expResults[index];
-                    final ItemType result = ItemsUtils.findItemType(value);
+                    final ItemType result = EnumValueFactory.INSTANCE.mapEnumValue(ItemType.class, value);
                     assertEquals(expResult, result);
                 });
     }
 
     /**
-     * Test of findItemRarity method, of class ItemsUtils.
+     * Test of ItemRarity.
      */
     @Test
     public void testFindItemRarity() {
@@ -123,17 +125,18 @@ public class ItemsUtilsTest {
             ItemRarity.UNKNOWN,
             ItemRarity.UNKNOWN
         };
+        assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
                 forEach(index -> {
                     final String value = values[index];
                     final ItemRarity expResult = expResults[index];
-                    final ItemRarity result = ItemsUtils.findItemRarity(value);
+                    final ItemRarity result = EnumValueFactory.INSTANCE.mapEnumValue(ItemRarity.class, value);
                     assertEquals(expResult, result);
                 });
     }
 
     /**
-     * Test of findItemGameType method, of class ItemsUtils.
+     * Test of ItemGameType.
      */
     @Test
     public void testFindItemGameType() {
@@ -158,17 +161,18 @@ public class ItemsUtilsTest {
             ItemGameType.UNKNOWN,
             ItemGameType.UNKNOWN
         };
+        assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
                 forEach(index -> {
                     final String value = values[index];
                     final ItemGameType expResult = expResults[index];
-                    final ItemGameType result = ItemsUtils.findItemGameType(value);
+                    final ItemGameType result = EnumValueFactory.INSTANCE.mapEnumValue(ItemGameType.class, value);
                     assertEquals(expResult, result);
                 });
     }
 
     /**
-     * Test of findItemFlag method, of class ItemsUtils.
+     * Test of ItemFlag.
      */
     @Test
     public void testFindItemFlag() {
@@ -205,17 +209,18 @@ public class ItemsUtilsTest {
             ItemFlag.UNKNOWN,
             ItemFlag.UNKNOWN
         };
+        assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
                 forEach(index -> {
                     final String value = values[index];
                     final ItemFlag expResult = expResults[index];
-                    final ItemFlag result = ItemsUtils.findItemFlag(value);
+                    final ItemFlag result = EnumValueFactory.INSTANCE.mapEnumValue(ItemFlag.class, value);
                     assertEquals(expResult, result);
                 });
     }
 
     /**
-     * Test of findItemRestriction method, of class ItemsUtils.
+     * Test of ItemRestriction.
      */
     @Test
     public void testFindItemRestriction() {
@@ -246,17 +251,18 @@ public class ItemsUtilsTest {
             ItemRestriction.UNKNOWN,
             ItemRestriction.UNKNOWN
         };
+        assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
                 forEach(index -> {
                     final String value = values[index];
                     final ItemRestriction expResult = expResults[index];
-                    final ItemRestriction result = ItemsUtils.findItemRestriction(value);
+                    final ItemRestriction result = EnumValueFactory.INSTANCE.mapEnumValue(ItemRestriction.class, value);
                     assertEquals(expResult, result);
                 });
     }
 
     /**
-     * Test of findArmorType method, of class ItemsUtils.
+     * Test of ItemArmorType.
      */
     @Test
     public void testFindItemArmorType() {
@@ -283,17 +289,18 @@ public class ItemsUtilsTest {
             ItemArmorType.UNKNOWN,
             ItemArmorType.UNKNOWN
         };
+        assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
                 forEach(index -> {
                     final String value = values[index];
                     final ItemArmorType expResult = expResults[index];
-                    final ItemArmorType result = ItemsUtils.findItemArmorType(value);
+                    final ItemArmorType result = EnumValueFactory.INSTANCE.mapEnumValue(ItemArmorType.class, value);
                     assertEquals(expResult, result);
                 });
     }
 
     /**
-     * Test of findArmorWeightClass method, of class ItemsUtils.
+     * Test of ItemArmorWeightClass.
      */
     @Test
     public void testFindItemArmorWeightClass() {
@@ -314,17 +321,18 @@ public class ItemsUtilsTest {
             ItemArmorWeightClass.UNKNOWN,
             ItemArmorWeightClass.UNKNOWN
         };
+        assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
                 forEach(index -> {
                     final String value = values[index];
                     final ItemArmorWeightClass expResult = expResults[index];
-                    final ItemArmorWeightClass result = ItemsUtils.findItemArmorWeightClass(value);
+                    final ItemArmorWeightClass result = EnumValueFactory.INSTANCE.mapEnumValue(ItemArmorWeightClass.class, value);
                     assertEquals(expResult, result);
                 });
     }
 
     /**
-     * Test of findWeaponType method, of class ItemsUtils.
+     * Test of ItemWeaponType.
      */
     @Test
     public void testFindItemWeaponType() {
@@ -375,17 +383,18 @@ public class ItemsUtilsTest {
             ItemWeaponType.UNKNOWN,
             ItemWeaponType.UNKNOWN
         };
+        assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
                 forEach(index -> {
                     final String value = values[index];
                     final ItemWeaponType expResult = expResults[index];
-                    final ItemWeaponType result = ItemsUtils.findItemWeaponType(value);
+                    final ItemWeaponType result = EnumValueFactory.INSTANCE.mapEnumValue(ItemWeaponType.class, value);
                     assertEquals(expResult, result);
                 });
     }
 
     /**
-     * Test of findItemWeaponDamageType method, of class ItemsUtils.
+     * Test of ItemWeaponDamageType.
      */
     @Test
     public void testFindItemWeaponDamageType() {
@@ -406,17 +415,18 @@ public class ItemsUtilsTest {
             ItemWeaponDamageType.UNKNOWN,
             ItemWeaponDamageType.UNKNOWN
         };
+        assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
                 forEach(index -> {
                     final String value = values[index];
                     final ItemWeaponDamageType expResult = expResults[index];
-                    final ItemWeaponDamageType result = ItemsUtils.findItemWeaponDamageType(value);
+                    final ItemWeaponDamageType result = EnumValueFactory.INSTANCE.mapEnumValue(ItemWeaponDamageType.class, value);
                     assertEquals(expResult, result);
                 });
     }
 
     /**
-     * Test of findInfusionSlotFlag method, of class ItemsUtils.
+     * Test of ItemInfusionSlotFlag.
      */
     @Test
     public void testFindItemInfusionSlotFlag() {
@@ -435,17 +445,18 @@ public class ItemsUtilsTest {
             ItemInfusionSlotFlag.UTILITY,
             ItemInfusionSlotFlag.UNKNOWN
         };
+        assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
                 forEach(index -> {
                     final String value = values[index];
                     final ItemInfusionSlotFlag expResult = expResults[index];
-                    final ItemInfusionSlotFlag result = ItemsUtils.findItemInfusionSlotFlag(value);
+                    final ItemInfusionSlotFlag result = EnumValueFactory.INSTANCE.mapEnumValue(ItemInfusionSlotFlag.class, value);
                     assertEquals(expResult, result);
                 });
     }
 
     /**
-     * Test of findItemInfixUpgradeAttribute method, of class ItemsUtils.
+     * Test of ItemInfixUpgradeAttribute.
      */
     @Test
     public void testFindItemInfixUpgradeAttribute() {
@@ -472,17 +483,18 @@ public class ItemsUtilsTest {
             ItemInfixUpgradeAttribute.UNKNOWN,
             ItemInfixUpgradeAttribute.UNKNOWN
         };
+        assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
                 forEach(index -> {
                     final String value = values[index];
                     final ItemInfixUpgradeAttribute expResult = expResults[index];
-                    final ItemInfixUpgradeAttribute result = ItemsUtils.findItemInfixUpgradeAttribute(value);
+                    final ItemInfixUpgradeAttribute result = EnumValueFactory.INSTANCE.mapEnumValue(ItemInfixUpgradeAttribute.class, value);
                     assertEquals(expResult, result);
                 });
     }
 
     /**
-     * Test of findItemUpgradeComponentFlag method, of class ItemsUtils.
+     * Test of ItemUpgradeComponentFlag.
      */
     @Test
     public void testFindItemUpgradeComponentFlag() {
@@ -541,17 +553,18 @@ public class ItemsUtilsTest {
             ItemUpgradeComponentFlag.UNKNOWN,
             ItemUpgradeComponentFlag.UNKNOWN
         };
+        assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length)
                 .forEach(index -> {
                     final String value = values[index];
                     final ItemUpgradeComponentFlag expResult = expResults[index];
-                    final ItemUpgradeComponentFlag result = ItemsUtils.findItemUpgradeComponentFlag(value);
+                    final ItemUpgradeComponentFlag result = EnumValueFactory.INSTANCE.mapEnumValue(ItemUpgradeComponentFlag.class, value);
                     assertEquals(expResult, result);
                 });
     }
 
     /**
-     * Test of findItemUpgradeComponentType method, of class ItemsUtils.
+     * Test of ItemUpgradeComponentType.
      */
     @Test
     public void testFindItemUpgradeComponentType() {
@@ -572,17 +585,18 @@ public class ItemsUtilsTest {
             ItemUpgradeComponentType.UNKNOWN,
             ItemUpgradeComponentType.UNKNOWN
         };
+        assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
                 forEach(index -> {
                     final String value = values[index];
                     final ItemUpgradeComponentType expResult = expResults[index];
-                    final ItemUpgradeComponentType result = ItemsUtils.findItemUpgradeComponentType(value);
+                    final ItemUpgradeComponentType result = EnumValueFactory.INSTANCE.mapEnumValue(ItemUpgradeComponentType.class, value);
                     assertEquals(expResult, result);
                 });
     }
 
     /**
-     * Test of findItemConsumableType method, of class ItemsUtils.
+     * Test of ItemConsumableType.
      */
     @Test
     public void testFindItemConsumableType() {
@@ -617,17 +631,18 @@ public class ItemsUtilsTest {
             ItemConsumableType.UNKNOWN,
             ItemConsumableType.UNKNOWN
         };
+        assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
                 forEach(index -> {
                     final String value = values[index];
                     final ItemConsumableType expResult = expResults[index];
-                    final ItemConsumableType result = ItemsUtils.findItemConsumableType(value);
+                    final ItemConsumableType result = EnumValueFactory.INSTANCE.mapEnumValue(ItemConsumableType.class, value);
                     assertEquals(expResult, result);
                 });
     }
 
     /**
-     * Test of findItemConsumableUnlockType method, of class ItemsUtils.
+     * Test of ItemConsumableUnlockType.
      */
     @Test
     public void testFindItemConsumableUnlockType() {
@@ -654,17 +669,18 @@ public class ItemsUtilsTest {
             ItemConsumableUnlockType.UNKNOWN,
             ItemConsumableUnlockType.UNKNOWN
         };
+        assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
                 forEach(index -> {
                     final String value = values[index];
                     final ItemConsumableUnlockType expResult = expResults[index];
-                    final ItemConsumableUnlockType result = ItemsUtils.findItemConsumableUnlockType(value);
+                    final ItemConsumableUnlockType result = EnumValueFactory.INSTANCE.mapEnumValue(ItemConsumableUnlockType.class, value);
                     assertEquals(expResult, result);
                 });
     }
 
     /**
-     * Test of findItemContainerType method, of class ItemsUtils.
+     * Test of ItemContainerType.
      */
     @Test
     public void testFindItemContainerType() {
@@ -683,17 +699,18 @@ public class ItemsUtilsTest {
             ItemContainerType.UNKNOWN,
             ItemContainerType.UNKNOWN
         };
+        assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
                 forEach(index -> {
                     final String value = values[index];
                     final ItemContainerType expResult = expResults[index];
-                    final ItemContainerType result = ItemsUtils.findItemContainerType(value);
+                    final ItemContainerType result = EnumValueFactory.INSTANCE.mapEnumValue(ItemContainerType.class, value);
                     assertEquals(expResult, result);
                 });
     }
 
     /**
-     * Test of findItemGatheringType method, of class ItemsUtils.
+     * Test of ItemGatheringType.
      */
     @Test
     public void testFindItemGatheringType() {
@@ -712,17 +729,18 @@ public class ItemsUtilsTest {
             ItemGatheringType.UNKNOWN,
             ItemGatheringType.UNKNOWN
         };
+        assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
                 forEach(index -> {
                     final String value = values[index];
                     final ItemGatheringType expResult = expResults[index];
-                    final ItemGatheringType result = ItemsUtils.findItemGatheringType(value);
+                    final ItemGatheringType result = EnumValueFactory.INSTANCE.mapEnumValue(ItemGatheringType.class, value);
                     assertEquals(expResult, result);
                 });
     }
 
     /**
-     * Test of findItemToolType method, of class ItemsUtils.
+     * Test of ItemToolType.
      */
     @Test
     public void testFindItemToolType() {
@@ -737,17 +755,18 @@ public class ItemsUtilsTest {
             ItemToolType.UNKNOWN,
             ItemToolType.UNKNOWN
         };
+        assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
                 forEach(index -> {
                     final String value = values[index];
                     final ItemToolType expResult = expResults[index];
-                    final ItemToolType result = ItemsUtils.findItemToolType(value);
+                    final ItemToolType result = EnumValueFactory.INSTANCE.mapEnumValue(ItemToolType.class, value);
                     assertEquals(expResult, result);
                 });
     }
 
     /**
-     * Test of findItemTrinketType method, of class ItemsUtils.
+     * Test of ItemTrinketType.
      */
     @Test
     public void testFindItemTrinketType() {
@@ -766,17 +785,18 @@ public class ItemsUtilsTest {
             ItemTrinketType.UNKNOWN,
             ItemTrinketType.UNKNOWN
         };
+        assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
                 forEach(index -> {
                     final String value = values[index];
                     final ItemTrinketType expResult = expResults[index];
-                    final ItemTrinketType result = ItemsUtils.findItemTrinketType(value);
+                    final ItemTrinketType result = EnumValueFactory.INSTANCE.mapEnumValue(ItemTrinketType.class, value);
                     assertEquals(expResult, result);
                 });
     }
 
     /**
-     * Test of findItemGizmoType method, of class ItemsUtils.
+     * Test of ItemGizmoType.
      */
     @Test
     public void testFindItemGizmoType() {
@@ -797,11 +817,12 @@ public class ItemsUtilsTest {
             ItemGizmoType.UNKNOWN,
             ItemGizmoType.UNKNOWN
         };
+        assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
                 forEach(index -> {
                     final String value = values[index];
                     final ItemGizmoType expResult = expResults[index];
-                    final ItemGizmoType result = ItemsUtils.findItemGizmoType(value);
+                    final ItemGizmoType result = EnumValueFactory.INSTANCE.mapEnumValue(ItemGizmoType.class, value);
                     assertEquals(expResult, result);
                 });
     }

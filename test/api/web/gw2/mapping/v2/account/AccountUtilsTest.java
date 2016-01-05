@@ -5,6 +5,7 @@
  */
 package api.web.gw2.mapping.v2.account;
 
+import api.web.gw2.mapping.core.EnumValueFactory;
 import java.util.stream.IntStream;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -39,7 +40,7 @@ public class AccountUtilsTest {
     }
 
     /**
-     * Test of findAccountAccessType method, of class AccountUtils.
+     * Test of AccountAccessType.
      */
     @Test
     public void testFindAccountAccessType() {
@@ -65,7 +66,7 @@ public class AccountUtilsTest {
                 forEach(index -> {
                     final String value = values[index];
                     final AccountAccessType expResult = expResults[index];
-                    final AccountAccessType result = AccountUtils.findAccountAccessType(value);
+                    final AccountAccessType result = EnumValueFactory.INSTANCE.mapEnumValue(AccountAccessType.class, value);
                     assertEquals(expResult, result);
                 });
 

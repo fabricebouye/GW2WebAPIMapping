@@ -7,6 +7,7 @@
  */
 package api.web.gw2.mapping.v2.worlds;
 
+import api.web.gw2.mapping.core.EnumValueFactory;
 import java.util.stream.IntStream;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -41,7 +42,7 @@ public class WorldsUtilsTest {
     }
 
     /**
-     * Test of findWorldPopulation method, of class WorldsUtils.
+     * Test of WorldPopulation.
      */
     @Test
     public void testFindWorldPopulation() {
@@ -69,7 +70,7 @@ public class WorldsUtilsTest {
                 forEach(index -> {
                     final String value = values[index];
                     final WorldPopulation expResult = expResults[index];
-                    final WorldPopulation result = WorldsUtils.findWorldPopulation(value);
+                    final WorldPopulation result = EnumValueFactory.INSTANCE.mapEnumValue(WorldPopulation.class, value);
                     assertEquals(expResult, result);
                 });
     }

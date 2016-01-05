@@ -7,6 +7,7 @@
  */
 package api.web.gw2.mapping.v2.characters.inventory;
 
+import api.web.gw2.mapping.core.EnumValueFactory;
 import java.util.stream.IntStream;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -41,7 +42,7 @@ public class InventoryUtilsTest {
     }
 
     /**
-     * Test of findInventoryBinding method, of class InventoryUtils.
+     * Test of InventoryBinding.
      */
     @Test
     public void testFindInventoryBinding() {
@@ -58,11 +59,12 @@ public class InventoryUtilsTest {
             InventoryBinding.UNKNOWN,
             InventoryBinding.UNKNOWN
         };
+        assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
                 forEach(index -> {
                     final String value = values[index];
                     final InventoryBinding expResult = expResults[index];
-                    final InventoryBinding result = InventoryUtils.findInventoryBinding(value);
+                    final InventoryBinding result = EnumValueFactory.INSTANCE.mapEnumValue(InventoryBinding.class, value);
                     assertEquals(expResult, result);
                 });
     }

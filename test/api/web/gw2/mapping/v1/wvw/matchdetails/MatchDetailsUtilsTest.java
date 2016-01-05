@@ -5,6 +5,7 @@
  */
 package api.web.gw2.mapping.v1.wvw.matchdetails;
 
+import api.web.gw2.mapping.core.EnumValueFactory;
 import java.util.stream.IntStream;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -14,8 +15,8 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
- *
- * @author FabriceB
+ * Unit test.
+ * @author Fabrice Bouyé
  */
 public class MatchDetailsUtilsTest {
 
@@ -39,7 +40,7 @@ public class MatchDetailsUtilsTest {
     }
 
     /**
-     * Test of findMatchDetailsMapType method, of class MatchDetailsUtils.
+     * Test of MatchDetailsMapType.
      */
     @Test
     public void testFindMatchDetailsMapType() {
@@ -65,13 +66,13 @@ public class MatchDetailsUtilsTest {
                 forEach(index -> {
                     final String value = values[index];
                     final MatchDetailsMapType expResult = expResults[index];
-                    final MatchDetailsMapType result = MatchDetailsUtils.findMatchDetailsMapType(value);
+                    final MatchDetailsMapType result = EnumValueFactory.INSTANCE.mapEnumValue(MatchDetailsMapType.class, value);
                     assertEquals(expResult, result);
                 });
     }
 
     /**
-     * Test of findMatchDetailsBonusOwner method, of class MatchDetailsUtils.
+     * Test of MatchDetailsBonusOwner.
      */
     @Test
     public void testFindMatchDetailsBonusOwner() {
@@ -95,18 +96,18 @@ public class MatchDetailsUtilsTest {
                 forEach(index -> {
                     final String value = values[index];
                     final MatchDetailsBonusOwner expResult = expResults[index];
-                    final MatchDetailsBonusOwner result = MatchDetailsUtils.findMatchDetailsBonusOwner(value);
+                    final MatchDetailsBonusOwner result = EnumValueFactory.INSTANCE.mapEnumValue(MatchDetailsBonusOwner.class, value);
                     assertEquals(expResult, result);
                 });
     }
 
     /**
-     * Test of findMatchDetailsObjectiveOwner method, of class MatchDetailsUtils.
+     * Test of MatchDetailsObjectiveOwner.
      */
     @Test
     public void testFindMatchDetailsObjectiveOwner() {
         System.out.println("findMatchDetailsObjectiveOwner");
-                final String[] values = {
+        final String[] values = {
             "Blue", // NOI18N.
             "Green", // NOI18N.
             "Neutral", // NOI18N.
@@ -127,7 +128,7 @@ public class MatchDetailsUtilsTest {
                 forEach(index -> {
                     final String value = values[index];
                     final MatchDetailsObjectiveOwner expResult = expResults[index];
-                    final MatchDetailsObjectiveOwner result = MatchDetailsUtils.findMatchDetailsObjectiveOwner(value);
+                    final MatchDetailsObjectiveOwner result = EnumValueFactory.INSTANCE.mapEnumValue(MatchDetailsObjectiveOwner.class, value);
                     assertEquals(expResult, result);
                 });
 

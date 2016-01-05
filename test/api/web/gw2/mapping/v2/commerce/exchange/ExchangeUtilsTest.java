@@ -7,6 +7,7 @@
  */
 package api.web.gw2.mapping.v2.commerce.exchange;
 
+import api.web.gw2.mapping.core.EnumValueFactory;
 import java.util.stream.IntStream;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -41,7 +42,7 @@ public class ExchangeUtilsTest {
     }
 
     /**
-     * Test of findExchangeResource method, of class ExchangeUtils.
+     * Test of ExchangeResource.
      */
     @Test
     public void testFindExchangeResource() {
@@ -58,11 +59,12 @@ public class ExchangeUtilsTest {
             ExchangeResource.UNKNOWN,
             ExchangeResource.UNKNOWN
         };
+        assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
                 forEach(index -> {
                     final String value = values[index];
                     final ExchangeResource expResult = expResults[index];
-                    final ExchangeResource result = ExchangeUtils.findExchangeResource(value);
+                    final ExchangeResource result = EnumValueFactory.INSTANCE.mapEnumValue(ExchangeResource.class, value);
                     assertEquals(expResult, result);
                 });
     }

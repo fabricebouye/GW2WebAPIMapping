@@ -7,6 +7,7 @@
  */
 package api.web.gw2.mapping.v2.recipes;
 
+import api.web.gw2.mapping.core.EnumValueFactory;
 import java.util.stream.IntStream;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -41,7 +42,7 @@ public class RecipesUtilsTest {
     }
 
     /**
-     * Test of findRecipeType method, of class RecipesUtils.
+     * Test of RecipeType.
      */
     @Test
     public void testFindRecipeType() {
@@ -155,13 +156,13 @@ public class RecipesUtilsTest {
                 forEach(index -> {
                     final String value = values[index];
                     final RecipeType expResult = expResults[index];
-                    final RecipeType result = RecipesUtils.findRecipeType(value);
+                    final RecipeType result = EnumValueFactory.INSTANCE.mapEnumValue(RecipeType.class, value);
                     assertEquals(expResult, result);
                 });
     }
 
     /**
-     * Test of findRecipeFlag method, of class RecipesUtils.
+     * Test of RecipeFlag.
      */
     @Test
     public void testFindRecipeFlag() {
@@ -183,13 +184,13 @@ public class RecipesUtilsTest {
                 forEach(index -> {
                     final String value = values[index];
                     final RecipeFlag expResult = expResults[index];
-                    final RecipeFlag result = RecipesUtils.findRecipeFlag(value);
+                    final RecipeFlag result = EnumValueFactory.INSTANCE.mapEnumValue(RecipeFlag.class, value);
                     assertEquals(expResult, result);
                 });
     }
 
     /**
-     * Test of findRecipeCraftingDiscipline method, of class RecipesUtils.
+     * Test of RecipeCraftingDiscipline.
      */
     @Test
     public void testFindRecipeCraftingDiscipline() {
@@ -225,7 +226,7 @@ public class RecipesUtilsTest {
                 forEach(index -> {
                     final String value = values[index];
                     final RecipeCraftingDiscipline expResult = expResults[index];
-                    final RecipeCraftingDiscipline result = RecipesUtils.findRecipeCraftingDiscipline(value);
+                    final RecipeCraftingDiscipline result = EnumValueFactory.INSTANCE.mapEnumValue(RecipeCraftingDiscipline.class, value);
                     assertEquals(expResult, result);
                 });
     }

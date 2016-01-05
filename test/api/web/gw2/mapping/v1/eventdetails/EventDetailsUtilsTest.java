@@ -7,6 +7,7 @@
  */
 package api.web.gw2.mapping.v1.eventdetails;
 
+import api.web.gw2.mapping.core.EnumValueFactory;
 import java.util.stream.IntStream;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -41,7 +42,7 @@ public class EventDetailsUtilsTest {
     }
 
     /**
-     * Test of findEventDetailsFlag method, of class EventDetailsUtils.
+     * Test of EventDetailsFlag.
      */
     @Test
     public void testFindEventDetailsFlag() {
@@ -63,13 +64,13 @@ public class EventDetailsUtilsTest {
                 forEach(index -> {
                     final String value = values[index];
                     final EventDetailsFlag expResult = expResults[index];
-                    final EventDetailsFlag result = EventDetailsUtils.findEventDetailsFlag(value);
+                    final EventDetailsFlag result = EnumValueFactory.INSTANCE.mapEnumValue(EventDetailsFlag.class, value);
                     assertEquals(expResult, result);
                 });
     }
 
     /**
-     * Test of findEventDetailsLocationType method, of class EventDetailsUtils.
+     * Test of EventDetailsLocationType.
      */
     @Test
     public void testFindEventDetailsLocationType() {
@@ -93,7 +94,7 @@ public class EventDetailsUtilsTest {
                 forEach(index -> {
                     final String value = values[index];
                     final EventDetailsLocationType expResult = expResults[index];
-                    final EventDetailsLocationType result = EventDetailsUtils.findEventDetailsLocationType(value);
+                    final EventDetailsLocationType result = EnumValueFactory.INSTANCE.mapEnumValue(EventDetailsLocationType.class, value);
                     assertEquals(expResult, result);
                 });
     }

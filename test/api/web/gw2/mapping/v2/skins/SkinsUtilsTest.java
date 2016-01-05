@@ -7,6 +7,7 @@
  */
 package api.web.gw2.mapping.v2.skins;
 
+import api.web.gw2.mapping.core.EnumValueFactory;
 import java.util.stream.IntStream;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -41,7 +42,7 @@ public class SkinsUtilsTest {
     }
 
     /**
-     * Test of findSkinType method, of class SkinsUtils.
+     * Test of SkinType.
      */
     @Test
     public void testFindSkinType() {
@@ -65,13 +66,13 @@ public class SkinsUtilsTest {
                 forEach(index -> {
                     final String value = values[index];
                     final SkinType expResult = expResults[index];
-                    final SkinType result = SkinsUtils.findSkinType(value);
+                    final SkinType result = EnumValueFactory.INSTANCE.mapEnumValue(SkinType.class, value);
                     assertEquals(expResult, result);
                 });
     }
 
     /**
-     * Test of findSkinFlag method, of class SkinsUtils.
+     * Test of SkinFlag.
      */
     @Test
     public void testFindSkinFlag() {
@@ -95,13 +96,13 @@ public class SkinsUtilsTest {
                 forEach(index -> {
                     final String value = values[index];
                     final SkinFlag expResult = expResults[index];
-                    final SkinFlag result = SkinsUtils.findSkinFlag(value);
+                    final SkinFlag result = EnumValueFactory.INSTANCE.mapEnumValue(SkinFlag.class, value);
                     assertEquals(expResult, result);
                 });
     }
 
     /**
-     * Test of findSkinArmorType method, of class SkinsUtils.
+     * Test of SkinArmorType.
      */
     @Test
     public void testFindSkinArmorType() {
@@ -133,13 +134,13 @@ public class SkinsUtilsTest {
                 forEach(index -> {
                     final String value = values[index];
                     final SkinArmorType expResult = expResults[index];
-                    final SkinArmorType result = SkinsUtils.findSkinArmorType(value);
+                    final SkinArmorType result = EnumValueFactory.INSTANCE.mapEnumValue(SkinArmorType.class, value);
                     assertEquals(expResult, result);
                 });
     }
 
     /**
-     * Test of findSkinWeaponType method, of class SkinsUtils.
+     * Test of SkinWeaponType.
      */
     @Test
     public void testFindSkinWeaponType() {
@@ -193,13 +194,13 @@ public class SkinsUtilsTest {
                 forEach(index -> {
                     final String value = values[index];
                     final SkinWeaponType expResult = expResults[index];
-                    final SkinWeaponType result = SkinsUtils.findSkinWeaponType(value);
+                    final SkinWeaponType result = EnumValueFactory.INSTANCE.mapEnumValue(SkinWeaponType.class, value);
                     assertEquals(expResult, result);
                 });
     }
 
     /**
-     * Test of findSkinArmorWeightClass method, of class SkinsUtils.
+     * Test of SkinArmorWeightClass.
      */
     @Test
     public void testFindSkinArmorWeightClass() {
@@ -223,13 +224,13 @@ public class SkinsUtilsTest {
                 forEach(index -> {
                     final String value = values[index];
                     final SkinArmorWeightClass expResult = expResults[index];
-                    final SkinArmorWeightClass result = SkinsUtils.findSkinArmorWeightClass(value);
+                    final SkinArmorWeightClass result = EnumValueFactory.INSTANCE.mapEnumValue(SkinArmorWeightClass.class, value);
                     assertEquals(expResult, result);
                 });
     }
 
     /**
-     * Test of findSkinWeaponDamageType method, of class SkinsUtils.
+     * Test of SkinWeaponDamageType.
      */
     @Test
     public void testFindSkinWeaponDamageType() {
@@ -255,7 +256,7 @@ public class SkinsUtilsTest {
                 forEach(index -> {
                     final String value = values[index];
                     final SkinWeaponDamageType expResult = expResults[index];
-                    final SkinWeaponDamageType result = SkinsUtils.findSkinWeaponDamageType(value);
+                    final SkinWeaponDamageType result = EnumValueFactory.INSTANCE.mapEnumValue(SkinWeaponDamageType.class, value);
                     assertEquals(expResult, result);
                 });
     }

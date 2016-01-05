@@ -7,6 +7,7 @@
  */
 package api.web.gw2.mapping.v2.tokeninfo;
 
+import api.web.gw2.mapping.core.EnumValueFactory;
 import java.util.stream.IntStream;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -41,7 +42,7 @@ public class TokenInfoUtilsTest {
     }
 
     /**
-     * Test of findTokenInfoPermission method, of class TokenInfoUtils.
+     * Test of TokenInfoPermission.
      */
     @Test
     public void testFindTokenInfoPermission() {
@@ -79,7 +80,7 @@ public class TokenInfoUtilsTest {
                 forEach(index -> {
                     final String value = values[index];
                     final TokenInfoPermission expResult = expResults[index];
-                    final TokenInfoPermission result = TokenInfoUtils.findTokenInfoPermission(value);
+                    final TokenInfoPermission result = EnumValueFactory.INSTANCE.mapEnumValue(TokenInfoPermission.class, value);
                     assertEquals(expResult, result);
                 });
     }

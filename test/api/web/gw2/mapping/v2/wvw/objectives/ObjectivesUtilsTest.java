@@ -7,6 +7,7 @@
  */
 package api.web.gw2.mapping.v2.wvw.objectives;
 
+import api.web.gw2.mapping.core.EnumValueFactory;
 import java.util.stream.IntStream;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -41,7 +42,7 @@ public class ObjectivesUtilsTest {
     }
 
     /**
-     * Test of findObjectiveType method, of class ObjectivesUtils.
+     * Test of ObjectiveType.
      */
     @Test
     public void testFindObjectiveType() {
@@ -71,7 +72,7 @@ public class ObjectivesUtilsTest {
                 forEach(index -> {
                     final String value = values[index];
                     final ObjectiveType expResult = expResults[index];
-                    final ObjectiveType result = ObjectivesUtils.findObjectiveType(value);
+                    final ObjectiveType result = EnumValueFactory.INSTANCE.mapEnumValue(ObjectiveType.class, value);
                     assertEquals(expResult, result);
                 });
     }

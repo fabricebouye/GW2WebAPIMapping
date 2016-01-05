@@ -7,6 +7,7 @@
  */
 package api.web.gw2.mapping.v2.pvp.games;
 
+import api.web.gw2.mapping.core.EnumValueFactory;
 import java.util.stream.IntStream;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -41,7 +42,7 @@ public class GamesUtilsTest {
     }
 
     /**
-     * Test of findGameTeam method, of class GamesUtils.
+     * Test of GameTeam.
      */
     @Test
     public void testFindGameTeam() {
@@ -67,13 +68,13 @@ public class GamesUtilsTest {
                 forEach(index -> {
                     final String value = values[index];
                     final GameTeam expResult = expResults[index];
-                    final GameTeam result = GamesUtils.findGameTeam(value);
+                    final GameTeam result = EnumValueFactory.INSTANCE.mapEnumValue(GameTeam.class, value);
                     assertEquals(expResult, result);
                 });
     }
 
     /**
-     * Test of findGameResult method, of class GamesUtils.
+     * Test of GameResult.
      */
     @Test
     public void testFindGameResult() {
@@ -95,7 +96,7 @@ public class GamesUtilsTest {
                 forEach(index -> {
                     final String value = values[index];
                     final GameResult expResult = expResults[index];
-                    final GameResult result = GamesUtils.findGameResult(value);
+                    final GameResult result = EnumValueFactory.INSTANCE.mapEnumValue(GameResult.class, value);
                     assertEquals(expResult, result);
                 });
     }

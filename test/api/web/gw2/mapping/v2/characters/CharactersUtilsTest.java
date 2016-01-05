@@ -7,6 +7,7 @@
  */
 package api.web.gw2.mapping.v2.characters;
 
+import api.web.gw2.mapping.core.EnumValueFactory;
 import java.util.stream.IntStream;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -41,7 +42,7 @@ public class CharactersUtilsTest {
     }
 
     /**
-     * Test of findCharacterRace method, of class CharactersUtils.
+     * Test of CharacterRace.
      */
     @Test
     public void testFindCharacterRace() {
@@ -69,13 +70,13 @@ public class CharactersUtilsTest {
                 forEach(index -> {
                     final String value = values[index];
                     final CharacterRace expResult = expResults[index];
-                    final CharacterRace result = CharactersUtils.findCharacterRace(value);
+                    final CharacterRace result = EnumValueFactory.INSTANCE.mapEnumValue(CharacterRace.class, value);
                     assertEquals(expResult, result);
                 });
     }
 
     /**
-     * Test of findCharacterProfession method, of class CharacterUtils.
+     * Test of CharacterProfession.
      */
     @Test
     public void testFindCharacterProfession() {
@@ -111,13 +112,13 @@ public class CharactersUtilsTest {
                 forEach(index -> {
                     final String value = values[index];
                     final CharacterProfession expResult = expResults[index];
-                    final CharacterProfession result = CharactersUtils.findCharacterProfession(value);
+                    final CharacterProfession result = EnumValueFactory.INSTANCE.mapEnumValue(CharacterProfession.class, value);
                     assertEquals(expResult, result);
                 });
     }
 
     /**
-     * Test of findCharacterGender method, of class CharacterUtils.
+     * Test of CharacterGender.
      */
     @Test
     public void testFindCharacterGender() {
@@ -139,13 +140,13 @@ public class CharactersUtilsTest {
                 forEach(index -> {
                     final String value = values[index];
                     final CharacterGender expResult = expResults[index];
-                    final CharacterGender result = CharactersUtils.findCharacterGender(value);
+                    final CharacterGender result = EnumValueFactory.INSTANCE.mapEnumValue(CharacterGender.class, value);
                     assertEquals(expResult, result);
                 });
     }
 
     /**
-     * Test of findCharacterGameType method, of class CharacterUtils.
+     * Test of CharacterGameType.
      */
     @Test
     public void testFindCharacterGameType() {
@@ -169,7 +170,7 @@ public class CharactersUtilsTest {
                 forEach(index -> {
                     final String value = values[index];
                     final CharacterGameType expResult = expResults[index];
-                    final CharacterGameType result = CharactersUtils.findCharacterGameType(value);
+                    final CharacterGameType result = EnumValueFactory.INSTANCE.mapEnumValue(CharacterGameType.class, value);
                     assertEquals(expResult, result);
                 });
     }

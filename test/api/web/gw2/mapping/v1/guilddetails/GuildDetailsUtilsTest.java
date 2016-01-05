@@ -7,6 +7,7 @@
  */
 package api.web.gw2.mapping.v1.guilddetails;
 
+import api.web.gw2.mapping.core.EnumValueFactory;
 import java.util.stream.IntStream;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -41,7 +42,7 @@ public class GuildDetailsUtilsTest {
     }
 
     /**
-     * Test of findGuildDetailsEmblemFlag method, of class GuildDetailsUtils.
+     * Test of GuildDetailsEmblemFlag.
      */
     @Test
     public void testFindGuildDetailsEmblemFlag() {
@@ -67,7 +68,7 @@ public class GuildDetailsUtilsTest {
                 forEach(index -> {
                     final String value = values[index];
                     final GuildDetailsEmblemFlag expResult = expResults[index];
-                    final GuildDetailsEmblemFlag result = GuildDetailsUtils.findGuildDetailsEmblemFlag(value);
+                    final GuildDetailsEmblemFlag result = EnumValueFactory.INSTANCE.mapEnumValue(GuildDetailsEmblemFlag.class, value);
                     assertEquals(expResult, result);
                 });
     }
