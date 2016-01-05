@@ -70,4 +70,10 @@ public interface Achievement {
      * @return A non-modifiable {@code Set<AchievementFlag>} instance, never {@code null}.
      */
     Set<AchievementFlag> getFlags();
+
+    /**
+     * Gets the tiers for this achievement.
+     * @return A non-modifiable {@code Set<AchievementTier>} instance, never {@code null}.
+     */
+    Set<AchievementTier> getTiers();
 }
