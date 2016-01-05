@@ -47,9 +47,9 @@ public interface MatchMap {
 
     /**
      * Gets the objectives of this map.
-     * @return A non-modifiable {@code Set<>} instance, never {@code null}, may be empty.
+     * @return A non-modifiable {@code Set<MatchMapObjective>} instance, never {@code null}, may be empty.
      */
-    Set getObjectives();
+    Set<MatchMapObjective> getObjectives();
 
     /**
      * Gets the deaths for this WvW match.
