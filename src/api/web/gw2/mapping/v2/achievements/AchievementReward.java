@@ -17,7 +17,7 @@ import api.web.gw2.mapping.v2.APIv2;
 public interface AchievementReward {
 
     /**
-     * Gets the of this achievement reward.
+     * Gets the type of this achievement reward.
      * @return An {@code AchievementRewardType} instance, never {@code null}.
      */
     AchievementRewardType getType();
