@@ -33,7 +33,7 @@ public enum PermissionId {
     DEPOSIT_COINS_STASH("DepositCoinsStash"),
     DEPOSIT_COINS_TROVE("DepositCoinsTrove"),
     DEPOSIT_ITEMS_TROVE("DepositItemsTrove"),
-    DEPOSIT_ITEM_STASH("DepositItemsStash"),
+    DEPOSIT_ITEMS_STASH("DepositItemsStash"),
     EDIT_ASSEMBLY_QUEUE("EditAssemblyQueue"),
     /**
      * Allows to edit guild anthem.
