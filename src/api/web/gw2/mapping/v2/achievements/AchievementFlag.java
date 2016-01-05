@@ -30,6 +30,10 @@ public enum AchievementFlag {
      */
     MOVE_TO_TOP("MoveToTop"),
     /**
+     * ?
+     */
+    REPAIR_ON_LOGIN("RepairOnLogin"),
+    /**
      * Defines a achievement that can only get progress in PvP or WvW.
      */
     PVP("Pvp"),

@@ -80,6 +80,7 @@ public class AchievementsUtilsTest {
             "IgnoreNearlyComplete", // NOI18N.
             "MoveToTop", // NOI18N.
             "Pvp", // NOI18N.
+            "RepairOnLogin", // NOI18N.
             null,
             "" // NOI18N.
         };
@@ -88,6 +89,7 @@ public class AchievementsUtilsTest {
             AchievementFlag.IGNORE_NEARLY_COMPLETE,
             AchievementFlag.MOVE_TO_TOP,
             AchievementFlag.PVP,
+            AchievementFlag.REPAIR_ON_LOGIN,
             AchievementFlag.UNKNOWN,
             AchievementFlag.UNKNOWN
         };
