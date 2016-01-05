@@ -156,4 +156,36 @@ public class AchievementsUtilsTest {
                     assertEquals(expResult, result);
                 });
     }
+
+    /**
+     * Test of AchievementBitType.
+     */
+    @Test
+    public void testFindAchievementBitType() {
+        System.out.println("findAchievementBitType"); // NOI18N.
+        final String[] values = {
+            "Item", // NOI18N.
+            "Minipet", // NOI18N.
+            "Skin", // NOI18N.
+            "Text", // NOI18N.
+            null,
+            "" // NOI18N.
+        };
+        final AchievementBitType[] expResults = {
+            AchievementBitType.ITEM,
+            AchievementBitType.MINIPET,
+            AchievementBitType.SKIN,
+            AchievementBitType.TEXT,
+            AchievementBitType.UNKNOWN,
+            AchievementBitType.UNKNOWN
+        };
+        assertEquals(values.length, expResults.length);
+        IntStream.range(0, values.length).
+                forEach(index -> {
+                    final String value = values[index];
+                    final AchievementBitType expResult = expResults[index];
+                    final AchievementBitType result = EnumValueFactory.INSTANCE.mapEnumValue(AchievementBitType.class, value);
+                    assertEquals(expResult, result);
+                });
+    }
 }

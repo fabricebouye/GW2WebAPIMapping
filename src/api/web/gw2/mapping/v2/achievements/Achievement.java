@@ -80,8 +80,16 @@ public interface Achievement {
     /**
      * Gets the rewards for this achievement.
      * @return An {@code Optional<Set<AchievementReward>>} instance, never {@code null}.
-     * <br>If present the contained set is not modifiable.
+     * <br>If present the contained set is non-modifiable and may be empty.
      */
     @OptionalValue
     Optional<Set<AchievementReward>> getRewards();
+
+    /**
+     * Gets the bits for this achievement.
+     * @return An {@code Optional<Set<AchievementBit>>} instance, never {@code null}.
+     * <br>If present the contained set is non-modifiable and may be empty.
+     */
+    @OptionalValue
+    Optional<Set<AchievementBit>> getBits();
 }
