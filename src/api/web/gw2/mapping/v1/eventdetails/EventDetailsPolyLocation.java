@@ -17,7 +17,7 @@ import java.util.List;
  * @author Fabrice Bouyé
  */
 @APIv1(endpoint = "v1/event_details.json") // NOI18N.
-public interface EventDetailsLocationPoly extends EventDetailsLocation {
+public interface EventDetailsPolyLocation extends EventDetailsLocation {
 
     /**
      * Gets the z range of this extruded poly shape event details location.

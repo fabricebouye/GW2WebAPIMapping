@@ -10,20 +10,26 @@ package api.web.gw2.mapping.v1.eventdetails;
 import api.web.gw2.mapping.v1.APIv1;
 
 /**
- * Defines a sphere event details location.
+ * Defines a cylinder event details location.
  * @author Fabrice Bouyé
  */
 @APIv1(endpoint = "v1/event_details.json") // NOI18N.
-public interface EventDetailsLocationSphere extends EventDetailsLocation {
+public interface EventDetailsCylinderLocation extends EventDetailsLocation {
 
     /**
-     * Gets the radius of this sphere location.
+     * Gets the height of this cylinder location.
+     * @return A {@code double}.
+     */
+    double getHeight();
+
+    /**
+     * Gets the radius of this cylinder location.
      * @return A {@code double}.
      */
     double getRadius();
 
     /**
-     * Gets the rotation of this sphere location.
+     * Gets the rotation of this cylinder location.
      * @return A {@code double}.
      */
     double getRotation();
