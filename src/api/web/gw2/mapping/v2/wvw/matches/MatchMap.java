@@ -22,10 +22,10 @@ public interface MatchMap {
 
     /**
      * Gets the id of this WvW map.
-     * @return A {@code String} instance, never {@code null}.
+     * @return An {@code int} &ge; 0.
      */
-    @IdValue(flavor = IdValue.Flavor.STRING)
-    String getId();
+    @IdValue
+    int getId();
 
     /**
      * Gets the type of this map.
