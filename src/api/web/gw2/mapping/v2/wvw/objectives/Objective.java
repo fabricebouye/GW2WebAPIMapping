@@ -42,10 +42,10 @@ public interface Objective {
 
     /**
      * Gets the id of the sector containing this objective.
-     * @return A {@code String} instance, never {@code null}.
+     * @return An {@code int} &gt; 0.
      */
     @IdValue
-    String getSectorId();
+    int getSectorId();
 
     /**
      * Gets the type of this objective.
