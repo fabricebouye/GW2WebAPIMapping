@@ -12,6 +12,7 @@ import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.LocalizedResource;
 import api.web.gw2.mapping.core.OptionalValue;
 import api.web.gw2.mapping.core.Point2D;
+import api.web.gw2.mapping.core.Point3D;
 import api.web.gw2.mapping.core.URLValue;
 import api.web.gw2.mapping.v2.APIv2;
 import java.net.URL;
@@ -67,9 +68,15 @@ public interface Objective {
 
     /**
      * Gets the coordinates of this objective.
+     * @return An {@code Point3D<Double>} instance, never {@code null}.
+     */
+    Point3D<Double> getCoord();
+
+    /**
+     * Gets the coordinates of of the label for this objective.
      * @return An {@code Point2D<Double>} instance, never {@code null}.
      */
-    Point2D<Double> getCoord();
+    Point2D<Double> getLabelCoord();
 
     /**
      * Gets the URL to the marker icon for this objective.
