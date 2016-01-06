@@ -42,6 +42,18 @@ public enum ObjectiveType {
      */
     TOWER("Tower"),
     /**
+     * Defines the castle objective type.
+     */
+    CASTLE("Castle"),
+    /**
+     * Defines the mercenary objective type.
+     */
+    MERCENARY("Mercenary"),
+    /**
+     * Defines the spawn objective type.
+     */
+    SPAWN("Spawn"),
+    /**
      * Fail safe value.
      */
     @ImplementationSpecific

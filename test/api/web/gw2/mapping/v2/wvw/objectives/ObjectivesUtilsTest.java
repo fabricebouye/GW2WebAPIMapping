@@ -54,6 +54,9 @@ public class ObjectivesUtilsTest {
             "Resource", // NOI18N.
             "Ruins", // NOI18N.
             "Tower", // NOI18N.
+            "Castle", // NOI18N.
+            "Mercenary", // NOI18N.
+            "Spawn", // NOI18N.
             null,
             "" // NOI18N.
         };
@@ -64,6 +67,9 @@ public class ObjectivesUtilsTest {
             ObjectiveType.RESOURCE,
             ObjectiveType.RUINS,
             ObjectiveType.TOWER,
+            ObjectiveType.CASTLE,
+            ObjectiveType.MERCENARY,
+            ObjectiveType.SPAWN,
             ObjectiveType.UNKNOWN,
             ObjectiveType.UNKNOWN
         };
