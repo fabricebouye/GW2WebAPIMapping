@@ -7,6 +7,7 @@
  */
 package api.web.gw2.mapping.v1.eventdetails;
 
+import api.web.gw2.mapping.core.Coord2DValue;
 import api.web.gw2.mapping.core.NumericRange;
 import api.web.gw2.mapping.core.Point2D;
 import api.web.gw2.mapping.v1.APIv1;
@@ -29,6 +30,7 @@ public interface EventDetailsPolyLocation extends EventDetailsLocation {
      * Gets the list of points of this extruded poly shape event details location.
      * @return A non-modifiable {@code List<Point2D>} instance, never {@code null}.
      */
+    @Coord2DValue
     List<Point2D> getPoints();
 
 }

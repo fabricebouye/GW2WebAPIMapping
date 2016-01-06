@@ -18,7 +18,9 @@ public final class MapDimension {
      */
     public static final MapDimension EMPTY = new MapDimension();
 
+    @Coord2DValue
     private final Point2D swCorner;
+    @Coord2DValue
     private final Point2D neCorner;
 
     /**
@@ -45,6 +47,7 @@ public final class MapDimension {
      * Gets the point that defines the lower-left (SW) corner.
      * @return A {@code Point2D} instance, never {@code null}.
      */
+    @Coord2DValue
     public Point2D getSwCorner() {
         return swCorner;
     }
@@ -53,6 +56,7 @@ public final class MapDimension {
      * Gets the point that defines the upper-right (NE) corner.
      * @return A {@code Point2D} instance, never {@code null}.
      */
+    @Coord2DValue
     public Point2D getNeCorner() {
         return neCorner;
     }

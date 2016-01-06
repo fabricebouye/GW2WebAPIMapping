@@ -18,7 +18,9 @@ public final class ContinentDimension {
      */
     public static final ContinentDimension EMPTY = new ContinentDimension();
 
+    @Coord2DValue
     private final Point2D nwCorner;
+    @Coord2DValue
     private final Point2D seCorner;
 
     /**
@@ -45,6 +47,7 @@ public final class ContinentDimension {
      * Gets the point that defines the upper-left (NW) corner.
      * @return A {@code Point2D} instance, never {@code null}.
      */
+    @Coord2DValue
     public Point2D getNwCorner() {
         return nwCorner;
     }
@@ -53,6 +56,7 @@ public final class ContinentDimension {
      * Gets the point that defines the lower-right (SE) corner.
      * @return A {@code Point2D} instance, never {@code null}.
      */
+    @Coord2DValue
     public Point2D getSeCorner() {
         return seCorner;
     }

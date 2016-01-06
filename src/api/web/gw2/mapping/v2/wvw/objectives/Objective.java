@@ -7,6 +7,8 @@
  */
 package api.web.gw2.mapping.v2.wvw.objectives;
 
+import api.web.gw2.mapping.core.Coord2DValue;
+import api.web.gw2.mapping.core.Coord3DValue;
 import api.web.gw2.mapping.v2.wvw.MapType;
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.LocalizedResource;
@@ -70,12 +72,14 @@ public interface Objective {
      * Gets the coordinates of this objective.
      * @return An {@code Point3D} instance, never {@code null}.
      */
+    @Coord3DValue
     Point3D getCoord();
 
     /**
      * Gets the coordinates of of the label for this objective.
      * @return An {@code Point2D} instance, never {@code null}.
      */
+    @Coord2DValue
     Point2D getLabelCoord();
 
     /**
