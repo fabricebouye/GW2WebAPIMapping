@@ -20,19 +20,19 @@ public enum MatchTeam {
     /**
      * Defines the blue team.
      */
-    BLUE("Blue"),
+    BLUE("Blue"), // NOI18N.
     /**
      * Defines the green team.
      */
-    GREEN("Green"),
+    GREEN("Green"), // NOI18N.
     /**
      * Defines the neutral team.
      */
-    NEUTRAL("Neutral"),
+    NEUTRAL("Neutral"), // NOI18N.
     /**
      * Defines the red team.
      */
-    RED("Red"),
+    RED("Red"), // NOI18N.
     /**
      * Fail safe value.
      */

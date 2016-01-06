@@ -14,45 +14,45 @@ import api.web.gw2.mapping.v2.APIv2;
  * Defines all WvW objective types.
  * @author Fabrice Bouyé
  */
-@APIv2(endpoint = "v2/wvw/objectives")
+@APIv2(endpoint = "v2/wvw/objectives") // NOI18N.
 public enum ObjectiveType {
 
     /**
      * Defines the camp objective type.
      */
-    CAMP("Camp"),
+    CAMP("Camp"), // NOI18N.
     /**
      * Defines the generic objective type.
      */
-    GENERIC("Generic"),
+    GENERIC("Generic"), // NOI18N.
     /**
      * Defines the keep objective type.
      */
-    KEEP("Keep"),
+    KEEP("Keep"), // NOI18N.
     /**
      * Defines the resource objective type.
      */
-    RESOURCE("Resource"),
+    RESOURCE("Resource"), // NOI18N.
     /**
      * Defines the ruins objective type.
      */
-    RUINS("Ruins"),
+    RUINS("Ruins"), // NOI18N.
     /**
      * Defines the tower objective type.
      */
-    TOWER("Tower"),
+    TOWER("Tower"), // NOI18N.
     /**
      * Defines the castle objective type.
      */
-    CASTLE("Castle"),
+    CASTLE("Castle"), // NOI18N.
     /**
      * Defines the mercenary objective type.
      */
-    MERCENARY("Mercenary"),
+    MERCENARY("Mercenary"), // NOI18N.
     /**
      * Defines the spawn objective type.
      */
-    SPAWN("Spawn"),
+    SPAWN("Spawn"), // NOI18N.
     /**
      * Fail safe value.
      */
