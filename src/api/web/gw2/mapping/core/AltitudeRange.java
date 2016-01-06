@@ -7,18 +7,17 @@
  */
 package api.web.gw2.mapping.core;
 
-import java.util.Objects;
-
 /**
- * Defines a numeric range
+ * Defines an altitude range.
  * <br>Defined to void reusing the {@code Point2D} class.
  * @author Fabrice Bouyé
- * @param <T> The type to use.
  */
-public final class NumericRange<T extends Number> {
+public final class AltitudeRange {
 
-    private final T min;
-    private final T max;
+    public static final AltitudeRange EMPTY = new AltitudeRange(0, 0);
+
+    private final double min;
+    private final double max;
 
     /**
      * Creates a new instance.
@@ -26,26 +25,24 @@ public final class NumericRange<T extends Number> {
      * @param max The max value.
      * @throws NullPointerException If either {@code min} or {@code max} is {@code null}.
      */
-    public NumericRange(final T min, final T max) throws NullPointerException {
-        Objects.requireNonNull(min);
-        Objects.requireNonNull(max);
-        this.min = (min.doubleValue() < max.doubleValue()) ? min : max;
-        this.max = (min.doubleValue() < max.doubleValue()) ? max : min;
+    public AltitudeRange(final double min, final double max) throws NullPointerException {
+        this.min = Math.min(min, max);
+        this.max = Math.max(min, max);
     }
 
     /**
      * Gets the minimum value of this numeric range.
-     * @return A {@code T} instance, never {@code null}.
+     * @return A {@code double}.
      */
-    public T getMin() {
+    public double getMin() {
         return min;
     }
 
     /**
      * Gets the maximum value of this numeric range.
-     * @return A {@code T} instance, never {@code null}.
+     * @return A {@code double}.
      */
-    public T getMax() {
+    public double getMax() {
         return max;
     }
 }

@@ -8,7 +8,7 @@
 package api.web.gw2.mapping.v1.eventdetails;
 
 import api.web.gw2.mapping.core.Coord2DValue;
-import api.web.gw2.mapping.core.NumericRange;
+import api.web.gw2.mapping.core.AltitudeRange;
 import api.web.gw2.mapping.core.Point2D;
 import api.web.gw2.mapping.v1.APIv1;
 import java.util.List;
@@ -22,9 +22,9 @@ public interface EventDetailsPolyLocation extends EventDetailsLocation {
 
     /**
      * Gets the z range of this extruded poly shape event details location.
-     * @return A {@code NumericRange<Double>} instance, never {@code null}.
+     * @return A {@code AltitudeRange} instance, never {@code null}.
      */
-    NumericRange<Double> getZRange();
+    AltitudeRange getZRange();
 
     /**
      * Gets the list of points of this extruded poly shape event details location.
