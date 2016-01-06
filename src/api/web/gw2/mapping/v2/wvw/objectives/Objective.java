@@ -68,15 +68,15 @@ public interface Objective {
 
     /**
      * Gets the coordinates of this objective.
-     * @return An {@code Point3D<Double>} instance, never {@code null}.
+     * @return An {@code Point3D} instance, never {@code null}.
      */
-    Point3D<Double> getCoord();
+    Point3D getCoord();
 
     /**
      * Gets the coordinates of of the label for this objective.
-     * @return An {@code Point2D<Double>} instance, never {@code null}.
+     * @return An {@code Point2D} instance, never {@code null}.
      */
-    Point2D<Double> getLabelCoord();
+    Point2D getLabelCoord();
 
     /**
      * Gets the URL to the marker icon for this objective.

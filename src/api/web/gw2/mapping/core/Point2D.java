@@ -14,39 +14,37 @@ import java.util.Objects;
  * <br>Defined a point class so we do not rely on either AWT, Java2D or JavaFX.
  * <br>Instance of this class are not mutable.
  * @author Fabrice Bouyé
- * @param <T> The type to use.
  */
-public final class Point2D<T extends Number> {
+public final class Point2D {
 
-    private final T x;
-    private final T y;
+    public static final Point2D ORIGIN = new Point2D(0, 0);
+
+    private final double x;
+    private final double y;
 
     /**
      * Creates a new instance.
      * @param x The X (abscise or or longitude) coordinate.
-     * @param y The Y (ordinate or latitude) coordinate. 
-     * @throws NullPointerException If either {@code x} or {@code y} is {@code null}.
+     * @param y The Y (ordinate or latitude) coordinate.
      */
-    public Point2D(final T x, final T y) throws NullPointerException {
-        Objects.requireNonNull(x);
-        Objects.requireNonNull(y);
+    public Point2D(final double x, final double y) {
         this.x = x;
         this.y = y;
     }
 
     /**
      * Gets the X (abscise or or longitude) component of this point.
-     * @return A {@code T} instance, never {@code null}.
+     * @return A {@code double}.
      */
-    public T getX() {
+    public double getX() {
         return x;
     }
 
     /**
      * Gets the Y (ordinate or latitude) component of this point.
-     * @return A {@code T} instance, never {@code null}.
+     * @return A {@code double}.
      */
-    public T getY() {
+    public double getY() {
         return y;
     }
 }

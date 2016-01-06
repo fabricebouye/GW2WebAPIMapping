@@ -14,25 +14,22 @@ import java.util.Objects;
  * <br>Defined a point class so we do not rely on either Java3D or JavaFX.
  * <br>Instance of this class are not mutable.
  * @author Fabrice Bouyé
- * @param <T> The type to use.
  */
-public final class Point3D<T extends Number> {
+public final class Point3D {
 
-    private final T x;
-    private final T y;
-    private final T z;
+    public static final Point3D ORIGIN = new Point3D(0, 0, 0);
+
+    private final double x;
+    private final double y;
+    private final double z;
 
     /**
      * Creates a new instance.
      * @param x The X (abscise or or longitude) coordinate.
-     * @param y The Y (ordinate or latitude) coordinate. 
-     * @param z The Y (depth or altitude) coordinate. 
-     * @throws NullPointerException If either {@code x}, {@code y} or {@code z} is {@code null}.
+     * @param y The Y (ordinate or latitude) coordinate.
+     * @param z The Y (depth or altitude) coordinate.
      */
-    public Point3D(final T x, final T y, final T z) throws NullPointerException {
-        Objects.requireNonNull(x);
-        Objects.requireNonNull(y);
-        Objects.requireNonNull(z);
+    public Point3D(final double x, final double y, final double z) {
         this.x = x;
         this.y = y;
         this.z = z;
@@ -40,25 +37,25 @@ public final class Point3D<T extends Number> {
 
     /**
      * Gets the X (abscise or or longitude) component of this point.
-     * @return A {@code T} instance, never {@code null}.
+     * @return A {@code double}.
      */
-    public T getX() {
+    public double getX() {
         return x;
     }
 
     /**
      * Gets the Y (ordinate or latitude) component of this point.
-     * @return A {@code T} instance, never {@code null}.
+     * @return A {@code double}.
      */
-    public T getY() {
+    public double getY() {
         return y;
     }
 
     /**
      * Gets the Z (depth or altitude) component of this point.
-     * @return A {@code T} instance, never {@code null}.
+     * @return A {@code double}.
      */
-    public T getZ() {
+    public double getZ() {
         return z;
     }
 }

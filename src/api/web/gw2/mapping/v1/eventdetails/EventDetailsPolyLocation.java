@@ -27,8 +27,8 @@ public interface EventDetailsPolyLocation extends EventDetailsLocation {
 
     /**
      * Gets the list of points of this extruded poly shape event details location.
-     * @return A non-modifiable {@code List<Point2D<Double>>} instance, never {@code null}.
+     * @return A non-modifiable {@code List<Point2D>} instance, never {@code null}.
      */
-    List<Point2D<Double>> getPoints();
+    List<Point2D> getPoints();
 
 }

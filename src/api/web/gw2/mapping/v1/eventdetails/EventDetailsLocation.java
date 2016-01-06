@@ -25,7 +25,7 @@ public interface EventDetailsLocation {
 
     /**
      * Gets the center coordinate of this event details location.
-     * @return A {@code Point3D<Double>} instance, never {@code null}.
+     * @return A {@code Point3D} instance, never {@code null}.
      */
-    Point3D<Double> getCenter();
+    Point3D getCenter();
 }

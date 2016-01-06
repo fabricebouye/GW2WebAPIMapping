@@ -92,13 +92,13 @@ public interface Map {
 
     /**
      * Gets the dimension and position of this map in map coordinates.
-     * @return A {@code MapDimension<Integer>} instance, never {@code null}.
+     * @return A {@code MapDimension} instance, never {@code null}.
      */
-    MapDimension<Integer> getMapRect();
+    MapDimension getMapRect();
 
     /**
      * Gets the dimension and position of this map in continent coordinates.
-     * @return A {@code ContinentDimension<Integer>} instance, never {@code null}.
+     * @return A {@code ContinentDimension} instance, never {@code null}.
      */
-    ContinentDimension<Integer> getContinentRect();
+    ContinentDimension getContinentRect();
 }

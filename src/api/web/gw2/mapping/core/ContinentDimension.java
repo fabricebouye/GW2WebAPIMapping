@@ -10,17 +10,24 @@ package api.web.gw2.mapping.core;
 /**
  * Defines an area in the continent coordinate system.
  * @author Fabrice Bouyé
- * @param <T> The type to use.
  */
-public final class ContinentDimension<T extends Number> {
+public final class ContinentDimension {
 
     /**
      * A single empty instance.
      */
-    public static final ContinentDimension<Integer> EMPTY = new ContinentDimension(0, 0, 0, 0);
+    public static final ContinentDimension EMPTY = new ContinentDimension();
 
-    private final Point2D<T> nwCorner;
-    private final Point2D<T> seCorner;
+    private final Point2D nwCorner;
+    private final Point2D seCorner;
+
+    /**
+     * Creates a new empty instance.
+     */
+    private ContinentDimension() {
+        nwCorner = Point2D.ORIGIN;
+        seCorner = Point2D.ORIGIN;
+    }
 
     /**
      * Creates a new instance.
@@ -28,26 +35,25 @@ public final class ContinentDimension<T extends Number> {
      * @param nwY The Y coordinate of the upper-left (NW) corner.
      * @param seX The X coordinate of the lower-right (SE) corner.
      * @param seY The Y coordinate of the lower-right (SE) corner.
-     * @throws NullPointerException If either {@code nwX}, {@code nwY}, {@code seX} or {@code seY} is {@code null}.    
      */
-    public ContinentDimension(final T nwX, final T nwY, final T seX, final T seY) throws NullPointerException {
+    public ContinentDimension(final double nwX, final double nwY, final double seX, final double seY) {
         nwCorner = new Point2D(nwX, nwY);
         seCorner = new Point2D(seX, seY);
     }
 
     /**
      * Gets the point that defines the upper-left (NW) corner.
-     * @return A {@code Point<T>} instance, never {@code null}.
+     * @return A {@code Point2D} instance, never {@code null}.
      */
-    public Point2D<T> getNwCorner() {
+    public Point2D getNwCorner() {
         return nwCorner;
     }
 
     /**
      * Gets the point that defines the lower-right (SE) corner.
-     * @return A {@code Point<T>} instance, never {@code null}.
+     * @return A {@code Point2D} instance, never {@code null}.
      */
-    public Point2D<T> getSeCorner() {
+    public Point2D getSeCorner() {
         return seCorner;
     }
 }

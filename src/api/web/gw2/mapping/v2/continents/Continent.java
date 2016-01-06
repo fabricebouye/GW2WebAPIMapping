@@ -37,9 +37,9 @@ public interface Continent {
 
     /**
      * Gets the dimensions of the area defined by this continent.
-     * @return A {@code ContinentDimension<Integer>} instance, never {@code null}.
+     * @return A {@code ContinentDimension} instance, never {@code null}.
      */
-    ContinentDimension<Integer> getContinentDims();
+    ContinentDimension getContinentDims();
 
     /**
      * Gets the minimum zoom level support for this continent.
