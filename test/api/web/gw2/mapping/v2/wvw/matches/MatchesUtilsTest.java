@@ -7,7 +7,6 @@
  */
 package api.web.gw2.mapping.v2.wvw.matches;
 
-import api.web.gw2.mapping.v2.wvw.objectives.*;
 import api.web.gw2.mapping.core.EnumValueFactory;
 import java.util.stream.IntStream;
 import org.junit.After;
