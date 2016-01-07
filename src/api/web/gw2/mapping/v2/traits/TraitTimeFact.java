@@ -28,7 +28,7 @@ public interface TraitTimeFact extends TraitFact {
     }
 
     /**
-     * Gets the duration of this fact.
+     * Gets the duration of this fact in seconds.
      * @return A {@code Duration} instance, never {@code null}.
      */
     @DurationValue

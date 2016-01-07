@@ -33,7 +33,7 @@ public interface TraitBuffFact extends TraitFact {
     }
 
     /**
-     * Gets the duration of this buff.
+     * Gets the duration of this buff in seconds.
      * @return An {@code Optional<Duration>} instance, never {@code null}.
      */
     @OptionalValue

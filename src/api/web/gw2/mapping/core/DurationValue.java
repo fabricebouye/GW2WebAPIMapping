@@ -21,4 +21,26 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.FIELD, ElementType.METHOD})
 public @interface DurationValue {
+
+    /**
+     * The flavor of this duration.
+     * <br>As of now durations in the GW2 API can be of 2 flavors:
+     * <ul>
+     * <li>{@code MILLIS} - ;</li>
+     * <li>{@code SECONDS} - For character's age, traits, etc.</li>
+     * </ul>
+     * @author Fabrice Bouyé
+     */
+    enum Flavor {
+        MILLIS, SECONDS;
+    }
+
+    /**
+     * The flavor of this id.
+     * <br>Default value is {@code IdValue.Flavor.SECONDS}.
+     * @return An {@code IdValue.Flavor} instance, never {@code null}.
+     * @see DurationValue.Flavor#MILLIS
+     * @see DurationValue.Flavor#SECONDS
+     */
+    public Flavor flavor() default Flavor.SECONDS;
 }

@@ -12,9 +12,9 @@ import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.LocalizedResource;
 import api.web.gw2.mapping.core.OptionalValue;
 import api.web.gw2.mapping.v2.APIv2;
+import java.time.Duration;
 import java.util.Optional;
 import java.util.OptionalInt;
-import java.util.OptionalLong;
 
 /**
  * Defines an item consumable details.
@@ -38,12 +38,12 @@ public interface ItemConsumableDetails {
     Optional<String> getDescription();
 
     /**
-     * Gets the duration of this consumable.
-     * @return An {@code OptionalLong} instance, never {@code null}.
+     * Gets the duration of this consumable in milliseconds.
+     * @return An {@code Optional<Duration>} instance, never {@code null}.
      */
     @OptionalValue
-    @DurationValue
-    OptionalLong getDuration();
+    @DurationValue(flavor = DurationValue.Flavor.MILLIS)
+    Optional<Duration> getDurationMs();
 
     /**
      * Gets the unlock type of this consumable.

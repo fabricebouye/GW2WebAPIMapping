@@ -15,6 +15,7 @@ import api.web.gw2.mapping.core.QuantityValue;
 import api.web.gw2.mapping.v2.APIv2;
 import api.web.gw2.mapping.v2.characters.inventory.InventoryBag;
 import api.web.gw2.mapping.v2.characters.equipment.Equipment;
+import java.time.Duration;
 import java.time.ZonedDateTime;
 import java.util.List;
 import java.util.Map;
@@ -78,7 +79,7 @@ public interface Character {
      * @return A {@code long}.
      */
     @DurationValue
-    long getAge();
+    Duration getAge();
 
     /**
      * Gets the number of deaths of this character.

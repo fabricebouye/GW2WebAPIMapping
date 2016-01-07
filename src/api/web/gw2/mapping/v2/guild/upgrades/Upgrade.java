@@ -53,7 +53,7 @@ public interface Upgrade {
     Optional<URL> getIcon();
 
     /**
-     * Gets the build time of this upgrade.
+     * Gets the build time of this upgrade in seconds.
      * @return A {@code Duration} instance, never {@code null}.
      */
     @DurationValue

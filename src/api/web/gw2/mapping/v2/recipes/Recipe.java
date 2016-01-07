@@ -11,6 +11,7 @@ import api.web.gw2.mapping.core.DurationValue;
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.LevelValue;
 import api.web.gw2.mapping.core.QuantityValue;
+import java.time.Duration;
 import java.util.Set;
 
 /**
@@ -48,10 +49,10 @@ public interface Recipe {
 
     /**
      * Gets the time in milliseconds to craft this recipe.
-     * @return A {@code long}.
+     * @return A {@code Duration} instance, never {@code null}.
      */
-    @DurationValue
-    long getTimeToCraftMs();
+    @DurationValue(flavor = DurationValue.Flavor.MILLIS)
+    Duration getTimeToCraftMs();
 
     /**
      * Gets a set of all crafting disciplines for this recipe.
