@@ -16,16 +16,17 @@ import api.web.gw2.mapping.v2.APIv2;
  */
 @APIv2(endpoint = "v2/items") // NOI18N.
 public interface ItemBagDetails extends ItemDetails {
+
     /**
-    * Get the size of this bag.
-    * @return An {@code int}.
-    */
+     * Get the size of this bag.
+     * @return An {@code int}.
+     */
     @QuantityValue
     int getSize();
 
     /**
-    * Indicates whether the content of the bag appears at merchant or can be sorted in game.
-    * @return  {@code True} if the property is verified, {@code false} otherwise.
-    */
-    boolean isNoSellOrSort();    
+     * Indicates whether the content of the bag appears at merchant or can be sorted in game.
+     * @return  {@code True} if the property is verified, {@code false} otherwise.
+     */
+    boolean isNoSellOrSort();
 }

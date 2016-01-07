@@ -19,7 +19,7 @@ import java.util.OptionalInt;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/items") // NOI18N.
-public interface ItemTrinketDetails {
+public interface ItemTrinketDetails extends ItemDetails {
 
     /**
      * Gets the list of infusion slots on this trinket.

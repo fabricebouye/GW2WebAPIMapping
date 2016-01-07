@@ -17,7 +17,7 @@ import java.util.Optional;
  * Defines a weapon details.
  * @author Fabrice Bouyé
  */
-public interface ItemWeaponDetails {
+public interface ItemWeaponDetails extends ItemDetails {
 
     /**
      * Gets the type of this weapon.

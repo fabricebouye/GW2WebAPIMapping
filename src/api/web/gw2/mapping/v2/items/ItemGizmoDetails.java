@@ -14,7 +14,7 @@ import api.web.gw2.mapping.v2.APIv2;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/items") // NOI18N.
-public interface ItemGizmoDetails {
+public interface ItemGizmoDetails extends ItemDetails {
 
     /**
      * Gets the type of this gizmo.

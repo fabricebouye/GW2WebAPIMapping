@@ -21,7 +21,7 @@ import java.util.OptionalInt;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/items") // NOI18N.
-public interface ItemConsumableDetails {
+public interface ItemConsumableDetails extends ItemDetails {
 
     /**
      * Gets the type of this consumable.

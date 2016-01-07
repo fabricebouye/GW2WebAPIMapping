@@ -7,7 +7,6 @@
  */
 package api.web.gw2.mapping.v2.items;
 
-import api.web.gw2.mapping.core.ImplementationSpecific;
 import api.web.gw2.mapping.v2.APIv2;
 
 /**
@@ -16,11 +15,4 @@ import api.web.gw2.mapping.v2.APIv2;
  */
 @APIv2(endpoint = "v2/items") // NOI18N.
 public interface ItemDetails {
-
-    /**
-     * Gets the item type of this details.
-     * @return An {@code ItemType} instance, never {@code null}.
-     */
-    @ImplementationSpecific
-    ItemType getItemType();
 }

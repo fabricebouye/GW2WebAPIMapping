@@ -18,7 +18,7 @@ import java.util.Set;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/items") // NOI18N.
-public interface ItemUpgradeComponentDetails {
+public interface ItemUpgradeComponentDetails extends ItemDetails {
 
     /**
      * Gets the type of this upgrade component.
