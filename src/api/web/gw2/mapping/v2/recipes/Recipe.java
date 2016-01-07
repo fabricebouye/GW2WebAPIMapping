@@ -7,6 +7,7 @@
  */
 package api.web.gw2.mapping.v2.recipes;
 
+import api.web.gw2.mapping.core.CraftingLevelValue;
 import api.web.gw2.mapping.core.DurationValue;
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.LevelValue;
@@ -64,7 +65,7 @@ public interface Recipe {
      * Gets the minimum level required to craft this recipe.
      * @return An {@code int}.
      */
-    @LevelValue
+    @CraftingLevelValue
     int getMinRating();
 
     /**
@@ -78,4 +79,10 @@ public interface Recipe {
      * @return A non-modifiable {@code Set<RecipeIngredient>} instance, never {@code null}.
      */
     Set<RecipeIngredient> getIngredients();
+
+    /**
+     * Gets the chat link for this recipe.
+     * @return  A {@code String} instance, never {@code null}.
+     */
+    String getChatLink();
 }
