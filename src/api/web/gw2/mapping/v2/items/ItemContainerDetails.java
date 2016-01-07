@@ -7,20 +7,17 @@
  */
 package api.web.gw2.mapping.v2.items;
 
-import api.web.gw2.mapping.core.ImplementationSpecific;
 import api.web.gw2.mapping.v2.APIv2;
 
 /**
- * Defines the details of an item.
+ * Defines container details.
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/items") // NOI18N.
-public interface ItemDetails {
-
+public interface ItemContainerDetails extends ItemDetails {
     /**
-     * Gets the item type of this details.
-     * @return An {@code ItemType} instance, never {@code null}.
-     */
-    @ImplementationSpecific
-    ItemType getItemType();
+    * Gets the type of this container.
+    * @return An {@code ItemContainerType} instance, never {@code null}.
+    */
+    ItemContainerType getType();
 }
