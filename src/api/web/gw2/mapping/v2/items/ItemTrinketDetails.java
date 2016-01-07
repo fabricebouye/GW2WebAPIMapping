@@ -22,6 +22,12 @@ import java.util.OptionalInt;
 public interface ItemTrinketDetails extends ItemDetails {
 
     /**
+     * Gets the type of this trinket.
+     * @return An {@code ItemTrinketType} instance, never {@code null}.
+     */
+    ItemTrinketType getType();
+
+    /**
      * Gets the list of infusion slots on this trinket.
      * @return A non-modifiable {@code List<ItemInfusionSlot>}, never {@code null}.
      */
