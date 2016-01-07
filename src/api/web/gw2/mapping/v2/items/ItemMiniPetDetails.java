@@ -7,18 +7,19 @@
  */
 package api.web.gw2.mapping.v2.items;
 
+import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.v2.APIv2;
 
 /**
- * Defines container details.
+ * Defines minipet details.
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/items") // NOI18N.
-public interface ItemContainerDetails extends ItemDetails {
-
+public interface ItemMiniPetDetails extends ItemDetails {
     /**
-     * Gets the type of this container.
-     * @return An {@code ItemContainerType} instance, never {@code null}.
-     */
-    ItemContainerType getType();
+    * Gets the id of this minipet.
+    * @return An {@code int} &ge; 0.
+    */
+    @IdValue
+    int getMinipetId();
 }
