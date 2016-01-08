@@ -14,8 +14,9 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * The JSON value defines an URL value.
+ * The JSON value defines an URL reference.
  * @author Fabrice Bouyé
+ * @see URLReference
  */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
