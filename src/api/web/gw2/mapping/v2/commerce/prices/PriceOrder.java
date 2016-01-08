@@ -23,10 +23,21 @@ import api.web.gw2.mapping.v2.APIv2;
  */
 @APIv2(endpoint = "v2/commerce/prices") // NOI18N.
 public interface PriceOrder {
+
     /**
-    * Singleton empty instance.
-    */
-    public static final PriceOrder EMPTY = new DefaultPriceOrder();
+     * Singleton empty instance.
+     */
+    public static final PriceOrder EMPTY = new PriceOrder() {
+        @Override
+        public CoinAmount getUnitPrice() {
+            return CoinAmount.ZERO;
+        }
+
+        @Override
+        public int getQuantity() {
+            return 0;
+        }
+    };
 
     /**
      * Gets the highest buy order or lowest sell offer price in coins.
