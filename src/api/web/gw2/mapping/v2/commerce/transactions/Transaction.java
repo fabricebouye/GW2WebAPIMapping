@@ -9,11 +9,13 @@ package api.web.gw2.mapping.v2.commerce.transactions;
 
 import api.web.gw2.mapping.core.CoinAmount;
 import api.web.gw2.mapping.core.CoinValue;
+import api.web.gw2.mapping.core.DateValue;
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.OptionalValue;
 import api.web.gw2.mapping.core.QuantityValue;
 import api.web.gw2.mapping.v2.APIv2;
 import java.time.LocalDate;
+import java.time.ZonedDateTime;
 import java.util.Optional;
 
 /**
@@ -53,14 +55,16 @@ public interface Transaction {
 
     /**
      * Gets the time of creation.
-     * @return A {@code LocalDate} instance, never {@code null}.
+     * @return A {@code ZonedDateTime} instance, never {@code null}.
      */
-    LocalDate getCreated();
+    @DateValue
+    ZonedDateTime getCreated();
 
     /**
      * Gets the time of purchase.
-     * @return An {@code Optional<LocalDate>} instance, never {@code null}.
+     * @return An {@code Optional<ZonedDateTime>} instance, never {@code null}.
      */
     @OptionalValue
-    Optional<LocalDate> getPurchased();
+    @DateValue
+    Optional<ZonedDateTime> getPurchased();
 }
