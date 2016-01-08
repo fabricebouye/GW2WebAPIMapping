@@ -22,7 +22,22 @@ public interface ColorRGB {
     /**
      * A singleton instance that represents the empty or black color.
      */
-    public static final ColorRGB EMPTY = new DefaultColorRGB();
+    public static final ColorRGB EMPTY = new ColorRGB(){
+        @Override
+        public int getRed() {
+            return 0;
+        }
+
+        @Override
+        public int getGreen() {
+            return 0;
+        }
+
+        @Override
+        public int getBlue() {
+            return 0;
+        }
+    };
 
     /**
      * Gets the red component of this RGB color.

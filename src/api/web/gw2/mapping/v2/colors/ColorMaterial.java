@@ -20,7 +20,37 @@ public interface ColorMaterial {
     /**
      * A singleton instance that represents the black material.
      */
-    public static final ColorMaterial EMPTY = new DefaultColorMaterial();
+    public static final ColorMaterial EMPTY = new ColorMaterial() {
+        @Override
+        public ColorRGB getRGB() {
+            return ColorRGB.EMPTY;
+        }
+
+        @Override
+        public int getBrightness() {
+            return 0;
+        }
+
+        @Override
+        public double getContrast() {
+            return 0;
+        }
+
+        @Override
+        public int getHue() {
+            return 0;
+        }
+
+        @Override
+        public double getSaturation() {
+            return 0;
+        }
+
+        @Override
+        public double getLightness() {
+            return 0;
+        }
+    };
 
     /**
      * Gets the base rgb color of this material.
