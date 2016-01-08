@@ -36,4 +36,10 @@ public interface Price {
      * @return An {@code PriceOrder} instance, never {@code null}.
      */
     PriceOrder getSells();
+    
+    /**
+    * Indicates whether or not a free to play account can purchase or sell this item on the trading post.
+    * @return A {@code boolean}.
+    */
+    boolean isWhitelisted();
 }
