@@ -8,11 +8,9 @@
 package api.web.gw2.mapping.v2.currencies;
 
 import api.web.gw2.mapping.core.IdValue;
-import api.web.gw2.mapping.core.OptionalValue;
+import api.web.gw2.mapping.core.URLReference;
 import api.web.gw2.mapping.core.URLValue;
 import api.web.gw2.mapping.v2.APIv2;
-import java.net.URL;
-import java.util.Optional;
 
 /**
  * Defines a currency.
@@ -42,11 +40,10 @@ public interface Currency {
 
     /**
      * Gets the URL of the icon of this currency.
-     * @return An {@code Optional<URL>} instance, never {@code null}.
+     * @return A {@code URLReference} instance, never {@code null}.
      */
-    @OptionalValue
     @URLValue
-    Optional<URL> getIcon();
+    URLReference getIcon();
 
     /**
      * Gets the sorting order of this currency.

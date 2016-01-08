@@ -10,10 +10,9 @@ package api.web.gw2.mapping.v2.traits;
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.LocalizedResource;
 import api.web.gw2.mapping.core.OptionalValue;
+import api.web.gw2.mapping.core.URLReference;
 import api.web.gw2.mapping.core.URLValue;
 import api.web.gw2.mapping.v2.APIv2;
-import api.web.gw2.mapping.v2.characters.CharacterProfession;
-import java.net.URL;
 import java.util.Optional;
 import java.util.Set;
 
@@ -40,11 +39,10 @@ public interface Trait {
 
     /**
      * Gets the URL for the icon of this trait.
-     * @return An {@code Optional<URL>} instance, never {@code null}.
+     * @return A {@code URLReference} instance, never {@code null}.
      */
-    @OptionalValue
     @URLValue
-    Optional<URL> getIcon();
+    URLReference getIcon();
 
     /**
      * Gets the localized description of this trait.

@@ -8,11 +8,9 @@
 package api.web.gw2.mapping.v2.emblem;
 
 import api.web.gw2.mapping.core.IdValue;
-import api.web.gw2.mapping.core.OptionalValue;
+import api.web.gw2.mapping.core.URLReference;
 import api.web.gw2.mapping.core.URLValue;
 import api.web.gw2.mapping.v2.APIv2;
-import java.net.URL;
-import java.util.Optional;
 import java.util.Set;
 
 /**
@@ -31,10 +29,8 @@ public interface EmblemLayer {
 
     /**
      * Gets the URLs of all images in this layer.
-     * @return A non-modifiable {@code Set<Optional<URL>>}, never {@code null}.
+     * @return A non-modifiable {@code Set<URLReference>}, never {@code null}.
      */
-    @OptionalValue
     @URLValue
-    // @todo We may need to move to Optional<Set<URL>> instead.
-    Set<Optional<URL>> getLayers();
+    Set<URLReference> getLayers();
 }

@@ -8,11 +8,9 @@
 package api.web.gw2.mapping.v2.files;
 
 import api.web.gw2.mapping.core.IdValue;
-import api.web.gw2.mapping.core.OptionalValue;
+import api.web.gw2.mapping.core.URLReference;
 import api.web.gw2.mapping.core.URLValue;
 import api.web.gw2.mapping.v2.APIv2;
-import java.net.URL;
-import java.util.Optional;
 
 /**
  * Defines a file.
@@ -30,9 +28,8 @@ public interface File {
 
     /**
      * Gets the URL of the icon of this file.
-     * @return An {@code Optional<URL>} instance, never {@code null}.
+     * @return A {@code URLReference} instance, never {@code null}.
      */
-    @OptionalValue
     @URLValue
-    Optional<URL> getIcon();
+    URLReference getIcon();
 }

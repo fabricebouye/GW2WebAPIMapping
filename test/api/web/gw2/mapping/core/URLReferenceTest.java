@@ -46,7 +46,7 @@ public class URLReferenceTest {
     public void testOf_URL() {
         System.out.println("of");
         final URL url = null;
-        final URLReference expResult = URLReference.EMPTY;
+        final URLReference expResult = URLReference.empty();
         final URLReference result = URLReference.of(url);
         assertEquals(expResult, result);
     }
@@ -58,7 +58,7 @@ public class URLReferenceTest {
     public void testOf_String() {
         System.out.println("of");
         final String path = null;
-        final URLReference expResult = URLReference.EMPTY;
+        final URLReference expResult = URLReference.empty();
         final URLReference result = URLReference.of(path);
         assertEquals(expResult, result);
     }
@@ -68,9 +68,10 @@ public class URLReferenceTest {
      */
     @Test
     public void testEmpty() {
-        System.out.println("empty");
-        URLReference expResult = URLReference.EMPTY;
-        URLReference result = URLReference.empty();
+        System.out.println("empty");        
+        final URLReference instance = URLReference.empty();
+        final boolean expResult = false;
+        final boolean result = instance.isPresent();
         assertEquals(expResult, result);
     }
 

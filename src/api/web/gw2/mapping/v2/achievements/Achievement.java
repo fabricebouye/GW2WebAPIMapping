@@ -10,9 +10,9 @@ package api.web.gw2.mapping.v2.achievements;
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.LocalizedResource;
 import api.web.gw2.mapping.core.OptionalValue;
+import api.web.gw2.mapping.core.URLReference;
 import api.web.gw2.mapping.core.URLValue;
 import api.web.gw2.mapping.v2.APIv2;
-import java.net.URL;
 import java.util.Optional;
 import java.util.Set;
 
@@ -31,12 +31,11 @@ public interface Achievement {
     int getId();
 
     /**
-     * Gets the URL of the icon for this achievement.
-     * @return An {@code Optional<URL>}, never {@code null}.
+     * Gets the optional URL of the icon for this achievement.
+     * @return A {@code URLReference}, never {@code null}.
      */
     @URLValue
-    @OptionalValue
-    Optional<URL> getIcon();
+    URLReference getIcon();
 
     /**
      * Gets the localized name of this achievement.
@@ -78,7 +77,7 @@ public interface Achievement {
     Set<AchievementTier> getTiers();
 
     /**
-     * Gets the rewards for this achievement.
+     * Gets the optional rewards for this achievement.
      * @return An {@code Optional<Set<AchievementReward>>} instance, never {@code null}.
      * <br>If present the contained set is non-modifiable and may be empty.
      */
@@ -86,7 +85,7 @@ public interface Achievement {
     Optional<Set<AchievementReward>> getRewards();
 
     /**
-     * Gets the bits for this achievement.
+     * Gets the optional bits for this achievement.
      * @return An {@code Optional<Set<AchievementBit>>} instance, never {@code null}.
      * <br>If present the contained set is non-modifiable and may be empty.
      */

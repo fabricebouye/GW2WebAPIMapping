@@ -10,9 +10,9 @@ package api.web.gw2.mapping.v2.traits;
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.LocalizedResource;
 import api.web.gw2.mapping.core.OptionalValue;
+import api.web.gw2.mapping.core.URLReference;
 import api.web.gw2.mapping.core.URLValue;
 import api.web.gw2.mapping.v2.APIv2;
-import java.net.URL;
 import java.util.Optional;
 import java.util.OptionalInt;
 
@@ -38,12 +38,11 @@ public interface TraitFact {
     TraitFactType getType();
 
     /**
-     * Gets the URL to the icon of this fact.
-     * @return An {@code Optional<URL>} instance, never {@code null}.
+     * Gets the optional URL to the icon of this fact.
+     * @return A {@code URLReference} instance, never {@code null}.
      */
-    @OptionalValue
     @URLValue
-    Optional<URL> getIcon();
+    URLReference getIcon();
 
     /**
      * Gets the trait that has to be selected for this fact to take effect.

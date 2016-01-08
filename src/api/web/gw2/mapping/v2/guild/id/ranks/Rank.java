@@ -8,13 +8,11 @@
 package api.web.gw2.mapping.v2.guild.id.ranks;
 
 import api.web.gw2.mapping.core.IdValue;
-import api.web.gw2.mapping.core.OptionalValue;
 import api.web.gw2.mapping.core.QuantityValue;
+import api.web.gw2.mapping.core.URLReference;
 import api.web.gw2.mapping.core.URLValue;
 import api.web.gw2.mapping.v2.APIv2;
 import api.web.gw2.mapping.v2.guild.permissions.PermissionId;
-import java.net.URL;
-import java.util.Optional;
 import java.util.Set;
 
 /**
@@ -48,9 +46,8 @@ public interface Rank {
 
     /**
      * Gets the URL to the icon of this item.
-     * @return An {@code Optional<URL>} instance, never {@code null}.
+     * @return A {@code URLReference} instance, never {@code null}.
      */
-    @OptionalValue
     @URLValue
-    Optional<URL> getIcon();
+    URLReference getIcon();
 }

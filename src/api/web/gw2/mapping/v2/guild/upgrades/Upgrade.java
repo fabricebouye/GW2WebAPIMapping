@@ -15,9 +15,9 @@ import api.web.gw2.mapping.core.LevelValue;
 import api.web.gw2.mapping.core.LocalizedResource;
 import api.web.gw2.mapping.core.OptionalValue;
 import api.web.gw2.mapping.core.QuantityValue;
+import api.web.gw2.mapping.core.URLReference;
 import api.web.gw2.mapping.core.URLValue;
 import api.web.gw2.mapping.v2.APIv2;
-import java.net.URL;
 import java.time.Duration;
 import java.util.Optional;
 import java.util.OptionalInt;
@@ -46,11 +46,10 @@ public interface Upgrade {
 
     /**
      * Gets the icon of this upgrade.
-     * @return An {@code Optional<URL>} instance, never {@code null}.
+     * @return A {@code URLReference} instance, never {@code null}.
      */
-    @OptionalValue
     @URLValue
-    Optional<URL> getIcon();
+    URLReference getIcon();
 
     /**
      * Gets the build time of this upgrade in seconds.

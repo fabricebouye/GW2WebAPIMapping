@@ -10,13 +10,14 @@ package api.web.gw2.mapping.core;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.NoSuchElementException;
+import java.util.Objects;
 import java.util.function.Consumer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * This class holds a URL path.
- * <br>This class is intended to replace all instances of {@code Optional<URL>} which were used in earlier versions of the mapping.
+ * This class holds a URL. It can be used to store optional and non-optional URL values within the mapping. It will also consume any {@code MalformedURLException} raised when transforming a {@code String} path into a {@code java.net.URL}
+ * <p>This class is intended to replace all instances of {@code java.util.Optional<URL>} which were used in earlier versions of the mapping. We cannot simply inherit from {@code java.util.Optional} is this class is {@code final}, so similar functionalities have been recoded here.
  * @author Fabrice Bouyé
  * @see URLValue
  */
@@ -25,7 +26,7 @@ public final class URLReference {
     /**
      * The unique empty instance.
      */
-    public static final URLReference EMPTY = new URLReference(null);
+    private static final URLReference EMPTY = new URLReference(null);
 
     /**
      * The underlying URL.
@@ -40,11 +41,29 @@ public final class URLReference {
         this.url = url;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (!(obj instanceof URLReference)) {
+            return false;
+        }
+        final URLReference other = (URLReference) obj;
+        return Objects.equals(url, other.url);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(url);
+    }
+
     /**
      * Gets an URL reference for the given URL.
      * @param url The source URL
      * @return A {@code URLReference} instance, never {@code null}.
-     * {@code URLReference.EMPTY} is returned if {@code url} is {@code null}.
+     * <br>The empty instance is returned if {@code url} is {@code null}.
+     * @see #empty() 
      */
     public static URLReference of(final URL url) {
         return (url == null) ? empty() : new URLReference(url);
@@ -52,9 +71,11 @@ public final class URLReference {
 
     /**
      * Gets an URL reference for the given path.
+     * <br>This method will consume any {@code MalformedURLException} which may be raised when creating a new {@code URL} instance.
      * @param path The source path
      * @return A {@code URLReference} instance, never {@code null}.
-     * {@code URLReference.EMPTY} is returned if {@code path} is malformed.
+     * <br>The empty instance is returned if {@code path} is malformed.
+     * @see #empty() 
      */
     public static URLReference of(final String path) {
         URLReference result = empty();
@@ -62,15 +83,14 @@ public final class URLReference {
             final URL url = new URL(path);
             result = new URLReference(url);
         } catch (MalformedURLException ex) {
-            Logger.getLogger(URLReference.class.getName()).log(Level.SEVERE, ex.getMessage(), ex);
+            Logger.getLogger(URLReference.class.getName()).log(Level.WARNING, ex.getMessage(), ex);
         }
         return result;
     }
 
     /**
      * Gets the empty instance.
-     * @return Always {@code URLReference.EMPTY}.
-     * @see #EMPTY
+     * @return Always the same empty instance, never {@code null}.
      */
     public static URLReference empty() {
         return EMPTY;

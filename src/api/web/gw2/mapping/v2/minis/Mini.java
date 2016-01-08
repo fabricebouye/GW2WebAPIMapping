@@ -10,9 +10,9 @@ package api.web.gw2.mapping.v2.minis;
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.LocalizedResource;
 import api.web.gw2.mapping.core.OptionalValue;
+import api.web.gw2.mapping.core.URLReference;
 import api.web.gw2.mapping.core.URLValue;
 import api.web.gw2.mapping.v2.APIv2;
-import java.net.URL;
 import java.util.Optional;
 
 /**
@@ -46,11 +46,10 @@ public interface Mini {
 
     /**
      * Gets the URL of the icon of this mini.
-     * @return An {@code Optional<URL>} instance, never {@code null}.
+     * @return A {@code URLReference} instance, never {@code null}.
      */
     @URLValue
-    @OptionalValue
-    public Optional<URL> getIcon();
+    public URLReference getIcon();
 
     /**
      * Gets the order of this mini.
