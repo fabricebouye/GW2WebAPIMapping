@@ -17,7 +17,7 @@ public final class ContinentDimensions {
     /**
      * The empty instance singleton.
      */
-    public static final ContinentDimensions EMPTY = new ContinentDimensions();
+    private static final ContinentDimensions EMPTY = new ContinentDimensions();
 
     /**
      * The width.
