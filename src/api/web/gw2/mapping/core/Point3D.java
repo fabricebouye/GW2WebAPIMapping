@@ -7,8 +7,6 @@
  */
 package api.web.gw2.mapping.core;
 
-import java.util.Objects;
-
 /**
  * Defines a 3D point.
  * <br>Defined a point class so we do not rely on either Java3D or JavaFX.
@@ -17,22 +15,65 @@ import java.util.Objects;
  */
 public final class Point3D {
 
-    public static final Point3D ORIGIN = new Point3D(0, 0, 0);
+    /**
+     * The origin singleton instance.
+     */
+    private static final Point3D ORIGIN = new Point3D();
 
+    /**
+     * The X (abscise or or longitude) coordinate.
+     */
     private final double x;
+    /**
+     * The Y (ordinate or latitude) coordinate.
+     */
     private final double y;
+    /**
+     * The Z (depth or altitude) coordinate.
+     */
     private final double z;
+
+    /**
+     * Creates a new empty instance.
+     */
+    private Point3D() {
+        this(0, 0, 0);
+    }
 
     /**
      * Creates a new instance.
      * @param x The X (abscise or or longitude) coordinate.
      * @param y The Y (ordinate or latitude) coordinate.
-     * @param z The Y (depth or altitude) coordinate.
+     * @param z The Z (depth or altitude) coordinate.
      */
-    public Point3D(final double x, final double y, final double z) {
+    private Point3D(final double x, final double y, final double z) {
         this.x = x;
         this.y = y;
         this.z = z;
+    }
+
+    /**
+     * Gets the origin singleton instance.
+     * @return A {@code Point3D} instance, never {@code null}.
+     */
+    public static Point3D origin() {
+        return ORIGIN;
+    }
+
+    /**
+     * Factory method.
+     * @param x The X (abscise or or longitude) coordinate.
+     * @param y The Y (ordinate or latitude) coordinate.
+     * @param z The Z (depth or altitude) coordinate.
+     * @return A {@code Point3D} instance, never {@code null}.
+     * <br>If {@code x}, {@code y} and {@code z} = 0 the origin singleton is returned.
+     */
+    public static final Point3D of(final double x, final double y, final double z) {
+        if (x == 0 && y == 0 && z == 0) {
+            return origin();
+        } else {
+            return new Point3D(x, y, z);
+        }
     }
 
     /**
