@@ -27,7 +27,7 @@ public interface AchievementItemReward extends AchievementReward {
 
     /**
      * Gets the quantity of the item rewarded by this achievement.
-     * @return An {@code int} & ge; 0.
+     * @return An {@code int} &ge; 0.
      */
     @QuantityValue
     int getCount();
