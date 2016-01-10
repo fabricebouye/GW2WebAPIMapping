@@ -8,8 +8,9 @@
 package api.web.gw2.mapping.core;
 
 /**
- * Dimensions of a continent.
+ * Dimensions of a continent. 
  * @author Fabrice Bouyé
+ * @see ContinentDims
  */
 public final class ContinentDimensions {
 

@@ -10,6 +10,7 @@ package api.web.gw2.mapping.core;
 /**
  * The dimensions of the map within the continent coordinate system, given as the coordinates of the upper-left (NW) and lower-right (SE) corners.
  * @author Fabrice Bouyé
+ * @see ContinentRect
  */
 public final class ContinentBounds {
 

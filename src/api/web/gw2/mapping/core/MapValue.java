@@ -14,13 +14,14 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * The JSON value defines a {@code Map}.
+ * The JSON value defines a {@code Map} (a {@code java.util.Map} instance).
  * <br>Some recent endpoint store informations as a {@code Map}.
  * <br>In all instances so far, keys used in the map are instance of enum types.
  * @author Fabrice Bouyé
+ * @see java.util.Map
  */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
-@Target({ElementType.FIELD})
+@Target({ElementType.FIELD, ElementType.METHOD})
 public @interface MapValue {
 }

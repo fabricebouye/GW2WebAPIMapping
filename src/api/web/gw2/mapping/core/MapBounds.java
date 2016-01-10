@@ -10,6 +10,7 @@ package api.web.gw2.mapping.core;
 /**
  * The dimensions of the map, given as the coordinates of the lower-left (SW) and upper-right (NE) corners.
  * @author Fabrice Bouyé
+ * @see MapRect
  */
 public final class MapBounds {
 

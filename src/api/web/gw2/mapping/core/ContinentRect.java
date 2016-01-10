@@ -14,12 +14,12 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * The JSON value defines a map area dimensions.
+ * The JSON value defines a continent area dimensions.
  * @author Fabrice Bouyé
- * @see MapBounds
+ * @see ContinentBounds
  */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.FIELD, ElementType.METHOD})
-public @interface MapRect {
+public @interface ContinentRect {
 }

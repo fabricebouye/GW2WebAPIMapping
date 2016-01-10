@@ -8,10 +8,12 @@
 package api.web.gw2.mapping.v2.maps;
 
 import api.web.gw2.mapping.core.ContinentDimensions;
+import api.web.gw2.mapping.core.ContinentRect;
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.LevelValue;
 import api.web.gw2.mapping.core.LocalizedResource;
 import api.web.gw2.mapping.core.MapBounds;
+import api.web.gw2.mapping.core.MapRect;
 import java.util.Set;
 
 /**
@@ -94,11 +96,13 @@ public interface Map {
      * Gets the dimension and position of this map in map coordinates.
      * @return A {@code MapBounds} instance, never {@code null}.
      */
+    @MapRect
     MapBounds getMapRect();
 
     /**
      * Gets the dimension and position of this map in continent coordinates.
      * @return A {@code ContinentDimension} instance, never {@code null}.
      */
+    @ContinentRect
     ContinentDimensions getContinentRect();
 }
