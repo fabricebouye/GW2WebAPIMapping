@@ -10,6 +10,7 @@ package api.web.gw2.mapping.v2.characters;
 import api.web.gw2.mapping.core.DurationValue;
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.LevelValue;
+import api.web.gw2.mapping.core.MapValue;
 import api.web.gw2.mapping.core.OptionalValue;
 import api.web.gw2.mapping.core.QuantityValue;
 import api.web.gw2.mapping.v2.APIv2;
@@ -122,5 +123,6 @@ public interface Character {
      * @see api.web.gw2.mapping.v2.tokeninfo.TokenInfoPermission#BUILDS
      */
     @OptionalValue
+    @MapValue
     Optional<Map<CharacterGameType, CharacterSpecialization>> getSpecialisations();
 }

@@ -9,6 +9,7 @@ package api.web.gw2.mapping.v2.wvw.matches;
 
 import api.web.gw2.mapping.core.DateValue;
 import api.web.gw2.mapping.core.IdValue;
+import api.web.gw2.mapping.core.MapValue;
 import api.web.gw2.mapping.v2.APIv2;
 import java.time.ZonedDateTime;
 import java.util.Map;
@@ -46,6 +47,7 @@ public interface Match {
      * Gets the scores for this WvW match.
      * @return A {@code Map<MatchTeam, Integer>}, never {@code null}, may be empty.
      */
+    @MapValue
     Map<MatchTeam, Integer> getScores();
 
     /**
@@ -53,18 +55,21 @@ public interface Match {
      * @return A {@code Map<MatchTeam, Integer>}, never {@code null}, may be empty.
      */
     @IdValue
+    @MapValue
     Map<MatchTeam, Integer> getWorlds();
 
     /**
      * Gets the deaths for this WvW match.
      * @return A {@code Map<MatchTeam, Integer>}, never {@code null}, may be empty.
      */
+    @MapValue
     Map<MatchTeam, Integer> getDeaths();
 
     /**
      * Gets the kills for this WvW match.
      * @return A {@code Map<MatchTeam, Integer>}, never {@code null}, may be empty.
      */
+    @MapValue
     Map<MatchTeam, Integer> getKills();
 
     /**

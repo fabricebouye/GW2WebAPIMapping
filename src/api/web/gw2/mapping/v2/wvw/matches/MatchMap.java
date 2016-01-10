@@ -7,7 +7,9 @@
  */
 package api.web.gw2.mapping.v2.wvw.matches;
 
+import api.web.gw2.mapping.core.EnumValue;
 import api.web.gw2.mapping.core.IdValue;
+import api.web.gw2.mapping.core.MapValue;
 import api.web.gw2.mapping.v2.APIv2;
 import java.util.List;
 import java.util.Map;
@@ -37,6 +39,7 @@ public interface MatchMap {
      * Gets the scores for this WvW match.
      * @return A {@code Map<MatchTeam, Integer>}, never {@code null}, may be empty.
      */
+    @MapValue
     Map<MatchTeam, Integer> getScores();
 
     /**
@@ -55,11 +58,13 @@ public interface MatchMap {
      * Gets the deaths for this WvW match.
      * @return A {@code Map<MatchTeam, Integer>}, never {@code null}, may be empty.
      */
+    @MapValue
     Map<MatchTeam, Integer> getDeaths();
 
     /**
      * Gets the kills for this WvW match.
      * @return A {@code Map<MatchTeam, Integer>}, never {@code null}, may be empty.
      */
+    @MapValue
     Map<MatchTeam, Integer> getKills();
 }
