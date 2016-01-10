@@ -7,6 +7,7 @@
  */
 package api.web.gw2.mapping.v1.wvw.matches;
 
+import api.web.gw2.mapping.core.SetValue;
 import api.web.gw2.mapping.v1.APIv1;
 import java.util.Set;
 
@@ -21,6 +22,7 @@ public interface MatchListing {
      * Gets a set of all currently ongoing WvW matches.
      * @return A non-modifiable {@code Set<Match>}, never {@code null}.
      */
+    @SetValue
     Set<Match> getWvwMatches();
 
 }

@@ -8,6 +8,7 @@
 package api.web.gw2.mapping.v2.commerce.exchange;
 
 import api.web.gw2.mapping.core.ImplementationSpecific;
+import api.web.gw2.mapping.core.SetValue;
 import api.web.gw2.mapping.v2.APIv2;
 import java.util.Set;
 
@@ -24,5 +25,6 @@ public interface ExchangeResponse {
      * @return A non-modifiable {@code Set<ExchangeResource>}, never {@code null}.
      */
     @ImplementationSpecific
+    @SetValue
     Set<ExchangeResource> getResources();
 }

@@ -13,6 +13,7 @@ import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.LevelValue;
 import api.web.gw2.mapping.core.LocalizedResource;
 import api.web.gw2.mapping.core.OptionalValue;
+import api.web.gw2.mapping.core.SetValue;
 import api.web.gw2.mapping.core.URLReference;
 import api.web.gw2.mapping.core.URLValue;
 import api.web.gw2.mapping.v2.APIv2;
@@ -87,18 +88,21 @@ public interface Item {
      * Get a set of flags on this items.
      * @return A non-modifiable {@code Set<ItemFlag>} instance, never {@code null}, set may be empty.
      */
+    @SetValue
     Set<ItemFlag> getFlags();
 
     /**
      * Get a set of game types on this items.
      * @return A non-modifiable {@code Set<ItemGameType>} instance, never {@code null}, set may be empty.
      */
+    @SetValue
     Set<ItemGameType> getGameTypes();
 
     /**
      * Get a set of restrictions on this items.
      * @return A non-modifiable {@code Set<ItemRestriction>} instance, never {@code null}, set may be empty.
      */
+    @SetValue
     Set<ItemRestriction> getRestrictions();
 
     /**

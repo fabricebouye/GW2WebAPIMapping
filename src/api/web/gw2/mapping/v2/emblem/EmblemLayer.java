@@ -8,6 +8,7 @@
 package api.web.gw2.mapping.v2.emblem;
 
 import api.web.gw2.mapping.core.IdValue;
+import api.web.gw2.mapping.core.SetValue;
 import api.web.gw2.mapping.core.URLReference;
 import api.web.gw2.mapping.core.URLValue;
 import api.web.gw2.mapping.v2.APIv2;
@@ -32,5 +33,6 @@ public interface EmblemLayer {
      * @return A non-modifiable {@code Set<URLReference>}, never {@code null}.
      */
     @URLValue
+    @SetValue
     Set<URLReference> getLayers();
 }

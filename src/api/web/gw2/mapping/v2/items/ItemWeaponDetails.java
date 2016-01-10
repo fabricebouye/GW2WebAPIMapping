@@ -8,6 +8,7 @@
 package api.web.gw2.mapping.v2.items;
 
 import api.web.gw2.mapping.core.IdValue;
+import api.web.gw2.mapping.core.ListValue;
 import api.web.gw2.mapping.core.OptionalValue;
 import api.web.gw2.mapping.core.QuantityValue;
 import java.util.List;
@@ -56,6 +57,7 @@ public interface ItemWeaponDetails extends ItemDetails {
      * Gets the list of infusions on this weapon.
      * @return A non-modifiable {@code List<ItemInfusionSlot>} instance, never {@code null}.
      */
+    @ListValue
     List<ItemInfusionSlot> getInfusionSlots();
 
     /**

@@ -8,6 +8,7 @@
 package api.web.gw2.mapping.v1.guilddetails;
 
 import api.web.gw2.mapping.core.IdValue;
+import api.web.gw2.mapping.core.SetValue;
 import api.web.gw2.mapping.v1.APIv1;
 import java.util.Set;
 
@@ -57,5 +58,6 @@ public interface GuildDetailsEmblem {
      * Gets a set of flags applied to this emblem.
      * @return A non-modifiable {@code Set<GuildDetailsEmblemFlag>}, never {@code null}, may be empty.
      */
+    @SetValue
     Set<GuildDetailsEmblemFlag> getFlags();
 }

@@ -6,6 +6,7 @@
 package api.web.gw2.mapping.v1.wvw.matchdetails;
 
 import api.web.gw2.mapping.core.IdValue;
+import api.web.gw2.mapping.core.SetValue;
 import api.web.gw2.mapping.v1.APIv1;
 import java.util.Set;
 
@@ -33,6 +34,7 @@ public interface MatchDetailsMap {
      * Gets a set of objectives on this map.
      * @return A non-modifiable {@code Set<MatchDetailsObjective>} instance, never {@code null}.
      */
+    @SetValue
     Set<MatchDetailsObjective> getObjectives();
 
     /**
@@ -40,5 +42,6 @@ public interface MatchDetailsMap {
      * @return A non-modifiable {@code Set<MatchDetailsBonus>} instance, never {@code null}.
      * <br>The set is empty if no faction holds a bonus on this map.
      */
+    @SetValue
     Set<MatchDetailsBonus> getBonuses();
 }

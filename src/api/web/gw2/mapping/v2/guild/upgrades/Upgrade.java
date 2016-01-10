@@ -15,6 +15,7 @@ import api.web.gw2.mapping.core.LevelValue;
 import api.web.gw2.mapping.core.LocalizedResource;
 import api.web.gw2.mapping.core.OptionalValue;
 import api.web.gw2.mapping.core.QuantityValue;
+import api.web.gw2.mapping.core.SetValue;
 import api.web.gw2.mapping.core.URLReference;
 import api.web.gw2.mapping.core.URLValue;
 import api.web.gw2.mapping.v2.APIv2;
@@ -78,12 +79,14 @@ public interface Upgrade {
      * @return A non-modifiable {@code Set<Integer>}, never {@code null}.
      */
     @IdValue
+    @SetValue
     Set<Integer> getPrerequisites();
 
     /**
      * Gets a set of costs required before allowed to build this upgrade.
      * @return A non-modifiable {@code Set<UpgradeCost>}, never {@code null}.
      */
+    @SetValue
     Set<UpgradeCost> getCosts();
 
     // @todo Not sure about the need to split into a sub itnerface for those 2 fields.

@@ -7,6 +7,7 @@
  */
 package api.web.gw2.mapping.v1.wvw.matchdetails;
 
+import api.web.gw2.mapping.core.SetValue;
 import api.web.gw2.mapping.v1.APIv1;
 import java.util.Set;
 
@@ -33,6 +34,6 @@ public interface MatchDetails {
      * Gets the set of maps in this match details.
      * @return A {@code Set<MatchDetailsMap>} instance, never {@code null}.
      */
+    @SetValue
     Set<MatchDetailsMap> getMaps();
-
 }

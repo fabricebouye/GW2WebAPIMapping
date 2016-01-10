@@ -9,6 +9,7 @@ package api.web.gw2.mapping.v2.materials;
 
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.LocalizedResource;
+import api.web.gw2.mapping.core.SetValue;
 import java.util.Set;
 
 /**
@@ -36,6 +37,6 @@ public interface MaterialStorage {
      * @return A {@code Set<Integer>} instance, never {@code null}.
      */
     @IdValue
+    @SetValue
     Set<Integer> getItems();
-
 }

@@ -10,6 +10,7 @@ package api.web.gw2.mapping.v2.achievements;
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.LocalizedResource;
 import api.web.gw2.mapping.core.OptionalValue;
+import api.web.gw2.mapping.core.SetValue;
 import api.web.gw2.mapping.core.URLReference;
 import api.web.gw2.mapping.core.URLValue;
 import api.web.gw2.mapping.v2.APIv2;
@@ -68,12 +69,14 @@ public interface Achievement {
      * Gets the flags of this achievement.
      * @return A non-modifiable {@code Set<AchievementFlag>} instance, never {@code null}.
      */
+    @SetValue
     Set<AchievementFlag> getFlags();
 
     /**
      * Gets the tiers for this achievement.
      * @return A non-modifiable {@code Set<AchievementTier>} instance, never {@code null}.
      */
+    @SetValue
     Set<AchievementTier> getTiers();
 
     /**
@@ -82,6 +85,7 @@ public interface Achievement {
      * <br>If present the contained set is non-modifiable and may be empty.
      */
     @OptionalValue
+    @SetValue
     Optional<Set<AchievementReward>> getRewards();
 
     /**
@@ -90,5 +94,6 @@ public interface Achievement {
      * <br>If present the contained set is non-modifiable and may be empty.
      */
     @OptionalValue
+    @SetValue
     Optional<Set<AchievementBit>> getBits();
 }

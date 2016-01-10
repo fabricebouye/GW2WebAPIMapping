@@ -12,6 +12,7 @@ import api.web.gw2.mapping.core.ContinentDims;
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.LocalizedResource;
 import api.web.gw2.mapping.core.QuantityValue;
+import api.web.gw2.mapping.core.SetValue;
 import api.web.gw2.mapping.v2.APIv2;
 import java.util.Set;
 
@@ -61,5 +62,6 @@ public interface Continent {
      * Gets a set of tile ids included in this continent.
      * @return A {@code Set<Integer>} instance, never {@code null}.
      */
+    @SetValue
     Set<Integer> getFloors();
 }

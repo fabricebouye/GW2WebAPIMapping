@@ -8,6 +8,7 @@
 package api.web.gw2.mapping.v2.characters.equipment;
 
 import api.web.gw2.mapping.core.IdValue;
+import api.web.gw2.mapping.core.ListValue;
 import api.web.gw2.mapping.core.OptionalValue;
 import api.web.gw2.mapping.v2.APIv2;
 import java.util.List;
@@ -40,6 +41,7 @@ public interface Equipment {
      */
     @OptionalValue
     @IdValue
+    @ListValue
     Optional<List<Integer>> getUpgrades();
 
     /**
@@ -49,6 +51,7 @@ public interface Equipment {
      */
     @OptionalValue
     @IdValue
+    @ListValue
     Optional<List<Integer>> getInfusions();
 
     /**

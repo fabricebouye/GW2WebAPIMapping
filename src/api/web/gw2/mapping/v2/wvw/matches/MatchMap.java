@@ -9,7 +9,9 @@ package api.web.gw2.mapping.v2.wvw.matches;
 
 import api.web.gw2.mapping.core.EnumValue;
 import api.web.gw2.mapping.core.IdValue;
+import api.web.gw2.mapping.core.ListValue;
 import api.web.gw2.mapping.core.MapValue;
+import api.web.gw2.mapping.core.SetValue;
 import api.web.gw2.mapping.v2.APIv2;
 import java.util.List;
 import java.util.Map;
@@ -46,12 +48,14 @@ public interface MatchMap {
      * Gets the bonuses of this map.
      * @return A non-modifiable {@code List<MatchMapBonus>} instance, never {@code null}, may be empty.
      */
+    @ListValue
     List<MatchMapBonus> getBonuses();
 
     /**
      * Gets the objectives of this map.
      * @return A non-modifiable {@code Set<MatchMapObjective>} instance, never {@code null}, may be empty.
      */
+    @SetValue
     Set<MatchMapObjective> getObjectives();
 
     /**

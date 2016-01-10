@@ -10,6 +10,7 @@ package api.web.gw2.mapping.v2.account.achievements;
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.OptionalValue;
 import api.web.gw2.mapping.core.QuantityValue;
+import api.web.gw2.mapping.core.SetValue;
 import api.web.gw2.mapping.v2.APIv2;
 import java.util.Optional;
 import java.util.OptionalInt;
@@ -53,10 +54,11 @@ public interface Achievement {
     boolean isDone();
 
     /**
-     * Gets the list of bits for this achievement.
+     * Gets the set of bits for this achievement.
      * @return An {@code Optional<Set<Integer>>} instance, never {@code null}:
      * <br>If present, the set is non-modifiable and may be empty.
      */
     @OptionalValue
+    @SetValue
     Optional<Set<Integer>> getBits();
 }

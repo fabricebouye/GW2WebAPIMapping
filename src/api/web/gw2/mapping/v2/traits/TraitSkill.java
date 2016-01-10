@@ -10,6 +10,7 @@ package api.web.gw2.mapping.v2.traits;
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.LocalizedResource;
 import api.web.gw2.mapping.core.OptionalValue;
+import api.web.gw2.mapping.core.SetValue;
 import api.web.gw2.mapping.core.URLReference;
 import api.web.gw2.mapping.core.URLValue;
 import java.util.Optional;
@@ -55,6 +56,7 @@ public interface TraitSkill {
      * <br>If present, the underlying set is non-modifiable and can be empty.
      */
     @OptionalValue
+    @SetValue
     Optional<Set<TraitFact>> getFacts();
 
     /**
@@ -63,5 +65,6 @@ public interface TraitSkill {
      * <br>If present, the underlying set is non-modifiable and can be empty.
      */
     @OptionalValue
+    @SetValue
     Optional<Set<TraitFact>> getTraitedFacts();
 }

@@ -20,7 +20,22 @@ public interface MatchDetailsScore {
     /**
      * A singleton instance that represents an empty score.
      */
-    public static final MatchDetailsScore EMPTY = new DefaultMatchDetailsScore();
+    public static final MatchDetailsScore EMPTY = new MatchDetailsScore() {
+        @Override
+        public int getRedScore() {
+            return 0;
+        }
+
+        @Override
+        public int getBlueScore() {
+            return 0;
+        }
+
+        @Override
+        public int getGreenScore() {
+            return 0;
+        }
+    };
 
     /**
      * Gets the score of the red faction.

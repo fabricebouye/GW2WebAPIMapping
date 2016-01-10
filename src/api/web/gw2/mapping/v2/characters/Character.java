@@ -10,9 +10,11 @@ package api.web.gw2.mapping.v2.characters;
 import api.web.gw2.mapping.core.DurationValue;
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.LevelValue;
+import api.web.gw2.mapping.core.ListValue;
 import api.web.gw2.mapping.core.MapValue;
 import api.web.gw2.mapping.core.OptionalValue;
 import api.web.gw2.mapping.core.QuantityValue;
+import api.web.gw2.mapping.core.SetValue;
 import api.web.gw2.mapping.v2.APIv2;
 import api.web.gw2.mapping.v2.characters.inventory.InventoryBag;
 import api.web.gw2.mapping.v2.characters.equipment.Equipment;
@@ -97,6 +99,7 @@ public interface Character {
      * @see api.web.gw2.mapping.v2.tokeninfo.TokenInfoPermission#INVENTORIES
      */
     @OptionalValue
+    @ListValue
     Optional<List<Equipment>> getEquipment();
 
     /**
@@ -106,6 +109,7 @@ public interface Character {
      * @see api.web.gw2.mapping.v2.tokeninfo.TokenInfoPermission#INVENTORIES
      */
     @OptionalValue
+    @ListValue
     Optional<List<InventoryBag>> getBags();
 
     /**
@@ -114,6 +118,7 @@ public interface Character {
      * <br>If present, the set is non-modifiable and may be empty.
      */
     @OptionalValue
+    @SetValue
     Optional<Set<CharacterCrafting>> getCrafting();
 
     /**

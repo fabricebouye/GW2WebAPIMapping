@@ -8,6 +8,7 @@
 package api.web.gw2.mapping.v2.tokeninfo;
 
 import api.web.gw2.mapping.core.IdValue;
+import api.web.gw2.mapping.core.SetValue;
 import api.web.gw2.mapping.v2.APIv2;
 import java.util.Set;
 
@@ -35,5 +36,6 @@ public interface TokenInfo {
      * Gets a set of permissions attached to this token info.
      * @return A non-modifiable {@code Set<TokenInfoPermission>} instance, never {@code null}, should never be empty.
      */
+    @SetValue
     Set<TokenInfoPermission> getPermissions();
 }

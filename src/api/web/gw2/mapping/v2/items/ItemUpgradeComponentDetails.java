@@ -7,7 +7,9 @@
  */
 package api.web.gw2.mapping.v2.items;
 
+import api.web.gw2.mapping.core.ListValue;
 import api.web.gw2.mapping.core.OptionalValue;
+import api.web.gw2.mapping.core.SetValue;
 import api.web.gw2.mapping.v2.APIv2;
 import java.util.List;
 import java.util.Optional;
@@ -30,12 +32,14 @@ public interface ItemUpgradeComponentDetails extends ItemDetails {
      * Gets the set of flags on this upgrade component.
      * @return A non-modifiable {@code Set<ItemUpgradeComponentFlag>} instance, never {@code null}.
      */
+    @SetValue
     Set<ItemUpgradeComponentFlag> getFlags();
 
     /**
      * Gets the set of infusion flags on this upgrade component.
      * @return A non-modifiable {@code Set<ItemInfusionSlotFlag>} instance, never {@code null}.
      */
+    @SetValue
     Set<ItemInfusionSlotFlag> getInfusionUpgradeFlags();
 
     /**
@@ -56,5 +60,6 @@ public interface ItemUpgradeComponentDetails extends ItemDetails {
      * <br>If present, the list is non-modifiable.
      */
     @OptionalValue
+    @ListValue
     Optional<List<String>> getBonuses();
 }

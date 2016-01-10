@@ -9,6 +9,7 @@ package api.web.gw2.mapping.v1.eventdetails;
 
 import api.web.gw2.mapping.core.Coord2DValue;
 import api.web.gw2.mapping.core.AltitudeRange;
+import api.web.gw2.mapping.core.ListValue;
 import api.web.gw2.mapping.core.Point2D;
 import api.web.gw2.mapping.v1.APIv1;
 import java.util.List;
@@ -31,6 +32,7 @@ public interface EventDetailsPolyLocation extends EventDetailsLocation {
      * @return A non-modifiable {@code List<Point2D>} instance, never {@code null}.
      */
     @Coord2DValue
+    @ListValue
     List<Point2D> getPoints();
 
 }

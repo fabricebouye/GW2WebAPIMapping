@@ -9,6 +9,7 @@ package api.web.gw2.mapping.v2.specializations;
 
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.LocalizedResource;
+import api.web.gw2.mapping.core.SetValue;
 import api.web.gw2.mapping.core.URLReference;
 import api.web.gw2.mapping.core.URLValue;
 import api.web.gw2.mapping.v2.APIv2;
@@ -67,11 +68,13 @@ public interface Specialization {
      * Gets the ids of minor traits for this specialization.
      * @return A non-modifiable {@code Set<Integer>}, never {@code null}.
      */
+    @SetValue
     Set<Integer> getMinorTraits();
 
     /**
      * Gets the ids of major traits for this specialization.
      * @return A non-modifiable {@code Set<Integer>}, never {@code null}.
      */
+    @SetValue
     Set<Integer> getMajorTraits();
 }

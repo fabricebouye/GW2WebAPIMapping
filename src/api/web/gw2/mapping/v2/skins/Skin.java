@@ -10,6 +10,7 @@ package api.web.gw2.mapping.v2.skins;
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.LocalizedResource;
 import api.web.gw2.mapping.core.OptionalValue;
+import api.web.gw2.mapping.core.SetValue;
 import api.web.gw2.mapping.core.URLReference;
 import api.web.gw2.mapping.core.URLValue;
 import java.net.URL;
@@ -46,12 +47,14 @@ public interface Skin {
      * Gets a set of flags of this skin.
      * @return A non-modifiable {@code Set<SkinFlags>} instance, never {@code null}.
      */
+    @SetValue
     Set<SkinFlag> getFlags();
 
     /**
      * Gets a set of restrictions of this skin.
      * @return A non-modifiable {@code Set<SkinRestriction>} instance, never {@code null}.
      */
+    @SetValue
     Set<SkinRestriction> getRestrictions();
 
     /**

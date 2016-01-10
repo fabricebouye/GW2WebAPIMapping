@@ -10,6 +10,7 @@ package api.web.gw2.mapping.v2.wvw.matches;
 import api.web.gw2.mapping.core.DateValue;
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.MapValue;
+import api.web.gw2.mapping.core.SetValue;
 import api.web.gw2.mapping.v2.APIv2;
 import java.time.ZonedDateTime;
 import java.util.Map;
@@ -76,5 +77,6 @@ public interface Match {
      * Gets detailed information about each map during this match.
      * @return A non-modifiable {@code Set<MatchMap>}, never {@code null}.
      */
+    @SetValue
     Set<MatchMap> getMaps();
 }

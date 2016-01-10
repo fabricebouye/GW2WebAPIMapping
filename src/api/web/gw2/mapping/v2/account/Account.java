@@ -10,6 +10,7 @@ package api.web.gw2.mapping.v2.account;
 import api.web.gw2.mapping.core.DateValue;
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.LevelValue;
+import api.web.gw2.mapping.core.SetValue;
 import api.web.gw2.mapping.v2.APIv2;
 import java.time.ZonedDateTime;
 import java.util.Set;
@@ -46,6 +47,7 @@ public interface Account {
      * @return A non-modifiable {@code Set<String>} instance, never {@code null}, may be empty.
      */
     @IdValue
+    @SetValue
     Set<String> getGuilds();
 
     /**

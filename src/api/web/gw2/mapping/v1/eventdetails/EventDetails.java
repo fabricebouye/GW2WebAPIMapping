@@ -9,6 +9,7 @@ package api.web.gw2.mapping.v1.eventdetails;
 
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.LocalizedResource;
+import api.web.gw2.mapping.core.SetValue;
 import api.web.gw2.mapping.v1.APIv1;
 import java.util.Set;
 
@@ -40,9 +41,10 @@ public interface EventDetails {
     int getMapId();
 
     /**
-     * Gets the list of flags for this event.
+     * Gets the set of flags for this event.
      * @return  A non-modifiable {@code Set<EventDetailsFlag>} instance, never {@code null}.
      */
+    @SetValue
     Set<EventDetailsFlag> getFlags();
 
     /**

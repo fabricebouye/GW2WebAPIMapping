@@ -8,6 +8,7 @@
 package api.web.gw2.mapping.v2.items;
 
 import api.web.gw2.mapping.core.IdValue;
+import api.web.gw2.mapping.core.ListValue;
 import api.web.gw2.mapping.core.OptionalValue;
 import api.web.gw2.mapping.v2.APIv2;
 import java.util.List;
@@ -31,6 +32,7 @@ public interface ItemTrinketDetails extends ItemDetails {
      * Gets the list of infusion slots on this trinket.
      * @return A non-modifiable {@code List<ItemInfusionSlot>}, never {@code null}.
      */
+    @ListValue
     List<ItemInfusionSlot> getInfusionSlots();
 
     /**

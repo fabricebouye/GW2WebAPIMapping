@@ -9,6 +9,7 @@ package api.web.gw2.mapping.v2.guild.id.ranks;
 
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.QuantityValue;
+import api.web.gw2.mapping.core.SetValue;
 import api.web.gw2.mapping.core.URLReference;
 import api.web.gw2.mapping.core.URLValue;
 import api.web.gw2.mapping.v2.APIv2;
@@ -42,6 +43,7 @@ public interface Rank {
      * @return A non-modifiable {@code Set<PermissionId>} instance, never {@code null}.
      * @see api.web.gw2.mapping.v2.guild.permissions.PermissionId
      */
+    @SetValue
     Set<PermissionId> getPermissions();
 
     /**

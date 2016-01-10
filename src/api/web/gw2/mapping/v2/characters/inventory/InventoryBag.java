@@ -8,6 +8,7 @@
 package api.web.gw2.mapping.v2.characters.inventory;
 
 import api.web.gw2.mapping.core.IdValue;
+import api.web.gw2.mapping.core.ListValue;
 import api.web.gw2.mapping.core.QuantityValue;
 import api.web.gw2.mapping.v2.APIv2;
 import java.util.List;
@@ -40,5 +41,6 @@ public interface InventoryBag {
      * @return A non-modifiable {@code List<Inventory>} instance, never {@code null}.
      * @see Inventory
      */
+    @ListValue
     List<Inventory> getInventory();
 }

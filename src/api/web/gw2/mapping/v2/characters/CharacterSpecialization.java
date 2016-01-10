@@ -8,6 +8,7 @@
 package api.web.gw2.mapping.v2.characters;
 
 import api.web.gw2.mapping.core.IdValue;
+import api.web.gw2.mapping.core.SetValue;
 import java.util.Set;
 
 /**
@@ -29,5 +30,6 @@ public interface CharacterSpecialization {
      * @return A non-modifiable {@code Set<Integer>}, never {@code null}.
      */
     @IdValue
+    @SetValue
     public Set<Integer> getTraits();
 }

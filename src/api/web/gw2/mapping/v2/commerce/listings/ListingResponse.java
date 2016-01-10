@@ -8,6 +8,7 @@
 package api.web.gw2.mapping.v2.commerce.listings;
 
 import api.web.gw2.mapping.core.IdValue;
+import api.web.gw2.mapping.core.SetValue;
 import java.util.Set;
 
 /**
@@ -27,6 +28,7 @@ public interface ListingResponse {
      * @return A non-modifiable {@code Set<Listing>} instance, never {@code null}.
      * <br>The set is ordered ascending from the lowest buy order.
      */
+    @SetValue
     Set<Listing> getBuys();
 
     /**
@@ -34,5 +36,6 @@ public interface ListingResponse {
      * @return A non-modifiable {@code Set<Listing>} instance, never {@code null}.
      * <br>The set is ordered ascending from the lowest sell offer.
      */
+    @SetValue
     Set<Listing> getSells();
 }

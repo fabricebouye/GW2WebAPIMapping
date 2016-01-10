@@ -9,6 +9,7 @@ package api.web.gw2.mapping.v2.items;
 
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.OptionalValue;
+import api.web.gw2.mapping.core.SetValue;
 import api.web.gw2.mapping.v2.APIv2;
 import java.util.OptionalInt;
 import java.util.Set;
@@ -25,6 +26,7 @@ public interface ItemInfusionSlot {
      * @return A non-modifiable {@code Set<ItemInfusionSlotFlag>} instance, never {@code null}.
      * When the infusion is an agony resistance infusion, the returned set contains {@code ItemInfusionSlotFlag.AGONY}. 
      */
+    @SetValue
     Set<ItemInfusionSlotFlag> getFlags();
 
     /**

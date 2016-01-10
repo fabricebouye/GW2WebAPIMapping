@@ -14,6 +14,7 @@ import api.web.gw2.mapping.core.LevelValue;
 import api.web.gw2.mapping.core.LocalizedResource;
 import api.web.gw2.mapping.core.MapBounds;
 import api.web.gw2.mapping.core.MapRect;
+import api.web.gw2.mapping.core.SetValue;
 import java.util.Set;
 
 /**
@@ -62,6 +63,7 @@ public interface Map {
      * @return A {@code Set<Integer>}, never {@code null}.
      */
     @IdValue
+    @SetValue
     Set<Integer> getFloors();
 
     /**
