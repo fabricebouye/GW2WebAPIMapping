@@ -7,6 +7,7 @@
  */
 package api.web.gw2.mapping.v2.maps;
 
+import api.web.gw2.mapping.core.ContinentBounds;
 import api.web.gw2.mapping.core.ContinentDimensions;
 import api.web.gw2.mapping.core.ContinentRect;
 import api.web.gw2.mapping.core.IdValue;
@@ -103,8 +104,8 @@ public interface Map {
 
     /**
      * Gets the dimension and position of this map in continent coordinates.
-     * @return A {@code ContinentDimension} instance, never {@code null}.
+     * @return A {@code ContinentBounds} instance, never {@code null}.
      */
     @ContinentRect
-    ContinentDimensions getContinentRect();
+    ContinentBounds getContinentRect();
 }
