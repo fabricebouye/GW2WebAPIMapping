@@ -25,10 +25,10 @@ public interface Continent {
 
     /**
      * Gets the id of this continent.
-     * @return A {@code String} instance, never {@code null}.
+     * @return An {@code int} &ge; 0.
      */
-    @IdValue(flavor = IdValue.Flavor.STRING)
-    String getId();
+    @IdValue
+    int getId();
 
     /**
      * Gets the localized name of this continent.
