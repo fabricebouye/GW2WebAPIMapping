@@ -15,8 +15,9 @@ import api.web.gw2.mapping.v2.APIv2;
  * Defines a PvP standing report.
  * @author Fabrice Bouyé
  */
-@APIv2(endpoint = "v2/pvp/games", requiresAuthentication = true, scope = "pvp") // NOI18N.
+@APIv2(endpoint = "v2/pvp/standings", requiresAuthentication = true, scope = "pvp") // NOI18N.
 public interface StandingReport {
+
     /**
      * @todo Document when wiki article is available.
      */

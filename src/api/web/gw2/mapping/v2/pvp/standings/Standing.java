@@ -14,21 +14,22 @@ import api.web.gw2.mapping.v2.APIv2;
  * Defines a PvP standing.
  * @author Fabrice Bouyé
  */
-@APIv2(endpoint = "v2/pvp/games", requiresAuthentication = true, scope = "pvp") // NOI18N.
+@APIv2(endpoint = "v2/pvp/standings", requiresAuthentication = true, scope = "pvp") // NOI18N.
 public interface Standing {
+
     /**
      * Gets the id of the season of this standing.
      * @return An int &gt; 0.
      */
     @IdValue(flavor = IdValue.Flavor.STRING)
     String getSeasonId();
-    
+
     /**
      * Gets the current standing report.
      * @return A {@code StandingReport} instance, never {@code null}.
      */
     StandingReport getCurrent();
-    
+
     /**
      * Gets the best standing report.
      * @return A {@code StandingReport} instance, never {@code null}.
