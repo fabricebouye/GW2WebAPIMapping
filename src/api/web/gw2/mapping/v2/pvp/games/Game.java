@@ -23,10 +23,10 @@ public interface Game {
 
     /**
      * Gets the id of this game.
-     * @return An {@code int}.
+     * @return A {@code String} instance, never {@code null}.
      */
-    @IdValue
-    int getId();
+    @IdValue(flavor = IdValue.Flavor.STRING)
+    String getId();
 
     /**
      * Gets the map id of this game.
