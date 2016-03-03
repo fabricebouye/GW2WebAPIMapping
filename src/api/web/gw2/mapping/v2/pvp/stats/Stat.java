@@ -26,6 +26,18 @@ public interface Stat {
     int getPvpRank();
 
     /**
+     * Gets the number of points in the current PvP rank.
+     * @return An {@code int}
+     */
+    int getPvpRankPoints();
+
+    /**
+     * Gets the number of rollovers since the player has achieved the max rank.
+     * @return An {@code int}
+     */
+    int getPvpRankRollovers();
+
+    /**
      * Gets the aggregate result for the account.
      * @return A {@code StatResult}, never {@code null}.
      */
