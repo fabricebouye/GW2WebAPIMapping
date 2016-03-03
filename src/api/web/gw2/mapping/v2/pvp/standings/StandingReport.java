@@ -19,6 +19,36 @@ import api.web.gw2.mapping.v2.APIv2;
 public interface StandingReport {
 
     /**
+     * The singleton empty instance.
+     */
+    public static final StandingReport EMPTY = new StandingReport() {
+        @Override
+        public int getTotalPoints() {
+            return 0;
+        }
+
+        @Override
+        public int getDivision() {
+            return 0;
+        }
+
+        @Override
+        public int getTier() {
+            return 0;
+        }
+
+        @Override
+        public int getPoints() {
+            return 0;
+        }
+
+        @Override
+        public int getRepeats() {
+            return 0;
+        }
+    };
+
+    /**
      * @todo Document when wiki article is available.
      */
     @QuantityValue
