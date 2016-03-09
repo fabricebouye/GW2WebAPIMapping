@@ -90,5 +90,5 @@ public interface Account {
      * @return An {@code int} &ge; 0.
      */
     @QuantityValue
-    int getMonthyAp();
+    int getMonthlyAp();
 }
