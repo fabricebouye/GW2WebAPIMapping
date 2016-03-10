@@ -91,4 +91,12 @@ public interface Account {
      */
     @QuantityValue
     int getMonthlyAp();
+    
+    /**
+     * Gets the WvW rank of this account.
+     * @return 
+     */
+    // @todo Maybe create a WvwLevelValue.
+    @LevelValue
+    int getWvwRank();
 }
