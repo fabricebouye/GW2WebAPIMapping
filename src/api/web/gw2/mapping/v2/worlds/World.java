@@ -7,10 +7,12 @@
  */
 package api.web.gw2.mapping.v2.worlds;
 
+import api.web.gw2.mapping.core.EnumValueFactory;
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.ImplementationSpecific;
 import api.web.gw2.mapping.core.LocalizedResource;
 import api.web.gw2.mapping.v2.APIv2;
+import static javax.management.Query.value;
 
 /**
  * Defines a world.
@@ -47,7 +49,7 @@ public interface World {
     default WorldRegion getRegion() {
         final int id = getId();
         final String code = "" + String.valueOf(id).charAt(0);
-        return WorldsUtils.findWorldRegion(code);
+        return EnumValueFactory.INSTANCE.mapEnumValue(WorldRegion.class, code);
     }
 
     /**
@@ -58,6 +60,6 @@ public interface World {
     default WorldLanguage getLanguage() {
         final int id = getId();
         final String code = "" + String.valueOf(id).charAt(1);
-        return WorldsUtils.findWorldLanguage(code);
+        return EnumValueFactory.INSTANCE.mapEnumValue(WorldLanguage.class, code);
     }
 }
