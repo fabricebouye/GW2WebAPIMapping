@@ -9,8 +9,10 @@ package api.web.gw2.mapping.v2.guild.id.members;
 
 import api.web.gw2.mapping.core.DateValue;
 import api.web.gw2.mapping.core.IdValue;
+import api.web.gw2.mapping.core.OptionalValue;
 import api.web.gw2.mapping.v2.APIv2;
 import java.time.ZonedDateTime;
+import java.util.Optional;
 
 /**
  * Defines a guild member.
@@ -35,8 +37,10 @@ public interface Member {
 
     /**
      * Gets date this member joined the guild.
-     * @return A {@code ZonedDateTime} instance, never {@code null}.
+     * Note: people who joined before March 19, 2013 do not have this date set, see <a href="https://forum-en.guildwars2.com/forum/community/api/New-endpoints-guild-ranks-members/5860679">the official forums</a> for more details.
+     * @return An {@code Optional<ZonedDateTime>} instance, never {@code null}.
      */
     @DateValue
-    ZonedDateTime getJoined();
+    @OptionalValue
+    Optional<ZonedDateTime> getJoined();
 }
