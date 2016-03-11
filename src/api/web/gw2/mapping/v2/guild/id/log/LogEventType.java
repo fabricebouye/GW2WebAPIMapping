@@ -19,11 +19,43 @@ public enum LogEventType {
     /**
      * Defines the treasury log event type.
      */
+    STASH("stash"),
+    /**
+     * Defines the treasury log event type.
+     */
     TREASURY("treasury"),
     /**
      * Defines the message of the day log event type.
      */
     MOTD("motd"),
+    /**
+     * Defines the influence log event type (pre-HoT).
+     */
+    INFLUENCE("influence"),
+    /**
+     * Defines the upgrade log event type.
+     */
+    UPGRADE("upgrade"),
+    /**
+     * Defines the invited declined log event type.
+     */
+    INVITED("invited"),
+    /**
+     * Defines the invite declined log event type.
+     */
+    INVITE_DECLINED("invite_declined"),
+    /**
+     * Defines the joined log event type.
+     */
+    JOINED("joined"),
+    /**
+     * Defines the kick log event type.
+     */
+    KICK("kick"),
+    /**
+     * Defines the rank changed event type.
+     */
+    RANK_CHANGE("rank_change"),
     /**
      * Fail safe value.
      */

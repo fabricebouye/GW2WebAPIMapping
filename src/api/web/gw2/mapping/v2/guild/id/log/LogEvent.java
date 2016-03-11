@@ -7,12 +7,14 @@
  */
 package api.web.gw2.mapping.v2.guild.id.log;
 
+import api.web.gw2.mapping.core.CoinAmount;
 import api.web.gw2.mapping.core.DateValue;
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.v2.APIv2;
 import java.time.ZonedDateTime;
 import java.util.Optional;
 import java.util.OptionalInt;
+import java.util.Set;
 
 /**
  * Defines a guild log event.
@@ -52,7 +54,7 @@ public interface LogEvent {
      * Gets the id of the item for a treasury log event.
      * @return An {@code OptionalInt} instance, never {@code null}.
      * <br>May be empty.
-     * @see LogEventType
+     * @see LogEventType#TREASURY
      */
     OptionalInt getItemId();
 
@@ -60,7 +62,7 @@ public interface LogEvent {
      * Gets the count of the item for a treasury log event.
      * @return An {@code OptionalInt} instance, never {@code null}.
      * <br>May be empty.
-     * @see LogEventType
+     * @see LogEventType#TREASURY
      */
     OptionalInt getCount();
 
@@ -68,7 +70,111 @@ public interface LogEvent {
      * Gets the message of the day for a motd log event.
      * @return An {@code Optional<String>} instance, never {@code null}.
      * <br>May be empty.
-     * @see LogEventType
+     * @see LogEventType#MOTD
      */
     Optional<String> getMotd();
+
+    /**
+     * Gets the upgrade id of an upgrade log event.
+     * @return An {@code OptionalInt} instance, never {@code null}.
+     * <br>May be empty.
+     * @see LogEventType#UPGRADE
+     */
+    OptionalInt getUpgradeId();
+
+    /**
+     * Gets the operation of a stash log event.
+     * @return An {@code Optional<LogEventStashOperation>} instance, never {@code null}.
+     * <br>May be empty.
+     * @see LogEventType#STASH
+     */
+    Optional<LogEventStashOperation> getOperation();
+
+    /**
+     * Gets the amount of coin of a stash log event.
+     * @return An {@code Optional<CoinAmount>} instance, never {@code null}.
+     * <br>May be empty.
+     * @see LogEventType#STASH
+     */
+    Optional<CoinAmount> getCoins();
+
+    /**
+     * Gets the action of an upgrade log event.
+     * @return An {@code Optional<LogEventUpgradeAction>} instance, never {@code null}.
+     * <br>May be empty.
+     * @see LogEventType#UPGRADE
+     */
+    Optional<LogEventUpgradeAction> getAction();
+
+    /**
+     * Gets the activity of an influence log event.
+     * @return An {@code Optional<LogEventUpgradeAction>} instance, never {@code null}.
+     * <br>May be empty.
+     * @see LogEventType#INFLUENCE
+     */
+    Optional<LogEventInfluenceActivity> getActivity();
+
+    /**
+     * Gets the total number of participants of an influence log event.
+     * @return An {@code OptionalInt} instance, never {@code null}.
+     * <br>May be empty.
+     * @see LogEventType#INFLUENCE
+     */
+    OptionalInt getTotalParticipants();
+
+    /**
+     * Gets the list of participants of an influence log event.
+     * @return An {@code Optional<Set<String>>} instance, never {@code null}.
+     * <br>May be empty.
+     * @see LogEventType#INFLUENCE
+     */
+    Optional<Set<String>> getParticipants();
+
+    /**
+     * Gets the initiator of an invited log event.
+     * @return An {@code Optional<String>} instance, never {@code null}.
+     * <br>May be empty.
+     * @see LogEventType#RANK_CHANGE
+     */
+    Optional<String> getInvitedBy();
+
+    /**
+     * Gets the initiator of a kick log event.
+     * @return An {@code Optional<String>} instance, never {@code null}.
+     * <br>May be empty.
+     * @see LogEventType#KICK
+     */
+    Optional<String> getKickedBy();
+
+    /**
+     * Gets the initiator of a rank change log event.
+     * @return An {@code Optional<String>} instance, never {@code null}.
+     * <br>May be empty.
+     * @see LogEventType#RANK_CHANGE
+     */
+    Optional<String> getChangedBy();
+
+    /**
+     * Gets the old rank of a rank change log event.
+     * @return An {@code Optional<String>} instance, never {@code null}.
+     * <br>May be empty.
+     * @see LogEventType#RANK_CHANGE
+     */
+    Optional<String> getOldRank();
+
+    /**
+     * Gets the new rank of a rank change log event.
+     * @return An {@code Optional<String>} instance, never {@code null}.
+     * <br>May be empty.
+     * @see LogEventType#RANK_CHANGE
+     */
+    Optional<String> getNewRank();
+
+    /**
+     * Gets the initiator of an invite decline log event.
+     * @return An {@code Optional<String>} instance, never {@code null}.
+     * <br>May be empty.
+     * @see LogEventType#INVITE_DECLINED
+     */
+    Optional<String> getDeclinedBy();
 }
