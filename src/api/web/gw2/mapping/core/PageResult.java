@@ -8,6 +8,7 @@
 package api.web.gw2.mapping.core;
 
 import java.util.Collection;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.stream.Stream;
 
@@ -17,6 +18,11 @@ import java.util.stream.Stream;
  * @param <T> The type to use.
  */
 public final class PageResult<T> implements Iterable<T> {
+
+    /**
+     * The empty singleton instance.
+     */
+    public static final PageResult EMPTY = new PageResult(Collections.EMPTY_LIST, 0, 0, 0);
 
     private final Collection<T> delegated;
     private final int pageSize;
