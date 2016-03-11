@@ -8,6 +8,7 @@
 package api.web.gw2.mapping.v2.worlds;
 
 import api.web.gw2.mapping.core.IdValue;
+import api.web.gw2.mapping.core.ImplementationSpecific;
 import api.web.gw2.mapping.core.LocalizedResource;
 import api.web.gw2.mapping.v2.APIv2;
 
@@ -31,10 +32,32 @@ public interface World {
      */
     @LocalizedResource
     String getName();
-    
+
     /**
      * Gets the population level of this world.
      * @return A {@code WorldPopulation} instance, never {@code null}.
      */
     WorldPopulation getPopulation();
+
+    /**
+     * Gets the region to which this world is attached to.
+     * @return A {@code WorldRegion} instance, never {@code null}.
+     */
+    @ImplementationSpecific
+    default WorldRegion getRegion() {
+        final int id = getId();
+        final String code = "" + String.valueOf(id).charAt(0);
+        return WorldsUtils.findWorldRegion(code);
+    }
+
+    /**
+     * Gets the expected language of the population of this world.
+     * @return A {@code WorldLanguage} instance, never {@code null}.
+     */
+    @ImplementationSpecific
+    default WorldLanguage getLanguage() {
+        final int id = getId();
+        final String code = "" + String.valueOf(id).charAt(1);
+        return WorldsUtils.findWorldLanguage(code);
+    }
 }

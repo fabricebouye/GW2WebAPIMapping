@@ -74,4 +74,64 @@ public class WorldsUtilsTest {
                     assertEquals(expResult, result);
                 });
     }
+
+    /**
+     * Test of WorldRegion.
+     */
+    @Test
+    public void testFindWorldRegion() {
+        System.out.println("findWorldRegion");
+        final String[] values = {
+            "1", // NOI18N.
+            "2", // NOI18N.
+            null,
+            "" // NOI18N.
+        };
+        final WorldRegion[] expResults = {
+            WorldRegion.US,
+            WorldRegion.EU,
+            WorldRegion.UNKNOWN,
+            WorldRegion.UNKNOWN
+        };
+        assertEquals(values.length, expResults.length);
+        IntStream.range(0, values.length).
+                forEach(index -> {
+                    final String value = values[index];
+                    final WorldRegion expResult = expResults[index];
+                    final WorldRegion result = EnumValueFactory.INSTANCE.mapEnumValue(WorldRegion.class, value);
+                    assertEquals(expResult, result);
+                });
+    }
+
+    /**
+     * Test of WorldLanguage.
+     */
+    @Test
+    public void testFindWorldLanguage() {
+        System.out.println("findWorldLanguage");
+        final String[] values = {
+            "0", // NOI18N.
+            "1", // NOI18N.
+            "2", // NOI18N.
+            "3", // NOI18N.
+            null,
+            "" // NOI18N.
+        };
+        final WorldLanguage[] expResults = {
+            WorldLanguage.EN,
+            WorldLanguage.FR,
+            WorldLanguage.DE,
+            WorldLanguage.ES,
+            WorldLanguage.UNKNOWN,
+            WorldLanguage.UNKNOWN
+        };
+        assertEquals(values.length, expResults.length);
+        IntStream.range(0, values.length).
+                forEach(index -> {
+                    final String value = values[index];
+                    final WorldLanguage expResult = expResults[index];
+                    final WorldLanguage result = EnumValueFactory.INSTANCE.mapEnumValue(WorldLanguage.class, value);
+                    assertEquals(expResult, result);
+                });
+    }
 }

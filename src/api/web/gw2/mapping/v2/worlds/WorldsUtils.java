@@ -35,4 +35,34 @@ public enum WorldsUtils {
         final WorldPopulation result = resultOptional.isPresent() ? resultOptional.get() : WorldPopulation.UNKNOWN;
         return result;
     }
+
+    /**
+     * Gets the world region for given value.
+     * @param value The source value.
+     * @return A {@code WorldPopulation} instance, never {@code null}.
+     * <br>If no corresponding value is found, {@code WorldPopulation.UNKNOWN} is returned.
+     * @see WorldPopulation
+     */
+    public static WorldRegion findWorldRegion(final String value) {
+        final Optional<WorldRegion> resultOptional = Arrays.stream(WorldRegion.values())
+                .filter(toTest -> value != null && value.equalsIgnoreCase(toTest.value))
+                .findFirst();
+        final WorldRegion result = resultOptional.isPresent() ? resultOptional.get() : WorldRegion.UNKNOWN;
+        return result;
+    }
+
+    /**
+     * Gets the world language for given value.
+     * @param value The source value.
+     * @return A {@code WorldLanguage} instance, never {@code null}.
+     * <br>If no corresponding value is found, {@code WorldLanguage.UNKNOWN} is returned.
+     * @see WorldLanguage
+     */
+    public static WorldLanguage findWorldLanguage(final String value) {
+        final Optional<WorldLanguage> resultOptional = Arrays.stream(WorldLanguage.values())
+                .filter(toTest -> value != null && value.equalsIgnoreCase(toTest.value))
+                .findFirst();
+        final WorldLanguage result = resultOptional.isPresent() ? resultOptional.get() : WorldLanguage.UNKNOWN;
+        return result;
+    }
 }
