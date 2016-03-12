@@ -51,18 +51,20 @@ public interface LogEvent {
     LogEventType getType();
 
     /**
-     * Gets the id of the item for a treasury log event.
+     * Gets the id of the item for a treasury or stash log event.
      * @return An {@code OptionalInt} instance, never {@code null}.
      * <br>May be empty.
      * @see LogEventType#TREASURY
+     * @see LogEventType#STASH
      */
     OptionalInt getItemId();
 
     /**
-     * Gets the count of the item for a treasury log event.
+     * Gets the count of the item for a treasury or stash log event.
      * @return An {@code OptionalInt} instance, never {@code null}.
      * <br>May be empty.
      * @see LogEventType#TREASURY
+     * @see LogEventType#STASH
      */
     OptionalInt getCount();
 
