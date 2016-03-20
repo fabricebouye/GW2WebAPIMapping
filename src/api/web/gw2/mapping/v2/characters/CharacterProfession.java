@@ -44,7 +44,6 @@ public enum CharacterProfession {
     /**
      * Defines revenant profession.
      */
-    @ImplementationSpecific
     REVENANT("Revenant"), // NOI18N.
     /**
      * Defines thief profession.
