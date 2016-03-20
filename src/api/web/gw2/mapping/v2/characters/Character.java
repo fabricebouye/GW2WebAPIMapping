@@ -130,4 +130,15 @@ public interface Character {
     @OptionalValue
     @MapValue
     Optional<Map<CharacterGameType, CharacterSpecialization>> getSpecialisations();
+
+    /**
+     * Gets the recipes known to this character.
+     * @return An {@code Optional<Set<Integer>>} instance, never {@code null}:
+     * <br>If present, the set is non-modifiable and may be empty.
+     * @see api.web.gw2.mapping.v2.tokeninfo.TokenInfoPermission#INVENTORIES
+     */
+    @OptionalValue
+    @SetValue
+    @IdValue
+    Optional<Set<Integer>> getRecipes();
 }
