@@ -123,13 +123,14 @@ public interface Character {
 
     /**
      * Gets the specialization of this character.
-     * @return An {@code Optional<Map<CharacterGameType, CharacterSpecialization>>} instance, never {@code null}:
+     * @return An {@code Optional<Map<CharacterGameType, Set<CharacterSpecialization>>>} instance, never {@code null}:
      * <br>If present, the map is non-modifiable and may be empty.
      * @see api.web.gw2.mapping.v2.tokeninfo.TokenInfoPermission#BUILDS
      */
     @OptionalValue
     @MapValue
-    Optional<Map<CharacterGameType, CharacterSpecialization>> getSpecialisations();
+    @SetValue
+    Optional<Map<CharacterGameType, Set<CharacterSpecialization>>> getSpecialisations();
 
     /**
      * Gets the recipes known to this character.
