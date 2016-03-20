@@ -79,4 +79,12 @@ public interface Inventory {
      */
     @OptionalValue
     Optional<String> getBoundTo();
+
+    /**
+     * @todo To be commented.
+     * @return An {@code OptionalInt} instance, never {@code null}:
+     */
+    @OptionalValue
+    @IdValue
+    OptionalInt getInfixUpgradeId();
 }
