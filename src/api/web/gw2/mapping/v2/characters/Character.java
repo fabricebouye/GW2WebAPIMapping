@@ -130,7 +130,7 @@ public interface Character {
     @OptionalValue
     @MapValue
     @SetValue
-    Optional<Map<CharacterGameType, Set<CharacterSpecialization>>> getSpecialisations();
+    Optional<Map<CharacterGameType, Set<CharacterSpecialization>>> getSpecializations();
 
     /**
      * Gets the recipes known to this character.
