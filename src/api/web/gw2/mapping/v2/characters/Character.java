@@ -142,4 +142,8 @@ public interface Character {
     @SetValue
     @IdValue
     Optional<Set<Integer>> getRecipes();
+
+    @OptionalValue
+    @MapValue
+    Optional<Map<CharacterGameType, CharacterSkillSet>> getSkills();
 }
