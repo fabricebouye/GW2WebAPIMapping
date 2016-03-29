@@ -7,10 +7,12 @@
  */
 package api.web.gw2.mapping.v2.pvp.seasons;
 
+import api.web.gw2.mapping.core.DateValue;
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.LocalizedResource;
 import api.web.gw2.mapping.core.SetValue;
 import api.web.gw2.mapping.v2.APIv2;
+import java.time.ZonedDateTime;
 import java.util.Set;
 
 /**
@@ -40,4 +42,24 @@ public interface Season {
      */
     @SetValue
     Set<SeasonDivision> getDivisions();
+    
+    /**
+     * Gets the start date of this season.
+     * @return A {@code ZonedDateTime} instance, never {@code null}.
+     */
+    @DateValue
+    ZonedDateTime getStart();
+
+    /**
+     * Gets the end date of this season.
+     * @return A {@code ZonedDateTime} instance, never {@code null}.
+     */
+    @DateValue
+    ZonedDateTime getEnd();
+    
+    /**
+     * Indicates whether this season is active.
+     * @return A {@code boolean}.
+     */
+    boolean isActive();
 }
