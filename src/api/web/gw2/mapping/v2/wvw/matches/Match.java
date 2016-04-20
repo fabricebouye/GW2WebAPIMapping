@@ -60,6 +60,15 @@ public interface Match {
     Map<MatchTeam, Integer> getWorlds();
 
     /**
+     * Gets all worlds that are teamed up for this WvW match.
+     * @return A {@code Map<MatchTeam, Set<Integer>>}, never {@code null}, may be empty.
+     */
+    @IdValue
+    @MapValue
+    @SetValue        
+    Map<MatchTeam, Set<Integer>> getAllWorlds();
+    
+    /**
      * Gets the deaths for this WvW match.
      * @return A {@code Map<MatchTeam, Integer>}, never {@code null}, may be empty.
      */
