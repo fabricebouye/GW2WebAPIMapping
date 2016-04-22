@@ -12,6 +12,7 @@ import api.web.gw2.mapping.core.ListValue;
 import api.web.gw2.mapping.core.OptionalValue;
 import api.web.gw2.mapping.core.QuantityValue;
 import api.web.gw2.mapping.v2.APIv2;
+import api.web.gw2.mapping.v2.characters.inventory.InventoryBinding;
 import java.util.Optional;
 import java.util.OptionalInt;
 import java.util.List;
@@ -63,4 +64,19 @@ public interface BankSlot {
     @OptionalValue
     @ListValue
     Optional<List<Integer>> getInfusions();
+
+    /**
+     * Gets the binding of this item.
+     * @return An {@code Optional<InventoryBinding>} instance, never {@code null}.
+     */
+    @OptionalValue
+    Optional<InventoryBinding> getBinding();
+
+    /**
+     * Gets the name of the character to which this item is bound to.
+     * @return An {@code Optional<String>} instance, never {@code null}.
+     */
+    @IdValue
+    @OptionalValue
+    Optional<String> getBoundTo();
 }
