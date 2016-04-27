@@ -24,7 +24,7 @@ public interface Treasury {
      * @return An {@code int} &gt; 0.
      */
     @IdValue
-    int getId();
+    int getItemId();
 
     /**
      * Gets the number of this item in the treasury.
