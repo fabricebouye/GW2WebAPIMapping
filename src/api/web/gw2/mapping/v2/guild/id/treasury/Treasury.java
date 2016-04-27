@@ -20,7 +20,7 @@ import java.util.Set;
 public interface Treasury {
 
     /**
-     * Gets the id of thsi item this treasury.
+     * Gets the id of this item this treasury.
      * @return An {@code int} &gt; 0.
      */
     @IdValue
