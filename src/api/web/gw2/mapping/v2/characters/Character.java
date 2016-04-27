@@ -36,6 +36,7 @@ public interface Character {
      * Gets the name of this character.
      * @return A {@code String}, never {@code null}.
      */
+    @IdValue(flavor = IdValue.Flavor.STRING)
     String getName();
 
     /**

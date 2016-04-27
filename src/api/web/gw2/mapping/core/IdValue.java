@@ -23,6 +23,15 @@ import java.lang.annotation.Target;
 public @interface IdValue {
 
     /**
+     * Value used for initialization and filtering.
+     */
+    public static final int DEFAULT_INTEGER_ID = -1;
+    /**
+     * Value used for initialization and filtering.
+     */
+    public static final String DEFAULT_STRING_ID = ""; // NOI18N.
+
+    /**
      * The flavor of this id.
      * <br>As of now ids in the GW2 API can be of 2 flavors:
      * <ul>

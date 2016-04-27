@@ -25,14 +25,14 @@ public interface Member {
      * Gets the name of the account.
      * @return A {@code String} instance, never {@code null}.
      */
-    @IdValue
+    @IdValue(flavor = IdValue.Flavor.STRING)
     String getName();
 
     /**
      * Gets the name of the rank.
      * @return A {@code String} instance, never {@code null}.
      */
-    @IdValue
+    @IdValue(flavor = IdValue.Flavor.STRING)
     String getRank();
 
     /**

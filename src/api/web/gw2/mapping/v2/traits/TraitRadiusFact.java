@@ -7,6 +7,7 @@
  */
 package api.web.gw2.mapping.v2.traits;
 
+import api.web.gw2.mapping.core.QuantityValue;
 import api.web.gw2.mapping.v2.APIv2;
 
 /**
@@ -29,5 +30,6 @@ public interface TraitRadiusFact extends TraitFact {
      * Gets the distance of this fact.
      * @return An {@code int} &ge; 0.
      */
+    @QuantityValue
     int getDistance();
 }

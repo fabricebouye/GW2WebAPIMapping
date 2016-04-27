@@ -12,6 +12,7 @@ import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
+import java.time.Duration;
 
 /**
  * The JSON value defines a duration in seconds or milliseconds.
@@ -21,6 +22,11 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.FIELD, ElementType.METHOD})
 public @interface DurationValue {
+
+    /**
+     * The default value.
+     */
+    public static final Duration DEFAULT = Duration.ZERO;
 
     /**
      * The flavor of this duration.

@@ -21,4 +21,9 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.FIELD, ElementType.METHOD})
 public @interface QuantityValue {
+
+    /**
+     * The default value.
+     */
+    public static final int DEFAULT = 0;
 }
