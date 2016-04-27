@@ -7,6 +7,7 @@
  */
 package api.web.gw2.mapping.v2.items;
 
+import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.ListValue;
 import api.web.gw2.mapping.core.OptionalValue;
 import api.web.gw2.mapping.v2.APIv2;
@@ -19,6 +20,14 @@ import java.util.Optional;
  */
 @APIv2(endpoint = "v2/items") // NOI18N.
 public interface ItemInfixUpgrade {
+
+    @IdValue
+    /**
+     * Gets the id of this infix upgrade.
+     * @return An {@code int}.
+     * <br>Old JSON files from earlier versions of the API may return {@code -1}.
+     */
+    int getId();
 
     /**
      * Gets the list of attribute values on this infix upgrade.
