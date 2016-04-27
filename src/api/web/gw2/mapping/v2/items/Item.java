@@ -115,8 +115,16 @@ public interface Item {
     /**
      * Gets the details of this object.
      * @param <T> The type of the details.
-     * @return An {@code Optional<T>} instance, never {@code null}. 
+     * @return An {@code Optional<T>} instance, never {@code null}.
      */
     @OptionalValue
     <T extends ItemDetails> Optional<T> getDetails();
+
+    /**
+     * Gets the chat link needed to pass this item to other players.
+     * @return A {@code String} instance, never {@code null}.
+     * <br>Old JSON files from earlier versions of the API or items that cannot be linked may return an empty {@code string}.
+     */
+    @OptionalValue
+    String getChatLink();
 }
