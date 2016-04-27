@@ -39,12 +39,25 @@ public interface Upgrade {
     int getId();
 
     /**
+     * Gets the type of this upgrade.
+     * @return An {@code UpgradeType} instance, never {@code null}.
+     */
+    UpgradeType getType();
+    
+    /**
      * Gets the localized name of this upgrade.
      * @return A {@code String} instance, never {@code null}.
      */
     @LocalizedResource
     String getName();
 
+    /**
+     * Gets the localized description of this upgrade.
+     * @return A {@code String} instance, never {@code null}.
+     */
+    @LocalizedResource
+    String getDescription();
+    
     /**
      * Gets the icon of this upgrade.
      * @return A {@code URLReference} instance, never {@code null}.
