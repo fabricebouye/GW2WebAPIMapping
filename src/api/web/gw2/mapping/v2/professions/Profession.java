@@ -68,11 +68,11 @@ public interface Profession {
      */
     @MapValue
     Map<ItemWeaponType, ProfessionWeaponSkillSet> getWeapons();
-    
+
     /**
-    * Gets all training tracks in this profession.
-    * @return A non-modifiable {@code Set<ProfessionTrack>} instance, never {@code null}.
-    */
+     * Gets all training tracks in this profession.
+     * @return A non-modifiable {@code Set<ProfessionTrack>} instance, never {@code null}.
+     */
     @SetValue
     Set<ProfessionTrack> getTraining();
 }

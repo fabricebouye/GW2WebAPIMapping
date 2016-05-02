@@ -21,10 +21,10 @@ public interface ProfessionWeaponSkill {
      */
     @IdValue
     int id();
-    
+
     /**
      * Gets the weapon slot of this skill.
      * @return A {@code ProfessionWeaponSlot} instance, never {@code null}.
-    */
+     */
     ProfessionWeaponSlot getSlot();
 }
