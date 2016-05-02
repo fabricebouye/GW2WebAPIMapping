@@ -50,12 +50,14 @@ public class ProfessionsUtilsTest {
         final String[] values = {
             "Skills", // NOI18N.
             "Specializations", // NOI18N.
+            "EliteSpecializations", // NOI18N.
             null,
             "" // NOI18N.
         };
         final ProfessionTrackCategory[] expResults = {
             ProfessionTrackCategory.SKILLS,
             ProfessionTrackCategory.SPECIALIZATIONS,
+            ProfessionTrackCategory.ELITE_SPECIALIZATIONS,
             ProfessionTrackCategory.UNKNOWN,
             ProfessionTrackCategory.UNKNOWN
         };

@@ -15,22 +15,26 @@ import api.web.gw2.mapping.core.ImplementationSpecific;
  */
 public enum ProfessionTrackCategory {
     /**
-    * Defines a skill track.
-    */
+     * Defines a skill track.
+     */
     SKILLS("Skills"), // NOI18N.
     /**
-    * Defines a specialization track.
-    */
+     * Defines a specialization track.
+     */
     SPECIALIZATIONS("Specializations"), // NOI18N.
+    /**
+     * Defines an elite specialization track.
+     */
+    ELITE_SPECIALIZATIONS("EliteSpecializations"), // NOI18N.
     /**
      * Fail safe value.
      */
     @ImplementationSpecific
     UNKNOWN(null);
-    
+
     private final String value;
-    
+
     private ProfessionTrackCategory(final String value) {
         this.value = value;
-    }    
+    }
 }
