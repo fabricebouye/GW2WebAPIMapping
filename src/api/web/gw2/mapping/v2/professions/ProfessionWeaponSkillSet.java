@@ -7,7 +7,10 @@
  */
 package api.web.gw2.mapping.v2.professions;
 
+import api.web.gw2.mapping.core.IdValue;
+import api.web.gw2.mapping.core.OptionalValue;
 import api.web.gw2.mapping.core.SetValue;
+import java.util.OptionalInt;
 import java.util.Set;
 
 /**
@@ -22,4 +25,12 @@ public interface ProfessionWeaponSkillSet {
      */
     @SetValue
     Set<ProfessionWeaponSkill> getSkills();
+
+    /**
+     * Gets the id of the specialization needed to use this weapon skill set (if any).
+     * @return An {@code OptionalInt} instance, never {@code null}.
+     */
+    @OptionalValue
+    @IdValue
+    OptionalInt getSpecialization();
 }
