@@ -432,10 +432,11 @@ public class ItemsUtilsTest {
     public void testFindItemInfusionSlotFlag() {
         System.out.println("findInfusionSlotFlag");
         final String[] values = {
-            "", // NOI18N.
+            "Agony", // NOI18N.
             "Defense", // NOI18N.
             "Offense", // NOI18N.
             "Utility", // NOI18N.
+            "", // NOI18N.
             null
         };
         final ItemInfusionSlotFlag[] expResults = {
@@ -443,6 +444,7 @@ public class ItemsUtilsTest {
             ItemInfusionSlotFlag.DEFENSE,
             ItemInfusionSlotFlag.OFFENSE,
             ItemInfusionSlotFlag.UTILITY,
+            ItemInfusionSlotFlag.UNKNOWN,
             ItemInfusionSlotFlag.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
