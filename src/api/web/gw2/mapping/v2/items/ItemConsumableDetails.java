@@ -11,6 +11,9 @@ import api.web.gw2.mapping.core.DurationValue;
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.LocalizedResource;
 import api.web.gw2.mapping.core.OptionalValue;
+import api.web.gw2.mapping.core.QuantityValue;
+import api.web.gw2.mapping.core.URLReference;
+import api.web.gw2.mapping.core.URLValue;
 import api.web.gw2.mapping.v2.APIv2;
 import java.time.Duration;
 import java.util.Optional;
@@ -67,4 +70,27 @@ public interface ItemConsumableDetails extends ItemDetails {
     @OptionalValue
     @IdValue
     OptionalInt getRecipeId();
+
+    /**
+     * Gets the number of charges applied by this consumable.
+     * @return An {@code OptionalInt} instance, never {@code null}.
+     */
+    @OptionalValue
+    @QuantityValue
+    OptionalInt getApplyCount();
+
+    /**
+     * Gets the localized name of the effect applied by this consumable.
+     * @return An {@code Optional<String>} instance, never {@code null}.
+     */
+    @OptionalValue
+    @LocalizedResource
+    Optional<String> getName();
+
+    /**
+     * Gets the icon of the effect applied by this consumable.
+     * @return A {@code URLReference} instance, never {@code null}.
+     */
+    @URLValue
+    URLReference getIcon();
 }
