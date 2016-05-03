@@ -7,7 +7,10 @@
  */
 package api.web.gw2.mapping.v2.professions;
 
+import api.web.gw2.mapping.core.IdValue;
+import api.web.gw2.mapping.core.OptionalValue;
 import api.web.gw2.mapping.core.QuantityValue;
+import java.util.OptionalInt;
 
 /**
  * Base interface for a track cost.
@@ -27,4 +30,22 @@ public interface ProfessionTrackCost {
      * @return A {@code ProfessionTrackCostType} instance, never {@code null}.
      */
     ProfessionTrackCostType getType();
+
+    /**
+     * Gets the skill id of this cost.
+     * @return An {@code OptionalInt} instance, never {@code null}.
+     * @see ProfessionTrackCostType#SKILL
+     */
+    @OptionalValue
+    @IdValue
+    OptionalInt getSkillId();
+
+    /**
+     * Gets the trait id of this cost.
+     * @return An {@code OptionalInt} instance, never {@code null}.
+     * @see ProfessionTrackCostType#TRAIT
+     */
+    @OptionalValue
+    @IdValue
+    OptionalInt getTraitId();
 }
