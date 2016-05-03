@@ -54,7 +54,7 @@ public enum ItemWeaponType {
      */
     PISTOL("Pistol"), // NOI18N.
     /**
-     * Defines a riffe weapon type.
+     * Defines a rifle weapon type.
      */
     RIFLE("Rifle"), // NOI18N.
     /**
