@@ -132,4 +132,36 @@ public class ProfessionsUtilsTest {
                     assertEquals(expResult, result);
                 });
     }
+
+    /**
+     * Test of ProfessionElementalistAttunement.
+     */
+    @Test
+    public void testFindProfessionElementalistAttunement() {
+        System.out.println("findProfessionElementalistAttunement");
+        final String[] values = {
+            "Air", // NOI18N.
+            "Earth", // NOI18N.
+            "Fire", // NOI18N.
+            "Water", // NOI18N.
+            null,
+            "" // NOI18N.
+        };
+        final ProfessionElementalistAttunement[] expResults = {
+            ProfessionElementalistAttunement.AIR,
+            ProfessionElementalistAttunement.EARTH,
+            ProfessionElementalistAttunement.FIRE,
+            ProfessionElementalistAttunement.WATER,
+            ProfessionElementalistAttunement.UNKNOWN,
+            ProfessionElementalistAttunement.UNKNOWN
+        };
+        assertEquals(values.length, expResults.length);
+        IntStream.range(0, values.length).
+                forEach(index -> {
+                    final String value = values[index];
+                    final ProfessionElementalistAttunement expResult = expResults[index];
+                    final ProfessionElementalistAttunement result = EnumValueFactory.INSTANCE.mapEnumValue(ProfessionElementalistAttunement.class, value);
+                    assertEquals(expResult, result);
+                });
+    }
 }
