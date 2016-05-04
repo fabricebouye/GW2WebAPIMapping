@@ -32,8 +32,7 @@ public enum ItemInfusionSlotFlag {
     /**
      * Defines the agony resistance flag.
      */
-    @ImplementationSpecific
-    AGONY(""),
+    AGONY("Agony"), // NOI18N.
     /**
      * Fail safe value.
      */
