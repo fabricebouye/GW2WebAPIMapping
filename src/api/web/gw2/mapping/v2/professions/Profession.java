@@ -14,7 +14,6 @@ import api.web.gw2.mapping.core.SetValue;
 import api.web.gw2.mapping.core.URLReference;
 import api.web.gw2.mapping.core.URLValue;
 import api.web.gw2.mapping.v2.APIv2;
-import api.web.gw2.mapping.v2.items.ItemWeaponType;
 import java.util.Map;
 import java.util.Set;
 
@@ -64,10 +63,10 @@ public interface Profession {
 
     /**
      * Gets the weapons skills for this profession.
-     * @return A non-modifiable {@code Map<ItemWeaponType, ProfessionWeaponSkillSet>} instance, never {@code null}.
+     * @return A non-modifiable {@code Map<ProfessionWeaponType, ProfessionWeaponSkillSet>} instance, never {@code null}.
      */
     @MapValue
-    Map<ItemWeaponType, ProfessionWeaponSkillSet> getWeapons();
+    Map<ProfessionWeaponType, ProfessionWeaponSkillSet> getWeapons();
 
     /**
      * Gets all training tracks in this profession.

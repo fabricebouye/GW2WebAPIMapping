@@ -1,22 +1,20 @@
-/* 
- * Copyright (C) 2015-2016 Fabrice Bouyé
- * All rights reserved.
- *
- * This software may be modified and distributed under the terms
- * of the BSD license.  See the LICENSE file for details.
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
-package api.web.gw2.mapping.v2.items;
+package api.web.gw2.mapping.v2.professions;
 
 import api.web.gw2.mapping.core.ImplementationSpecific;
 import api.web.gw2.mapping.v2.APIv2;
 
 /**
- * Defines all item weapon types.
+ * Defines all weapon types used by profession weapons skills.
  * @author Fabrice Bouyé
- * @see api.web.gw2.mapping.v2.professions.ProfessionWeaponType
+ * @see api.web.gw2.mapping.v2.items.ItemWeaponType
  */
-@APIv2(endpoint = "v2/items") // NOI18N.
-public enum ItemWeaponType {
+@APIv2(endpoint = "v2/professions") // NOI18N.
+public enum ProfessionWeaponType {
 
     /**
      * Defines an axe weapon type.
@@ -43,14 +41,13 @@ public enum ItemWeaponType {
      */
     HAMMER("Hammer"), // NOI18N.
     /**
-     * Defines a harpoon weapon type.
-     * @see api.web.gw2.mapping.v2.professions.ProfessionWeaponType#SPEAR
-     */
-    HARPOON("Harpoon"), // NOI18N.
-    /**
      * Defines a mace weapon type.
      */
     MACE("Mace"), // NOI18N.
+    /**
+     * Defines the nothing weapon type (used by thief skill #3 when no offhand weapon equipped).
+     */
+    NOTHING("Nothing"), // NOI18N.
     /**
      * Defines a pistol weapon type.
      */
@@ -71,6 +68,11 @@ public enum ItemWeaponType {
      * Defines short bow weapon type.
      */
     SHORT_BOW("ShortBow"), // NOI18N.
+    /**
+     * Defines a spear weapon type.
+     * @see api.web.gw2.mapping.v2.items.ItemWeaponType#HARPOON
+     */
+    SPEAR("Spear"), // NOI18N.
     /**
      * Defines an speargun weapon type.
      */
@@ -103,7 +105,7 @@ public enum ItemWeaponType {
 
     final String value;
 
-    private ItemWeaponType(final String value) {
+    private ProfessionWeaponType(final String value) {
         this.value = value;
     }
 }

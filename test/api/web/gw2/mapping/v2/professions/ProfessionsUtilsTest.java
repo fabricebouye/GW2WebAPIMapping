@@ -164,4 +164,68 @@ public class ProfessionsUtilsTest {
                     assertEquals(expResult, result);
                 });
     }
+
+    /**
+     * Test of ProfessionWeaponType.
+     */
+    @Test
+    public void testFindProfessionWeaponType() {
+        System.out.println("findWeaponType");
+        final String[] values = {
+            "Axe", // NOI18N.
+            "Dagger", // NOI18N.
+            "Focus", // NOI18N.
+            "Greatsword", // NOI18N.
+            "Hammer", // NOI18N.
+            "LongBow", // NOI18N.
+            "Mace", // NOI18N.
+            "Nothing", // NOI18N.
+            "Pistol", // NOI18N.
+            "Rifle", // NOI18N.
+            "Scepter", // NOI18N.
+            "Shield", // NOI18N.
+            "ShortBow", // NOI18N.
+            "Spear", // NOI18N.
+            "Speargun", // NOI18N.
+            "Staff", // NOI18N.
+            "Sword", // NOI18N.
+            "Torch", // NOI18N.
+            "Trident", // NOI18N.
+            "Warhorn", // NOI18N.
+            null,
+            "" // NOI18N.
+        };
+        final ProfessionWeaponType[] expResults = {
+            ProfessionWeaponType.AXE,
+            ProfessionWeaponType.DAGGER,
+            ProfessionWeaponType.FOCUS,
+            ProfessionWeaponType.GREATSWORD,
+            ProfessionWeaponType.HAMMER,
+            ProfessionWeaponType.LONG_BOW,
+            ProfessionWeaponType.MACE,
+            ProfessionWeaponType.NOTHING,
+            ProfessionWeaponType.PISTOL,
+            ProfessionWeaponType.RIFLE,
+            ProfessionWeaponType.SCEPTER,
+            ProfessionWeaponType.SHIELD,
+            ProfessionWeaponType.SHORT_BOW,
+            ProfessionWeaponType.SPEAR,
+            ProfessionWeaponType.SPEARGUN,
+            ProfessionWeaponType.STAFF,
+            ProfessionWeaponType.SWORD,
+            ProfessionWeaponType.TORCH,
+            ProfessionWeaponType.TRIDENT,
+            ProfessionWeaponType.WARHORN,
+            ProfessionWeaponType.UNKNOWN,
+            ProfessionWeaponType.UNKNOWN
+        };
+        assertEquals(values.length, expResults.length);
+        IntStream.range(0, values.length).
+                forEach(index -> {
+                    final String value = values[index];
+                    final ProfessionWeaponType expResult = expResults[index];
+                    final ProfessionWeaponType result = EnumValueFactory.INSTANCE.mapEnumValue(ProfessionWeaponType.class, value);
+                    assertEquals(expResult, result);
+                });
+    }
 }

@@ -34,11 +34,11 @@ public interface ProfessionWeaponSkill {
 
     /**
      * Gets the offhand weapon that is required for this skill.
-     * <br>Thief skill #3 may change depending of the equiped offhand weapon?
-     * @return An {@code  Optional<ItemWeaponType>} instance, never {@code null}.
+     * <br>Thief skill #3 may change depending of the equipped offhand weapon.
+     * @return An {@code  Optional<ProfessionWeaponType>} instance, never {@code null}.
      */
     @OptionalValue
-    Optional<ItemWeaponType> getOffhand();
+    Optional<ProfessionWeaponType> getOffhand();
 
     /**
      * Gets the elementalist attunement that is required for this skill.
