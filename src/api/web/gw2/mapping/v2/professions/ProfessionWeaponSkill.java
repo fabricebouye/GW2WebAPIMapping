@@ -22,7 +22,7 @@ public interface ProfessionWeaponSkill {
      * @return
      */
     @IdValue
-    int id();
+    int getId();
 
     /**
      * Gets the weapon slot of this skill.
