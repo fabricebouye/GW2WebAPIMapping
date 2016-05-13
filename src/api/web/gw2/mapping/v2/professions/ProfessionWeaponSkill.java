@@ -7,10 +7,8 @@
  */
 package api.web.gw2.mapping.v2.professions;
 
-import api.web.gw2.mapping.core.EnumValue;
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.OptionalValue;
-import api.web.gw2.mapping.v2.items.ItemWeaponType;
 import java.util.Optional;
 
 /**
