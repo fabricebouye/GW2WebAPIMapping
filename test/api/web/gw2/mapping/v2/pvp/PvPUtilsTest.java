@@ -48,12 +48,14 @@ public class PvPUtilsTest {
     public void testFindPvPLadder() {
         System.out.println("findPvPLadder");
         final String[] values = {
+            "none", // NOI18N.
             "ranked", // NOI18N.
             "unranked", // NOI18N.
             null,
             "" // NOI18N.
         };
         final PvPLadder[] expResults = {
+            PvPLadder.NONE,
             PvPLadder.RANKED,
             PvPLadder.UNRANKED,
             PvPLadder.UNKNOWN,
