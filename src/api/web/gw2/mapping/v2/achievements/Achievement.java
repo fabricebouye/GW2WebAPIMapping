@@ -10,11 +10,13 @@ package api.web.gw2.mapping.v2.achievements;
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.LocalizedResource;
 import api.web.gw2.mapping.core.OptionalValue;
+import api.web.gw2.mapping.core.QuantityValue;
 import api.web.gw2.mapping.core.SetValue;
 import api.web.gw2.mapping.core.URLReference;
 import api.web.gw2.mapping.core.URLValue;
 import api.web.gw2.mapping.v2.APIv2;
 import java.util.Optional;
+import java.util.OptionalInt;
 import java.util.Set;
 
 /**
@@ -96,4 +98,30 @@ public interface Achievement {
     @OptionalValue
     @SetValue
     Optional<Set<AchievementBit>> getBits();
+
+    /**
+     * Gets the optional text when this achievement is still locked.
+     * @return  An {@code Optional<String>} instance, never {@code null}.
+     */
+    @OptionalValue
+    @LocalizedResource
+    Optional<String> getLockedText();
+
+    /**
+     * Gets the optional prerequisites for this achievement.
+     * @return An {@code Optional<Set<Integer>>} instance, never {@code null}.
+     * <br>If present the contained set is non-modifiable and may be empty.
+     */
+    @OptionalValue
+    @IdValue
+    @SetValue
+    Optional<Set<Integer>> getPrerequisites();
+
+    /**
+     * Gets the maximum number of repetitions after which this achievement will cease to give points.
+     * @return  An {@code OptionalInt} instance, never {@code null}.
+     */
+    @OptionalValue
+    @QuantityValue
+    OptionalInt getPointCap();
 }
