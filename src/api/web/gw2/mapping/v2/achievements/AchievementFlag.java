@@ -20,23 +20,35 @@ public enum AchievementFlag {
     /**
      * Defines an achievement category.
      */
-    CATEGORY_DISPLAY("CategoryDisplay"),
+    CATEGORY_DISPLAY("CategoryDisplay"), // NOI18N.
     /**
      * Efects in-game UI collation.
      */
-    IGNORE_NEARLY_COMPLETE("IgnoreNearlyComplete"),
+    IGNORE_NEARLY_COMPLETE("IgnoreNearlyComplete"), // NOI18N.
     /**
      * Defines a default achievement.
      */
-    MOVE_TO_TOP("MoveToTop"),
-    /**
-     * ?
-     */
-    REPAIR_ON_LOGIN("RepairOnLogin"),
+    MOVE_TO_TOP("MoveToTop"), // NOI18N.
     /**
      * Defines a achievement that can only get progress in PvP or WvW.
      */
-    PVP("Pvp"),
+    PVP("Pvp"), // NOI18N.
+    /**
+     * ?
+     */
+    REPAIR_ON_LOGIN("RepairOnLogin"), // NOI18N.
+    /**
+     * Achievement is hidden until unlocked.
+     */
+    HIDDEN("Hidden"), // NOI18N.
+    /**
+     * Achievement can be repeated.    
+     */
+    REPEATABLE("Repeatable"), // NOI18N.
+    /**
+     * Achievement requires unlock.
+     */
+    REQUIRES_UNLOCK("RequiresUnlock"), // NOI18N.
     @ImplementationSpecific
     /**
      * Fail safe value.

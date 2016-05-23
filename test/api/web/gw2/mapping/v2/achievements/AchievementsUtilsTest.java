@@ -81,6 +81,9 @@ public class AchievementsUtilsTest {
             "MoveToTop", // NOI18N.
             "Pvp", // NOI18N.
             "RepairOnLogin", // NOI18N.
+            "Hidden", // NOI18N.
+            "Repeatable", // NOI18N.
+            "RequiresUnlock", // NOI18N.
             null,
             "" // NOI18N.
         };
@@ -90,6 +93,9 @@ public class AchievementsUtilsTest {
             AchievementFlag.MOVE_TO_TOP,
             AchievementFlag.PVP,
             AchievementFlag.REPAIR_ON_LOGIN,
+            AchievementFlag.HIDDEN,
+            AchievementFlag.REPEATABLE,
+            AchievementFlag.REQUIRES_UNLOCK,
             AchievementFlag.UNKNOWN,
             AchievementFlag.UNKNOWN
         };
