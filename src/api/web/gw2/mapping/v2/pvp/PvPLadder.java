@@ -14,16 +14,19 @@ import api.web.gw2.mapping.v2.APIv2;
  * Defines all PvP ladder types.
  * @author Fabrice Bouyé
  */
-@APIv2(endpoint = "v2/traits")
+@APIv2(endpoint = "v2/pvp")
 @ImplementationSpecific
 public enum PvPLadder {
-
     /**
-     * Defines the air combo field type.
+     * Defines no ladder.
+     */
+    NONE("none"),
+    /**
+     * Defines the ranked ladder.
      */
     RANKED("Ranked"), // NOI18N.
     /**
-     * Defines the dark combo field type.
+     * Defines unranked ladder.
      */
     UNRANKED("Unranked"), // NOI18N.
     /**
