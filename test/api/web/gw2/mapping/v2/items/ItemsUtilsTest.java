@@ -336,7 +336,7 @@ public class ItemsUtilsTest {
      */
     @Test
     public void testFindItemWeaponType() {
-        System.out.println("findWeaponType");
+        System.out.println("findItemWeaponType");
         final String[] values = {
             "Axe", // NOI18N.
             "Dagger", // NOI18N.
