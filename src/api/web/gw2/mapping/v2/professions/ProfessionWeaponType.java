@@ -12,6 +12,7 @@ import api.web.gw2.mapping.v2.APIv2;
  * Defines all weapon types used by profession weapons skills.
  * @author Fabrice Bouyé
  * @see api.web.gw2.mapping.v2.items.ItemWeaponType
+ * @see api.web.gw2.mapping.v2.skills.SkillWeaponType
  */
 @APIv2(endpoint = "v2/professions") // NOI18N.
 public enum ProfessionWeaponType {
