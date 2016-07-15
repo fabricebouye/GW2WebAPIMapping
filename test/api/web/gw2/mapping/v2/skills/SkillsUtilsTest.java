@@ -7,7 +7,6 @@
  */
 package api.web.gw2.mapping.v2.skills;
 
-import api.web.gw2.mapping.v2.skins.*;
 import api.web.gw2.mapping.core.EnumValueFactory;
 import java.util.stream.IntStream;
 import org.junit.After;
@@ -192,6 +191,220 @@ public class SkillsUtilsTest {
                     final String value = values[index];
                     final SkillType expResult = expResults[index];
                     final SkillType result = EnumValueFactory.INSTANCE.mapEnumValue(SkillType.class, value);
+                    assertEquals(expResult, result);
+                });
+    }
+
+    /**
+     * Test of SkillAttribute.
+     */
+    @Test
+    public void testFindSkillAttribute() {
+        System.out.println("findSkillAttribute");
+        final String[] values = {
+            "ConditionDamage", // NOI18N.
+            "CritDamage", // NOI18N.
+            "Healing", // NOI18N.
+            "None", // NOI18N.
+            "Power", // NOI18N.
+            "Precision", // NOI18N.
+            "Toughness", // NOI18N.
+            "Vitality", // NOI18N.
+            null,
+            "" // NOI18N.
+        };
+        final SkillAttribute[] expResults = {
+            SkillAttribute.CONDITION_DAMAGE,
+            SkillAttribute.FEROCITY,
+            SkillAttribute.HEALING,
+            SkillAttribute.NONE,
+            SkillAttribute.POWER,
+            SkillAttribute.PRECISION,
+            SkillAttribute.TOUGHNESS,
+            SkillAttribute.VITALITY,
+            SkillAttribute.UNKNOWN,
+            SkillAttribute.UNKNOWN
+        };
+        assertEquals(values.length, expResults.length);
+        IntStream.range(0, values.length).
+                forEach(index -> {
+                    final String value = values[index];
+                    final SkillAttribute expResult = expResults[index];
+                    final SkillAttribute result = EnumValueFactory.INSTANCE.mapEnumValue(SkillAttribute.class, value);
+                    assertEquals(expResult, result);
+                });
+    }
+
+    /**
+     * Test of SkillComboFieldType.
+     */
+    @Test
+    public void testFindSkillComboFieldType() {
+        System.out.println("findSkillComboFieldType");
+        final String[] values = {
+            "Air", // NOI18N.
+            "Dark", // NOI18N.
+            "Ethereal", // NOI18N.
+            "Fire", // NOI18N.
+            "Ice", // NOI18N.
+            "Light", // NOI18N.
+            "Lightning", // NOI18N.
+            "Poison", // NOI18N.
+            "Smoke", // NOI18N.
+            "Water", // NOI18N.
+            null,
+            "" // NOI18N.
+        };
+        final SkillComboFieldType[] expResults = {
+            SkillComboFieldType.AIR,
+            SkillComboFieldType.DARK,
+            SkillComboFieldType.ETHEREAL,
+            SkillComboFieldType.FIRE,
+            SkillComboFieldType.ICE,
+            SkillComboFieldType.LIGHT,
+            SkillComboFieldType.LIGHTNING,
+            SkillComboFieldType.POISON,
+            SkillComboFieldType.SMOKE,
+            SkillComboFieldType.WATER,
+            SkillComboFieldType.UNKNOWN,
+            SkillComboFieldType.UNKNOWN
+        };
+        assertEquals(values.length, expResults.length);
+        IntStream.range(0, values.length).
+                forEach(index -> {
+                    final String value = values[index];
+                    final SkillComboFieldType expResult = expResults[index];
+                    final SkillComboFieldType result = EnumValueFactory.INSTANCE.mapEnumValue(SkillComboFieldType.class, value);
+                    assertEquals(expResult, result);
+                });
+    }
+
+    /**
+     * Test of SkillComboFinisherType.
+     */
+    @Test
+    public void testFindSkillComboFinisherType() {
+        System.out.println("findSkillComboFinisherType");
+        final String[] values = {
+            "Blast", // NOI18N.
+            "Leap", // NOI18N.
+            "Projectile", // NOI18N.
+            "Whirl", // NOI18N.
+            null,
+            "" // NOI18N.
+        };
+        final SkillComboFinisherType[] expResults = {
+            SkillComboFinisherType.BLAST,
+            SkillComboFinisherType.LEAP,
+            SkillComboFinisherType.PROJECTILE,
+            SkillComboFinisherType.WHIRL,
+            SkillComboFinisherType.UNKNOWN,
+            SkillComboFinisherType.UNKNOWN
+        };
+        assertEquals(values.length, expResults.length);
+        IntStream.range(0, values.length).
+                forEach(index -> {
+                    final String value = values[index];
+                    final SkillComboFinisherType expResult = expResults[index];
+                    final SkillComboFinisherType result = EnumValueFactory.INSTANCE.mapEnumValue(SkillComboFinisherType.class, value);
+                    assertEquals(expResult, result);
+                });
+    }
+
+    /**
+     * Test of SkillFactType.
+     */
+    @Test
+    public void testFindSkillFactType() {
+        System.out.println("findSkillFactType");
+        final String[] values = {
+            "AttributeAdjust", // NOI18N.
+            "Buff", // NOI18N.
+            "ComboField", // NOI18N.
+            "ComboFinisher", // NOI18N.
+            "Damage", // NOI18N.
+            "Distance", // NOI18N.
+            "Duration", // NOI18N.
+            "Heal", // NOI18N.
+            "HealingAdjust", // NOI18N.
+            "NoData", // NOI18N.
+            "Number", // NOI18N.
+            "Percent", // NOI18N.
+            "PrefixedBuff", // NOI18N.
+            "Radius", // NOI18N.
+            "Range", // NOI18N.
+            "Recharge", // NOI18N.
+            "Time", // NOI18N.
+            "Unblockable", // NOI18N.
+            null,
+            "" // NOI18N.
+        };
+        final SkillFactType[] expResults = {
+            SkillFactType.ATTRIBUTE_ADJUST,
+            SkillFactType.BUFF,
+            SkillFactType.COMBO_FIELD,
+            SkillFactType.COMBO_FINISHER,
+            SkillFactType.DAMAGE,
+            SkillFactType.DISTANCE,
+            SkillFactType.DURATION,
+            SkillFactType.HEAL,
+            SkillFactType.HEALING_ADJUST,
+            SkillFactType.NO_DATA,
+            SkillFactType.NUMBER,
+            SkillFactType.PERCENT,
+            SkillFactType.PREFIXED_BUFF,
+            SkillFactType.RADIUS,
+            SkillFactType.RANGE,
+            SkillFactType.RECHARGE,
+            SkillFactType.TIME,
+            SkillFactType.UNBLOCKABLE,
+            SkillFactType.UNKNOWN,
+            SkillFactType.UNKNOWN
+        };
+        assertEquals(values.length, expResults.length);
+        IntStream.range(0, values.length).
+                forEach(index -> {
+                    final String value = values[index];
+                    final SkillFactType expResult = expResults[index];
+                    final SkillFactType result = EnumValueFactory.INSTANCE.mapEnumValue(SkillFactType.class, value);
+                    assertEquals(expResult, result);
+                });
+    }
+
+    /**
+     * Test of SkillCategory.
+     */
+    @Test
+    public void testFindSkillCategory() {
+        System.out.println("findSkillCategory");
+        final String[] values = {
+            "Burst", // NOI18N.
+            "Cantrip", // NOI18N.
+            "conjure", // NOI18N.
+            "DualWield", // NOI18N.
+            "Shout", // NOI18N.
+            "Signet", // NOI18N.
+            "StealthAttack", // NOI18N.
+            null,
+            "" // NOI18N.
+        };
+        final SkillCategory[] expResults = {
+            SkillCategory.BURST,
+            SkillCategory.CANTRIP,
+            SkillCategory.CONJURE,
+            SkillCategory.DUAL_WIELD,
+            SkillCategory.SHOUT,
+            SkillCategory.SIGNET,
+            SkillCategory.STEALTH_ATTACK,
+            SkillCategory.UNKNOWN,
+            SkillCategory.UNKNOWN
+        };
+        assertEquals(values.length, expResults.length);
+        IntStream.range(0, values.length).
+                forEach(index -> {
+                    final String value = values[index];
+                    final SkillCategory expResult = expResults[index];
+                    final SkillCategory result = EnumValueFactory.INSTANCE.mapEnumValue(SkillCategory.class, value);
                     assertEquals(expResult, result);
                 });
     }
