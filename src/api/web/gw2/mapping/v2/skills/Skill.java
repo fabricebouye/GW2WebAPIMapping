@@ -10,12 +10,16 @@ package api.web.gw2.mapping.v2.skills;
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.LocalizedResource;
 import api.web.gw2.mapping.core.OptionalValue;
+import api.web.gw2.mapping.core.QuantityValue;
 import api.web.gw2.mapping.core.SetValue;
 import api.web.gw2.mapping.core.URLReference;
 import api.web.gw2.mapping.core.URLValue;
 import api.web.gw2.mapping.v2.APIv2;
 import api.web.gw2.mapping.v2.characters.CharacterProfession;
+import api.web.gw2.mapping.v2.items.ItemWeaponType;
+import api.web.gw2.mapping.v2.professions.ProfessionElementalistAttunement;
 import java.util.Optional;
+import java.util.OptionalInt;
 import java.util.Set;
 
 /**
@@ -84,4 +88,56 @@ public interface Skill {
      * @return A {@code SkillSlot} instance, never {@code null}.
      */
     SkillSlot getSlot();
+
+    @OptionalValue
+    @SetValue
+    Optional<Set<SkillFact>> getFacts();
+
+    @OptionalValue
+    @SetValue
+    Optional<Set<SkillTraitedFact>> getTraitedFacts();
+
+    @OptionalValue
+    @SetValue
+    Optional<Set<SkillCategory>> getCategories();
+
+    @OptionalValue
+    Optional<ProfessionElementalistAttunement> getAttunement();
+
+    @OptionalValue
+    @QuantityValue
+    OptionalInt getCost();
+
+    @OptionalValue
+    Optional<ItemWeaponType> getDualWield();
+
+    @OptionalValue
+    @IdValue
+    OptionalInt getFlipSkill();
+
+    @OptionalValue
+    @QuantityValue
+    OptionalInt getInitiative();
+
+    @OptionalValue
+    @IdValue
+    OptionalInt getNextChain();
+
+    @OptionalValue
+    @IdValue
+    OptionalInt getPrevChain();
+
+    @OptionalValue
+    @SetValue
+    @IdValue
+    Optional<Set<Integer>> getTransformSkills();
+
+    @OptionalValue
+    @SetValue
+    @IdValue
+    Optional<Set<Integer>> getBundleSkills();
+
+    @OptionalValue
+    @IdValue
+    OptionalInt getToolbeltSkill();
 }
