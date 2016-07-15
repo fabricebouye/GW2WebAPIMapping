@@ -46,10 +46,6 @@ public enum SkillAttribute {
      */
     VITALITY("Vitality"), // NOI18N.
     /**
-     * Defines the none attribute (? apparently used for ranger pet?).
-     */
-    NONE("None"), // NOI18N.
-    /**
      * Fail safe value.
      */
     @ImplementationSpecific

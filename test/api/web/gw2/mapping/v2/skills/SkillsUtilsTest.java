@@ -205,7 +205,6 @@ public class SkillsUtilsTest {
             "ConditionDamage", // NOI18N.
             "CritDamage", // NOI18N.
             "Healing", // NOI18N.
-            "None", // NOI18N.
             "Power", // NOI18N.
             "Precision", // NOI18N.
             "Toughness", // NOI18N.
@@ -217,7 +216,6 @@ public class SkillsUtilsTest {
             SkillAttribute.CONDITION_DAMAGE,
             SkillAttribute.FEROCITY,
             SkillAttribute.HEALING,
-            SkillAttribute.NONE,
             SkillAttribute.POWER,
             SkillAttribute.PRECISION,
             SkillAttribute.TOUGHNESS,
