@@ -203,6 +203,7 @@ public class SkillsUtilsTest {
         System.out.println("findSkillAttribute");
         final String[] values = {
             "ConditionDamage", // NOI18N.
+            "ConditionDuration", // NOI18N.
             "CritDamage", // NOI18N.
             "Healing", // NOI18N.
             "Power", // NOI18N.
@@ -214,6 +215,7 @@ public class SkillsUtilsTest {
         };
         final SkillAttribute[] expResults = {
             SkillAttribute.CONDITION_DAMAGE,
+            SkillAttribute.CONDITION_DURATION,
             SkillAttribute.FEROCITY,
             SkillAttribute.HEALING,
             SkillAttribute.POWER,
