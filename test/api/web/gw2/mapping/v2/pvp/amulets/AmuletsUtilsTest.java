@@ -49,6 +49,7 @@ public class AmuletsUtilsTest {
         System.out.println("findAmuletAttribute");
         final String[] values = {
             "ConditionDamage", // NOI18N.
+            "ConditionDuration", // NOI18N.
             "CritDamage", // NOI18N.
             "Healing", // NOI18N.
             "Power", // NOI18N.
@@ -60,6 +61,7 @@ public class AmuletsUtilsTest {
         };
         final AmuletAttribute[] expResults = {
             AmuletAttribute.CONDITION_DAMAGE,
+            AmuletAttribute.CONDITION_DURATION,
             AmuletAttribute.FEROCITY,
             AmuletAttribute.HEALING,
             AmuletAttribute.POWER,

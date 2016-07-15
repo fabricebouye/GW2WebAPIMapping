@@ -31,6 +31,10 @@ public enum AmuletAttribute {
      */
     CONDITION_DAMAGE("ConditionDamage"), // NOI18N.
     /**
+     * Defines the condition duration attribute.
+     */
+    CONDITION_DURATION("ConditionDuration"), // NOI18N.
+    /**
      * Defines the ferocity attribute.
      */
     FEROCITY("CritDamage"), // NOI18N.
