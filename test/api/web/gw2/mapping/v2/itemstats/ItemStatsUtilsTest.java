@@ -53,6 +53,7 @@ public class ItemStatsUtilsTest {
             "AgonyResistance", // NOI18N.
             "BoonDuration", // NOI18N.
             "ConditionDamage", // NOI18N.
+            "ConditionDuration", // NOI18N.
             "CritDamage", // NOI18N.
             "Healing", // NOI18N.
             "Power", // NOI18N.
@@ -66,6 +67,7 @@ public class ItemStatsUtilsTest {
             ItemstatsAttribute.AGONY_RESISTANCE,
             ItemstatsAttribute.BOON_DURATION,
             ItemstatsAttribute.CONDITION_DAMAGE,
+            ItemstatsAttribute.CONDITION_DURATION,
             ItemstatsAttribute.FEROCITY,
             ItemstatsAttribute.HEALING,
             ItemstatsAttribute.POWER,
