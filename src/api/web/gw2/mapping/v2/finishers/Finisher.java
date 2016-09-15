@@ -12,6 +12,7 @@ import api.web.gw2.mapping.core.LocalizedResource;
 import api.web.gw2.mapping.core.OptionalValue;
 import api.web.gw2.mapping.core.QuantityValue;
 import api.web.gw2.mapping.core.URLReference;
+import api.web.gw2.mapping.core.URLValue;
 import api.web.gw2.mapping.v2.APIv2;
 import java.util.Optional;
 
@@ -48,6 +49,7 @@ public interface Finisher {
      * Gets the URL to this finisher's icon.
      * @return A {@code URLReference} instance, never {@code null}.
      */
+    @URLValue
     URLReference getIcon();
 
     /**
