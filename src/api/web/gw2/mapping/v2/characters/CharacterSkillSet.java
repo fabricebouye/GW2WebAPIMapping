@@ -13,18 +13,30 @@ import api.web.gw2.mapping.v2.APIv2;
 import java.util.Set;
 
 /**
- * Defines a character's equiped skills (slots 6-10).
+ * Defines a character's equipped skills (slots 6-10).
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/characters", requiresAuthentication = true, scope = "characters") // NOI18N.
 public interface CharacterSkillSet {
 
+    /**
+     * Get id of equipped heal skill.
+     * @return An {@code int}.
+     */
     @IdValue
     int getHeal();
 
+    /**
+     * Get id of equipped elite skill.
+     * @return An {@code int}.
+     */
     @IdValue
     int getElite();
 
+    /**
+     * Gets ids of equipped utility skills.
+     * @return A non-modifiable {@code Set<Integer>} instance, never {@code null}.
+     */
     @SetValue
     Set<Integer> getUtilities();
 }
