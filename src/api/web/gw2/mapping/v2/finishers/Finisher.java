@@ -20,7 +20,7 @@ import java.util.Optional;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/finishers") // NOI18N.
-public interface Fisnisher {
+public interface Finisher {
 
     /**
      * Gets the id of this finisher.
