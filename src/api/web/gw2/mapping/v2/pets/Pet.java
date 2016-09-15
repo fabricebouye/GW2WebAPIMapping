@@ -16,6 +16,7 @@ import api.web.gw2.mapping.core.URLValue;
  * Defines a ranger's pet.
  * @author Fabrice Bouyé
  */
+@APIv2(endpoint = "v2/pets") // NOI18N.
 public interface Pet {
 
     /**
