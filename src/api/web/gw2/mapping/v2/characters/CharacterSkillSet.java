@@ -39,4 +39,11 @@ public interface CharacterSkillSet {
      */
     @SetValue
     Set<Integer> getUtilities();
+
+    /**
+     * Gets Revenant's legends.
+     * @return A non-modifiable {@code Set<Integer>} instance, never {@code null}.
+     */
+    Set<Integer> getLegends();
+
 }
