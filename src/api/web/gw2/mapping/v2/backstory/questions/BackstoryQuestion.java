@@ -11,6 +11,7 @@ import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.LocalizedResource;
 import api.web.gw2.mapping.core.QuantityValue;
 import api.web.gw2.mapping.core.SetValue;
+import api.web.gw2.mapping.v2.APIv2;
 import api.web.gw2.mapping.v2.characters.CharacterProfession;
 import api.web.gw2.mapping.v2.characters.CharacterRace;
 import java.util.Set;
@@ -19,6 +20,7 @@ import java.util.Set;
  * Defines a backstory (character's biography) question.
  * @author Fabrice Bouyé
  */
+@APIv2(endpoint = "v2/backstory/questions") // NOI18N.
 public interface BackstoryQuestion {
 
     /**
