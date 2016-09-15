@@ -20,15 +20,19 @@ public enum DailyAchievementGameType {
     /**
      * Defines the PvE (Player vs. Environment) game mode.
      */
-    PVE("Pve"), // NOI18N.
+    PVE("pve"), // NOI18N.
     /**
      * Defines the PvP (Player vs. Player) game mode.
      */
-    PVP("Pvp"), // NOI18N.
+    PVP("pvp"), // NOI18N.
     /**
      * Defines the WvW (World vs. World) game mode.
      */
-    WVW("Wvw"), // NOI18N.
+    WVW("wvw"), // NOI18N.
+    /**
+     * Defines the special (festival) categories.
+     */
+    SPECIAL("special"), // NOI18N.
     /**
      * Fail safe value.
      */

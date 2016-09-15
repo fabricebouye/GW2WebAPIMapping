@@ -48,9 +48,10 @@ public class DailyUtilsTest {
     public void testFindDailyAchievementGameType() {
         System.out.println("findDailyAchievementGameType"); // NOI18N.
         final String[] values = {
-            "Pve", // NOI18N.
-            "Pvp", // NOI18N.
-            "Wvw", // NOI18N.
+            "pve", // NOI18N.
+            "pvp", // NOI18N.
+            "wvw", // NOI18N.
+            "special", // NOI18N.
             null,
             "" // NOI18N.
         };
@@ -58,6 +59,7 @@ public class DailyUtilsTest {
             DailyAchievementGameType.PVE,
             DailyAchievementGameType.PVP,
             DailyAchievementGameType.WVW,
+            DailyAchievementGameType.SPECIAL,
             DailyAchievementGameType.UNKNOWN,
             DailyAchievementGameType.UNKNOWN
         };
