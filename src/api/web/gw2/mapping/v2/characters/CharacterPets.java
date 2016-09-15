@@ -10,46 +10,28 @@ package api.web.gw2.mapping.v2.characters;
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.SetValue;
 import api.web.gw2.mapping.v2.APIv2;
-import java.util.Optional;
 import java.util.Set;
 
 /**
- * Defines a character's equipped skills (slots 6-10).
+ * Defines a character's equipped pets (when the character is a Ranger).
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/characters", requiresAuthentication = true, scope = "characters") // NOI18N.
-public interface CharacterSkillSet {
+public interface CharacterPets {
 
     /**
-     * Get id of equipped heal skill.
-     * @return An {@code int}.
-     */
-    @IdValue
-    int getHeal();
-
-    /**
-     * Get id of equipped elite skill.
-     * @return An {@code int}.
-     */
-    @IdValue
-    int getElite();
-
-    /**
-     * Gets ids of equipped utility skills.
+     * Gets ids of equipped terrestrial pets.
      * @return A non-modifiable {@code Set<Integer>} instance, never {@code null}.
      */
     @SetValue
-    Set<Integer> getUtilities();
+    @IdValue
+    Set<Integer> getTerrestrial();
 
     /**
-     * Gets Revenant's legends.
+     * Gets ids of equipped aquatic pets.
      * @return A non-modifiable {@code Set<Integer>} instance, never {@code null}.
      */
-    Set<Integer> getLegends();
-
-    /**
-     * Gets Ranger's pets.
-     * @return An {@code Optional<CharacterPets>} instance, never {@code null}.
-     */
-    Optional<CharacterPets> getPets();
+    @SetValue
+    @IdValue
+    Set<Integer> getAquatic();
 }
