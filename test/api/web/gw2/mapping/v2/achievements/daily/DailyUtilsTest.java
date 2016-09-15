@@ -72,4 +72,32 @@ public class DailyUtilsTest {
                     assertEquals(expResult, result);
                 });
     }
+
+    /**
+     * Test of DailyAchievementGameType.
+     */
+    @Test
+    public void testFindDailyAchievementCampaign() {
+        System.out.println("findDailyAchievementCampaign"); // NOI18N.
+        final String[] values = {
+            "GuildWars2", // NOI18N.
+            "HeartOfThorns", // NOI18N.
+            null,
+            "" // NOI18N.
+        };
+        final DailyAchievementCampaign[] expResults = {
+            DailyAchievementCampaign.GUILD_WARS_2,
+            DailyAchievementCampaign.HEART_OF_THORNS,
+            DailyAchievementCampaign.UNKNOWN,
+            DailyAchievementCampaign.UNKNOWN
+        };
+        assertEquals(values.length, expResults.length);
+        IntStream.range(0, values.length).
+                forEach(index -> {
+                    final String value = values[index];
+                    final DailyAchievementCampaign expResult = expResults[index];
+                    final DailyAchievementCampaign result = EnumValueFactory.INSTANCE.mapEnumValue(DailyAchievementCampaign.class, value);
+                    assertEquals(expResult, result);
+                });
+    }
 }

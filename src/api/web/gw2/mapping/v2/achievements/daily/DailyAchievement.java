@@ -8,7 +8,9 @@
 package api.web.gw2.mapping.v2.achievements.daily;
 
 import api.web.gw2.mapping.core.IdValue;
+import api.web.gw2.mapping.core.SetValue;
 import api.web.gw2.mapping.v2.APIv2;
+import java.util.Set;
 
 /**
  * Defines a daily achievements.
@@ -29,4 +31,11 @@ public interface DailyAchievement {
      * @return A {@code DailyAchievementLevelRange} instance, never {@code null}.
      */
     DailyAchievementLevelRange getLevel();
+
+    /**
+     * Gets the campaigns required to have access to this achievement.
+     * @return A non-modifiable {@code Set<DailyAchievementCampaign>}, never {@code null}.
+     */
+    @SetValue
+    Set<DailyAchievementCampaign> getRequiredAccess();
 }
