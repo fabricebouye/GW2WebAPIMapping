@@ -23,6 +23,7 @@ import java.time.ZonedDateTime;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.OptionalInt;
 import java.util.Set;
 
 /**
@@ -156,4 +157,11 @@ public interface Character {
     @SetValue
     @IdValue
     Set<Integer> getBackstory();
+
+    /**
+     * Gets the id of this character's title.
+     * @return An {@code OptionalInt} instance, never {@code null}.
+     * @see api.web.gw2.mapping.v2.titles.Title#getId() 
+     */
+    OptionalInt getTitle();
 }
