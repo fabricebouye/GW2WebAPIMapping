@@ -23,7 +23,7 @@ public interface ProfessionTrack {
      * @return 
      */
     @IdValue
-    int id();
+    int getId();
 
     /**
      * Gets the category of the track.
