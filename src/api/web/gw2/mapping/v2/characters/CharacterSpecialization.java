@@ -9,12 +9,14 @@ package api.web.gw2.mapping.v2.characters;
 
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.SetValue;
+import api.web.gw2.mapping.v2.APIv2;
 import java.util.Set;
 
 /**
  * Defines a character specialization.
  * @author Fabrice Bouyé
  */
+@APIv2(endpoint = "v2/characters", requiresAuthentication = true, scope = {"characters", "builds"}) // NOI18N.
 public interface CharacterSpecialization {
 
     /**

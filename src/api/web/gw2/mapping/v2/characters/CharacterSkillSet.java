@@ -17,7 +17,7 @@ import java.util.Set;
  * Defines a character's equipped skills (slots 6-10).
  * @author Fabrice Bouyé
  */
-@APIv2(endpoint = "v2/characters", requiresAuthentication = true, scope = "characters") // NOI18N.
+@APIv2(endpoint = "v2/characters", requiresAuthentication = true, scope = {"characters", "builds"}) // NOI18N.
 public interface CharacterSkillSet {
 
     /**

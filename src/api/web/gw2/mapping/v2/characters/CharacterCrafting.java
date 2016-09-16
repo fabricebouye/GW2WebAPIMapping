@@ -8,12 +8,14 @@
 package api.web.gw2.mapping.v2.characters;
 
 import api.web.gw2.mapping.core.CraftingLevelValue;
+import api.web.gw2.mapping.v2.APIv2;
 import api.web.gw2.mapping.v2.recipes.RecipeCraftingDiscipline;
 
 /**
  * Defines the description of a character's crafting discipline.
  * @author Fabrice Bouyé
  */
+@APIv2(endpoint = "v2/characters", requiresAuthentication = true, scope = "characters") // NOI18N.
 public interface CharacterCrafting {
 
     /**
