@@ -163,5 +163,7 @@ public interface Character {
      * @return An {@code OptionalInt} instance, never {@code null}.
      * @see api.web.gw2.mapping.v2.titles.Title#getId() 
      */
+    @OptionalValue
+    @IdValue
     OptionalInt getTitle();
 }
