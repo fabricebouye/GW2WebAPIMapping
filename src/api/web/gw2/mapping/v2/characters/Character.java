@@ -145,6 +145,12 @@ public interface Character {
     @IdValue
     Optional<Set<Integer>> getRecipes();
 
+    /**
+     * Gets the utility and profession skills of this character.
+     * @return An {@code Optional<Map<CharacterGameType, CharacterSkillSet>>} instance, never {@code null}:
+     * <br>If present, the map is non-modifiable and may be empty.
+     * @see api.web.gw2.mapping.v2.tokeninfo.TokenInfoPermission#BUILDS
+     */
     @OptionalValue
     @MapValue
     Optional<Map<CharacterGameType, CharacterSkillSet>> getSkills();
