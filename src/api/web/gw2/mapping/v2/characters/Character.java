@@ -135,6 +135,17 @@ public interface Character {
     Optional<Map<CharacterGameType, Set<CharacterSpecialization>>> getSpecializations();
 
     /**
+     * Gets the training of this character.
+     * @return An {@code Optional<Set<CharacterTraining>>} instance, never {@code null}:
+     * <br>If present, the set is non-modifiable and may be empty.
+     */
+    @OptionalValue
+    @MapValue
+    @SetValue
+    Optional<Set<CharacterTraining>> getTraining();
+    
+    
+    /**
      * Gets the recipes known to this character.
      * @return An {@code Optional<Set<Integer>>} instance, never {@code null}:
      * <br>If present, the set is non-modifiable and may be empty.
