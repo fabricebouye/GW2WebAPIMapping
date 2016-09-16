@@ -147,4 +147,13 @@ public interface Character {
     @OptionalValue
     @MapValue
     Optional<Map<CharacterGameType, CharacterSkillSet>> getSkills();
+
+    /** 
+     * Gets the ids of the answers to this character's backstory.
+     * @return A non-modifiable {@code Set<Integer>} instance, never {@code null}.
+     * @see api.web.gw2.mapping.v2.backstory.answers.BackstoryAnswer#getId() 
+     */
+    @SetValue
+    @IdValue
+    Set<Integer> getBackstory();
 }
