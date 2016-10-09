@@ -183,4 +183,7 @@ public interface Character {
     @OptionalValue
     @IdValue
     OptionalInt getTitle();
+    
+    @OptionalValue
+    Optional<CharacterEquipmentPvP> getEquipmentPvp();
 }
