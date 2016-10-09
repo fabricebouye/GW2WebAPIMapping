@@ -108,4 +108,70 @@ public class EquipmentUtilsTest {
                     assertEquals(expResult, result);
                 });
     }
+
+    /**
+     * Test of EquipmentBinding.
+     */
+    @Test
+    public void testFindEquipmentBinding() {
+        System.out.println("findEquipmentBinding");
+        final String[] values = {
+            "Account", // NOI18N.
+            "Character", // NOI18N.
+            null,
+            "" // NOI18N.
+        };
+        final EquipmentBinding[] expResults = {
+            EquipmentBinding.ACCOUNT,
+            EquipmentBinding.CHARACTER,
+            EquipmentBinding.UNKNOWN,
+            EquipmentBinding.UNKNOWN
+        };
+        assertEquals(values.length, expResults.length);
+        IntStream.range(0, values.length).
+                forEach(index -> {
+                    final String value = values[index];
+                    final EquipmentBinding expResult = expResults[index];
+                    final EquipmentBinding result = EnumValueFactory.INSTANCE.mapEnumValue(EquipmentBinding.class, value);
+                    assertEquals(expResult, result);
+                });
+    }
+
+    /**
+     * Test of EquipmentAttribute.
+     */
+    @Test
+    public void testFindEquipmentAttribute() {
+        System.out.println("findEquipmentAttribute");
+        final String[] values = {
+            "ConditionDamage", // NOI18N.
+            "CritDamage", // NOI18N.
+            "Healing", // NOI18N.
+            "Power", // NOI18N.
+            "Precision", // NOI18N.
+            "Toughness", // NOI18N.
+            "Vitality", // NOI18N.
+            null,
+            "" // NOI18N.
+        };
+        final EquipmentAttribute[] expResults = {
+            EquipmentAttribute.CONDITION_DAMAGE,
+            EquipmentAttribute.CRIT_DAMAGE,
+            EquipmentAttribute.HEALING,
+            EquipmentAttribute.POWER,
+            EquipmentAttribute.PRECISION,
+            EquipmentAttribute.TOUGHNESS,
+            EquipmentAttribute.VITALITTY,
+            EquipmentAttribute.UNKNOWN,
+            EquipmentAttribute.UNKNOWN
+        };
+        assertEquals(values.length, expResults.length);
+        IntStream.range(0, values.length).
+                forEach(index -> {
+                    final String value = values[index];
+                    final EquipmentAttribute expResult = expResults[index];
+                    final EquipmentAttribute result = EnumValueFactory.INSTANCE.mapEnumValue(EquipmentAttribute.class, value);
+                    assertEquals(expResult, result);
+                });
+    }
 }

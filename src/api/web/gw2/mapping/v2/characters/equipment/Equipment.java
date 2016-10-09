@@ -60,4 +60,14 @@ public interface Equipment {
      */
     @IdValue
     int getSkin();
+
+    @OptionalValue
+    Optional<EquipmentStats> getStats();
+
+    @OptionalValue
+    Optional<EquipmentBinding> getBinding();
+
+    @OptionalValue
+    @IdValue(flavor = IdValue.Flavor.STRING)
+    Optional<String> getBoundTo();
 }
