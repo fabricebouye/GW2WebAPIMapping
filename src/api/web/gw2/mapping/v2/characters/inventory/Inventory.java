@@ -87,4 +87,10 @@ public interface Inventory {
     @OptionalValue
     @IdValue
     OptionalInt getInfixUpgradeId();
+
+    /**
+     * Gets the number of charges for this object in inventory.
+     * @return An {@code OptionalInt} instance, never {@code null}:
+     */
+    OptionalInt getCharges();
 }

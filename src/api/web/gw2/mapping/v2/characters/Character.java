@@ -143,8 +143,7 @@ public interface Character {
     @MapValue
     @SetValue
     Optional<Set<CharacterTraining>> getTraining();
-    
-    
+
     /**
      * Gets the recipes known to this character.
      * @return An {@code Optional<Set<Integer>>} instance, never {@code null}:
@@ -183,10 +182,10 @@ public interface Character {
     @OptionalValue
     @IdValue
     OptionalInt getTitle();
-    
+
     @OptionalValue
     Optional<CharacterEquipmentPvP> getEquipmentPvp();
-    
+
     /** 
      * Gets the WvW abilities of this character's.
      * @return A non-modifiable {@code Set<CharacterAbility>} instance, never {@code null}.
