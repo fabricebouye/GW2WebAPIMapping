@@ -186,4 +186,12 @@ public interface Character {
     
     @OptionalValue
     Optional<CharacterEquipmentPvP> getEquipmentPvp();
+    
+    /** 
+     * Gets the WvW abilities of this character's.
+     * @return A non-modifiable {@code Set<CharacterAbility>} instance, never {@code null}.
+     * @see api.web.gw2.mapping.v2.wvw.abilities.Ability
+     */
+    @SetValue
+    Set<CharacterAbility> getWvwAbilities();
 }
