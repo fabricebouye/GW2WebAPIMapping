@@ -92,5 +92,7 @@ public interface Inventory {
      * Gets the number of charges for this object in inventory.
      * @return An {@code OptionalInt} instance, never {@code null}:
      */
+    @OptionalValue
+    @QuantityValue
     OptionalInt getCharges();
 }
