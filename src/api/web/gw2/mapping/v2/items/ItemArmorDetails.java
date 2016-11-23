@@ -11,9 +11,11 @@ import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.ListValue;
 import api.web.gw2.mapping.core.OptionalValue;
 import api.web.gw2.mapping.core.QuantityValue;
+import api.web.gw2.mapping.core.SetValue;
 import java.util.List;
 import java.util.Optional;
 import java.util.OptionalInt;
+import java.util.Set;
 
 /**
  * Defines an item armor details.
@@ -68,4 +70,14 @@ public interface ItemArmorDetails extends ItemDetails {
      */
     @IdValue
     String getSecondarySuffixItemId();
+
+    /**
+     * Gets the available stats choices for this armor.
+     * @return A non-modifiable {@code Set<Integer>} instance, never {@code null}. 
+     * <br>May be empty if no stat choice is available.
+     * @see api.web.gw2.mapping.v2.itemstats
+     */
+    @SetValue
+    @IdValue
+    Set<Integer> getStatsChoices();
 }

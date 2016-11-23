@@ -10,10 +10,12 @@ package api.web.gw2.mapping.v2.items;
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.ListValue;
 import api.web.gw2.mapping.core.OptionalValue;
+import api.web.gw2.mapping.core.SetValue;
 import api.web.gw2.mapping.v2.APIv2;
 import java.util.List;
 import java.util.Optional;
 import java.util.OptionalInt;
+import java.util.Set;
 
 /**
  * Defines a back item details.
@@ -50,4 +52,14 @@ public interface ItemBackDetails extends ItemDetails {
      */
     @IdValue
     String getSecondarySuffixItemId();
+
+    /**
+     * Gets the available stats choices for this back item.
+     * @return A non-modifiable {@code Set<Integer>} instance, never {@code null}. 
+     * <br>May be empty if no stat choice is available.
+     * @see api.web.gw2.mapping.v2.itemstats
+     */
+    @SetValue
+    @IdValue
+    Set<Integer> getStatsChoices();
 }

@@ -11,8 +11,10 @@ import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.ListValue;
 import api.web.gw2.mapping.core.OptionalValue;
 import api.web.gw2.mapping.core.QuantityValue;
+import api.web.gw2.mapping.core.SetValue;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 /**
  * Defines a weapon details.
@@ -75,9 +77,19 @@ public interface ItemWeaponDetails extends ItemDetails {
     int getSuffixItemId();
 
     /**
-     * Gets the id of the secondary suffix item on this armor.
+     * Gets the id of the secondary suffix item on this weapon.
      * @return A {@code String} instance, never {@code null}.
      */
     @IdValue
     String getSecondarySuffixItemId();
+
+    /**
+     * Gets the available stats choices for this weapon.
+     * @return A non-modifiable {@code Set<Integer>} instance, never {@code null}. 
+     * <br>May be empty if no stat choice is available.
+     * @see api.web.gw2.mapping.v2.itemstats
+     */
+    @SetValue
+    @IdValue
+    Set<Integer> getStatsChoices();
 }
