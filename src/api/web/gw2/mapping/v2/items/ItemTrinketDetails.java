@@ -67,5 +67,5 @@ public interface ItemTrinketDetails extends ItemDetails {
      */
     @SetValue
     @IdValue
-    Set<Integer> getStatsChoices();
+    Set<Integer> getStatChoices();
 }

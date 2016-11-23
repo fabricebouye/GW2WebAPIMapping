@@ -61,5 +61,5 @@ public interface ItemBackDetails extends ItemDetails {
      */
     @SetValue
     @IdValue
-    Set<Integer> getStatsChoices();
+    Set<Integer> getStatChoices();
 }

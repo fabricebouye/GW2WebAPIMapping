@@ -91,5 +91,5 @@ public interface ItemWeaponDetails extends ItemDetails {
      */
     @SetValue
     @IdValue
-    Set<Integer> getStatsChoices();
+    Set<Integer> getStatChoices();
 }

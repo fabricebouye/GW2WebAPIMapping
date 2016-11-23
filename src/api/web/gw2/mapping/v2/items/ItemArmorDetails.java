@@ -79,5 +79,5 @@ public interface ItemArmorDetails extends ItemDetails {
      */
     @SetValue
     @IdValue
-    Set<Integer> getStatsChoices();
+    Set<Integer> getStatChoices();
 }
