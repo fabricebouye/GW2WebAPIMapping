@@ -464,6 +464,7 @@ public class ItemsUtilsTest {
     public void testFindItemInfixUpgradeAttribute() {
         System.out.println("findInfixUpgradeAttribute");
         final String[] values = {
+            "AgonyResistance", // NOI18N.
             "ConditionDamage", // NOI18N.
             "CritDamage", // NOI18N.
             "Healing", // NOI18N.
@@ -475,6 +476,7 @@ public class ItemsUtilsTest {
             "" // NOI18N.
         };
         final ItemInfixUpgradeAttribute[] expResults = {
+            ItemInfixUpgradeAttribute.AGONY_RESISTANCE,
             ItemInfixUpgradeAttribute.CONDITION_DAMAGE,
             ItemInfixUpgradeAttribute.CRIT_DAMAGE,
             ItemInfixUpgradeAttribute.HEALING,

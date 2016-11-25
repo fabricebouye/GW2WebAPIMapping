@@ -18,6 +18,10 @@ import api.web.gw2.mapping.v2.APIv2;
 public enum ItemInfixUpgradeAttribute {
 
     /**
+     * Defines the agony resistance attribute.
+     */
+    AGONY_RESISTANCE("AgonyResistance"), // NOI18N.
+    /**
      * Defines the condition damage attribute.
      */
     CONDITION_DAMAGE("ConditionDamage"), // NOI18N.
