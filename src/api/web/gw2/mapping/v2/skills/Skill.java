@@ -140,4 +140,11 @@ public interface Skill {
     @OptionalValue
     @IdValue
     OptionalInt getToolbeltSkill();
+
+    /**
+     * Gets the flags on this skill.
+     * @return A non-modifiable {@code Set<?>}, never {@code null}. May be empty.
+     */
+    @SetValue
+    Set<?> getFlags();
 }
