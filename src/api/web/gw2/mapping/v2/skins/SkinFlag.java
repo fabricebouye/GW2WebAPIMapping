@@ -30,6 +30,10 @@ public enum SkinFlag {
      */
     HIDE_IF_LOCKED("HideIfLocked"), // NOI18N.
     /**
+     * The skin overrides the rarity of the item.
+     */
+    OVERRIDE_RARITY("OverrideRarity"), // NOI18N.
+    /**
      * Fail safe value.
      */
     @ImplementationSpecific

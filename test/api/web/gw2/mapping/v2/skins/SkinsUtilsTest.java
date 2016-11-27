@@ -81,6 +81,7 @@ public class SkinsUtilsTest {
             "HideIfLocked", // NOI18N.
             "NoCost", // NOI18N.
             "ShowInWardrobe", // NOI18N.
+            "OverrideRarity", // NOI18N.
             null,
             "" // NOI18N.
         };
@@ -88,6 +89,7 @@ public class SkinsUtilsTest {
             SkinFlag.HIDE_IF_LOCKED,
             SkinFlag.NO_COST,
             SkinFlag.SHOW_IN_WARDROBE,
+            SkinFlag.OVERRIDE_RARITY,
             SkinFlag.UNKNOWN,
             SkinFlag.UNKNOWN
         };
