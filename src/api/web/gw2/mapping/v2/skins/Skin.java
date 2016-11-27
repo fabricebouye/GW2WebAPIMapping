@@ -13,7 +13,6 @@ import api.web.gw2.mapping.core.OptionalValue;
 import api.web.gw2.mapping.core.SetValue;
 import api.web.gw2.mapping.core.URLReference;
 import api.web.gw2.mapping.core.URLValue;
-import java.net.URL;
 import java.util.Optional;
 import java.util.Set;
 
@@ -78,4 +77,10 @@ public interface Skin {
      * @return An {@code Optional<T>} instance, never {@code null}.
      */
     <T extends SkinDetails> Optional<T> getDetails();
+
+    /**
+     * Gets the rarity of this skin.
+     * @return A {@code SkinRarity} instance, never {@code null}.
+     */
+    SkinRarity getRarity();
 }

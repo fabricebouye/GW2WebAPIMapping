@@ -262,4 +262,44 @@ public class SkinsUtilsTest {
                     assertEquals(expResult, result);
                 });
     }
+
+    /**
+     * Test of SkinRarity.
+     */
+    @Test
+    public void testFindSkinRarity() {
+        System.out.println("findSkinRarity");
+        final String[] values = {
+            "Ascended", // NOI18N.
+            "Basic", // NOI18N.
+            "Exotic", // NOI18N.
+            "Fine", // NOI18N.
+            "Junk", // NOI18N.
+            "Legendary", // NOI18N.
+            "Masterwork", // NOI18N.
+            "Rare", // NOI18N.
+            null,
+            "" // NOI18N.
+        };
+        final SkinRarity[] expResults = {
+            SkinRarity.ASCENDED,
+            SkinRarity.BASIC,
+            SkinRarity.EXOTIC,
+            SkinRarity.FINE,
+            SkinRarity.JUNK,
+            SkinRarity.LEGENDARY,
+            SkinRarity.MASTERWORK,
+            SkinRarity.RARE,
+            SkinRarity.UNKNOWN,
+            SkinRarity.UNKNOWN
+        };
+        assertEquals(values.length, expResults.length);
+        IntStream.range(0, values.length).
+                forEach(index -> {
+                    final String value = values[index];
+                    final SkinRarity expResult = expResults[index];
+                    final SkinRarity result = EnumValueFactory.INSTANCE.mapEnumValue(SkinRarity.class, value);
+                    assertEquals(expResult, result);
+                });
+    }
 }
