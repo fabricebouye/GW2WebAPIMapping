@@ -24,10 +24,10 @@ public interface BackstoryAnswer {
 
     /**
      * Gets the id of this answer.
-     * @return An {@code int}.
+     * @return A {@code String} instance, never {@code null}.
      */
-    @IdValue
-    int getId();
+    @IdValue(flavor = IdValue.Flavor.STRING)
+    String getId();
 
     /**
      * Gets the i18n title of this answer.
