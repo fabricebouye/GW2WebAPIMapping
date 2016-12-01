@@ -56,10 +56,8 @@ public interface ItemUpgradeComponentDetails extends ItemDetails {
 
     /**
      * Gets the list of bonuses on this upgrade component.
-     * @return An {@code Optional<List<String>>} instance, never {@code null}.
-     * <br>If present, the list is non-modifiable.
+     * @return A non-modifiable {@code List<String>} instance, never {@code null}; non-modifiable.
      */
-    @OptionalValue
     @ListValue
-    Optional<List<String>> getBonuses();
+    List<String> getBonuses();
 }

@@ -72,29 +72,23 @@ public interface Trait {
     TraitSlotType getSlot();
 
     /**
-    * Gets the set of facts that may be triggered by this trait.
-    * @return An {@code Optional<Set<TraitFact>>} instance, never {@code null}.
-    * <br>If present, the underlying set is non-modifiable and can be empty.
-    */
-    @OptionalValue
+     * Gets the set of facts that may be triggered by this trait.
+     * @return A non-modifiable {@code Set<TraitFact>} instance, never {@code null}; may be empty.
+     */
     @SetValue
-    Optional<Set<TraitFact>> getFacts();
+    Set<TraitFact> getFacts();
 
     /**
-    * Gets the set of traited facts that may be triggered by this trait.
-    * @return An {@code Optional<Set<TraitFact>>} instance, never {@code null}.
-    * <br>If present, the underlying set is non-modifiable and can be empty.
-    */
-    @OptionalValue
+     * Gets the set of traited facts that may be triggered by this trait.
+     * @return A non-modifiable {@code Set<TraitFact>} instance, never {@code null}; may be empty.
+     */
     @SetValue
-    Optional<Set<TraitFact>> getTraitedFacts();
+    Set<TraitFact> getTraitedFacts();
 
     /**
-    * Gets the set of skills that may be triggered by this trait.
-    * @return An {@code Optional<Set<TraitSkill>>} instance, never {@code null}.
-    * <br>If present, the underlying set is non-modifiable and can be empty.
-    */
-    @OptionalValue
+     * Gets the set of skills that may be triggered by this trait.
+     * @return A non-modifiable {@code Set<TraitSkill>} instance, never {@code null}; may be empty.
+     */
     @SetValue
-    Optional<Set<TraitSkill>> getSkills();
+    Set<TraitSkill> getSkills();
 }

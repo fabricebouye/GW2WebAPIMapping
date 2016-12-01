@@ -55,10 +55,8 @@ public interface Achievement {
 
     /**
      * Gets the set of bits for this achievement.
-     * @return An {@code Optional<Set<Integer>>} instance, never {@code null}:
-     * <br>If present, the set is non-modifiable and may be empty.
+     * @return A non-modifiable {@code Set<Integer>} instance, never {@code null}; may be empty.
      */
-    @OptionalValue
     @SetValue
-    Optional<Set<Integer>> getBits();
+    Set<Integer> getBits();
 }

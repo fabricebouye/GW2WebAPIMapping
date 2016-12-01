@@ -89,61 +89,108 @@ public interface Skill {
      */
     SkillSlot getSlot();
 
-    @OptionalValue
+    /**
+     * Gets facts about this skill.
+     * @return A non-modifiable {@code Set<SkillFact>} instance, never {@code null}; may be empty.
+     */
     @SetValue
-    Optional<Set<SkillFact>> getFacts();
+    Set<SkillFact> getFacts();
 
-    @OptionalValue
+    /**
+     * Gets traited facts about this skill.
+     * @return A non-modifiable {@code Set<TraitedFacts>} instance, never {@code null}; may be empty.
+     */
     @SetValue
-    Optional<Set<SkillTraitedFact>> getTraitedFacts();
+    Set<SkillTraitedFact> getTraitedFacts();
 
-    @OptionalValue
+    /**
+     * Gets the categories of this skill.
+     * @return A non-modifiable {@code Set<SkillCategory>} instance, never {@code null}; may be empty.
+     */
     @SetValue
-    Optional<Set<SkillCategory>> getCategories();
+    Set<SkillCategory> getCategories();
 
+    /**
+     * Gets the elemental attunement of this skill (Elementalist).
+     * @return An {@code Optional<ProfessionElementalistAttunement>} instance, never {@code null}.
+     */
     @OptionalValue
     Optional<ProfessionElementalistAttunement> getAttunement();
 
-    @OptionalValue
+    /**
+     * Gets the energy cost of this skill (Revenant).
+     * @return An {@code OptionalInt} instance, never {@code null}.
+     */
     @QuantityValue
+    @OptionalValue
     OptionalInt getCost();
 
+    /**
+     * Indicates the type of weapon that needs to be wielded for this skill to appear.
+     * @return An {@code Optional<ItemWeaponType>} instance, never {@code null}.
+     */
     @OptionalValue
     Optional<ItemWeaponType> getDualWield();
 
-    @OptionalValue
+    /**
+     * Gets the initiative cost of flip over skill (Engineer's toolkits, Revenant's facets).
+     * @return An {@code OptionalInt} instance, never {@code null}.
+     */
     @IdValue
+    @OptionalValue
     OptionalInt getFlipSkill();
 
-    @OptionalValue
+    /**
+     * Gets the initiative cost of this skill (Thief).
+     * @return An {@code OptionalInt} instance, never {@code null}.
+     */
     @QuantityValue
+    @OptionalValue
     OptionalInt getInitiative();
 
-    @OptionalValue
+    /**
+     * Gets the id of the next skill in this skill's attack chain.
+     * @return An {@code OptionalInt} instance, never {@code null}.
+     */
     @IdValue
+    @OptionalValue
     OptionalInt getNextChain();
 
-    @OptionalValue
+    /**
+     * Gets the id of the previous skill in this skill's attack chain.
+     * @return An {@code OptionalInt} instance, never {@code null}.
+     */
     @IdValue
+    @OptionalValue
     OptionalInt getPrevChain();
 
-    @OptionalValue
+    /**
+     * Gets the ids of transformations skills granted by this skill (shrouds & avatar states and other transformations).
+     * @return A non-modifiable {@code Set<Integer>} instance, never {@code null}; may be empty.
+     */
+    @IdValue
     @SetValue
-    @IdValue
-    Optional<Set<Integer>> getTransformSkills();
+    Set<Integer> getTransformSkills();
 
-    @OptionalValue
+    /**
+     * Gets the ids of bundle skills granted by this skill  (Engineer and other environmental weapons).
+     * @return A non-modifiable {@code Set<Integer>} instance, never {@code null}; may be empty.
+     */
+    @IdValue
     @SetValue
-    @IdValue
-    Optional<Set<Integer>> getBundleSkills();
+    Set<Integer> getBundleSkills();
 
-    @OptionalValue
+    /**
+     * Gets the id of the toolbelt skills granted by this skill (Engineer).
+     * @return An {@code OptionalInt} instance, never {@code null}.
+     */
     @IdValue
+    @OptionalValue
     OptionalInt getToolbeltSkill();
 
     /**
      * Gets the flags on this skill.
-     * @return A non-modifiable {@code Set<?>}, never {@code null}. May be empty.
+     * @return A non-modifiable {@code Set<?>}, never {@code null}; may be empty.
      */
     @SetValue
     Set<?> getFlags();

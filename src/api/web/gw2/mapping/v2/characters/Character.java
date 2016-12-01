@@ -95,75 +95,60 @@ public interface Character {
 
     /**
      * Gets the equipment of this character.
-     * @return An {@code Optional<List<Equipment>>} instance, never {@code null}:
-     * <br>If present, the list is non-modifiable and may be empty.
+     * @return A non-modifiable {@code List<Equipment>} instance, never {@code null}; may be empty.
      * @see api.web.gw2.mapping.v2.tokeninfo.TokenInfoPermission#BUILDS
      * @see api.web.gw2.mapping.v2.tokeninfo.TokenInfoPermission#INVENTORIES
      */
-    @OptionalValue
     @ListValue
-    Optional<List<Equipment>> getEquipment();
+    List<Equipment> getEquipment();
 
     /**
      * Gets the inventory bags of this character.
-     * @return An {@code Optional<List<Bag>>} instance, never {@code null}:
-     * <br>If present, the list is non-modifiable and may be empty.
+     * @return A non-modifiable {@code List<Bag>} instance, never {@code null}; may be empty.
      * @see api.web.gw2.mapping.v2.tokeninfo.TokenInfoPermission#INVENTORIES
      */
-    @OptionalValue
     @ListValue
-    Optional<List<InventoryBag>> getBags();
+    List<InventoryBag> getBags();
 
     /**
      * Gets the crafting disciplines of this character.
-     * @return An {@code Optional<Set<CharacterCrafting>>} instance, never {@code null}:
-     * <br>If present, the set is non-modifiable and may be empty.
+     * @return A non-modifiable {@code Set<CharacterCrafting>} instance, never {@code null}; may be empty.
      */
-    @OptionalValue
     @SetValue
-    Optional<Set<CharacterCrafting>> getCrafting();
+    Set<CharacterCrafting> getCrafting();
 
     /**
      * Gets the specialization of this character.
-     * @return An {@code Optional<Map<CharacterGameType, Set<CharacterSpecialization>>>} instance, never {@code null}:
-     * <br>If present, the map is non-modifiable and may be empty.
+     * @return A non-modifiable {@code Map<CharacterGameType, Set<CharacterSpecialization>>} instance, never {@code null}; may be empty.
      * @see api.web.gw2.mapping.v2.tokeninfo.TokenInfoPermission#BUILDS
      */
-    @OptionalValue
     @MapValue
     @SetValue
-    Optional<Map<CharacterGameType, Set<CharacterSpecialization>>> getSpecializations();
+    Map<CharacterGameType, Set<CharacterSpecialization>> getSpecializations();
 
     /**
      * Gets the training of this character.
-     * @return An {@code Optional<Set<CharacterTraining>>} instance, never {@code null}:
-     * <br>If present, the set is non-modifiable and may be empty.
+     * @return A non-modifiable {@code Set<CharacterTraining>} instance, never {@code null}; may be empty.
      */
-    @OptionalValue
-    @MapValue
     @SetValue
-    Optional<Set<CharacterTraining>> getTraining();
+    Set<CharacterTraining> getTraining();
 
     /**
      * Gets the recipes known to this character.
-     * @return An {@code Optional<Set<Integer>>} instance, never {@code null}:
-     * <br>If present, the set is non-modifiable and may be empty.
+     * @return A non-modifiable {@code Set<Integer>} instance, never {@code null}; may be empty.
      * @see api.web.gw2.mapping.v2.tokeninfo.TokenInfoPermission#INVENTORIES
      */
-    @OptionalValue
     @SetValue
     @IdValue
-    Optional<Set<Integer>> getRecipes();
+    Set<Integer> getRecipes();
 
     /**
      * Gets the utility and profession skills of this character.
-     * @return An {@code Optional<Map<CharacterGameType, CharacterSkillSet>>} instance, never {@code null}:
-     * <br>If present, the map is non-modifiable and may be empty.
+     * @return A non-modifiable {@code Map<CharacterGameType, CharacterSkillSet>} instance, never {@code null}; may be empty.
      * @see api.web.gw2.mapping.v2.tokeninfo.TokenInfoPermission#BUILDS
      */
-    @OptionalValue
     @MapValue
-    Optional<Map<CharacterGameType, CharacterSkillSet>> getSkills();
+    Map<CharacterGameType, CharacterSkillSet> getSkills();
 
     /** 
      * Gets the ids of the answers to this character's backstory.

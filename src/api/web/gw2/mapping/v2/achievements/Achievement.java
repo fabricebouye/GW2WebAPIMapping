@@ -83,21 +83,17 @@ public interface Achievement {
 
     /**
      * Gets the optional rewards for this achievement.
-     * @return An {@code Optional<Set<AchievementReward>>} instance, never {@code null}.
-     * <br>If present the contained set is non-modifiable and may be empty.
+     * @return A non-modifiable {@code Set<AchievementReward>} instance, never {@code null}; may be empty.
      */
-    @OptionalValue
     @SetValue
-    Optional<Set<AchievementReward>> getRewards();
+    Set<AchievementReward> getRewards();
 
     /**
      * Gets the optional bits for this achievement.
-     * @return An {@code Optional<Set<AchievementBit>>} instance, never {@code null}.
-     * <br>If present the contained set is non-modifiable and may be empty.
+     * @return A non-modifiable {@code Set<AchievementBit>} instance, never {@code null}; may be empty.
      */
-    @OptionalValue
     @SetValue
-    Optional<Set<AchievementBit>> getBits();
+    Set<AchievementBit> getBits();
 
     /**
      * Gets the optional text when this achievement is still locked.
@@ -109,13 +105,11 @@ public interface Achievement {
 
     /**
      * Gets the optional prerequisites for this achievement.
-     * @return An {@code Optional<Set<Integer>>} instance, never {@code null}.
-     * <br>If present the contained set is non-modifiable and may be empty.
+     * @return A non-modifiable {@code Set<Integer>} instance, never {@code null}; may be empty.
      */
-    @OptionalValue
     @IdValue
     @SetValue
-    Optional<Set<Integer>> getPrerequisites();
+    Set<Integer> getPrerequisites();
 
     /**
      * Gets the maximum number of repetitions after which this achievement will cease to give points.

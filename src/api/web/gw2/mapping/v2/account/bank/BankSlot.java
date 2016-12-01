@@ -49,21 +49,19 @@ public interface BankSlot {
 
     /**
      * Gets a list containing the item ids for each rune or signet applied to the item (if any).
-     * @return An non-modifiable {@code Optional<List<Integer>>}, never {@code null}.
+     * @return An non-modifiable {@code List<Integer>}, never {@code null}; may be empty.
      */
     @IdValue
-    @OptionalValue
     @ListValue
-    Optional<List<Integer>> getUpgrades();
+    List<Integer> getUpgrades();
 
     /**
      * Gets a list containing the item ids for each rune or signet applied to the item (if any).
-     * @return An non-modifiable {@code Optional<List<Integer>>}, never {@code null}.
+     * @return An non-modifiable {@code List<Integer>}, never {@code null}; may be empty.
      */
     @IdValue
-    @OptionalValue
     @ListValue
-    Optional<List<Integer>> getInfusions();
+    List<Integer> getInfusions();
 
     /**
      * Gets the binding of this item.

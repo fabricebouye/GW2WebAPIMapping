@@ -52,19 +52,15 @@ public interface TraitSkill {
 
     /**
      * Gets the set of traited facts that may be associated by this trait skill.
-     * @return An {@code Optional<Set<TraitFact>>} instance, never {@code null}.
-     * <br>If present, the underlying set is non-modifiable and can be empty.
+     * @return A non-modifiable {@code Set<TraitFact>} instance, never {@code null}; may be empty.
      */
-    @OptionalValue
     @SetValue
-    Optional<Set<TraitFact>> getFacts();
+    Set<TraitFact> getFacts();
 
     /**
      * Gets an additional set of traited facts that may be associated by this trait skill.
-     * @return An {@code Optional<Set<TraitFact>>} instance, never {@code null}.
-     * <br>If present, the underlying set is non-modifiable and can be empty.
+     * @return A non-modifiable {@code Set<TraitFact>} instance, never {@code null}; may be empty.
      */
-    @OptionalValue
     @SetValue
-    Optional<Set<TraitFact>> getTraitedFacts();
+    Set<TraitFact> getTraitedFacts();
 }

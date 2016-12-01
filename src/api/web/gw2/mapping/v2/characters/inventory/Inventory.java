@@ -48,23 +48,19 @@ public interface Inventory {
 
     /**
      * Gets the list of upgrades ids on this object in inventory.
-     * @return An {@code Optional<List<Integer>>} instance, never {@code null}:
-     * If present, the list is non-modifiable and may be empty.
+     * @return A non-modifiable {@code List<Integer>} instance, never {@code null}; may be empty.
      */
-    @OptionalValue
     @IdValue
     @ListValue
-    Optional<List<Integer>> getUpgrades();
+    List<Integer> getUpgrades();
 
     /**
      * Gets the list of infusions ids on this object in inventory.
-     * @return An {@code Optional<List<Integer>>} instance, never {@code null}:
-     * If present, the list is non-modifiable and may be empty.
+     * @return A non-modifiable {@code List<Integer>} instance, never {@code null}; may be empty.
      */
-    @OptionalValue
     @IdValue
     @ListValue
-    Optional<List<Integer>> getInfusions();
+    List<Integer> getInfusions();
 
     /**
      * Gets the binding status of this object in inventory.
