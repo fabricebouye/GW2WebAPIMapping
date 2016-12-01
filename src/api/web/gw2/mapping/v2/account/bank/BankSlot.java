@@ -79,4 +79,12 @@ public interface BankSlot {
     @IdValue
     @OptionalValue
     Optional<String> getBoundTo();
+
+    /**
+     * Gets the amount of charges.
+     * @return An {@code OptionalInt} instance, never {@code null}.
+     */
+    @QuantityValue
+    @OptionalValue
+    OptionalInt getCharges();
 }
