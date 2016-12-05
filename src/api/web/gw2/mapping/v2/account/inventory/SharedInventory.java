@@ -9,9 +9,11 @@ package api.web.gw2.mapping.v2.account.inventory;
 
 import api.web.gw2.mapping.v2.characters.inventory.InventoryBinding;
 import api.web.gw2.mapping.core.IdValue;
+import api.web.gw2.mapping.core.ListValue;
 import api.web.gw2.mapping.core.OptionalValue;
 import api.web.gw2.mapping.core.QuantityValue;
 import api.web.gw2.mapping.v2.APIv2;
+import java.util.List;
 import java.util.OptionalInt;
 
 /**
@@ -52,4 +54,12 @@ public interface SharedInventory {
     @OptionalValue
     @QuantityValue
     OptionalInt getCharges();
+
+    /**
+     * Gets the list of infusions ids on this object in inventory slot.
+     * @return A non-modifiable {@code List<Integer>} instance, never {@code null}; may be empty.
+     */
+    @IdValue
+    @ListValue
+    List<Integer> getInfusions();
 }
