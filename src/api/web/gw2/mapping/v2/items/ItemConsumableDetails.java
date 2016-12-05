@@ -12,12 +12,14 @@ import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.LocalizedResource;
 import api.web.gw2.mapping.core.OptionalValue;
 import api.web.gw2.mapping.core.QuantityValue;
+import api.web.gw2.mapping.core.SetValue;
 import api.web.gw2.mapping.core.URLReference;
 import api.web.gw2.mapping.core.URLValue;
 import api.web.gw2.mapping.v2.APIv2;
 import java.time.Duration;
 import java.util.Optional;
 import java.util.OptionalInt;
+import java.util.Set;
 
 /**
  * Defines an item consumable details.
@@ -93,4 +95,12 @@ public interface ItemConsumableDetails extends ItemDetails {
      */
     @URLValue
     URLReference getIcon();
+
+    /**
+     * Gets the list of skins applied by this consumable (supported by some skin that act as transmutation charges).
+     * @return A non-modifiable {@code Set<Integer>} instance, never {@code null}; may be empty.
+     */
+    @SetValue
+    @IdValue
+    Set<Integer> getSkins();
 }
