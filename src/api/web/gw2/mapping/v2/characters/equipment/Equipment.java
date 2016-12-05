@@ -10,9 +10,11 @@ package api.web.gw2.mapping.v2.characters.equipment;
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.ListValue;
 import api.web.gw2.mapping.core.OptionalValue;
+import api.web.gw2.mapping.core.QuantityValue;
 import api.web.gw2.mapping.v2.APIv2;
 import java.util.List;
 import java.util.Optional;
+import java.util.OptionalInt;
 
 /**
  * Defines the equipment of a character.
@@ -78,4 +80,12 @@ public interface Equipment {
     @OptionalValue
     @IdValue(flavor = IdValue.Flavor.STRING)
     Optional<String> getBoundTo();
+
+    /**
+     * Gets the number of charges for this equipment (mainly for gathering tools).
+     * @return An {@code OptionalInt} instance, never {@code null}:
+     */
+    @OptionalValue
+    @QuantityValue
+    OptionalInt getCharges();
 }
