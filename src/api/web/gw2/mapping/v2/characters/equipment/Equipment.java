@@ -57,12 +57,24 @@ public interface Equipment {
     @IdValue
     int getSkin();
 
+    /**
+     * Gets the stats of this equipment.
+     * @return An {@code Optional<EquipmentStats>} instance, never {@code null}.
+     */
     @OptionalValue
     Optional<EquipmentStats> getStats();
 
+    /**
+     * Gets the binding state of this equipment.
+     * @return An {@code Optional<EquipmentBinding>} instance, never {@code null}.
+     */
     @OptionalValue
     Optional<EquipmentBinding> getBinding();
 
+    /**
+     * Gets the name of the character this equipment is bound to.
+     * @return An {@code Optional<String>} instance, never {@code null}.
+     */
     @OptionalValue
     @IdValue(flavor = IdValue.Flavor.STRING)
     Optional<String> getBoundTo();
