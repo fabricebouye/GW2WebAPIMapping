@@ -144,6 +144,7 @@ public class EquipmentUtilsTest {
     public void testFindEquipmentAttribute() {
         System.out.println("findEquipmentAttribute");
         final String[] values = {
+            "BoonDuration", // NOI18N.
             "ConditionDamage", // NOI18N.
             "CritDamage", // NOI18N.
             "Healing", // NOI18N.
@@ -155,6 +156,7 @@ public class EquipmentUtilsTest {
             "" // NOI18N.
         };
         final EquipmentAttribute[] expResults = {
+            EquipmentAttribute.BOON_DURATION,
             EquipmentAttribute.CONDITION_DAMAGE,
             EquipmentAttribute.CRIT_DAMAGE,
             EquipmentAttribute.HEALING,

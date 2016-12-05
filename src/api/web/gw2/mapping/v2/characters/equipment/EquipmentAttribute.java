@@ -18,6 +18,9 @@ import api.web.gw2.mapping.v2.APIv2;
 public enum EquipmentAttribute {
 
     /**
+     */
+    BOON_DURATION("BoonDuration"), // NOI18N.
+    /**
      * Defines the condition damage attribute.
      */
     CONDITION_DAMAGE("ConditionDamage"), // NOI18N.
