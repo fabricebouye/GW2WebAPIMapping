@@ -12,6 +12,7 @@ import api.web.gw2.mapping.core.ListValue;
 import api.web.gw2.mapping.core.OptionalValue;
 import api.web.gw2.mapping.core.QuantityValue;
 import api.web.gw2.mapping.v2.APIv2;
+import api.web.gw2.mapping.v2.characters.equipment.EquipmentStats;
 import java.util.List;
 import java.util.Optional;
 import java.util.OptionalInt;
@@ -91,4 +92,10 @@ public interface Inventory {
     @OptionalValue
     @QuantityValue
     OptionalInt getCharges();
+    
+    /**
+    * @return An {@code Optional<EquipmentStats>} instance, never {@code null}.
+    */
+    @OptionalValue
+    Optional<EquipmentStats> getStats();
 }
