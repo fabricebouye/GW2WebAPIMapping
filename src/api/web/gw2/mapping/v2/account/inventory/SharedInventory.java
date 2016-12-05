@@ -9,8 +9,10 @@ package api.web.gw2.mapping.v2.account.inventory;
 
 import api.web.gw2.mapping.v2.characters.inventory.InventoryBinding;
 import api.web.gw2.mapping.core.IdValue;
+import api.web.gw2.mapping.core.OptionalValue;
 import api.web.gw2.mapping.core.QuantityValue;
 import api.web.gw2.mapping.v2.APIv2;
+import java.util.OptionalInt;
 
 /**
  * Defines an inventory slot.
@@ -42,4 +44,12 @@ public interface SharedInventory {
     default InventoryBinding getBinding() {
         return InventoryBinding.ACCOUNT;
     }
+
+    /**
+     * Gets the number of charges for this object in this inventory slot.
+     * @return An {@code OptionalInt} instance, never {@code null}:
+     */
+    @OptionalValue
+    @QuantityValue
+    OptionalInt getCharges();
 }
