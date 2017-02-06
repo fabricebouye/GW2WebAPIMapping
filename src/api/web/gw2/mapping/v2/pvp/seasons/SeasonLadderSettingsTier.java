@@ -8,6 +8,7 @@
 package api.web.gw2.mapping.v2.pvp.seasons;
 
 import api.web.gw2.mapping.core.LocalizedResource;
+import api.web.gw2.mapping.core.OptionalValue;
 import api.web.gw2.mapping.core.SetValue;
 import api.web.gw2.mapping.v2.APIv2;
 import java.util.Optional;
@@ -31,18 +32,21 @@ public interface SeasonLadderSettingsTier {
      * Gets the HTML color of this tier (for season 1-4).
      * @return An {@code Optional<String>}, never {@code null}.
      */
+    @OptionalValue
     Optional<String> getColor();
 
     /**
      * Gets the type of this tier (for season 1-4).
      * @return An {@code Optional<SeasonLadderSettingsTierType>}, never {@code null}.
      */
+    @OptionalValue
     Optional<SeasonLadderSettingsTierType> getType();
 
     /**
      * Gets the i18n name of this tier (for season 1-4).
      * @return An {@code Optional<String>}, never {@code null}.
      */
+    @OptionalValue
     @LocalizedResource
     Optional<String> getName();
 }
