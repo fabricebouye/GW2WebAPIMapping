@@ -27,7 +27,7 @@ public interface UpgradeCost {
     UpgradeCostType getType();
 
     /**
-     * Gets the localized name of this cost.
+     * Gets the i18n name of this cost.
      * @return A {@code String} instance, never {@code null}.
      */
     @LocalizedResource

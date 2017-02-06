@@ -24,7 +24,7 @@ import java.util.OptionalInt;
 public interface TraitFact {
 
     /**
-     * Gets the localized text of this fact.
+     * Gets the i18n text of this fact.
      * @return An {@code Optional<String>} instance, never {@code null}.
      */
     @LocalizedResource

@@ -21,7 +21,7 @@ import java.util.Set;
 public interface SeasonDivision {
 
     /**
-     * Gets the localized name of this season.
+     * Gets the i18n name of this season.
      * @return A {@code String} instance, never {@code null}.
      */
     @LocalizedResource

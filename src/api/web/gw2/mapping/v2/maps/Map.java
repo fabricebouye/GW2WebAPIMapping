@@ -32,7 +32,7 @@ public interface Map {
     int getId();
 
     /**
-     * Gets the localized name of this map.
+     * Gets the i18n name of this map.
      * @return A {@code String} instance, never {@code null}.
      */
     @LocalizedResource
@@ -75,7 +75,7 @@ public interface Map {
     int getContinentId();
 
     /**
-     * Gets the localized name of the continent which contains this map.
+     * Gets the i18n name of the continent which contains this map.
      * @return A {@code String} instance, never {@code null}.
      */
     @LocalizedResource
@@ -89,7 +89,7 @@ public interface Map {
     int getRegionId();
 
     /**
-     * Gets the localized name of the region which contains this map.
+     * Gets the i18n name of the region which contains this map.
      * @return A {@code String} instance, never {@code null}.
      */
     @LocalizedResource

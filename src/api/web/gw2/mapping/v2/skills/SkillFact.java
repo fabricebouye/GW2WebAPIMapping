@@ -20,7 +20,7 @@ import api.web.gw2.mapping.v2.APIv2;
 public interface SkillFact {
 
     /**
-     * Gets the localized description of this skill fact.
+     * Gets the i18n description of this skill fact.
      * @return A {@code String} instance, never {@code null}.
      */
     @LocalizedResource

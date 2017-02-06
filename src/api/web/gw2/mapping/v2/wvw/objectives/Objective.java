@@ -36,7 +36,7 @@ public interface Objective {
     String getId();
 
     /**
-     * Gets the localized abstract name of this objective.
+     * Gets the i18n abstract name of this objective.
      * <br>Note: this may not be the same as the name in game.
      * @return A {@code String} instance, never {@code null}.
      */

@@ -26,7 +26,7 @@ public interface ItemBuff {
     int getSkillId();
 
     /**
-     * Gets the localized description of this buff.
+     * Gets the i18n description of this buff.
      * @return A {@code String} instance, never {@code null}.
      */
     @LocalizedResource

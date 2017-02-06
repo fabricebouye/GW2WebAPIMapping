@@ -82,7 +82,7 @@ public interface ItemConsumableDetails extends ItemDetails {
     OptionalInt getApplyCount();
 
     /**
-     * Gets the localized name of the effect applied by this consumable.
+     * Gets the i18n name of the effect applied by this consumable.
      * @return An {@code Optional<String>} instance, never {@code null}.
      */
     @OptionalValue

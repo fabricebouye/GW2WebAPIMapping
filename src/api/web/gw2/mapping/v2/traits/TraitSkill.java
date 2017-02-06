@@ -30,7 +30,7 @@ public interface TraitSkill {
     int getId();
 
     /**
-     * Gets the localized name of this trait skill.
+     * Gets the i18n name of this trait skill.
      * @return A {@code String}, never {@code null}.
      */
     @LocalizedResource
@@ -44,7 +44,7 @@ public interface TraitSkill {
     URLReference getIcon();
 
     /**
-     * Gets the localized description of this trait skill.
+     * Gets the i18n description of this trait skill.
      * @return A {@code String}, never {@code null}.
      */
     @LocalizedResource

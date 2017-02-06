@@ -24,7 +24,7 @@ public interface EventName {
     String getId();
 
     /**
-     * Gets the localized name of this event.
+     * Gets the i18n name of this event.
      * @return A {@code String} instance, never {@code null}.
      */
     @LocalizedResource

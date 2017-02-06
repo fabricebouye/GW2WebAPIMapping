@@ -28,14 +28,14 @@ public interface Group {
     String getId();
 
     /**
-     * Gets the localized name of this category group.
+     * Gets the i18n name of this category group.
      * @return A {@code String} instance, never {@code null}.
      */
     @LocalizedResource
     String getName();
 
     /**
-     * Gets the localized description of this category group.
+     * Gets the i18n description of this category group.
      * @return A {@code String} instance, never {@code null}.
      */
     @LocalizedResource

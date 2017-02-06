@@ -33,7 +33,7 @@ public interface Profession {
     String getId();
 
     /**
-     * Gets the localized name of the profession (non-gender specific).
+     * Gets the i18n name of the profession (non-gender specific).
      * @return A {@code String} never {@code null}.
      */
     @LocalizedResource

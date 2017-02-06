@@ -21,7 +21,7 @@ import java.util.Set;
 public interface EventDetails {
 
     /**
-     * Gets the localized name of the event.
+     * Gets the i18n name of the event.
      * @return A {@code String} instance, never {@code null}.
      */
     @LocalizedResource

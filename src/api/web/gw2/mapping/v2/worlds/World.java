@@ -29,7 +29,7 @@ public interface World {
     int getId();
 
     /**
-     * Gets the localized name of this world.
+     * Gets the i18n name of this world.
      * @return An {@code String} instance, never {@code null}.
      */
     @LocalizedResource

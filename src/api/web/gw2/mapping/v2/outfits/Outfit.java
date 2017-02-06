@@ -30,7 +30,7 @@ public interface Outfit {
     int getId();
 
     /**
-     * Gets the I18N name of this outfit.
+     * Gets the i18n name of this outfit.
      * @return A {@code String}, never {@code null}.
      */
     @LocalizedResource

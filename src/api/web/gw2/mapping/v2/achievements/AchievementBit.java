@@ -36,7 +36,7 @@ public interface AchievementBit {
     OptionalInt getId();
 
     /**
-     * Gets the localized text of the bit.
+     * Gets the i18n text of the bit.
      * @return An {@code Optional<String>}, never {@code null}.
      */
     @LocalizedResource

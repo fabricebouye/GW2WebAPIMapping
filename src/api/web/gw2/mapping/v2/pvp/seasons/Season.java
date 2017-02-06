@@ -30,7 +30,7 @@ public interface Season {
     String getId();
 
     /**
-     * Gets the localizs name of this season.
+     * Gets the i18n name of this season.
      * @return A {@code String} instance, never {@code null}.
      */
     @LocalizedResource
@@ -42,7 +42,7 @@ public interface Season {
      */
     @SetValue
     Set<SeasonDivision> getDivisions();
-    
+
     /**
      * Gets the start date of this season.
      * @return A {@code ZonedDateTime} instance, never {@code null}.
@@ -56,7 +56,7 @@ public interface Season {
      */
     @DateValue
     ZonedDateTime getEnd();
-    
+
     /**
      * Indicates whether this season is active.
      * @return A {@code boolean}.

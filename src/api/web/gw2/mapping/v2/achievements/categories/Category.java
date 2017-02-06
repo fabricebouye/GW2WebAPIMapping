@@ -30,14 +30,14 @@ public interface Category {
     int getId();
 
     /**
-     * Gets the localized name of this category.
+     * Gets the i18n name of this category.
      * @return A {@code String} instance, never {@code null}.
      */
     @LocalizedResource
     String getName();
 
     /**
-     * Gets the localized description of this category.
+     * Gets the i18n description of this category.
      * @return A {@code String} instance, never {@code null}.
      */
     @LocalizedResource

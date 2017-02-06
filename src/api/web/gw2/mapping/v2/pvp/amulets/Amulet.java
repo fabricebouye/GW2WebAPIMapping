@@ -30,7 +30,7 @@ public interface Amulet {
     int getId();
 
     /**
-     * Gets the localized name of this PvP amulet.
+     * Gets the i18n name of this PvP amulet.
      * @return A {@code String}, never {@code null}.
      */
     @LocalizedResource

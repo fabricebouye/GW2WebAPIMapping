@@ -27,7 +27,7 @@ public interface Itemstats {
     int getId();
 
     /**
-     * Gets the localized name of this item stats set.
+     * Gets the i18n name of this item stats set.
      */
     @LocalizedResource
     String getName();

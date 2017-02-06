@@ -27,7 +27,7 @@ public interface ColorDye {
     int getId();
 
     /**
-     * Gets the localized name of this dye.
+     * Gets the i18n name of this dye.
      * @return A {@code String} instance, never {@code null}.
      */
     @LocalizedResource

@@ -26,7 +26,7 @@ public interface Title {
     int getId();
 
     /**
-     * Gets the localized name of this title.
+     * Gets the i18n name of this title.
      * @return A {@code String} instance, never {@code null}.
      */
     @LocalizedResource

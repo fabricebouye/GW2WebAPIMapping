@@ -26,7 +26,7 @@ public interface MaterialStorage {
     int getId();
 
     /**
-     * Gets the localized name of this material storage.
+     * Gets the i18n name of this material storage.
      * @return A {@code String} instance, never {@code null}.
      */
     @LocalizedResource

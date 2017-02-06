@@ -30,7 +30,7 @@ public interface Mini {
     public int getId();
 
     /**
-     * Gets the localized name of this mini.
+     * Gets the i18n name of this mini.
      * @return A {@code String} instance, never {@code null}.
      */
     @LocalizedResource

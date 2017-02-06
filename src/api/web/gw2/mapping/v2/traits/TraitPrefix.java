@@ -45,7 +45,7 @@ public interface TraitPrefix {
     };
 
     /**
-     * Gets the localized text of this fact.
+     * Gets the i18n text of this fact.
      * @return A {@code String} instance, never {@code null}.
      */
     @LocalizedResource
@@ -62,7 +62,7 @@ public interface TraitPrefix {
     String getStatus();
 
     /**
-     * Gets the localized description of this fact.
+     * Gets the i18n description of this fact.
      * @return A {@code String} instance, never {@code null}.
      */
     @LocalizedResource

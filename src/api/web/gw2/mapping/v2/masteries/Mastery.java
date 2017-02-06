@@ -32,14 +32,14 @@ public interface Mastery {
     int getId();
 
     /**
-     * Gets the I18N name of this mastery.
+     * Gets the i18n name of this mastery.
      * @return A {@code String} instance, never {@code null}.
      */
     @LocalizedResource
     String getName();
 
     /**
-     * Gets the I18N requirement of this mastery.
+     * Gets the i18n requirement of this mastery.
      * @return A {@code String} instance, never {@code null}.
      */
     @LocalizedResource

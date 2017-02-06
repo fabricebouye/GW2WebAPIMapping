@@ -21,21 +21,21 @@ import api.web.gw2.mapping.v2.APIv2;
 public interface MasteryLevel {
 
     /**
-     * Gets the I18N name of this mastery level.
+     * Gets the i18n name of this mastery level.
      * @return A {@code String} instance, never {@code null}.
      */
     @LocalizedResource
     String getName();
 
     /**
-     * Gets the I18N description of this mastery level.
+     * Gets the i18n description of this mastery level.
      * @return A {@code String} instance, never {@code null}.
      */
     @LocalizedResource
     String getDescription();
 
     /**
-     * Gets the I18N instruction of this mastery level.
+     * Gets the i18n instruction of this mastery level.
      * @return A {@code String} instance, never {@code null}.
      */
     @LocalizedResource

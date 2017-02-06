@@ -26,7 +26,7 @@ public interface AbilityRank {
     int getCost();
 
     /**
-     * Gets the localized effect of this ability rank.
+     * Gets the i18n effect of this ability rank.
      * @return A {@code String} instance, never {@code null}.
      */
     @LocalizedResource

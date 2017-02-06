@@ -30,14 +30,14 @@ public interface Ability {
     int getId();
 
     /**
-     * Gets the localized name of this ability.
+     * Gets the i18n name of this ability.
      * @return A {@code String} instance, never {@code null}.
      */
     @LocalizedResource
     String getName();
 
     /**
-     * Gets the localized description of this ability.
+     * Gets the i18n description of this ability.
      * @return A {@code String} instance, never {@code null}.
      */
     @LocalizedResource

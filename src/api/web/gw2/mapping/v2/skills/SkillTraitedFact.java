@@ -24,7 +24,7 @@ import java.util.OptionalInt;
 public interface SkillTraitedFact {
 
     /**
-     * Gets the localized description of this skill traited fact.
+     * Gets the i18n description of this skill traited fact.
      * @return A {@code String} instance, never {@code null}.
      */
     @LocalizedResource

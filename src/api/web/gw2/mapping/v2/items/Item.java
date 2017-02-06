@@ -36,14 +36,14 @@ public interface Item {
     int getId();
 
     /**
-     * Gets the localized name of this item.
+     * Gets the i18n name of this item.
      * @return A {@code String} instance, never {@code null}.
      */
     @LocalizedResource
     String getName();
 
     /**
-     * Gets the localized description of this item.
+     * Gets the i18n description of this item.
      * @return An {@code Optional<String>} instance, never {@code null}.
      */
     @LocalizedResource

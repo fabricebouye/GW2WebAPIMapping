@@ -32,7 +32,7 @@ public interface ProfessionTrack {
     ProfessionTrackCategory getCategory();
 
     /**
-     * Gets the localized name of the track.
+     * Gets the i18n name of the track.
      * @return A {@code String} instance, never {@code null}.
      */
     @LocalizedResource

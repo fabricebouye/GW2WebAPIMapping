@@ -30,7 +30,7 @@ public interface Skin {
     int getId();
 
     /**
-     * Gets the localized name of this skin.
+     * Gets the i18n name of this skin.
      * @return A {@code String} instance, never {@code null}.
      */
     @LocalizedResource
@@ -64,7 +64,7 @@ public interface Skin {
     URLReference getIcon();
 
     /**
-     * Gets the localized description of this skin.
+     * Gets the i18n description of this skin.
      * @return An {@code Optional<String>} instance, never {@code null}.
      */
     @OptionalValue

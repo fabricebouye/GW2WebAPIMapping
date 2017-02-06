@@ -37,14 +37,14 @@ public interface Skill {
     int getId();
 
     /**
-     * Gets the localized name of this skill.
+     * Gets the i18n name of this skill.
      * @return A {@code String} instance, never {@code null}.
      */
     @LocalizedResource
     String getName();
 
     /**
-     * Gets the localized description of this skill.
+     * Gets the i18n description of this skill.
      * @return An {@code Optional<String>} instance, never {@code null}.
      */
     @LocalizedResource

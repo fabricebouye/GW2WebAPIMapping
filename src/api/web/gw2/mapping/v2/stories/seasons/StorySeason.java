@@ -29,7 +29,7 @@ public interface StorySeason {
     String getId();
 
     /**
-     * Gets the localized name of this story season.
+     * Gets the i18n name of this story season.
      * @return A {@code String} instance, never {@code null}.
      */
     @LocalizedResource

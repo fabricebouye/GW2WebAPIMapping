@@ -31,7 +31,7 @@ public interface Continent {
     int getId();
 
     /**
-     * Gets the localized name of this continent.
+     * Gets the i18n name of this continent.
      * @return A {@code String} instance, never {@code null}.
      */
     @LocalizedResource

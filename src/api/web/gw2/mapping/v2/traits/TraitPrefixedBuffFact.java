@@ -37,14 +37,14 @@ public interface TraitPrefixedBuffFact extends TraitFact {
     Duration getDuration();
 
     /**
-     * Gets the localized status of this fact.
+     * Gets the i18n status of this fact.
      * @return A {@code String} instance, never {@code null}.
      */
     @LocalizedResource
     String getStatus();
 
     /**
-     * Gets the localized description of this fact.
+     * Gets the i18n description of this fact.
      * @return A {@code String} instance, never {@code null}.
      */
     @LocalizedResource

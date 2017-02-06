@@ -32,7 +32,7 @@ public interface Trait {
     int getId();
 
     /**
-     * Gets the localized name of this trait.
+     * Gets the i18n name of this trait.
      * @return A {@code String}, never {@code null}.
      */
     @LocalizedResource
@@ -46,7 +46,7 @@ public interface Trait {
     URLReference getIcon();
 
     /**
-     * Gets the localized description of this trait.
+     * Gets the i18n description of this trait.
      * @return A {@code String}, never {@code null}.
      */
     @LocalizedResource

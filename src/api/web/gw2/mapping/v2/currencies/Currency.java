@@ -27,13 +27,13 @@ public interface Currency {
     int getId();
 
     /**
-     * Gets the localized name of this currency.
+     * Gets the i18n name of this currency.
      * @return A {@code String} instance, never {@code null}
      */
     String getName();
 
     /**
-     * Gets the localized description of this currency.
+     * Gets the i18n description of this currency.
      * @return A {@code String} instance, never {@code null}
      */
     String getDescription();

@@ -41,21 +41,21 @@ public interface Achievement {
     URLReference getIcon();
 
     /**
-     * Gets the localized name of this achievement.
+     * Gets the i18n name of this achievement.
      * @return A {@code String} instance, never {@code null}.
      */
     @LocalizedResource
     String getName();
 
     /**
-     * Gets the localized description of this achievement.
+     * Gets the i18n description of this achievement.
      * @return A {@code String} instance, never {@code null}.
      */
     @LocalizedResource
     String getDescription();
 
     /**
-     * Gets the localized requirement of this achievement.
+     * Gets the i18n requirement of this achievement.
      * @return A {@code String} instance, never {@code null}.
      */
     @LocalizedResource

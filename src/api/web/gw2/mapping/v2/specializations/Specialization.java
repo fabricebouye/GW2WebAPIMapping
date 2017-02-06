@@ -31,7 +31,7 @@ public interface Specialization {
     int getId();
 
     /**
-     * Gets the localized name of this specialization.
+     * Gets the i18n name of this specialization.
      * @return A {@code String}, never {@code null}.
      */
     @LocalizedResource
