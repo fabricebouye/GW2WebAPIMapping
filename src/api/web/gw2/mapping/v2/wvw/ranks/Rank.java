@@ -16,7 +16,7 @@ import api.web.gw2.mapping.v2.APIv2;
  * Defines a WvW rank.
  * @author Fabrice Bouyé
  */
-@APIv2(endpoint = "v2/wvw/rank") // NOI18N.
+@APIv2(endpoint = "v2/wvw/ranks") // NOI18N.
 public interface Rank {
 
     /**
