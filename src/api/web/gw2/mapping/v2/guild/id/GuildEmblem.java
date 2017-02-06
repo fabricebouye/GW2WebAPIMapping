@@ -8,9 +8,9 @@
 package api.web.gw2.mapping.v2.guild.id;
 
 import api.web.gw2.mapping.core.IdValue;
-import api.web.gw2.mapping.core.SetValue;
+import api.web.gw2.mapping.core.ListValue;
 import api.web.gw2.mapping.v2.APIv2;
-import java.util.Set;
+import java.util.List;
 
 /**
  * Defines the emblem of a guild.
@@ -34,9 +34,9 @@ public interface GuildEmblem {
     GuildEmblemLayer getForeground();
 
     /**
-     * Gets a set of flags applied to each layer in this emblem.
-     * @return A non-modifiable {@code Set<GuildsEmblemFlag>}, never {@code null}, may be empty.
+     * Gets a list of flags applied to each layer in this emblem.
+     * @return A non-modifiable {@code List<GuildsEmblemFlag>}, never {@code null}, may be empty.
      */
-    @SetValue
-    Set<GuildsEmblemFlag> getFlags();
+    @ListValue
+    List<GuildsEmblemFlag> getFlags();
 }
