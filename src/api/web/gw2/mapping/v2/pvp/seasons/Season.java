@@ -19,7 +19,7 @@ import java.util.Set;
  * Defines a PvP league season.
  * @author Fabrice Bouyé
  */
-@APIv2(endpoint = "v2/pvp/seasons", requiresAuthentication = true, scope = "pvp") // NOI18N.
+@APIv2(endpoint = "v2/pvp/seasons") // NOI18N.
 public interface Season {
 
     /**

@@ -14,7 +14,7 @@ import api.web.gw2.mapping.v2.APIv2;
  * Defines a PvP league season division flags.
  * @author Fabrice Bouyé
  */
-@APIv2(endpoint = "v2/pvp/seasons", requiresAuthentication = true, scope = "pvp") // NOI18N.
+@APIv2(endpoint = "v2/pvp/seasons") // NOI18N.
 public enum SeasonDivisionFlag {
     /**
      * Player can lose points in this division.
