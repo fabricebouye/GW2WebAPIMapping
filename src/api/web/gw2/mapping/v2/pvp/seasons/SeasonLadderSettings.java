@@ -33,8 +33,8 @@ public interface SeasonLadderSettings {
 
     /**
      * Gets the tiers uses in the scoring.
-     * @return A {@code Set<SeasonLadderSettingsTiers>} instance, never {@code null}.
+     * @return A {@code Set<SeasonLadderSettingsTier>} instance, never {@code null}.
      */
     @SetValue
-    Set<SeasonLadderSettingsTiers> getTiers();
+    Set<SeasonLadderSettingsTier> getTiers();
 }

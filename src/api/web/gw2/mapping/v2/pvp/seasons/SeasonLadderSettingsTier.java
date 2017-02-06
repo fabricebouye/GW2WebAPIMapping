@@ -7,8 +7,10 @@
  */
 package api.web.gw2.mapping.v2.pvp.seasons;
 
+import api.web.gw2.mapping.core.LocalizedResource;
 import api.web.gw2.mapping.core.SetValue;
 import api.web.gw2.mapping.v2.APIv2;
+import java.util.Optional;
 import java.util.Set;
 
 /**
@@ -16,7 +18,7 @@ import java.util.Set;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/pvp/seasons") // NOI18N.
-public interface SeasonLadderSettingsTiers {
+public interface SeasonLadderSettingsTier {
 
     /**
      * Gets the range [min-max] of this tier.
@@ -24,4 +26,23 @@ public interface SeasonLadderSettingsTiers {
      */
     @SetValue
     Set<Integer> getRange();
+
+    /**
+     * Gets the HTML color of this tier (for season 1-4).
+     * @return An {@code Optional<String>}, never {@code null}.
+     */
+    Optional<String> getColor();
+
+    /**
+     * Gets the type of this tier (for season 1-4).
+     * @return An {@code Optional<SeasonLadderSettingsTierType>}, never {@code null}.
+     */
+    Optional<SeasonLadderSettingsTierType> getType();
+
+    /**
+     * Gets the i18n name of this tier (for season 1-4).
+     * @return An {@code Optional<String>}, never {@code null}.
+     */
+    @LocalizedResource
+    Optional<String> getName();
 }

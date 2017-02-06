@@ -154,4 +154,30 @@ public final class SeasonUtilsTest {
                     assertEquals(expResult, result);
                 });
     }
+
+    /**
+     * Test of SeasonLadderSettingsTierType.
+     */
+    @Test
+    public void testSeasonLadderSettingsTierType() {
+        System.out.println("findSeasonLadderSettingsTierType");
+        final String[] values = {
+            "Rank", // NOI18N.
+            null,
+            "" // NOI18N.
+        };
+        final SeasonLadderSettingsTierType[] expResults = {
+            SeasonLadderSettingsTierType.RANK,
+            SeasonLadderSettingsTierType.UNKNOWN,
+            SeasonLadderSettingsTierType.UNKNOWN
+        };
+        assertEquals(values.length, expResults.length);
+        IntStream.range(0, values.length).
+                forEach(index -> {
+                    final String value = values[index];
+                    final SeasonLadderSettingsTierType expResult = expResults[index];
+                    final SeasonLadderSettingsTierType result = EnumValueFactory.INSTANCE.mapEnumValue(SeasonLadderSettingsTierType.class, value);
+                    assertEquals(expResult, result);
+                });
+    }
 }
