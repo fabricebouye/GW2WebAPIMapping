@@ -99,4 +99,12 @@ public interface Account {
     // @todo Maybe create a WvwLevelValue.
     @LevelValue
     int getWvwRank();
+
+    /**
+     * Gets a set of guilds that have this account as their leader.
+     * @return A non-modifiable {@code Set<String>} instance, never {@code null}, may be empty.
+     */
+    @IdValue
+    @SetValue
+    Set<String> getGuildLeader();
 }
