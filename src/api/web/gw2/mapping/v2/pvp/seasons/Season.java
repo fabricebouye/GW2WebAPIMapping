@@ -13,6 +13,7 @@ import api.web.gw2.mapping.core.LocalizedResource;
 import api.web.gw2.mapping.core.SetValue;
 import api.web.gw2.mapping.v2.APIv2;
 import java.time.ZonedDateTime;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -62,4 +63,10 @@ public interface Season {
      * @return A {@code boolean}.
      */
     boolean isActive();
+
+    /**
+     * Gets the leaderboards for this season.
+     * @return A non-modifiable {@code Map<SeasonLadderType, SeasonLadder>} instance, never {@code null}; may be empty.
+     */
+    Map<SeasonLadderType, SeasonLadder> getLeaderboards();
 }
