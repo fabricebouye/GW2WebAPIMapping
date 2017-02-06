@@ -73,6 +73,13 @@ public interface Guild {
     int getFavor();
 
     /**
+     * Gets the current amount of resonance of the guild.
+     * @return An {@code int} &ge; 0.
+     */
+    @QuantityValue
+    int getResonance();
+
+    /**
      * Gets the current emblem of the guild.
      * @return A {@code GuildEmblem}, never {@code null}.
      */
