@@ -74,5 +74,5 @@ public interface LeaderboardEntry {
      * @return A non-modifiable {@codeSet<LeaderboardScore>} instance, never {@code null}; may be empty.
      */
     @SetValue
-    Set<LeaderboardScore> getScore();
+    Set<LeaderboardScore> getScores();
 }
