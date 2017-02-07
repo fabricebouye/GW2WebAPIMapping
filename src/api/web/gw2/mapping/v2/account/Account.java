@@ -8,11 +8,13 @@
 package api.web.gw2.mapping.v2.account;
 
 import api.web.gw2.mapping.core.DateValue;
+import api.web.gw2.mapping.core.DurationValue;
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.LevelValue;
 import api.web.gw2.mapping.core.QuantityValue;
 import api.web.gw2.mapping.core.SetValue;
 import api.web.gw2.mapping.v2.APIv2;
+import java.time.Duration;
 import java.time.ZonedDateTime;
 import java.util.Set;
 
@@ -45,7 +47,8 @@ public interface Account {
 
     /**
      * Gets a set of guilds attached to this account.
-     * @return A non-modifiable {@code Set<String>} instance, never {@code null}, may be empty.
+     * @return A non-modifiable {@code Set<String>} instance, never
+     * {@code null}, may be empty.
      */
     @IdValue
     @SetValue
@@ -91,10 +94,10 @@ public interface Account {
      */
     @QuantityValue
     int getMonthlyAp();
-    
+
     /**
      * Gets the WvW rank of this account.
-     * @return 
+     * @return
      */
     // @todo Maybe create a WvwLevelValue.
     @LevelValue
@@ -102,9 +105,17 @@ public interface Account {
 
     /**
      * Gets a set of guilds that have this account as their leader.
-     * @return A non-modifiable {@code Set<String>} instance, never {@code null}, may be empty.
+     * @return A non-modifiable {@code Set<String>} instance, never
+     * {@code null}, may be empty.
      */
     @IdValue
     @SetValue
     Set<String> getGuildLeader();
+
+    /**
+     * Gets the age of this account.
+     * @return A {@code Duration} instance, never {@code null}.
+     */
+    @DurationValue
+    Duration getAge();
 }
