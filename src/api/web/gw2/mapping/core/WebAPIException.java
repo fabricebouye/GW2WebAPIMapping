@@ -46,7 +46,7 @@ public final class WebAPIException extends IOException {
     }
 
     /**
-     * Convenient factory method for HTTP 404 error.
+     * Convenient factory method for HTTP 403 error.
      * @param error The source error.
      * @return A {@code WebAPIException} instance, never {@code null}.
      */
