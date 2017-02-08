@@ -9,8 +9,11 @@ package api.web.gw2.mapping.v2.guild.id;
 
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.LevelValue;
+import api.web.gw2.mapping.core.OptionalValue;
 import api.web.gw2.mapping.core.QuantityValue;
 import api.web.gw2.mapping.v2.APIv2;
+import java.util.Optional;
+import java.util.OptionalInt;
 
 /**
  * Defines a guild.
@@ -40,44 +43,50 @@ public interface Guild {
 
     /**
      * Gets the current level of the guild.
-     * @return An {@code int} &ge; 0.
+     * @return An {@code OptionalInt}, never {@code null}; if present, the value is &ge; 0.
      */
+    @OptionalValue
     @LevelValue
-    int getLevel();
+    OptionalInt getLevel();
 
     /**
      * Gets the current message of the day of the guild.
-     * @return A {@code String} instance, may be {@code null} (?).
+     * @return An {@code Optional<String>} instance, never {@code null}.
      */
-    String getMotd();
+    @OptionalValue
+    Optional<String> getMotd();
 
     /**
      * Gets the current amount of influence of the guild.
-     * @return An {@code int} &ge; 0.
+     * @return An {@code OptionalInt}, never {@code null}; if present, the value is &ge; 0.
      */
+    @OptionalValue
     @QuantityValue
-    int getInfluence();
+    OptionalInt getInfluence();
 
     /**
      * Gets the current amount of aetherium of the guild.
-     * @return An {@code int} &ge; 0.
+     * @return An {@code OptionalInt}, never {@code null}; if present, the value is &ge; 0.
      */
+    @OptionalValue
     @QuantityValue
-    int getAetherium();
+    OptionalInt getAetherium();
 
     /**
      * Gets the current amount of favor of the guild.
-     * @return An {@code int} &ge; 0.
+     * @return An {@code OptionalInt}, never {@code null}; if present, the value is &ge; 0.
      */
+    @OptionalValue
     @QuantityValue
-    int getFavor();
+    OptionalInt getFavor();
 
     /**
      * Gets the current amount of resonance of the guild.
-     * @return An {@code int} &ge; 0.
+     * @return An {@code OptionalInt}, never {@code null}; if present, the value is &ge; 0.
      */
+    @OptionalValue
     @QuantityValue
-    int getResonance();
+    OptionalInt getResonance();
 
     /**
      * Gets the current emblem of the guild.
