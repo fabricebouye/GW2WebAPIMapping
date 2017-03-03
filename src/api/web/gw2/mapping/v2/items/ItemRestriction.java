@@ -58,6 +58,7 @@ public enum ItemRestriction {
      */
     @ImplementationSpecific
     UNKNOWN(null);
+
     final String value;
 
     private ItemRestriction(final String value) {

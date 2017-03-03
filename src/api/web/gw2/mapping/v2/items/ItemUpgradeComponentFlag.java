@@ -114,6 +114,7 @@ public enum ItemUpgradeComponentFlag {
      */
     @ImplementationSpecific
     UNKNOWN(null);
+    
     final String value;
 
     private ItemUpgradeComponentFlag(final String value) {

@@ -25,10 +25,10 @@ public enum AchievementRewardType {
      * Defines a mastery achievement reward type.
      */
     MASTERY("Mastery"),
-    @ImplementationSpecific
     /**
      * Fail safe value.
      */
+    @ImplementationSpecific
     UNKNOWN(null);
 
     final String value;

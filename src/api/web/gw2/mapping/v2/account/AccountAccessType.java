@@ -7,6 +7,7 @@
  */
 package api.web.gw2.mapping.v2.account;
 
+import api.web.gw2.mapping.core.ImplementationSpecific;
 import api.web.gw2.mapping.v2.APIv2;
 
 /**
@@ -34,6 +35,7 @@ public enum AccountAccessType {
     /**
      * Fail safe value.
      */
+    @ImplementationSpecific
     UNKNOWN(null);
 
     final String value;

@@ -25,10 +25,10 @@ public enum AchievementType {
      * Defines a collection achievement.
      */
     ITEM_SET("ItemSet"),
-    @ImplementationSpecific
     /**
      * Fail safe value.
      */
+    @ImplementationSpecific
     UNKNOWN(null);
 
     final String value;

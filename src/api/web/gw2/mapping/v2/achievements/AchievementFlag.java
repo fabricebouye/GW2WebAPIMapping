@@ -49,10 +49,10 @@ public enum AchievementFlag {
      * Achievement requires unlock.
      */
     REQUIRES_UNLOCK("RequiresUnlock"), // NOI18N.
-    @ImplementationSpecific
     /**
      * Fail safe value.
      */
+    @ImplementationSpecific
     UNKNOWN(null);
 
     final String value;

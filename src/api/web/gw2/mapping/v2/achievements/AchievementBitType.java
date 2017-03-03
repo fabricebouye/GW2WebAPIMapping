@@ -33,10 +33,10 @@ public enum AchievementBitType {
      * Defines the skin achievement bit type.
      */    
     SKIN("Skin"),
-    @ImplementationSpecific
     /**
      * Fail safe value.
      */
+    @ImplementationSpecific
     UNKNOWN(null);
 
     final String value;

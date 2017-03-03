@@ -25,10 +25,10 @@ public enum AchievementRewardRegion {
      * Defines the Maguuma achievement reward region.
      */
     MAGUUMA("Maguuma"),
-    @ImplementationSpecific
     /**
      * Fail safe value.
      */
+    @ImplementationSpecific
     UNKNOWN(null);
 
     final String value;
