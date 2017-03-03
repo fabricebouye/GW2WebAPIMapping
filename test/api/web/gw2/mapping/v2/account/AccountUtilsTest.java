@@ -1,7 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/* 
+ * Copyright (C) 2015-2017 Fabrice Bouyé
+ * All rights reserved.
+ *
+ * This software may be modified and distributed under the terms
+ * of the BSD license.  See the LICENSE file for details.
  */
 package api.web.gw2.mapping.v2.account;
 
@@ -15,10 +17,10 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
- *
- * @author Fabrice
+ * Unit test.
+ * @author Fabrice Bouyé
  */
-public class AccountUtilsTest {
+public final class AccountUtilsTest {
 
     public AccountUtilsTest() {
     }
@@ -44,7 +46,7 @@ public class AccountUtilsTest {
      */
     @Test
     public void testFindAccountAccessType() {
-        System.out.println("findAccountAccessType");
+        System.out.println("findAccountAccessType"); // NOI18N.
         final String[] values = {
             "None", // NOI18N.
             "PlayForFree", // NOI18N.
