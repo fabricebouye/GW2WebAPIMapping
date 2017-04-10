@@ -5,7 +5,7 @@
  * This software may be modified and distributed under the terms
  * of the BSD license.  See the LICENSE file for details.
  */
-package api.web.gw2.mapping.v2.characters;
+package api.web.gw2.mapping.v2.characters.id.crafting;
 
 import api.web.gw2.mapping.core.CraftingLevelValue;
 import api.web.gw2.mapping.v2.APIv2;
@@ -15,7 +15,7 @@ import api.web.gw2.mapping.v2.recipes.RecipeCraftingDiscipline;
  * Defines the description of a character's crafting discipline.
  * @author Fabrice Bouyé
  */
-@APIv2(endpoint = "v2/characters", requiresAuthentication = true, scope = "characters") // NOI18N.
+@APIv2(endpoint = "v2/characters/:id/crafting", requiresAuthentication = true, scope = "characters") // NOI18N.
 public interface CharacterCrafting {
 
     /**

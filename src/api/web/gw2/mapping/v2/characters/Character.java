@@ -16,6 +16,7 @@ import api.web.gw2.mapping.core.OptionalValue;
 import api.web.gw2.mapping.core.QuantityValue;
 import api.web.gw2.mapping.core.SetValue;
 import api.web.gw2.mapping.v2.APIv2;
+import api.web.gw2.mapping.v2.characters.id.crafting.CharacterCrafting;
 import api.web.gw2.mapping.v2.characters.id.equipment.CharacterEquipment;
 import api.web.gw2.mapping.v2.characters.id.equipment_pvp.CharacterEquipmentPvP;
 import api.web.gw2.mapping.v2.characters.id.inventory.CharacterInventoryBag;
@@ -100,7 +101,8 @@ public interface Character {
     ZonedDateTime getCreated();
 
     /**
-     * Gets the age of this character (the amount of second the character was played).
+     * Gets the age of this character (the amount of second the character was
+     * played).
      * @return A {@code long}.
      */
     @DurationValue
@@ -134,7 +136,8 @@ public interface Character {
 
     /**
      * Gets the crafting disciplines of this character.
-     * @return A non-modifiable {@code Set<CharacterCrafting>} instance, never {@code null}; may be empty.
+     * @return A non-modifiable {@code Set<CharacterCrafting>} instance, never
+     * {@code null}; may be empty.
      */
     @SetValue
     Set<CharacterCrafting> getCrafting();
@@ -191,7 +194,7 @@ public interface Character {
     /**
      * Gets the id of this character's title.
      * @return An {@code OptionalInt} instance, never {@code null}.
-     * @see api.web.gw2.mapping.v2.titles.Title#getId() 
+     * @see api.web.gw2.mapping.v2.titles.Title#getId()
      */
     @OptionalValue
     @IdValue
