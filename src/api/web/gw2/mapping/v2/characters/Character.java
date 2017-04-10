@@ -16,7 +16,7 @@ import api.web.gw2.mapping.core.OptionalValue;
 import api.web.gw2.mapping.core.QuantityValue;
 import api.web.gw2.mapping.core.SetValue;
 import api.web.gw2.mapping.v2.APIv2;
-import api.web.gw2.mapping.v2.characters.equipment.Equipment;
+import api.web.gw2.mapping.v2.characters.id.equipment.CharacterEquipment;
 import api.web.gw2.mapping.v2.characters.id.inventory.CharacterInventoryBag;
 import java.time.Duration;
 import java.time.ZonedDateTime;
@@ -34,6 +34,7 @@ import java.util.Set;
  * <br>As of 2017-04-11, equipment_pvp and wvw_abilities can only be accessed by
  * getting the full character view.
  * @author Fabrice Bouyé
+ * @see api.web.gw2.mapping.v2.characters.id.equipment.CharacterEquipment
  * @see api.web.gw2.mapping.v2.characters.id.inventory.CharacterInventoryBag
  */
 @APIv2(endpoint = "v2/characters", requiresAuthentication = true, scope = "characters") // NOI18N.
@@ -101,12 +102,13 @@ public interface Character {
 
     /**
      * Gets the equipment of this character.
-     * @return A non-modifiable {@code List<Equipment>} instance, never {@code null}; may be empty.
+     * @return A non-modifiable {@code List<CharacterEquipment>} instance, never
+     * {@code null}; may be empty.
      * @see api.web.gw2.mapping.v2.tokeninfo.TokenInfoPermission#BUILDS
      * @see api.web.gw2.mapping.v2.tokeninfo.TokenInfoPermission#INVENTORIES
      */
     @ListValue
-    List<Equipment> getEquipment();
+    List<CharacterEquipment> getEquipment();
 
     /**
      * Gets the inventory bags of this character.

@@ -5,7 +5,7 @@
  * This software may be modified and distributed under the terms
  * of the BSD license.  See the LICENSE file for details.
  */
-package api.web.gw2.mapping.v2.characters.equipment;
+package api.web.gw2.mapping.v2.characters.id.equipment;
 
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.ListValue;
@@ -20,8 +20,8 @@ import java.util.OptionalInt;
  * Defines the equipment of a character.
  * @author Fabrice Bouyé
  */
-@APIv2(endpoint = "v2/characters/<name>/equipment", requiresAuthentication = true, scope = {"inventories", "builds"}) // NOI18N.
-public interface Equipment {
+@APIv2(endpoint = "v2/characters/:id/equipment", requiresAuthentication = true, scope = {"inventories", "builds"}) // NOI18N.
+public interface CharacterEquipment {
 
     /**
      * Gets the Id of this equipment.
@@ -32,9 +32,9 @@ public interface Equipment {
 
     /**
      * Gets the slot of this equipment.
-     * @return An {@code EquipmentSlot} instance, never {@code null}.
+     * @return An {@code CharacterEquipmentSlot} instance, never {@code null}.
      */
-    EquipmentSlot getSlot();
+    CharacterEquipmentSlot getSlot();
 
     /**
      * Gets the list of upgrades ids on this equipment.
@@ -61,17 +61,17 @@ public interface Equipment {
 
     /**
      * Gets the stats of this equipment.
-     * @return An {@code Optional<EquipmentStats>} instance, never {@code null}.
+     * @return An {@code Optional<CharacterEquipmentStats>} instance, never {@code null}.
      */
     @OptionalValue
-    Optional<EquipmentStats> getStats();
+    Optional<CharacterEquipmentStats> getStats();
 
     /**
      * Gets the binding state of this equipment.
-     * @return An {@code Optional<EquipmentBinding>} instance, never {@code null}.
+     * @return An {@code Optional<CharacterEquipmentBinding>} instance, never {@code null}.
      */
     @OptionalValue
-    Optional<EquipmentBinding> getBinding();
+    Optional<CharacterEquipmentBinding> getBinding();
 
     /**
      * Gets the name of the character this equipment is bound to.

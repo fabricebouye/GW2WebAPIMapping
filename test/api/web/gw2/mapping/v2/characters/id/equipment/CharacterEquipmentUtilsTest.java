@@ -5,7 +5,7 @@
  * This software may be modified and distributed under the terms
  * of the BSD license.  See the LICENSE file for details.
  */
-package api.web.gw2.mapping.v2.characters.equipment;
+package api.web.gw2.mapping.v2.characters.id.equipment;
 
 import api.web.gw2.mapping.core.EnumValueFactory;
 import java.util.stream.IntStream;
@@ -20,9 +20,9 @@ import static org.junit.Assert.*;
  * Unit test.
  * @author Fabrice Bouyé
  */
-public class EquipmentUtilsTest {
+public class CharacterEquipmentUtilsTest {
 
-    public EquipmentUtilsTest() {
+    public CharacterEquipmentUtilsTest() {
     }
 
     @BeforeClass
@@ -45,8 +45,8 @@ public class EquipmentUtilsTest {
      * Test of EquipmentSlot.
      */
     @Test
-    public void testFindEquipmentSlot() {
-        System.out.println("findEquipmentSlot");
+    public void testFindCharacterEquipmentSlot() {
+        System.out.println("findCharacterEquipmentSlot");
         final String[] values = {
             "HelmAquatic", // NOI18N.
             "Backpack", // NOI18N.
@@ -73,38 +73,38 @@ public class EquipmentUtilsTest {
             null,
             "" // NOI18N.
         };
-        final EquipmentSlot[] expResults = {
-            EquipmentSlot.HELM_AQUATIC,
-            EquipmentSlot.BACKPACK,
-            EquipmentSlot.COAT,
-            EquipmentSlot.BOOTS,
-            EquipmentSlot.GLOVES,
-            EquipmentSlot.HELM,
-            EquipmentSlot.LEGGINGS,
-            EquipmentSlot.SHOULDERS,
-            EquipmentSlot.ACCESSORY_1,
-            EquipmentSlot.ACCESSORY_2,
-            EquipmentSlot.RING_1,
-            EquipmentSlot.RING_2,
-            EquipmentSlot.AMULET,
-            EquipmentSlot.WEAPON_AQUATIC_A,
-            EquipmentSlot.WEAPON_AQUATIC_B,
-            EquipmentSlot.WEAPON_A1,
-            EquipmentSlot.WEAPON_A2,
-            EquipmentSlot.WEAPON_B1,
-            EquipmentSlot.WEAPON_B2,
-            EquipmentSlot.SICKLE,
-            EquipmentSlot.AXE,
-            EquipmentSlot.PICK,
-            EquipmentSlot.UNKNOWN,
-            EquipmentSlot.UNKNOWN
+        final CharacterEquipmentSlot[] expResults = {
+            CharacterEquipmentSlot.HELM_AQUATIC,
+            CharacterEquipmentSlot.BACKPACK,
+            CharacterEquipmentSlot.COAT,
+            CharacterEquipmentSlot.BOOTS,
+            CharacterEquipmentSlot.GLOVES,
+            CharacterEquipmentSlot.HELM,
+            CharacterEquipmentSlot.LEGGINGS,
+            CharacterEquipmentSlot.SHOULDERS,
+            CharacterEquipmentSlot.ACCESSORY_1,
+            CharacterEquipmentSlot.ACCESSORY_2,
+            CharacterEquipmentSlot.RING_1,
+            CharacterEquipmentSlot.RING_2,
+            CharacterEquipmentSlot.AMULET,
+            CharacterEquipmentSlot.WEAPON_AQUATIC_A,
+            CharacterEquipmentSlot.WEAPON_AQUATIC_B,
+            CharacterEquipmentSlot.WEAPON_A1,
+            CharacterEquipmentSlot.WEAPON_A2,
+            CharacterEquipmentSlot.WEAPON_B1,
+            CharacterEquipmentSlot.WEAPON_B2,
+            CharacterEquipmentSlot.SICKLE,
+            CharacterEquipmentSlot.AXE,
+            CharacterEquipmentSlot.PICK,
+            CharacterEquipmentSlot.UNKNOWN,
+            CharacterEquipmentSlot.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
                 forEach(index -> {
                     final String value = values[index];
-                    final EquipmentSlot expResult = expResults[index];
-                    final EquipmentSlot result = EnumValueFactory.INSTANCE.mapEnumValue(EquipmentSlot.class, value);
+                    final CharacterEquipmentSlot expResult = expResults[index];
+                    final CharacterEquipmentSlot result = EnumValueFactory.INSTANCE.mapEnumValue(CharacterEquipmentSlot.class, value);
                     assertEquals(expResult, result);
                 });
     }
@@ -113,26 +113,26 @@ public class EquipmentUtilsTest {
      * Test of EquipmentBinding.
      */
     @Test
-    public void testFindEquipmentBinding() {
-        System.out.println("findEquipmentBinding");
+    public void testFindCharacterEquipmentBinding() {
+        System.out.println("findCharacterEquipmentBinding");
         final String[] values = {
             "Account", // NOI18N.
             "Character", // NOI18N.
             null,
             "" // NOI18N.
         };
-        final EquipmentBinding[] expResults = {
-            EquipmentBinding.ACCOUNT,
-            EquipmentBinding.CHARACTER,
-            EquipmentBinding.UNKNOWN,
-            EquipmentBinding.UNKNOWN
+        final CharacterEquipmentBinding[] expResults = {
+            CharacterEquipmentBinding.ACCOUNT,
+            CharacterEquipmentBinding.CHARACTER,
+            CharacterEquipmentBinding.UNKNOWN,
+            CharacterEquipmentBinding.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
                 forEach(index -> {
                     final String value = values[index];
-                    final EquipmentBinding expResult = expResults[index];
-                    final EquipmentBinding result = EnumValueFactory.INSTANCE.mapEnumValue(EquipmentBinding.class, value);
+                    final CharacterEquipmentBinding expResult = expResults[index];
+                    final CharacterEquipmentBinding result = EnumValueFactory.INSTANCE.mapEnumValue(CharacterEquipmentBinding.class, value);
                     assertEquals(expResult, result);
                 });
     }
@@ -141,8 +141,8 @@ public class EquipmentUtilsTest {
      * Test of EquipmentAttribute.
      */
     @Test
-    public void testFindEquipmentAttribute() {
-        System.out.println("findEquipmentAttribute");
+    public void testFindCharacterEquipmentAttribute() {
+        System.out.println("findCharacterEquipmentAttribute");
         final String[] values = {
             "BoonDuration", // NOI18N.
             "ConditionDamage", // NOI18N.
@@ -155,24 +155,24 @@ public class EquipmentUtilsTest {
             null,
             "" // NOI18N.
         };
-        final EquipmentAttribute[] expResults = {
-            EquipmentAttribute.BOON_DURATION,
-            EquipmentAttribute.CONDITION_DAMAGE,
-            EquipmentAttribute.CRIT_DAMAGE,
-            EquipmentAttribute.HEALING,
-            EquipmentAttribute.POWER,
-            EquipmentAttribute.PRECISION,
-            EquipmentAttribute.TOUGHNESS,
-            EquipmentAttribute.VITALITTY,
-            EquipmentAttribute.UNKNOWN,
-            EquipmentAttribute.UNKNOWN
+        final CharacterEquipmentAttribute[] expResults = {
+            CharacterEquipmentAttribute.BOON_DURATION,
+            CharacterEquipmentAttribute.CONDITION_DAMAGE,
+            CharacterEquipmentAttribute.CRIT_DAMAGE,
+            CharacterEquipmentAttribute.HEALING,
+            CharacterEquipmentAttribute.POWER,
+            CharacterEquipmentAttribute.PRECISION,
+            CharacterEquipmentAttribute.TOUGHNESS,
+            CharacterEquipmentAttribute.VITALITTY,
+            CharacterEquipmentAttribute.UNKNOWN,
+            CharacterEquipmentAttribute.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
                 forEach(index -> {
                     final String value = values[index];
-                    final EquipmentAttribute expResult = expResults[index];
-                    final EquipmentAttribute result = EnumValueFactory.INSTANCE.mapEnumValue(EquipmentAttribute.class, value);
+                    final CharacterEquipmentAttribute expResult = expResults[index];
+                    final CharacterEquipmentAttribute result = EnumValueFactory.INSTANCE.mapEnumValue(CharacterEquipmentAttribute.class, value);
                     assertEquals(expResult, result);
                 });
     }
