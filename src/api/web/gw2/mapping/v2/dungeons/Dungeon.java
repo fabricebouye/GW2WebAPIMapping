@@ -7,8 +7,11 @@
  */
 package api.web.gw2.mapping.v2.dungeons;
 
+import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.ImplementationSpecific;
+import api.web.gw2.mapping.core.SetValue;
 import api.web.gw2.mapping.v2.APIv2;
+import java.util.Set;
 
 /**
  * Defines dungeons ids.
@@ -16,49 +19,19 @@ import api.web.gw2.mapping.v2.APIv2;
  */
 @ImplementationSpecific
 @APIv2(endpoint = "v2/dungeon") // NOI18N.
-public enum Dungeon {
+public interface Dungeon {
 
     /**
-     * Defines the Ascalonian Catacombs.
+     * Gets the id of this dungeon.
+     * @return A {@code String} instance, never {@code null}.
      */
-    ASCALONIAN_CATACOMBS("ascalonian_catacombs"), // NOI18N.
-    /**
-     * Defines Caudecus' Manor.
-     */
-    CAUDECUS_MANOR("caudecus_manor"), // NOI18N.
-    /**
-     * Defines the Twilight Arbor.
-     */
-    TWILIGHT_ARBOR("twilight_arbor"), // NOI18N.
-    /**
-     * Defines Sorrow's Embrace.
-     */
-    SORROWS_EMBRACE("sorrows_embrace"), // NOI18N.
-    /**
-     * Defines the Citadel of Flames.
-     */
-    CITADEL_OF_FLAME("citadel_of_flame"), // NOI18N.
-    /**
-     * Defines the Honor of the Waves.
-     */
-    HONOR_OF_THE_WAVES("honor_of_the_waves"), // NOI18N.
-    /**
-     * Defines the Crucible of Eternity.
-     */
-    CRUCIBLE_OF_ETERNITY("crucible_of_eternity"), // NOI18N.
-    /**
-     * Defines the Ruined City of Arah.
-     */
-    RUINED_CITY_OF_ARAH("ruined_city_of_arah"), // NOI18N.
-    /**
-     * Fail safe value.
-     */
-    @ImplementationSpecific
-    UNKNOWN(null);
+    @IdValue(flavor = IdValue.Flavor.STRING)
+    String getId();
 
-    final String value;
-
-    private Dungeon(final String value) {
-        this.value = value;
-    }
+    /**
+     * Gets the set of paths in this dungeon.
+     * @return A {@code Set<DungeonPath>}; never {@code null}. May be empty.
+     */
+    @SetValue
+    Set<DungeonPath> getPaths();
 }
