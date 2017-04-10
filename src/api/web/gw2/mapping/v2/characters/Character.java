@@ -17,6 +17,7 @@ import api.web.gw2.mapping.core.QuantityValue;
 import api.web.gw2.mapping.core.SetValue;
 import api.web.gw2.mapping.v2.APIv2;
 import api.web.gw2.mapping.v2.characters.id.equipment.CharacterEquipment;
+import api.web.gw2.mapping.v2.characters.id.equipment_pvp.CharacterEquipmentPvP;
 import api.web.gw2.mapping.v2.characters.id.inventory.CharacterInventoryBag;
 import api.web.gw2.mapping.v2.characters.id.skills.CharacterSkillSet;
 import api.web.gw2.mapping.v2.characters.id.specializations.CharacterSpecialization;

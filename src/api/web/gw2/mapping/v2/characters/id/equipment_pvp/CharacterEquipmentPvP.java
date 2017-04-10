@@ -5,7 +5,7 @@
  * This software may be modified and distributed under the terms
  * of the BSD license.  See the LICENSE file for details.
  */
-package api.web.gw2.mapping.v2.characters;
+package api.web.gw2.mapping.v2.characters.id.equipment_pvp;
 
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.ListValue;
@@ -16,7 +16,7 @@ import java.util.List;
  * Defines the PvP equipment of a character.
  * @author Fabrice Bouyé
  */
-@APIv2(endpoint = "v2/characters/<name>/equipment", requiresAuthentication = true, scope = {"inventories", "builds"}) // NOI18N.
+@APIv2(endpoint = "v2/characters/:id/equipment_pvp", requiresAuthentication = true, scope = {"inventories", "builds"}) // NOI18N.
 public interface CharacterEquipmentPvP {
 
     @IdValue
