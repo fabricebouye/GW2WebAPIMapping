@@ -18,6 +18,7 @@ import api.web.gw2.mapping.core.SetValue;
 import api.web.gw2.mapping.v2.APIv2;
 import api.web.gw2.mapping.v2.characters.id.equipment.CharacterEquipment;
 import api.web.gw2.mapping.v2.characters.id.inventory.CharacterInventoryBag;
+import api.web.gw2.mapping.v2.characters.id.wvw_abilities.CharacterAbility;
 import java.time.Duration;
 import java.time.ZonedDateTime;
 import java.util.List;
@@ -36,6 +37,7 @@ import java.util.Set;
  * @author Fabrice Bouyé
  * @see api.web.gw2.mapping.v2.characters.id.equipment.CharacterEquipment
  * @see api.web.gw2.mapping.v2.characters.id.inventory.CharacterInventoryBag
+ * @see api.web.gw2.mapping.v2.characters.id.wvw_abilities.CharacterAbility
  */
 @APIv2(endpoint = "v2/characters", requiresAuthentication = true, scope = "characters") // NOI18N.
 public interface Character {
@@ -180,9 +182,10 @@ public interface Character {
     @OptionalValue
     Optional<CharacterEquipmentPvP> getEquipmentPvp();
 
-    /** 
+    /**
      * Gets the WvW abilities of this character's.
-     * @return A non-modifiable {@code Set<CharacterAbility>} instance, never {@code null}.
+     * @return A non-modifiable {@code Set<CharacterAbility>} instance, never
+     * {@code null}.
      * @see api.web.gw2.mapping.v2.wvw.abilities.Ability
      */
     @SetValue
