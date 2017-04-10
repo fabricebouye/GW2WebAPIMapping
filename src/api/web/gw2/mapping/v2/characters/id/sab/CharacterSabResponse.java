@@ -20,7 +20,7 @@ public interface CharacterSabResponse {
 
     /**
      * Gets the SAB zone info for this character.
-     * @return A {@code List<CharacterSabZone>}; never {@code null}. May be
+     * @return A {@code List<CharacterSabZone>}, never {@code null}. May be
      * empty.
      */
     @ListValue
@@ -28,7 +28,7 @@ public interface CharacterSabResponse {
 
     /**
      * Gets the unlocks info for this character.
-     * @return A {@code List<CharacterSabUnlock>}; never {@code null}. May be
+     * @return A {@code List<CharacterSabUnlock>}, never {@code null}. May be
      * empty.
      */
     @ListValue
@@ -36,7 +36,7 @@ public interface CharacterSabResponse {
 
     /**
      * Gets the songs for this character.
-     * @return A {@code List<CharacterSabSong>}; never {@code null}. May be
+     * @return A {@code List<CharacterSabSong>}, never {@code null}. May be
      * empty.
      */
     @ListValue
