@@ -18,6 +18,7 @@ import api.web.gw2.mapping.core.SetValue;
 import api.web.gw2.mapping.v2.APIv2;
 import api.web.gw2.mapping.v2.characters.id.equipment.CharacterEquipment;
 import api.web.gw2.mapping.v2.characters.id.inventory.CharacterInventoryBag;
+import api.web.gw2.mapping.v2.characters.id.skills.CharacterSkillSet;
 import api.web.gw2.mapping.v2.characters.id.specializations.CharacterSpecialization;
 import api.web.gw2.mapping.v2.characters.id.specializations.CharacterSpecializationGameType;
 import api.web.gw2.mapping.v2.characters.id.training.CharacterTraining;
@@ -168,16 +169,19 @@ public interface Character {
 
     /**
      * Gets the utility and profession skills of this character.
-     * @return A non-modifiable {@code Map<CharacterGameType, CharacterSkillSet>} instance, never {@code null}; may be empty.
+     * @return A non-modifiable
+     * {@code Map<CharacterGameType, CharacterSkillSet>} instance, never
+     * {@code null}; may be empty.
      * @see api.web.gw2.mapping.v2.tokeninfo.TokenInfoPermission#BUILDS
      */
     @MapValue
-    Map<CharacterGameType, CharacterSkillSet> getSkills();
+    Map<CharacterSpecializationGameType, CharacterSkillSet> getSkills();
 
-    /** 
+    /**
      * Gets the ids of the answers to this character's backstory.
-     * @return A non-modifiable {@code Set<Integer>} instance, never {@code null}.
-     * @see api.web.gw2.mapping.v2.backstory.answers.BackstoryAnswer#getId() 
+     * @return A non-modifiable {@code Set<Integer>} instance, never
+     * {@code null}.
+     * @see api.web.gw2.mapping.v2.backstory.answers.BackstoryAnswer#getId()
      */
     @SetValue
     @IdValue

@@ -5,7 +5,7 @@
  * This software may be modified and distributed under the terms
  * of the BSD license.  See the LICENSE file for details.
  */
-package api.web.gw2.mapping.v2.characters;
+package api.web.gw2.mapping.v2.characters.id.skills;
 
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.SetValue;
@@ -16,8 +16,8 @@ import java.util.Set;
  * Defines a character's equipped pets (when the character is a Ranger).
  * @author Fabrice Bouyé
  */
-@APIv2(endpoint = "v2/characters", requiresAuthentication = true, scope = "characters") // NOI18N.
-public interface CharacterPets {
+@APIv2(endpoint = "v2/characters/:id/skills", requiresAuthentication = true, scope = "characters") // NOI18N.
+public interface CharacterSkillPets {
 
     /**
      * Gets ids of equipped terrestrial pets.
