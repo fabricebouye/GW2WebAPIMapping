@@ -30,7 +30,7 @@ public interface Dungeon {
 
     /**
      * Gets the set of paths in this dungeon.
-     * @return A {@code Set<DungeonPath>}; never {@code null}. May be empty.
+     * @return A {@code Set<DungeonPath>}, never {@code null}. May be empty.
      */
     @SetValue
     Set<DungeonPath> getPaths();

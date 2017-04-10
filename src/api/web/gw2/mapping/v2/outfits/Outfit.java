@@ -45,7 +45,7 @@ public interface Outfit {
 
     /**
      * Gets the set of ids of all items unlocked by this outfit.
-     * @return A non-modifiable {@code Set<Integer>}; never {@code null}. May be empty.
+     * @return A non-modifiable {@code Set<Integer>}, never {@code null}. May be empty.
      */
     @SetValue
     @IdValue
