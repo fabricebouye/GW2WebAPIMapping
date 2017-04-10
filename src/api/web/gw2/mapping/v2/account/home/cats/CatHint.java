@@ -47,6 +47,7 @@ public enum CatHint {
     CAUDECUS("cadeucus"), // NOI18N.
     BUNDLE("bundle"), // NOI18N.
     GHOST("ghost"), // NOI18N.
+    SAB("sab"), // NOI18N.
     /**
      * Fail safe value.
      */

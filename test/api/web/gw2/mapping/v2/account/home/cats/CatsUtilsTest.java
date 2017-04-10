@@ -79,6 +79,7 @@ public final class CatsUtilsTest {
             "cadeucus", // NOI18N.
             "bundle", // NOI18N.
             "ghost", // NOI18N.
+            "sab", // NOI18N.
             null,
             "" // NOI18N.
         };
@@ -114,6 +115,7 @@ public final class CatsUtilsTest {
             CatHint.CAUDECUS,
             CatHint.BUNDLE,
             CatHint.GHOST,
+            CatHint.SAB,
             CatHint.UNKNOWN,
             CatHint.UNKNOWN,};
         assertEquals(values.length, expResults.length);
