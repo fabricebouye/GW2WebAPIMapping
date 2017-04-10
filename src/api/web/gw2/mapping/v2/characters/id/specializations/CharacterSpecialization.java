@@ -5,7 +5,7 @@
  * This software may be modified and distributed under the terms
  * of the BSD license.  See the LICENSE file for details.
  */
-package api.web.gw2.mapping.v2.characters;
+package api.web.gw2.mapping.v2.characters.id.specializations;
 
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.SetValue;
@@ -16,7 +16,7 @@ import java.util.Set;
  * Defines a character specialization.
  * @author Fabrice Bouyé
  */
-@APIv2(endpoint = "v2/characters", requiresAuthentication = true, scope = {"characters", "builds"}) // NOI18N.
+@APIv2(endpoint = "v2/characters/:id/specializations", requiresAuthentication = true, scope = {"characters", "builds"}) // NOI18N.
 public interface CharacterSpecialization {
 
     /**

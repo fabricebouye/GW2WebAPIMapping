@@ -144,34 +144,4 @@ public class CharactersUtilsTest {
                     assertEquals(expResult, result);
                 });
     }
-
-    /**
-     * Test of CharacterGameType.
-     */
-    @Test
-    public void testFindCharacterGameType() {
-        System.out.println("findCharacterGameType"); // NOI18N.
-        final String[] values = {
-            "pve", // NOI18N.
-            "pvp", // NOI18N.
-            "wvw", // NOI18N.
-            null,
-            "" // NOI18N.
-        };
-        final CharacterGameType[] expResults = {
-            CharacterGameType.PVE,
-            CharacterGameType.PVP,
-            CharacterGameType.WVW,
-            CharacterGameType.UNKNOWN,
-            CharacterGameType.UNKNOWN
-        };
-        assertEquals(values.length, expResults.length);
-        IntStream.range(0, values.length).
-                forEach(index -> {
-                    final String value = values[index];
-                    final CharacterGameType expResult = expResults[index];
-                    final CharacterGameType result = EnumValueFactory.INSTANCE.mapEnumValue(CharacterGameType.class, value);
-                    assertEquals(expResult, result);
-                });
-    }
 }

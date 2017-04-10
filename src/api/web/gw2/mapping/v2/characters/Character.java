@@ -18,6 +18,8 @@ import api.web.gw2.mapping.core.SetValue;
 import api.web.gw2.mapping.v2.APIv2;
 import api.web.gw2.mapping.v2.characters.id.equipment.CharacterEquipment;
 import api.web.gw2.mapping.v2.characters.id.inventory.CharacterInventoryBag;
+import api.web.gw2.mapping.v2.characters.id.specializations.CharacterSpecialization;
+import api.web.gw2.mapping.v2.characters.id.specializations.CharacterSpecializationGameType;
 import api.web.gw2.mapping.v2.characters.id.wvw_abilities.CharacterAbility;
 import java.time.Duration;
 import java.time.ZonedDateTime;
@@ -37,6 +39,7 @@ import java.util.Set;
  * @author Fabrice Bouyé
  * @see api.web.gw2.mapping.v2.characters.id.equipment.CharacterEquipment
  * @see api.web.gw2.mapping.v2.characters.id.inventory.CharacterInventoryBag
+ * @see api.web.gw2.mapping.v2.characters.id.specializations.CharacterSpecialization
  * @see api.web.gw2.mapping.v2.characters.id.wvw_abilities.CharacterAbility
  */
 @APIv2(endpoint = "v2/characters", requiresAuthentication = true, scope = "characters") // NOI18N.
@@ -130,12 +133,14 @@ public interface Character {
 
     /**
      * Gets the specialization of this character.
-     * @return A non-modifiable {@code Map<CharacterGameType, Set<CharacterSpecialization>>} instance, never {@code null}; may be empty.
+     * @return A non-modifiable
+     * {@code Map<CharacterGameType, Set<CharacterSpecialization>>} instance,
+     * never {@code null}; may be empty.
      * @see api.web.gw2.mapping.v2.tokeninfo.TokenInfoPermission#BUILDS
      */
     @MapValue
     @SetValue
-    Map<CharacterGameType, Set<CharacterSpecialization>> getSpecializations();
+    Map<CharacterSpecializationGameType, Set<CharacterSpecialization>> getSpecializations();
 
     /**
      * Gets the training of this character.
