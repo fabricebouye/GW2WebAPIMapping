@@ -5,25 +5,25 @@
  * This software may be modified and distributed under the terms
  * of the BSD license.  See the LICENSE file for details.
  */
-package api.web.gw2.mapping.v2.characters.inventory;
+package api.web.gw2.mapping.v2.characters.id.inventory;
 
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.ListValue;
 import api.web.gw2.mapping.core.OptionalValue;
 import api.web.gw2.mapping.core.QuantityValue;
 import api.web.gw2.mapping.v2.APIv2;
-import api.web.gw2.mapping.v2.characters.equipment.EquipmentStats;
 import java.util.List;
 import java.util.Optional;
 import java.util.OptionalInt;
+import api.web.gw2.mapping.v2.characters.id.equipment.CharacterEquipmentStats;
 
 /**
  * Defines an inventory object within a bag.
  * @author Fabrice Bouyé
  * @see InventoryBag
  */
-@APIv2(endpoint = "v2/characters/<name>/inventory", requiresAuthentication = true, scope = "inventories") // NOI18N.
-public interface Inventory {
+@APIv2(endpoint = "v2/characters/:id/inventory", requiresAuthentication = true, scope = "inventories") // NOI18N.
+public interface CharacterInventory {
 
     /**
      * Gets the Id of this object in inventory.
@@ -65,10 +65,10 @@ public interface Inventory {
 
     /**
      * Gets the binding status of this object in inventory.
-     * @return An {@code Optional<InventoryBinding>} instance, never {@code null}:
+     * @return An {@code Optional<CharacterInventoryBinding>} instance, never {@code null}:
      */
     @OptionalValue
-    Optional<InventoryBinding> getBinding();
+    Optional<CharacterInventoryBinding> getBinding();
 
     /**
      * Gets character to which this object in inventory is bound to.
@@ -94,8 +94,8 @@ public interface Inventory {
     OptionalInt getCharges();
     
     /**
-    * @return An {@code Optional<EquipmentStats>} instance, never {@code null}.
+    * @return An {@code Optional<CharacterEquipmentStats>} instance, never {@code null}.
     */
     @OptionalValue
-    Optional<EquipmentStats> getStats();
+    Optional<CharacterEquipmentStats> getStats();
 }

@@ -3,15 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package api.web.gw2.mapping.v2.characters.inventory;
+package api.web.gw2.mapping.v2.characters.id.inventory;
 
 import api.web.gw2.mapping.core.ImplementationSpecific;
+import api.web.gw2.mapping.v2.APIv2;
 
 /**
  * Defines inventory binding.
  * @author Fabrice Bouyé
  */
-public enum InventoryBinding {
+@APIv2(endpoint = "v2/characters/:id/inventory", requiresAuthentication = true, scope = "inventories") // NOI18N.
+public enum CharacterInventoryBinding {
     /**
      * The item is account bound.
      */
@@ -28,7 +30,7 @@ public enum InventoryBinding {
 
     final String value;
 
-    private InventoryBinding(final String value) {
+    private CharacterInventoryBinding(final String value) {
         this.value = value;
     }
 }

@@ -16,8 +16,8 @@ import api.web.gw2.mapping.core.OptionalValue;
 import api.web.gw2.mapping.core.QuantityValue;
 import api.web.gw2.mapping.core.SetValue;
 import api.web.gw2.mapping.v2.APIv2;
-import api.web.gw2.mapping.v2.characters.inventory.InventoryBag;
 import api.web.gw2.mapping.v2.characters.equipment.Equipment;
+import api.web.gw2.mapping.v2.characters.id.inventory.CharacterInventoryBag;
 import java.time.Duration;
 import java.time.ZonedDateTime;
 import java.util.List;
@@ -28,7 +28,13 @@ import java.util.Set;
 
 /**
  * Defines a character.
+ * <br>This is the full character summary.
+ * <br>For quicker access with smaller footprints, you should check the
+ * specialized sub-views and appropriate endpoints.
+ * <br>As of 2017-04-11, equipment_pvp and wvw_abilities can only be accessed by
+ * getting the full character view.
  * @author Fabrice Bouyé
+ * @see api.web.gw2.mapping.v2.characters.id.inventory.CharacterInventoryBag
  */
 @APIv2(endpoint = "v2/characters", requiresAuthentication = true, scope = "characters") // NOI18N.
 public interface Character {
@@ -104,11 +110,12 @@ public interface Character {
 
     /**
      * Gets the inventory bags of this character.
-     * @return A non-modifiable {@code List<Bag>} instance, never {@code null}; may be empty.
+     * @return A non-modifiable {@code List<CharacterInventoryBag>} instance, never {@code null};
+     * may be empty.
      * @see api.web.gw2.mapping.v2.tokeninfo.TokenInfoPermission#INVENTORIES
      */
     @ListValue
-    List<InventoryBag> getBags();
+    List<CharacterInventoryBag> getBags();
 
     /**
      * Gets the crafting disciplines of this character.
