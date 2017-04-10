@@ -7,7 +7,7 @@
  */
 package api.web.gw2.mapping.v2.account.inventory;
 
-import api.web.gw2.mapping.v2.characters.inventory.InventoryBinding;
+import api.web.gw2.mapping.v2.characters.id.inventory.CharacterInventoryBinding;
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.ListValue;
 import api.web.gw2.mapping.core.OptionalValue;
@@ -40,11 +40,11 @@ public interface SharedInventory {
 
     /**
      * Gets the binding status of this inventory slot.
-     * @return Always {@code InventoryBinding.ACCOUNT}.
-     * @see InventoryBinding#ACCOUNT
+     * @return Always {@code CharacterInventoryBinding.ACCOUNT}.
+     * @see CharacterInventoryBinding#ACCOUNT
      */
-    default InventoryBinding getBinding() {
-        return InventoryBinding.ACCOUNT;
+    default CharacterInventoryBinding getBinding() {
+        return CharacterInventoryBinding.ACCOUNT;
     }
 
     /**
