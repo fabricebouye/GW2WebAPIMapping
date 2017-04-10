@@ -7,7 +7,6 @@
  */
 package api.web.gw2.mapping.v2.guild.id.stash;
 
-import api.web.gw2.mapping.v2.characters.inventory.*;
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.QuantityValue;
 import api.web.gw2.mapping.v2.APIv2;
