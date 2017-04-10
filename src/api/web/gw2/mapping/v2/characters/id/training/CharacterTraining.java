@@ -5,7 +5,7 @@
  * This software may be modified and distributed under the terms
  * of the BSD license.  See the LICENSE file for details.
  */
-package api.web.gw2.mapping.v2.characters;
+package api.web.gw2.mapping.v2.characters.id.training;
 
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.QuantityValue;
@@ -15,7 +15,7 @@ import api.web.gw2.mapping.v2.APIv2;
  * Defines a character's training track advancement.
  * @author Fabrice Bouyé
  */
-@APIv2(endpoint = "v2/characters", requiresAuthentication = true, scope = {"characters", "builds"}) // NOI18N.
+@APIv2(endpoint = "v2/characters/:id/training", requiresAuthentication = true, scope = {"characters", "builds"}) // NOI18N.
 public interface CharacterTraining {
 
     /**
