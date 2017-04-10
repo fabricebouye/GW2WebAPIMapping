@@ -8,11 +8,13 @@
 package api.web.gw2.mapping.v2.dungeons;
 
 import api.web.gw2.mapping.core.ImplementationSpecific;
+import api.web.gw2.mapping.v2.APIv2;
 
 /**
  * Defines dungeons path types.
  * @author Fabrice Bouyé
  */
+@APIv2(endpoint = "v2/dungeon") // NOI18N.
 public enum DungeonPathType {
     /**
      * Defines a story dungeon path type.
