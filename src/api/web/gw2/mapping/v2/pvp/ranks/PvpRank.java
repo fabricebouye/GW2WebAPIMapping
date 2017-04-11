@@ -13,12 +13,14 @@ import api.web.gw2.mapping.core.LocalizedResource;
 import api.web.gw2.mapping.core.SetValue;
 import api.web.gw2.mapping.core.URLReference;
 import api.web.gw2.mapping.core.URLValue;
+import api.web.gw2.mapping.v2.APIv2;
 import java.util.Set;
 
 /**
  * Defines an PvP rank.
  * @author Fabrice Bouyé
  */
+@APIv2(endpoint = "v2/pvp/ranks")
 public interface PvpRank {
 
     /**

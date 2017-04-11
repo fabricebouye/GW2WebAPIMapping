@@ -9,11 +9,13 @@ package api.web.gw2.mapping.v2.pvp.ranks;
 
 import api.web.gw2.mapping.core.LevelValue;
 import api.web.gw2.mapping.core.QuantityValue;
+import api.web.gw2.mapping.v2.APIv2;
 
 /**
  * Defines an PvP rank level.
  * @author Fabrice Bouyé
  */
+@APIv2(endpoint = "v2/pvp/ranks")
 public interface PvpRankLevel {
 
     /**
