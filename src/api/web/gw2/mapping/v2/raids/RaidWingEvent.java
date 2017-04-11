@@ -19,10 +19,10 @@ public interface RaidWingEvent {
 
     /**
      * Gets the id of this raid wing event.
-     * @return An {@code int} &gt; 0.
+     * @return A {@code String} instance, never {@code null}.
      */
-    @IdValue
-    int getId();
+    @IdValue(flavor = IdValue.Flavor.STRING)
+    String getId();
 
     /**
      * Gets the type of this raid wing event.
