@@ -16,7 +16,7 @@ import api.web.gw2.mapping.v2.APIv2;
  */
 @APIv2(endpoint = "v2/pvp")
 @ImplementationSpecific
-public enum PvPLadder {
+public enum PvpLadder {
     /**
      * Defines no ladder.
      */
@@ -37,7 +37,7 @@ public enum PvPLadder {
 
     final String value;
 
-    private PvPLadder(String value) {
+    private PvpLadder(String value) {
         this.value = value;
     }
 }

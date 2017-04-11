@@ -9,7 +9,7 @@ package api.web.gw2.mapping.v2.pvp.stats;
 
 import api.web.gw2.mapping.v2.APIv2;
 import api.web.gw2.mapping.v2.characters.CharacterProfession;
-import api.web.gw2.mapping.v2.pvp.PvPLadder;
+import api.web.gw2.mapping.v2.pvp.PvpLadder;
 import java.util.Map;
 
 /**
@@ -57,5 +57,5 @@ public interface Stat {
      * <br>Ladder modes that haven't been played in PvP, will have their result set to {@code StatResult.EMPTY}.
      * @see StatResult#EMPTY
      */
-    Map<PvPLadder, StatResult> getLadders();
+    Map<PvpLadder, StatResult> getLadders();
 }

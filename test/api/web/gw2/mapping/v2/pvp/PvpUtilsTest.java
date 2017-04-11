@@ -20,9 +20,9 @@ import static org.junit.Assert.*;
  * Unit test.
  * @author Fabrice Bouyé
  */
-public class PvPUtilsTest {
+public class PvpUtilsTest {
 
-    public PvPUtilsTest() {
+    public PvpUtilsTest() {
     }
 
     @BeforeClass
@@ -54,19 +54,19 @@ public class PvPUtilsTest {
             null,
             "" // NOI18N.
         };
-        final PvPLadder[] expResults = {
-            PvPLadder.NONE,
-            PvPLadder.RANKED,
-            PvPLadder.UNRANKED,
-            PvPLadder.UNKNOWN,
-            PvPLadder.UNKNOWN
+        final PvpLadder[] expResults = {
+            PvpLadder.NONE,
+            PvpLadder.RANKED,
+            PvpLadder.UNRANKED,
+            PvpLadder.UNKNOWN,
+            PvpLadder.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
                 forEach(index -> {
                     final String value = values[index];
-                    final PvPLadder expResult = expResults[index];
-                    final PvPLadder result = EnumValueFactory.INSTANCE.mapEnumValue(PvPLadder.class, value);
+                    final PvpLadder expResult = expResults[index];
+                    final PvpLadder result = EnumValueFactory.INSTANCE.mapEnumValue(PvpLadder.class, value);
                     assertEquals(expResult, result);
                     assertEquals(expResult, result);
                 });

@@ -11,7 +11,7 @@ import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.MapValue;
 import api.web.gw2.mapping.core.SetValue;
 import api.web.gw2.mapping.v2.APIv2;
-import api.web.gw2.mapping.v2.pvp.PvPLadder;
+import api.web.gw2.mapping.v2.pvp.PvpLadder;
 import java.util.Map;
 import java.util.Set;
 
@@ -61,5 +61,5 @@ public interface Team {
      * <br>May be empty.
      */
     @MapValue
-    Map<PvPLadder, TeamLadderResult> getLadders();
+    Map<PvpLadder, TeamLadderResult> getLadders();
 }
