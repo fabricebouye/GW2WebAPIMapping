@@ -32,5 +32,5 @@ public interface Raid {
      * empty.
      */
     @SetValue
-    Set<RaidWing> getEvents();
+    Set<RaidWing> getWings();
 }
