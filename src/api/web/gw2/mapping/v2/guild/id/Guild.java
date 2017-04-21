@@ -93,4 +93,18 @@ public interface Guild {
      * @return A {@code GuildEmblem}, never {@code null}.
      */
     GuildEmblem getEmblem();
+    
+    /**
+     * Gets the current number of members in the guild.
+     * @return An {@code int} &ge; 0.
+     */
+    @QuantityValue
+    int getMemberCount();
+    
+    /**
+     * Gets the maximum member capacity in the guild.
+     * @return An {@code int} &ge; 0.
+     */
+    @QuantityValue
+    int getMemberCapacity();
 }
