@@ -22,7 +22,7 @@ import java.util.Set;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/wvw/matches") // NOI18N.
-public interface MatchMap {
+public interface WvwMatchMap {
 
     /**
      * Gets the id of this WvW map.
@@ -33,42 +33,42 @@ public interface MatchMap {
 
     /**
      * Gets the type of this map.
-     * @return A {@code MatchMapType} instance, never {@code null}.
+     * @return A {@code WvwMatchMapType} instance, never {@code null}.
      */
-    MatchMapType getType();
+    WvwMatchMapType getType();
 
     /**
      * Gets the scores for this WvW match.
-     * @return A {@code Map<MatchTeam, Integer>}, never {@code null}, may be empty.
+     * @return A {@code Map<WvwMatchTeam, Integer>}, never {@code null}, may be empty.
      */
     @MapValue
-    Map<MatchTeam, Integer> getScores();
+    Map<WvwMatchTeam, Integer> getScores();
 
     /**
      * Gets the bonuses of this map.
      * @return A non-modifiable {@code List<MatchMapBonus>} instance, never {@code null}, may be empty.
      */
     @ListValue
-    List<MatchMapBonus> getBonuses();
+    List<WvwMatchMapBonus> getBonuses();
 
     /**
      * Gets the objectives of this map.
      * @return A non-modifiable {@code Set<MatchMapObjective>} instance, never {@code null}, may be empty.
      */
     @SetValue
-    Set<MatchMapObjective> getObjectives();
+    Set<WvwMatchMapObjective> getObjectives();
 
     /**
      * Gets the deaths for this WvW match.
-     * @return A {@code Map<MatchTeam, Integer>}, never {@code null}, may be empty.
+     * @return A {@code Map<WvwMatchTeam, Integer>}, never {@code null}, may be empty.
      */
     @MapValue
-    Map<MatchTeam, Integer> getDeaths();
+    Map<WvwMatchTeam, Integer> getDeaths();
 
     /**
      * Gets the kills for this WvW match.
-     * @return A {@code Map<MatchTeam, Integer>}, never {@code null}, may be empty.
+     * @return A {@code Map<WvwMatchTeam, Integer>}, never {@code null}, may be empty.
      */
     @MapValue
-    Map<MatchTeam, Integer> getKills();
+    Map<WvwMatchTeam, Integer> getKills();
 }

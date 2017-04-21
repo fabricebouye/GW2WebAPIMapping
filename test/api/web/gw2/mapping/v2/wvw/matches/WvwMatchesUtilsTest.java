@@ -20,9 +20,9 @@ import static org.junit.Assert.*;
  * Unit test.
  * @author Fabrice Bouyé
  */
-public class MatchesUtilsTest {
+public class WvwMatchesUtilsTest {
 
-    public MatchesUtilsTest() {
+    public WvwMatchesUtilsTest() {
     }
 
     @BeforeClass
@@ -45,26 +45,26 @@ public class MatchesUtilsTest {
      * Test of MatchMapBonusType.
      */
     @Test
-    public void testFindMatchMapBonusType() {
-        System.out.println("findMatchMapBonusType");
+    public void testFindWvwMatchMapBonusType() {
+        System.out.println("findWvwMatchMapBonusType");
         final String[] values = {
             "Bloodlust", // NOI18N.
             "Center", // NOI18N.
             null,
             "" // NOI18N.
         };
-        final MatchMapBonusType[] expResults = {
-            MatchMapBonusType.BLOODLUST,
-            MatchMapBonusType.CENTER,
-            MatchMapBonusType.UNKNOWN,
-            MatchMapBonusType.UNKNOWN
+        final WvwMatchMapBonusType[] expResults = {
+            WvwMatchMapBonusType.BLOODLUST,
+            WvwMatchMapBonusType.CENTER,
+            WvwMatchMapBonusType.UNKNOWN,
+            WvwMatchMapBonusType.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
                 forEach(index -> {
                     final String value = values[index];
-                    final MatchMapBonusType expResult = expResults[index];
-                    final MatchMapBonusType result = EnumValueFactory.INSTANCE.mapEnumValue(MatchMapBonusType.class, value);
+                    final WvwMatchMapBonusType expResult = expResults[index];
+                    final WvwMatchMapBonusType result = EnumValueFactory.INSTANCE.mapEnumValue(WvwMatchMapBonusType.class, value);
                     assertEquals(expResult, result);
                 });
     }
@@ -73,8 +73,8 @@ public class MatchesUtilsTest {
      * Test of MatchMapType.
      */
     @Test
-    public void testFindMatchMapType() {
-        System.out.println("findMatchMapType");
+    public void testFindWvwMatchMapType() {
+        System.out.println("findWvwMatchMapType");
         final String[] values = {
             "BlueHome", // NOI18N.
             "Center", // NOI18N.
@@ -83,20 +83,20 @@ public class MatchesUtilsTest {
             null,
             "" // NOI18N.
         };
-        final MatchMapType[] expResults = {
-            MatchMapType.BLUE_HOME,
-            MatchMapType.CENTER,
-            MatchMapType.GREEN_HOME,
-            MatchMapType.RED_HOME,
-            MatchMapType.UNKNOWN,
-            MatchMapType.UNKNOWN
+        final WvwMatchMapType[] expResults = {
+            WvwMatchMapType.BLUE_HOME,
+            WvwMatchMapType.CENTER,
+            WvwMatchMapType.GREEN_HOME,
+            WvwMatchMapType.RED_HOME,
+            WvwMatchMapType.UNKNOWN,
+            WvwMatchMapType.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
                 forEach(index -> {
                     final String value = values[index];
-                    final MatchMapType expResult = expResults[index];
-                    final MatchMapType result = EnumValueFactory.INSTANCE.mapEnumValue(MatchMapType.class, value);
+                    final WvwMatchMapType expResult = expResults[index];
+                    final WvwMatchMapType result = EnumValueFactory.INSTANCE.mapEnumValue(WvwMatchMapType.class, value);
                     assertEquals(expResult, result);
                 });
     }
@@ -105,8 +105,8 @@ public class MatchesUtilsTest {
      * Test of MatchTeam.
      */
     @Test
-    public void testFindMatchTeam() {
-        System.out.println("findMatchTeam");
+    public void testFindWvwMatchTeam() {
+        System.out.println("findWvwMatchTeam");
         final String[] values = {
             "Blue", // NOI18N.
             "Green", // NOI18N.
@@ -115,20 +115,20 @@ public class MatchesUtilsTest {
             null,
             "" // NOI18N.
         };
-        final MatchTeam[] expResults = {
-            MatchTeam.BLUE,
-            MatchTeam.GREEN,
-            MatchTeam.NEUTRAL,
-            MatchTeam.RED,
-            MatchTeam.UNKNOWN,
-            MatchTeam.UNKNOWN
+        final WvwMatchTeam[] expResults = {
+            WvwMatchTeam.BLUE,
+            WvwMatchTeam.GREEN,
+            WvwMatchTeam.NEUTRAL,
+            WvwMatchTeam.RED,
+            WvwMatchTeam.UNKNOWN,
+            WvwMatchTeam.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
                 forEach(index -> {
                     final String value = values[index];
-                    final MatchTeam expResult = expResults[index];
-                    final MatchTeam result = EnumValueFactory.INSTANCE.mapEnumValue(MatchTeam.class, value);
+                    final WvwMatchTeam expResult = expResults[index];
+                    final WvwMatchTeam result = EnumValueFactory.INSTANCE.mapEnumValue(WvwMatchTeam.class, value);
                     assertEquals(expResult, result);
                 });
     }

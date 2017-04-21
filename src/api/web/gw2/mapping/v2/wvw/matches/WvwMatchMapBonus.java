@@ -12,17 +12,17 @@ import api.web.gw2.mapping.v2.APIv2;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/wvw/matches") // NOI18N.
-public interface MatchMapBonus {
+public interface WvwMatchMapBonus {
 
     /**
      * Gets the type of this bonus.
-     * @return A {@code MatchMapBonusType} instance, never {@code null}.
+     * @return A {@code WvwMatchMapBonusType} instance, never {@code null}.
      */
-    MatchMapBonusType getType();
+    WvwMatchMapBonusType getType();
 
     /**
      * Gets the type of this bonus.
-     * @return A {@code MatchMapBonusType} instance, never {@code null}.
+     * @return A {@code WvwMatchMapBonusType} instance, never {@code null}.
      */
-    MatchTeam getOwner();
+    WvwMatchTeam getOwner();
 }

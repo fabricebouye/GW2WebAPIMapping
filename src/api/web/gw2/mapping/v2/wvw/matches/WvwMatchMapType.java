@@ -15,7 +15,7 @@ import api.web.gw2.mapping.v2.APIv2;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/wvw/matches") // NOI18N.
-public enum MatchMapType {
+public enum WvwMatchMapType {
 
     /**
      * Defines the red borderland.
@@ -41,7 +41,7 @@ public enum MatchMapType {
 
     final String value;
 
-    private MatchMapType(String value) {
+    private WvwMatchMapType(String value) {
         this.value = value;
     }
 }

@@ -21,7 +21,7 @@ import java.util.Set;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/wvw/matches") // NOI18N.
-public interface Match {
+public interface WvwMatch {
 
     /**
      * Gets the id of this WvW match.
@@ -46,46 +46,46 @@ public interface Match {
 
     /**
      * Gets the scores for this WvW match.
-     * @return A {@code Map<MatchTeam, Integer>}, never {@code null}, may be empty.
+     * @return A {@code Map<WvwMatchTeam, Integer>}, never {@code null}, may be empty.
      */
     @MapValue
-    Map<MatchTeam, Integer> getScores();
+    Map<WvwMatchTeam, Integer> getScores();
 
     /**
      * Gets the worlds for this WvW match.
-     * @return A {@code Map<MatchTeam, Integer>}, never {@code null}, may be empty.
+     * @return A {@code Map<WvwMatchTeam, Integer>}, never {@code null}, may be empty.
      */
     @IdValue
     @MapValue
-    Map<MatchTeam, Integer> getWorlds();
+    Map<WvwMatchTeam, Integer> getWorlds();
 
     /**
      * Gets all worlds that are teamed up for this WvW match.
-     * @return A {@code Map<MatchTeam, Set<Integer>>}, never {@code null}, may be empty.
+     * @return A {@code Map<WvwMatchTeam, Set<Integer>>}, never {@code null}, may be empty.
      */
     @IdValue
     @MapValue
     @SetValue        
-    Map<MatchTeam, Set<Integer>> getAllWorlds();
+    Map<WvwMatchTeam, Set<Integer>> getAllWorlds();
     
     /**
      * Gets the deaths for this WvW match.
-     * @return A {@code Map<MatchTeam, Integer>}, never {@code null}, may be empty.
+     * @return A {@code Map<WvwMatchTeam, Integer>}, never {@code null}, may be empty.
      */
     @MapValue
-    Map<MatchTeam, Integer> getDeaths();
+    Map<WvwMatchTeam, Integer> getDeaths();
 
     /**
      * Gets the kills for this WvW match.
-     * @return A {@code Map<MatchTeam, Integer>}, never {@code null}, may be empty.
+     * @return A {@code Map<WvwMatchTeam, Integer>}, never {@code null}, may be empty.
      */
     @MapValue
-    Map<MatchTeam, Integer> getKills();
+    Map<WvwMatchTeam, Integer> getKills();
 
     /**
      * Gets detailed information about each map during this match.
      * @return A non-modifiable {@code Set<MatchMap>}, never {@code null}.
      */
     @SetValue
-    Set<MatchMap> getMaps();
+    Set<WvwMatchMap> getMaps();
 }

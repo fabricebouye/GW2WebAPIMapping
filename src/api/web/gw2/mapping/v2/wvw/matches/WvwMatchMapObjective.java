@@ -11,7 +11,7 @@ import api.web.gw2.mapping.core.DateValue;
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.OptionalValue;
 import api.web.gw2.mapping.v2.APIv2;
-import api.web.gw2.mapping.v2.wvw.objectives.ObjectiveType;
+import api.web.gw2.mapping.v2.wvw.objectives.WvwObjectiveType;
 import java.time.ZonedDateTime;
 import java.util.Optional;
 
@@ -20,7 +20,7 @@ import java.util.Optional;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/wvw/matches") // NOI18N.
-public interface MatchMapObjective {
+public interface WvwMatchMapObjective {
 
     /**
      * Gets the id of this objective.
@@ -31,15 +31,15 @@ public interface MatchMapObjective {
 
     /**
      * Gets the type of this objective.
-     * @return An {@code ObjectiveType} instance, never {@code null}.
+     * @return A {@code WvwObjectiveType} instance, never {@code null}.
      */
-    ObjectiveType getType();
+    WvwObjectiveType getType();
 
     /**
      * Gets the owner of this objective.
-     * @return A {@code MatchTeam} instance, never {@code null}.
+     * @return A {@code WvwMatchTeam} instance, never {@code null}.
      */
-    MatchTeam getOwner();
+    WvwMatchTeam getOwner();
 
     /**
      * Gets the time at which this objective was last flipped.

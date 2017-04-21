@@ -11,28 +11,20 @@ import api.web.gw2.mapping.core.ImplementationSpecific;
 import api.web.gw2.mapping.v2.APIv2;
 
 /**
- * Defines all WvW match teams.
+ * Define all WvW match map bonus types.
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/wvw/matches") // NOI18N.
-public enum MatchTeam {
+public enum WvwMatchMapBonusType {
 
     /**
-     * Defines the blue team.
+     * Defines the bloodlust bonus.
      */
-    BLUE("Blue"), // NOI18N.
+    BLOODLUST("Bloodlust"), // NOI18N.
     /**
-     * Defines the green team.
+     * Defines the eternal battlegrounds.
      */
-    GREEN("Green"), // NOI18N.
-    /**
-     * Defines the neutral team.
-     */
-    NEUTRAL("Neutral"), // NOI18N.
-    /**
-     * Defines the red team.
-     */
-    RED("Red"), // NOI18N.
+    CENTER("Center"), // NOI18N.
     /**
      * Fail safe value.
      */
@@ -41,7 +33,7 @@ public enum MatchTeam {
 
     final String value;
 
-    private MatchTeam(String value) {
+    private WvwMatchMapBonusType(String value) {
         this.value = value;
     }
 }
