@@ -58,7 +58,8 @@ public interface Recipe {
 
     /**
      * Gets a set of all crafting disciplines for this recipe.
-     * @return A non-modifiable {@code Set<RecipeCraftingDiscipline>} instance, never {@code null}.
+     * @return A non-modifiable {@code Set<RecipeCraftingDiscipline>} instance,
+     * never {@code null}.
      */
     @SetValue
     Set<RecipeCraftingDiscipline> getDisciplines();
@@ -72,21 +73,23 @@ public interface Recipe {
 
     /**
      * Gets a set of all flags for this recipe.
-     * @return A non-modifiable {@code Set<RecipeFlag>} instance, never {@code null}.
+     * @return A non-modifiable {@code Set<RecipeFlag>} instance, never
+     * {@code null}.
      */
     @SetValue
     Set<RecipeFlag> getFlags();
 
     /**
      * Gets a set of all ingredients for this recipe.
-     * @return A non-modifiable {@code Set<RecipeIngredient>} instance, never {@code null}.
+     * @return A non-modifiable {@code Set<RecipeIngredient>} instance, never
+     * {@code null}.
      */
     @SetValue
     Set<RecipeIngredient> getIngredients();
 
     /**
      * Gets the chat link for this recipe.
-     * @return  A {@code String} instance, never {@code null}.
+     * @return A {@code String} instance, never {@code null}.
      */
     String getChatLink();
 }

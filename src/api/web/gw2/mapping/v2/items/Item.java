@@ -86,21 +86,24 @@ public interface Item {
 
     /**
      * Get a set of flags on this items.
-     * @return A non-modifiable {@code Set<ItemFlag>} instance, never {@code null}, set may be empty.
+     * @return A non-modifiable {@code Set<ItemFlag>} instance, never
+     * {@code null}, set may be empty.
      */
     @SetValue
     Set<ItemFlag> getFlags();
 
     /**
      * Get a set of game types on this items.
-     * @return A non-modifiable {@code Set<ItemGameType>} instance, never {@code null}, set may be empty.
+     * @return A non-modifiable {@code Set<ItemGameType>} instance, never
+     * {@code null}, set may be empty.
      */
     @SetValue
     Set<ItemGameType> getGameTypes();
 
     /**
      * Get a set of restrictions on this items.
-     * @return A non-modifiable {@code Set<ItemRestriction>} instance, never {@code null}, set may be empty.
+     * @return A non-modifiable {@code Set<ItemRestriction>} instance, never
+     * {@code null}, set may be empty.
      */
     @SetValue
     Set<ItemRestriction> getRestrictions();
@@ -123,8 +126,8 @@ public interface Item {
     /**
      * Gets the chat link needed to pass this item to other players.
      * @return A {@code String} instance, never {@code null}.
-     * <br>Old JSON files from earlier versions of the API or items that cannot be linked may return an empty {@code string}.
+     * <br>Old JSON files from earlier versions of the API or items that cannot
+     * be linked may return an empty {@code string}.
      */
-    @OptionalValue
     String getChatLink();
 }

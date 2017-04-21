@@ -94,6 +94,5 @@ public interface Objective {
      * <br>Old JSON files from earlier versions of the API or objectives that
      * cannot be linked may return an empty {@code string}.
      */
-    @OptionalValue
     String getChatLink();
 }
