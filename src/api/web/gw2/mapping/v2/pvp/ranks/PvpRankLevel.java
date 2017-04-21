@@ -20,14 +20,14 @@ public interface PvpRankLevel {
 
     /**
      * Gets the min rank of this PvP rank level.
-     * @return
+     * @return An {@code int}.
      */
     @LevelValue
     int getMinRank();
 
     /**
      * Gets the max rank of this PvP rank level.
-     * @return
+     * @return An {@code int}.
      */
     @LevelValue
     int getMaxRank();
@@ -35,7 +35,7 @@ public interface PvpRankLevel {
     /**
      * Gets amount of points needed to go from min rank to max rank of this PvP
      * rank level.
-     * @return
+     * @return An {@code int}.
      */
     @QuantityValue
     int getPoints();

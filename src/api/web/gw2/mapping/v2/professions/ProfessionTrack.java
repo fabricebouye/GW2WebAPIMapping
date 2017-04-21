@@ -20,7 +20,7 @@ public interface ProfessionTrack {
 
     /**
      * Gets the id of this training track.
-     * @return 
+     * @return An {@code int}.
      */
     @IdValue
     int getId();

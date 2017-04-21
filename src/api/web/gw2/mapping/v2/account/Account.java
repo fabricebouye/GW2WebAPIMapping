@@ -97,7 +97,7 @@ public interface Account {
 
     /**
      * Gets the WvW rank of this account.
-     * @return
+     * @return An {@code int}.
      */
     // @todo Maybe create a WvwLevelValue.
     @LevelValue

@@ -20,7 +20,7 @@ import api.web.gw2.mapping.v2.characters.id.equipment.CharacterEquipmentStats;
 /**
  * Defines an inventory object within a bag.
  * @author Fabrice Bouyé
- * @see InventoryBag
+ * @see CharacterInventoryBag
  */
 @APIv2(endpoint = "v2/characters/:id/inventory", requiresAuthentication = true, scope = "inventories") // NOI18N.
 public interface CharacterInventory {
@@ -78,9 +78,9 @@ public interface CharacterInventory {
     Optional<String> getBoundTo();
 
     /**
-     * @todo To be commented.
      * @return An {@code OptionalInt} instance, never {@code null}:
      */
+    // @todo To be commented.
     @OptionalValue
     @IdValue
     OptionalInt getInfixUpgradeId();

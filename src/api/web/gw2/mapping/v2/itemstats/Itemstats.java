@@ -22,19 +22,22 @@ public interface Itemstats {
 
     /**
      * Gets the id of this item stats set.
+     * @return An {@code int}.
      */
     @IdValue
     int getId();
 
     /**
      * Gets the i18n name of this item stats set.
+     * @return A {@code String} instance, never {@code null}.
      */
     @LocalizedResource
     String getName();
 
     /**
      * Gets the attributes values for this items stats set.
-     * @return A non-modifiable {@code Map<ItemstatsAttribute, Integer>}, never {@code null}.
+     * @return A non-modifiable {@code Map<ItemstatsAttribute, Integer>}, never
+     * {@code null}.
      */
     @MapValue
     Map<ItemstatsAttribute, Integer> getAttributes();

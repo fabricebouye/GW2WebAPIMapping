@@ -26,8 +26,7 @@ public interface CharacterSabUnlock {
 
     /**
      * Gets the name of the song unlocked.
-     * @return A {@code String}, never {
-     * @ code null}.
+     * @return A {@code String}, never {@code null}.
      */
     String getName();
 }

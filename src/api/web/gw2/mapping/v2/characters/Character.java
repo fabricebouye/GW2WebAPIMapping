@@ -207,7 +207,7 @@ public interface Character {
      * Gets the WvW abilities of this character's.
      * @return A non-modifiable {@code Set<CharacterAbility>} instance, never
      * {@code null}.
-     * @see api.web.gw2.mapping.v2.wvw.abilities.Ability
+     * @see api.web.gw2.mapping.v2.wvw.abilities.WvwAbility
      */
     @SetValue
     Set<CharacterAbility> getWvwAbilities();

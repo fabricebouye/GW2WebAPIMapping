@@ -165,7 +165,7 @@ public interface Skill {
     OptionalInt getPrevChain();
 
     /**
-     * Gets the ids of transformations skills granted by this skill (shrouds & avatar states and other transformations).
+     * Gets the ids of transformations skills granted by this skill (shrouds &amp; avatar states and other transformations).
      * @return A non-modifiable {@code Set<Integer>} instance, never {@code null}; may be empty.
      */
     @IdValue

@@ -19,7 +19,8 @@ import java.util.OptionalInt;
 /**
  * Defines an inventory slot.
  * @author Fabrice Bouyé
- * @see InventoryBag
+ * @see api.web.gw2.mapping.v2.characters.id.inventory.CharacterInventory
+ * @see api.web.gw2.mapping.v2.characters.id.inventory.CharacterInventoryBag
  */
 @APIv2(endpoint = "v2/account/inventory", requiresAuthentication = true, scope = "inventories") // NOI18N.
 public interface SharedInventory {

@@ -24,7 +24,7 @@ public interface Category {
 
     /**
      * Gets the id of this category.
-     * @return An {@code int} &gt: 0.
+     * @return An {@code int} &gt; 0.
      */
     @IdValue
     int getId();
@@ -45,7 +45,7 @@ public interface Category {
 
     /**
      * Gets the order of this category.
-     * @return An {@code int} &ge: 0.
+     * @return An {@code int} &ge; 0.
      */
     @QuantityValue
     int getOrder();

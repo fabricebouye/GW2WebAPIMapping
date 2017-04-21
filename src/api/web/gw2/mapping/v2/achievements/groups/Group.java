@@ -43,7 +43,7 @@ public interface Group {
 
     /**
      * Gets the order of this category group.
-     * @return An {@code int} &ge: 0.
+     * @return An {@code int} &ge; 0.
      */
     @QuantityValue
     int getOrder();

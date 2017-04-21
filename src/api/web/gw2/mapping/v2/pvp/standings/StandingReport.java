@@ -48,33 +48,23 @@ public interface StandingReport {
         }
     };
 
-    /**
-     * @todo Document when wiki article is available.
-     */
+    // @todo Document when wiki article is available.
     @QuantityValue
     int getTotalPoints();
 
-    /**
-     * @todo Document when wiki article is available.
-     */
+    // @todo Document when wiki article is available.
     @IdValue
     int getDivision();
 
-    /**
-     * @todo Document when wiki article is available.
-     */
+    // @todo Document when wiki article is available.
     @IdValue
     int getTier();
 
-    /**
-     * @todo Document when wiki article is available.
-     */
+    // @todo Document when wiki article is available.
     @QuantityValue
     int getPoints();
 
-    /**
-     * @todo Document when wiki article is available.
-     */
+    // @todo Document when wiki article is available.
     @QuantityValue
     int getRepeats();
 }

@@ -14,7 +14,6 @@ import api.web.gw2.mapping.v2.APIv2;
 /**
  * Defines an inventory object within a guild stash.
  * @author Fabrice Bouyé
- * @see InventoryBag
  */
 @APIv2(endpoint = "v2/characters/:id/stash", requiresAuthentication = true, scope = "guild") // NOI18N.
 public interface StashInventory {

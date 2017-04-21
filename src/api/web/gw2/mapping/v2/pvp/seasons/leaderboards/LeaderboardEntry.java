@@ -71,7 +71,7 @@ public interface LeaderboardEntry {
 
     /**
      * Gets the values for scoring.
-     * @return A non-modifiable {@codeSet<LeaderboardScore>} instance, never {@code null}; may be empty.
+     * @return A non-modifiable {@code Set<LeaderboardScore>} instance, never {@code null}; may be empty.
      */
     @SetValue
     Set<LeaderboardScore> getScores();

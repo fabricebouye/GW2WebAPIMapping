@@ -19,7 +19,7 @@ public interface ProfessionWeaponSkill {
 
     /**
      * Gets the id of this weapon skill.
-     * @return
+     * @return An {@code int}.
      */
     @IdValue
     int getId();

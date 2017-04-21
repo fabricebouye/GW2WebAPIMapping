@@ -21,7 +21,7 @@ public interface CharacterEquipmentStats {
 
     /**
      * Gets the id of this equipment stats set.
-     * @return
+     * @return An {@code int}.
      */
     @IdValue
     int getId();
