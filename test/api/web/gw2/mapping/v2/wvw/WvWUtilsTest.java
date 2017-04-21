@@ -20,9 +20,9 @@ import static org.junit.Assert.*;
  * Unit test.
  * @author Fabrice Bouyé
  */
-public class WvWUtilsTest {
+public class WvwUtilsTest {
 
-    public WvWUtilsTest() {
+    public WvwUtilsTest() {
     }
 
     @BeforeClass
@@ -45,8 +45,8 @@ public class WvWUtilsTest {
      * Test of MapType.
      */
     @Test
-    public void testFindMapType() {
-        System.out.println("findMapType");
+    public void testWvwFindMapType() {
+        System.out.println("findWvwMapType");
         final String[] values = {
             "Center", // NOI18N.
             "BlueHome", // NOI18N.
@@ -56,21 +56,21 @@ public class WvWUtilsTest {
             null,
             "" // NOI18N.
         };
-        final MapType[] expResults = {
-            MapType.CENTER,
-            MapType.BLUE_HOME,
-            MapType.GREEN_HOME,
-            MapType.RED_HOME,
-            MapType.EDGE_OF_THE_MISTS,
-            MapType.UNKNOWN,
-            MapType.UNKNOWN
+        final WvwMapType[] expResults = {
+            WvwMapType.CENTER,
+            WvwMapType.BLUE_HOME,
+            WvwMapType.GREEN_HOME,
+            WvwMapType.RED_HOME,
+            WvwMapType.EDGE_OF_THE_MISTS,
+            WvwMapType.UNKNOWN,
+            WvwMapType.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
                 forEach(index -> {
                     final String value = values[index];
-                    final MapType expResult = expResults[index];
-                    final MapType result = EnumValueFactory.INSTANCE.mapEnumValue(MapType.class, value);
+                    final WvwMapType expResult = expResults[index];
+                    final WvwMapType result = EnumValueFactory.INSTANCE.mapEnumValue(WvwMapType.class, value);
                     assertEquals(expResult, result);
                 });
     }

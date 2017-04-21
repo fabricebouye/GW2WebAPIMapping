@@ -15,7 +15,7 @@ import api.web.gw2.mapping.v2.APIv2;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/wvw")
-public enum MapType {
+public enum WvwMapType {
 
     /**
      * Defines the center (Eternal Battleground) map type.
@@ -45,7 +45,7 @@ public enum MapType {
 
     final String value;
 
-    private MapType(String value) {
+    private WvwMapType(String value) {
         this.value = value;
     }
 }
