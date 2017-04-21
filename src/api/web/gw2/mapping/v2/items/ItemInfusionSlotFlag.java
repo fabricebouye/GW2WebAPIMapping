@@ -41,7 +41,9 @@ public enum ItemInfusionSlotFlag {
     UTILITY("Utility"), // NOI18N.
     /**
      * Defines the agony resistance flag.
+     * @deprecated 
      */
+    @Deprecated
     AGONY("Agony"), // NOI18N.
     /**
      * Fail safe value.
