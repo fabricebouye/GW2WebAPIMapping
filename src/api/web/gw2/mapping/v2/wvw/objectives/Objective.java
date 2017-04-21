@@ -18,6 +18,7 @@ import api.web.gw2.mapping.core.Point3D;
 import api.web.gw2.mapping.core.URLReference;
 import api.web.gw2.mapping.core.URLValue;
 import api.web.gw2.mapping.v2.APIv2;
+import java.util.OptionalInt;
 
 /**
  * Defines a WvW objective.
@@ -95,4 +96,12 @@ public interface Objective {
      * cannot be linked may return an empty {@code string}.
      */
     String getChatLink();
+
+    /**
+     * Gets the id of the upgrade of this objective.
+     * @return An {@code OptionalInt} instance, never {@code null}.
+     */
+    @IdValue
+    @OptionalValue
+    OptionalInt getUpgradeId();
 }
