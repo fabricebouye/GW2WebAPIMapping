@@ -146,6 +146,7 @@ public class CharacterEquipmentUtilsTest {
         final String[] values = {
             "BoonDuration", // NOI18N.
             "ConditionDamage", // NOI18N.
+            "ConditionDuration", // NOI18N.
             "CritDamage", // NOI18N.
             "Healing", // NOI18N.
             "Power", // NOI18N.
@@ -158,6 +159,7 @@ public class CharacterEquipmentUtilsTest {
         final CharacterEquipmentAttribute[] expResults = {
             CharacterEquipmentAttribute.BOON_DURATION,
             CharacterEquipmentAttribute.CONDITION_DAMAGE,
+            CharacterEquipmentAttribute.CONDITION_DURATION,
             CharacterEquipmentAttribute.CRIT_DAMAGE,
             CharacterEquipmentAttribute.HEALING,
             CharacterEquipmentAttribute.POWER,

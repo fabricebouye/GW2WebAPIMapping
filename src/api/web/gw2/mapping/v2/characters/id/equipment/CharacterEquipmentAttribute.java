@@ -25,6 +25,10 @@ public enum CharacterEquipmentAttribute {
      */
     CONDITION_DAMAGE("ConditionDamage"), // NOI18N.
     /**
+     * Defines the condition duration attribute.
+     */
+    CONDITION_DURATION("ConditionDuration"), // NOI18N.
+    /**
      * Defines the ferocity (critical damage) attribute.
      */
     CRIT_DAMAGE("CritDamage"), // NOI18N.
