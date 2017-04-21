@@ -17,7 +17,7 @@ import api.web.gw2.mapping.v2.APIv2;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/wvw/ranks") // NOI18N.
-public interface Rank {
+public interface WvwRank {
 
     /**
      * Gets the id of this WvW rank.
