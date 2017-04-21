@@ -180,6 +180,7 @@ public class ItemsUtilsTest {
         final String[] values = {
             "AccountBindOnUse", // NOI18N.
             "AccountBound", // NOI18N.
+            "DeleteWarning", // NOI18N.
             "HideSuffix", // NOI18N.
             "MonsterOnly", // NOI18N.
             "NotUpgradeable", // NOI18N.
@@ -196,6 +197,7 @@ public class ItemsUtilsTest {
         final ItemFlag[] expResults = {
             ItemFlag.ACCOUNT_BIND_ON_USE,
             ItemFlag.ACCOUNT_BOUND,
+            ItemFlag.DELETE_WARNING,
             ItemFlag.HIDE_SUFFIX,
             ItemFlag.MONSTER_ONLY,
             ItemFlag.NOT_UPGRADEABLE,

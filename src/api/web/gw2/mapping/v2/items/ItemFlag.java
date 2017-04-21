@@ -26,6 +26,10 @@ public enum ItemFlag {
      */
     ACCOUNT_BOUND("AccountBound"), // NOI18N.
     /**
+     * Define the delete warning flag.
+     */
+    DELETE_WARNING("DeleteWarning"), // NOI18N.
+    /**
      * Define the hide suffix flag.
      */
     HIDE_SUFFIX("HideSuffix"), // NOI18N.
