@@ -20,9 +20,9 @@ import static org.junit.Assert.*;
  * Unit test.
  * @author Fabrice Bouyé
  */
-public class ObjectivesUtilsTest {
+public class WvwObjectivesUtilsTest {
 
-    public ObjectivesUtilsTest() {
+    public WvwObjectivesUtilsTest() {
     }
 
     @BeforeClass
@@ -45,8 +45,8 @@ public class ObjectivesUtilsTest {
      * Test of ObjectiveType.
      */
     @Test
-    public void testFindObjectiveType() {
-        System.out.println("findObjectiveType");
+    public void testFindWvwObjectiveType() {
+        System.out.println("findWvwObjectiveType");
         final String[] values = {
             "Camp", // NOI18N.
             "Generic", // NOI18N.
@@ -60,25 +60,25 @@ public class ObjectivesUtilsTest {
             null,
             "" // NOI18N.
         };
-        final ObjectiveType[] expResults = {
-            ObjectiveType.CAMP,
-            ObjectiveType.GENERIC,
-            ObjectiveType.KEEP,
-            ObjectiveType.RESOURCE,
-            ObjectiveType.RUINS,
-            ObjectiveType.TOWER,
-            ObjectiveType.CASTLE,
-            ObjectiveType.MERCENARY,
-            ObjectiveType.SPAWN,
-            ObjectiveType.UNKNOWN,
-            ObjectiveType.UNKNOWN
+        final WvwObjectiveType[] expResults = {
+            WvwObjectiveType.CAMP,
+            WvwObjectiveType.GENERIC,
+            WvwObjectiveType.KEEP,
+            WvwObjectiveType.RESOURCE,
+            WvwObjectiveType.RUINS,
+            WvwObjectiveType.TOWER,
+            WvwObjectiveType.CASTLE,
+            WvwObjectiveType.MERCENARY,
+            WvwObjectiveType.SPAWN,
+            WvwObjectiveType.UNKNOWN,
+            WvwObjectiveType.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
                 forEach(index -> {
                     final String value = values[index];
-                    final ObjectiveType expResult = expResults[index];
-                    final ObjectiveType result = EnumValueFactory.INSTANCE.mapEnumValue(ObjectiveType.class, value);
+                    final WvwObjectiveType expResult = expResults[index];
+                    final WvwObjectiveType result = EnumValueFactory.INSTANCE.mapEnumValue(WvwObjectiveType.class, value);
                     assertEquals(expResult, result);
                 });
     }
