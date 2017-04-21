@@ -18,16 +18,26 @@ import api.web.gw2.mapping.v2.APIv2;
 public enum ItemInfusionSlotFlag {
 
     /**
-     * Defines the defense flag.
+     * Defines the defense slot flag.
+     * @deprecated 
      */
+    @Deprecated
     DEFENSE("Defense"), // NOI18N.
     /**
-     * Defines the offense flag.
+     * Defines the offense slot flag.
+     * @deprecated 
      */
+    @Deprecated
     OFFENSE("Offense"), // NOI18N.
     /**
-     * Defines the utility flag.
+     * Defines the influsion slot flag.
      */
+    INFUSION("Infusion"), // NOI18N.
+    /**
+     * Defines the utility slot flag.
+     * @deprecated 
+     */
+    @Deprecated
     UTILITY("Utility"), // NOI18N.
     /**
      * Defines the agony resistance flag.

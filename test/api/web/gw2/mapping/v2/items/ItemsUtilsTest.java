@@ -436,6 +436,7 @@ public class ItemsUtilsTest {
         final String[] values = {
             "Agony", // NOI18N.
             "Defense", // NOI18N.
+            "Infusion", // NOI18N.
             "Offense", // NOI18N.
             "Utility", // NOI18N.
             "", // NOI18N.
@@ -444,6 +445,7 @@ public class ItemsUtilsTest {
         final ItemInfusionSlotFlag[] expResults = {
             ItemInfusionSlotFlag.AGONY,
             ItemInfusionSlotFlag.DEFENSE,
+            ItemInfusionSlotFlag.INFUSION,
             ItemInfusionSlotFlag.OFFENSE,
             ItemInfusionSlotFlag.UTILITY,
             ItemInfusionSlotFlag.UNKNOWN,
