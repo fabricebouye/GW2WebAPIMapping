@@ -20,7 +20,7 @@ import java.util.Set;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/wvw/abilities") // NOI18N.
-public interface Ability {
+public interface WvwAbility {
 
     /**
      * Gets the id of this ability.
@@ -52,8 +52,8 @@ public interface Ability {
 
     /**
      * Gets a set of descriptions for each rank of this ability.
-     * @return A non-modifiable {@code Set<AbilityRank>} instance, never {@code null}.
+     * @return A non-modifiable {@code Set<WvwAbilityRank>} instance, never {@code null}.
      */
     @SetValue
-    Set<AbilityRank> getRanks();
+    Set<WvwAbilityRank> getRanks();
 }

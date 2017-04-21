@@ -16,7 +16,7 @@ import api.web.gw2.mapping.v2.APIv2;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/wvw/abilities") // NOI18N.
-public interface AbilityRank {
+public interface WvwAbilityRank {
 
     /**
      * Gets the cost of this ability rank.
