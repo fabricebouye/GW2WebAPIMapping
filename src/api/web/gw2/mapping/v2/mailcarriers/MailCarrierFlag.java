@@ -15,7 +15,7 @@ import api.web.gw2.mapping.core.ImplementationSpecific;
  */
 public enum MailCarrierFlag {
     /**
-     * Defines the air attunement.
+     * Defines default flag.
      */
     DEFAULT("Default"), // NOI18N.
     /**
