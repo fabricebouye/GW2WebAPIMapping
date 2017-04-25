@@ -37,7 +37,7 @@ public interface MailCarrier {
      */
     @IdValue
     @SetValue
-    Set<Integer> getUnlocks();
+    Set<Integer> getUnlockItems();
 
     /**
      * Gets the order in which to sort this mail carrier.
