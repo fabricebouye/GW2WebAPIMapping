@@ -20,9 +20,9 @@ import static org.junit.Assert.*;
  * Unit test.
  * @author Fabrice Bouyé
  */
-public class GamesUtilsTest {
+public class PvpGamesUtilsTest {
 
-    public GamesUtilsTest() {
+    public PvpGamesUtilsTest() {
     }
 
     @BeforeClass
@@ -42,11 +42,11 @@ public class GamesUtilsTest {
     }
 
     /**
-     * Test of GameTeam.
+     * Test of PvpGameTeam.
      */
     @Test
-    public void testFindGameTeam() {
-        System.out.println("findGameTeam");
+    public void testFindPvpGameTeam() {
+        System.out.println("findPvpGameTeam");
         final String[] values = {
             "Red", // NOI18N.
             "Blue", // NOI18N.
@@ -55,48 +55,48 @@ public class GamesUtilsTest {
             null,
             "" // NOI18N.
         };
-        final GameTeam[] expResults = {
-            GameTeam.RED,
-            GameTeam.BLUE,
-            GameTeam.RED,
-            GameTeam.BLUE,
-            GameTeam.UNKNOWN,
-            GameTeam.UNKNOWN
+        final PvpGameTeam[] expResults = {
+            PvpGameTeam.RED,
+            PvpGameTeam.BLUE,
+            PvpGameTeam.RED,
+            PvpGameTeam.BLUE,
+            PvpGameTeam.UNKNOWN,
+            PvpGameTeam.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
                 forEach(index -> {
                     final String value = values[index];
-                    final GameTeam expResult = expResults[index];
-                    final GameTeam result = EnumValueFactory.INSTANCE.mapEnumValue(GameTeam.class, value);
+                    final PvpGameTeam expResult = expResults[index];
+                    final PvpGameTeam result = EnumValueFactory.INSTANCE.mapEnumValue(PvpGameTeam.class, value);
                     assertEquals(expResult, result);
                 });
     }
 
     /**
-     * Test of GameResult.
+     * Test of PvpGameResult.
      */
     @Test
-    public void testFindGameResult() {
-        System.out.println("findGameResult");
+    public void testFindPvpGameResult() {
+        System.out.println("findPvpGameResult");
         final String[] values = {
             "Defeat", // NOI18N.
             "Victory", // NOI18N.
             null,
             "" // NOI18N.
         };
-        final GameResult[] expResults = {
-            GameResult.DEFEAT,
-            GameResult.VICTORY,
-            GameResult.UNKNOWN,
-            GameResult.UNKNOWN
+        final PvpGameResult[] expResults = {
+            PvpGameResult.DEFEAT,
+            PvpGameResult.VICTORY,
+            PvpGameResult.UNKNOWN,
+            PvpGameResult.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
                 forEach(index -> {
                     final String value = values[index];
-                    final GameResult expResult = expResults[index];
-                    final GameResult result = EnumValueFactory.INSTANCE.mapEnumValue(GameResult.class, value);
+                    final PvpGameResult expResult = expResults[index];
+                    final PvpGameResult result = EnumValueFactory.INSTANCE.mapEnumValue(PvpGameResult.class, value);
                     assertEquals(expResult, result);
                 });
     }

@@ -19,7 +19,7 @@ import java.util.Map;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/pvp/games", requiresAuthentication = true, scope = "pvp") // NOI18N.
-public interface Game {
+public interface PvpGame {
 
     /**
      * Gets the id of this game.
@@ -51,15 +51,15 @@ public interface Game {
 
     /**
      * Gets the result of the game.
-     * @return A {@code GameResult} instance, never {@code null}.
+     * @return A {@code PvpGameResult} instance, never {@code null}.
      */
-    GameResult getResult();
+    PvpGameResult getResult();
 
     /**
      * Gets the team on which was the player during the game.
-     * @return A {@code GameTeam} instance, never {@code null}.
+     * @return A {@code PvpGameTeam} instance, never {@code null}.
      */
-    GameTeam getTeam();
+    PvpGameTeam getTeam();
 
     /**
      * Gets the profession played by the player during the game.
@@ -69,7 +69,7 @@ public interface Game {
 
     /**
      * Gets the scores for each team.
-     * @return A non-modifiable {@code Map<GameTeam, Integer>} instance, never {@code null}.
+     * @return A non-modifiable {@code Map<PvpGameTeam, Integer>} instance, never {@code null}.
      */
-    Map<GameTeam, Integer> getScores();
+    Map<PvpGameTeam, Integer> getScores();
 }

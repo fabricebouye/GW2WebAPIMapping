@@ -15,7 +15,7 @@ import api.web.gw2.mapping.v2.APIv2;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/pvp/games", requiresAuthentication = true, scope = "pvp") // NOI18N.
-public enum GameTeam {
+public enum PvpGameTeam {
 
     /**
      * Defines the blue team.
@@ -33,7 +33,7 @@ public enum GameTeam {
 
     final String value;
 
-    private GameTeam(final String value) {
+    private PvpGameTeam(final String value) {
         this.value = value;
     }
 }
