@@ -54,7 +54,7 @@ public interface MailCarrier {
     URLReference getIcon();
 
     /**
-     * Gets the localized name of this mail carrier.
+     * Gets the i18n name of this mail carrier.
      * @return A {@code String} instance; never {@code null}.
      */
     @LocalizedResource

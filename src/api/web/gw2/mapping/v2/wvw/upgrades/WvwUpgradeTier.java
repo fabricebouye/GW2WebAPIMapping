@@ -19,7 +19,7 @@ import java.util.Set;
 public interface WvwUpgradeTier {
 
     /**
-     * Gets the localized name of this tier.
+     * Gets the i18n name of this tier.
      * @return A {@code String} instance, never {@code null}.
      */
     @LocalizedResource

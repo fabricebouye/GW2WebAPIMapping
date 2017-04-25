@@ -18,7 +18,7 @@ import api.web.gw2.mapping.core.URLValue;
 public interface WvwUpgrade {
 
     /**
-     * Gets the localized name of this upgrade.
+     * Gets the i18n name of this upgrade.
      * @return A {@code String} instance, never {@code null}.
      */
     @LocalizedResource

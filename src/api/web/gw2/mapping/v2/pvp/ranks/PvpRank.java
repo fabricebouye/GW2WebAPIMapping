@@ -39,7 +39,7 @@ public interface PvpRank {
     int getFinisherId();
 
     /**
-     * Gets the localized name of this PvP rank.
+     * Gets the i18n name of this PvP rank.
      * @return A {@code String} instance, never {@code null}.
      */
     @LocalizedResource

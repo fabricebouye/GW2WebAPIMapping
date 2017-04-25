@@ -55,7 +55,7 @@ public interface Glider {
     URLReference getIcon();
 
     /**
-     * Gets the localized name of this glider.
+     * Gets the i18n name of this glider.
      * @return A {@code String} instance, never {@code null}.
      */
     @LocalizedResource

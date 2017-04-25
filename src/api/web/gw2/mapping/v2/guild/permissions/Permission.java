@@ -26,7 +26,7 @@ public interface Permission {
     PermissionId getId();
     
     /**
-    * Gets this permission's localized name.
+    * Gets this permission's i18n name.
     * @return A {@code String} instance, never {@code null}.
     */
     @LocalizedResource
