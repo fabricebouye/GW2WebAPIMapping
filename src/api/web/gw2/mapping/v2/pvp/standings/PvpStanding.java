@@ -15,7 +15,7 @@ import api.web.gw2.mapping.v2.APIv2;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/pvp/standings", requiresAuthentication = true, scope = "pvp") // NOI18N.
-public interface Standing {
+public interface PvpStanding {
 
     /**
      * Gets the id of the season of this standing.
@@ -26,13 +26,13 @@ public interface Standing {
 
     /**
      * Gets the current standing report.
-     * @return A {@code StandingReport} instance, never {@code null}.
+     * @return A {@code PvpStandingReport} instance, never {@code null}.
      */
-    StandingReport getCurrent();
+    PvpStandingReport getCurrent();
 
     /**
      * Gets the best standing report.
-     * @return A {@code StandingReport} instance, never {@code null}.
+     * @return A {@code PvpStandingReport} instance, never {@code null}.
      */
-    StandingReport getBest();
+    PvpStandingReport getBest();
 }

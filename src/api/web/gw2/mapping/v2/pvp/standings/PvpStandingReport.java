@@ -16,12 +16,12 @@ import api.web.gw2.mapping.v2.APIv2;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/pvp/standings", requiresAuthentication = true, scope = "pvp") // NOI18N.
-public interface StandingReport {
+public interface PvpStandingReport {
 
     /**
      * The singleton empty instance.
      */
-    public static final StandingReport EMPTY = new StandingReport() {
+    public static final PvpStandingReport EMPTY = new PvpStandingReport() {
         @Override
         public int getTotalPoints() {
             return 0;
