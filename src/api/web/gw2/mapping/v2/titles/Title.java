@@ -9,7 +9,12 @@ package api.web.gw2.mapping.v2.titles;
 
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.LocalizedResource;
+import api.web.gw2.mapping.core.OptionalValue;
+import api.web.gw2.mapping.core.QuantityValue;
+import api.web.gw2.mapping.core.SetValue;
 import api.web.gw2.mapping.v2.APIv2;
+import java.util.OptionalInt;
+import java.util.Set;
 
 /**
  * Defines a title.
@@ -35,7 +40,26 @@ public interface Title {
     /**
      * Gets the id of the achievement that grants this title.
      * @return An {@code int}.
+     * @deprecated 
      */
+    @Deprecated
     @IdValue
     int getAchievement();
+
+    /**
+     * Gets the set of achievement ids that grants this title.
+     * @return A {@code Set<Integer>} instance; never {@code null}. May be empty.
+     * @see api.web.gw2.mapping.v2.achievements.Achievement
+     */
+    @IdValue
+    @SetValue
+    Set<Integer> getAchievements();
+
+    /**
+     * Gets the number of achievement points required to obtain this title.
+     * @return An {@code OptionalInt} instance; never {@code null}. May be empty.
+     */
+    @QuantityValue
+    @OptionalValue
+    OptionalInt getApRequired();
 }
