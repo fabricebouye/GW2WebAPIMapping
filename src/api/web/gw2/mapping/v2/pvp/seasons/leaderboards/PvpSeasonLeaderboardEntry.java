@@ -23,7 +23,7 @@ import java.util.Set;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/pvp/seasons/leaderboard") // NOI18N.
-public interface LeaderboardEntry {
+public interface PvpSeasonLeaderboardEntry {
 
     /**
      * Gets the id of the account.
@@ -71,8 +71,8 @@ public interface LeaderboardEntry {
 
     /**
      * Gets the values for scoring.
-     * @return A non-modifiable {@code Set<LeaderboardScore>} instance, never {@code null}; may be empty.
+     * @return A non-modifiable {@code Set<PvpSeasonLeaderboardScore>} instance, never {@code null}; may be empty.
      */
     @SetValue
-    Set<LeaderboardScore> getScores();
+    Set<PvpSeasonLeaderboardScore> getScores();
 }

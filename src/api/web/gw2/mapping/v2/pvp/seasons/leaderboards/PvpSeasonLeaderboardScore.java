@@ -16,7 +16,7 @@ import api.web.gw2.mapping.v2.APIv2;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/pvp/seasons/leaderboard") // NOI18N.
-public interface LeaderboardScore {
+public interface PvpSeasonLeaderboardScore {
 
     /**
      * Gets the id of the scoring.
