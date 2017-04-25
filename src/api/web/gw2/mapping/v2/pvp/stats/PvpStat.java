@@ -17,7 +17,7 @@ import java.util.Map;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/pvp/stats", requiresAuthentication = true, scope = "pvp") // NOI18N.
-public interface Stat {
+public interface PvpStat {
 
     /**
      * Gets the PvP rank of the account.
@@ -39,23 +39,23 @@ public interface Stat {
 
     /**
      * Gets the aggregate result for the account.
-     * @return A {@code StatResult}, never {@code null}.
+     * @return A {@code PvpStatResult}, never {@code null}.
      */
-    StatResult getAggregate();
+    PvpStatResult getAggregate();
 
     /**
      * Gets the result for each ingame profession for the account.
-     * @return A non-modifiable {@code Map<CharacterProfession, StatResult>}, never {@code null}.
-     * <br>Professions that haven't been played in PvP, will have their result set to {@code StatResult.EMPTY}.
-     * @see StatResult#EMPTY
+     * @return A non-modifiable {@code Map<CharacterProfession, PvpStatResult>}, never {@code null}.
+     * <br>Professions that haven't been played in PvP, will have their result set to {@code PvpStatResult.EMPTY}.
+     * @see PvpStatResult#EMPTY
      */
-    Map<CharacterProfession, StatResult> getProfessions();
+    Map<CharacterProfession, PvpStatResult> getProfessions();
 
     /**
      * Gets the result for each ingame ladder mode for the account.
-     * @return A non-modifiable {@code Map<PvPLadder, StatResult>}, never {@code null}.
-     * <br>Ladder modes that haven't been played in PvP, will have their result set to {@code StatResult.EMPTY}.
-     * @see StatResult#EMPTY
+     * @return A non-modifiable {@code Map<PvPLadder, PvpStatResult>}, never {@code null}.
+     * <br>Ladder modes that haven't been played in PvP, will have their result set to {@code PvpStatResult.EMPTY}.
+     * @see PvpStatResult#EMPTY
      */
-    Map<PvpLadder, StatResult> getLadders();
+    Map<PvpLadder, PvpStatResult> getLadders();
 }

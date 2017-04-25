@@ -16,13 +16,13 @@ import api.web.gw2.mapping.v2.APIv2;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/pvp/stats", requiresAuthentication = true, scope = "pvp") // NOI18N.
-public interface StatResult {
+public interface PvpStatResult {
 
     /**
      * The empty stats result singleton.
      */
     @ImplementationSpecific
-    public static final StatResult EMPTY = new StatResult() {
+    public static final PvpStatResult EMPTY = new PvpStatResult() {
 
         /**
          * {@inheritDoc}
