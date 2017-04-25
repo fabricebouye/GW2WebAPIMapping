@@ -11,19 +11,15 @@ import api.web.gw2.mapping.core.ImplementationSpecific;
 import api.web.gw2.mapping.v2.APIv2;
 
 /**
- * Defines all scoring ordering values for ladder in leaderboards.
+ * Defines all tier type values for ladder settings tiers in leaderboards.
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/pvp/seasons") // NOI18N.
-public enum SeasonLadderScoringOrdering {
+public enum PvpSeasonLadderSettingsTierType {
     /**
-     * Less points is better.
+     * points are integer.
      */
-    LESS_IS_BETTER("LessIsBetter"), // NOI18N.
-    /**
-     * More points is better.
-     */
-    MORE_IS_BETTER("MoreIsBetter"), // NOI18N.
+    RANK("Rank"), // NOI18N.
     /**
      * Fail safe value.
      */
@@ -32,7 +28,7 @@ public enum SeasonLadderScoringOrdering {
 
     final String value;
 
-    private SeasonLadderScoringOrdering(String value) {
+    private PvpSeasonLadderSettingsTierType(String value) {
         this.value = value;
     }
 }

@@ -15,7 +15,7 @@ import api.web.gw2.mapping.v2.APIv2;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/pvp/seasons") // NOI18N.
-public interface SeasonTier {
+public interface PvpSeasonTier {
 
     /**
      * Gets the number of points in this tier.

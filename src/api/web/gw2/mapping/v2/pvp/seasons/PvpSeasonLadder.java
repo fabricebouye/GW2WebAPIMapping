@@ -22,18 +22,18 @@ import java.util.Set;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/pvp/seasons") // NOI18N.
-public interface SeasonLadder {
+public interface PvpSeasonLadder {
 
     /**
      * Gets the settings in this ladder.
-     * @return A {@code SeasonLadderSettings} instance, never {@code null}.
+     * @return A {@code PvpSeasonLadderSettings} instance, never {@code null}.
      */
-    SeasonLadderSettings getSettings();
+    PvpSeasonLadderSettings getSettings();
 
     /**
      * Gets the definitions of scoring in this ladder.
-     * @return A non-modifiable {@code Set<SeasonLadderScoring>} instance, never {@code null}; may be empty.
+     * @return A non-modifiable {@code Set<PvpSeasonLadderScoring>} instance, never {@code null}; may be empty.
      */
     @SetValue
-    Set<SeasonLadderScoring> getScorings();
+    Set<PvpSeasonLadderScoring> getScorings();
 }

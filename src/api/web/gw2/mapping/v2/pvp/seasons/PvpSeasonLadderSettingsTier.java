@@ -19,7 +19,7 @@ import java.util.Set;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/pvp/seasons") // NOI18N.
-public interface SeasonLadderSettingsTier {
+public interface PvpSeasonLadderSettingsTier {
 
     /**
      * Gets the range [min-max] of this tier.
@@ -37,10 +37,10 @@ public interface SeasonLadderSettingsTier {
 
     /**
      * Gets the type of this tier (for season 1-4).
-     * @return An {@code Optional<SeasonLadderSettingsTierType>}, never {@code null}.
+     * @return An {@code Optional<PvpSeasonLadderSettingsTierType>}, never {@code null}.
      */
     @OptionalValue
-    Optional<SeasonLadderSettingsTierType> getType();
+    Optional<PvpSeasonLadderSettingsTierType> getType();
 
     /**
      * Gets the i18n name of this tier (for season 1-4).

@@ -16,7 +16,7 @@ import api.web.gw2.mapping.v2.APIv2;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/pvp/seasons") // NOI18N.
-public interface SeasonLadderScoring {
+public interface PvpSeasonLadderScoring {
 
     /**
      * Gets the id of this PvP season scoring.
@@ -27,9 +27,9 @@ public interface SeasonLadderScoring {
 
     /**
      * Gets the type of scoring used.
-     * @return A {@code SeasonLadderScoringType} instance, never {@code null}.
+     * @return A {@code PvpSeasonLadderScoringType} instance, never {@code null}.
      */
-    SeasonLadderScoringType getType();
+    PvpSeasonLadderScoringType getType();
 
     /**
      * Gets the i18n description of this scoring.
@@ -47,7 +47,7 @@ public interface SeasonLadderScoring {
 
     /**
      * Gets the ordering method used in the scoring.
-     * @return A {@code SeasonLadderScoringOrdering} instance, never {@code null}.
+     * @return A {@code PvpSeasonLadderScoringOrdering} instance, never {@code null}.
      */
-    SeasonLadderScoringOrdering getOrdering();
+    PvpSeasonLadderScoringOrdering getOrdering();
 }

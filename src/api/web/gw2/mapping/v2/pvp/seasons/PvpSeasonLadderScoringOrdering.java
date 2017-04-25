@@ -11,23 +11,19 @@ import api.web.gw2.mapping.core.ImplementationSpecific;
 import api.web.gw2.mapping.v2.APIv2;
 
 /**
- * Defines a PvP league season division flags.
+ * Defines all scoring ordering values for ladder in leaderboards.
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/pvp/seasons") // NOI18N.
-public enum SeasonDivisionFlag {
+public enum PvpSeasonLadderScoringOrdering {
     /**
-     * Player can lose points in this division.
+     * Less points is better.
      */
-    CAN_LOSE_POINTS("CanLosePoints"), // NOI18N.
+    LESS_IS_BETTER("LessIsBetter"), // NOI18N.
     /**
-     * Player can lose tiers in this division.
+     * More points is better.
      */
-    CAN_LOSE_TIERS("CanLoseTiers"), // NOI18N.
-    /**
-     * Player can repeat this division.
-     */
-    REPEATABLE("Repeatable"), // NOI18N.
+    MORE_IS_BETTER("MoreIsBetter"), // NOI18N.
     /**
      * Fail safe value.
      */
@@ -36,7 +32,7 @@ public enum SeasonDivisionFlag {
 
     final String value;
 
-    private SeasonDivisionFlag(final String value) {
+    private PvpSeasonLadderScoringOrdering(String value) {
         this.value = value;
     }
 }

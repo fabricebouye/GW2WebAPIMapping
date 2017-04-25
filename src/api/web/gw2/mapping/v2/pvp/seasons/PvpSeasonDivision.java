@@ -18,7 +18,7 @@ import java.util.Set;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/pvp/seasons") // NOI18N.
-public interface SeasonDivision {
+public interface PvpSeasonDivision {
 
     /**
      * Gets the i18n name of this season.
@@ -29,10 +29,10 @@ public interface SeasonDivision {
 
     /**
      * Gets the set of flags of this division.
-     * @return A non-modifiable {@code Set<SeasonDivisionFlag>} instance, never {@code null}.
+     * @return A non-modifiable {@code Set<PvpSeasonDivisionFlag>} instance, never {@code null}.
      * <br>Can be empty.
      */
-    Set<SeasonDivisionFlag> getFlags();
+    Set<PvpSeasonDivisionFlag> getFlags();
 
     /**
      * Gets the URL of the large icon for this division.
@@ -57,8 +57,8 @@ public interface SeasonDivision {
 
     /**
      * Gets the set of tiers of this division.
-     * @return A non-modifiable {@code Set<SeasonTier>} instance, never {@code null}.
+     * @return A non-modifiable {@code Set<PvpSeasonTier>} instance, never {@code null}.
      * <br>Can be empty.
      */
-    Set<SeasonTier> getTiers();
+    Set<PvpSeasonTier> getTiers();
 }

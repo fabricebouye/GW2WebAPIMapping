@@ -17,7 +17,7 @@ import java.util.Set;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/pvp/seasons") // NOI18N.
-public interface SeasonLadderSettings {
+public interface PvpSeasonLadderSettings {
     // Not documented as of 2017-02-06.
     String getName();
 
@@ -33,8 +33,8 @@ public interface SeasonLadderSettings {
 
     /**
      * Gets the tiers uses in the scoring.
-     * @return A {@code Set<SeasonLadderSettingsTier>} instance, never {@code null}.
+     * @return A {@code Set<PvpSeasonLadderSettingsTier>} instance, never {@code null}.
      */
     @SetValue
-    Set<SeasonLadderSettingsTier> getTiers();
+    Set<PvpSeasonLadderSettingsTier> getTiers();
 }

@@ -21,7 +21,7 @@ import java.util.Set;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/pvp/seasons") // NOI18N.
-public interface Season {
+public interface PvpSeason {
 
     /**
      * Gets the id of this season.
@@ -39,10 +39,10 @@ public interface Season {
 
     /**
      * Gets the set of divisions in this season.
-     * @return A {@code Set<SeasonDivision>} instance, never {@code null}.
+     * @return A {@code Set<PvpSeasonDivision>} instance, never {@code null}.
      */
     @SetValue
-    Set<SeasonDivision> getDivisions();
+    Set<PvpSeasonDivision> getDivisions();
 
     /**
      * Gets the start date of this season.
@@ -66,7 +66,7 @@ public interface Season {
 
     /**
      * Gets the leaderboards for this season.
-     * @return A non-modifiable {@code Map<SeasonLadderType, SeasonLadder>} instance, never {@code null}; may be empty.
+     * @return A non-modifiable {@code Map<PvpSeasonLadderType, PvpSeasonLadder>} instance, never {@code null}; may be empty.
      */
-    Map<SeasonLadderType, SeasonLadder> getLeaderboards();
+    Map<PvpSeasonLadderType, PvpSeasonLadder> getLeaderboards();
 }

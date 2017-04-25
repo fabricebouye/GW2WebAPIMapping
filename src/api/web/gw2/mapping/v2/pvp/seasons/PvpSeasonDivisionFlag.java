@@ -11,15 +11,23 @@ import api.web.gw2.mapping.core.ImplementationSpecific;
 import api.web.gw2.mapping.v2.APIv2;
 
 /**
- * Defines all tier type values for ladder settings tiers in leaderboards.
+ * Defines a PvP league season division flags.
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/pvp/seasons") // NOI18N.
-public enum SeasonLadderSettingsTierType {
+public enum PvpSeasonDivisionFlag {
     /**
-     * points are integer.
+     * Player can lose points in this division.
      */
-    RANK("Rank"), // NOI18N.
+    CAN_LOSE_POINTS("CanLosePoints"), // NOI18N.
+    /**
+     * Player can lose tiers in this division.
+     */
+    CAN_LOSE_TIERS("CanLoseTiers"), // NOI18N.
+    /**
+     * Player can repeat this division.
+     */
+    REPEATABLE("Repeatable"), // NOI18N.
     /**
      * Fail safe value.
      */
@@ -28,7 +36,7 @@ public enum SeasonLadderSettingsTierType {
 
     final String value;
 
-    private SeasonLadderSettingsTierType(String value) {
+    private PvpSeasonDivisionFlag(final String value) {
         this.value = value;
     }
 }
