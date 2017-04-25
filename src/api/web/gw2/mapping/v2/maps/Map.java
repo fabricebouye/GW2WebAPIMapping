@@ -8,7 +8,6 @@
 package api.web.gw2.mapping.v2.maps;
 
 import api.web.gw2.mapping.core.ContinentBounds;
-import api.web.gw2.mapping.core.ContinentDimensions;
 import api.web.gw2.mapping.core.ContinentRect;
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.LevelValue;
@@ -16,12 +15,14 @@ import api.web.gw2.mapping.core.LocalizedResource;
 import api.web.gw2.mapping.core.MapBounds;
 import api.web.gw2.mapping.core.MapRect;
 import api.web.gw2.mapping.core.SetValue;
+import api.web.gw2.mapping.v2.APIv2;
 import java.util.Set;
 
 /**
  * Defines a map.
  * @author Fabrice Bouyé
  */
+@APIv2(endpoint = "v2/maps") // NOI18N.
 public interface Map {
 
     /**
