@@ -7,8 +7,6 @@
  */
 package api.web.gw2.mapping.v2.itemstats;
 
-import api.web.gw2.mapping.v2.skills.*;
-import api.web.gw2.mapping.v2.skins.*;
 import api.web.gw2.mapping.core.EnumValueFactory;
 import java.util.stream.IntStream;
 import org.junit.After;
