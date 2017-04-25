@@ -20,9 +20,9 @@ import static org.junit.Assert.*;
  * Unit test.
  * @author Fabrice Bouyé
  */
-public class AmuletsUtilsTest {
+public class PvpAmuletsUtilsTest {
 
-    public AmuletsUtilsTest() {
+    public PvpAmuletsUtilsTest() {
     }
 
     @BeforeClass
@@ -42,11 +42,11 @@ public class AmuletsUtilsTest {
     }
 
     /**
-     * Test of AmuletAttribute.
+     * Test of PvpAmuletAttribute.
      */
     @Test
-    public void testFindAmuletAttribute() {
-        System.out.println("findAmuletAttribute");
+    public void testFindPvpAmuletAttribute() {
+        System.out.println("findPvpAmuletAttribute");
         final String[] values = {
             "ConditionDamage", // NOI18N.
             "ConditionDuration", // NOI18N.
@@ -59,24 +59,24 @@ public class AmuletsUtilsTest {
             null,
             "" // NOI18N.
         };
-        final AmuletAttribute[] expResults = {
-            AmuletAttribute.CONDITION_DAMAGE,
-            AmuletAttribute.CONDITION_DURATION,
-            AmuletAttribute.FEROCITY,
-            AmuletAttribute.HEALING,
-            AmuletAttribute.POWER,
-            AmuletAttribute.PRECISION,
-            AmuletAttribute.TOUGHNESS,
-            AmuletAttribute.VITALITY,
-            AmuletAttribute.UNKNOWN,
-            AmuletAttribute.UNKNOWN
+        final PvpAmuletAttribute[] expResults = {
+            PvpAmuletAttribute.CONDITION_DAMAGE,
+            PvpAmuletAttribute.CONDITION_DURATION,
+            PvpAmuletAttribute.FEROCITY,
+            PvpAmuletAttribute.HEALING,
+            PvpAmuletAttribute.POWER,
+            PvpAmuletAttribute.PRECISION,
+            PvpAmuletAttribute.TOUGHNESS,
+            PvpAmuletAttribute.VITALITY,
+            PvpAmuletAttribute.UNKNOWN,
+            PvpAmuletAttribute.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
                 forEach(index -> {
                     final String value = values[index];
-                    final AmuletAttribute expResult = expResults[index];
-                    final AmuletAttribute result = EnumValueFactory.INSTANCE.mapEnumValue(AmuletAttribute.class, value);
+                    final PvpAmuletAttribute expResult = expResults[index];
+                    final PvpAmuletAttribute result = EnumValueFactory.INSTANCE.mapEnumValue(PvpAmuletAttribute.class, value);
                     assertEquals(expResult, result);
                 });
     }

@@ -20,7 +20,7 @@ import java.util.Map;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/pvp/amulets")
-public interface Amulet {
+public interface PvpAmulet {
 
     /**
      * Gets the id of this PvP amulet.
@@ -45,8 +45,8 @@ public interface Amulet {
 
     /**
      * Gets the attributes values for this PvP amulet.
-     * @return A non-modifiable {@code Map<AmuletAttribute, Integer>}, never {@code null}.
+     * @return A non-modifiable {@code Map<PvpAmuletAttribute, Integer>}, never {@code null}.
      */
     @MapValue
-    Map<AmuletAttribute, Integer> getAttributes();
+    Map<PvpAmuletAttribute, Integer> getAttributes();
 }

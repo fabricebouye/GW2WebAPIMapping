@@ -7,7 +7,6 @@
  */
 package api.web.gw2.mapping.v2.pvp.amulets;
 
-import api.web.gw2.mapping.v2.itemstats.*;
 import api.web.gw2.mapping.core.ImplementationSpecific;
 import api.web.gw2.mapping.v2.APIv2;
 
@@ -16,7 +15,7 @@ import api.web.gw2.mapping.v2.APIv2;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/pvp/amulets")
-public enum AmuletAttribute {
+public enum PvpAmuletAttribute {
 
     /**
      * Defines the agony resistance attribute.
@@ -66,7 +65,7 @@ public enum AmuletAttribute {
 
     final String value;
 
-    private AmuletAttribute(String value) {
+    private PvpAmuletAttribute(String value) {
         this.value = value;
     }
 }
