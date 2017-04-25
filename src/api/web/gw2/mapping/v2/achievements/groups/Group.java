@@ -17,7 +17,7 @@ import java.util.Set;
  * Defines an achievement category group.
  * @author Fabrice Bouyé
  */
-@APIv2(endpoint = "v2/achievements/categories") // NOI18N.
+@APIv2(endpoint = "v2/achievements/groups") // NOI18N.
 public interface Group {
 
     /**
