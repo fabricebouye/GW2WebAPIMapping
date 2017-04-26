@@ -21,7 +21,7 @@ public interface PvpSeasonLeaderboardScore {
     /**
      * Gets the id of the scoring.
      * @return A {@code String} instance, never {@code null}.
-     * @see api.web.gw2.mapping.v2.pvp.seasons.SeasonLadderScoring
+     * @see api.web.gw2.mapping.v2.pvp.seasons.PvpSeasonLadderScoring
      */
     @IdValue(flavor = IdValue.Flavor.STRING)
     String getId();
