@@ -15,7 +15,7 @@ import api.web.gw2.mapping.v2.APIv2;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/account/home/cats", requiresAuthentication = true, scope = "progression") // NOI18N.
-public enum CatHint {
+public enum AccountHomeCatHint {
     CHICKEN("chicken"), // NOI18N.
     GRILLED_CHICKEN("grilled_chicken"), // NOI18N.
     SPICY_FLANK("spicy_flank"), // NOI18N.
@@ -56,7 +56,7 @@ public enum CatHint {
 
     final String value;
 
-    private CatHint(final String value) {
+    private AccountHomeCatHint(final String value) {
         this.value = value;
     }
 }

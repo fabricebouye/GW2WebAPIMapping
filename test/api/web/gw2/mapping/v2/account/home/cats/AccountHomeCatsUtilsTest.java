@@ -20,9 +20,9 @@ import static org.junit.Assert.*;
  * Unit test.
  * @author Fabrice Bouyé
  */
-public final class CatsUtilsTest {
+public final class AccountHomeCatsUtilsTest {
 
-    public CatsUtilsTest() {
+    public AccountHomeCatsUtilsTest() {
     }
 
     @BeforeClass
@@ -45,8 +45,8 @@ public final class CatsUtilsTest {
      * Test of AccountAccessType.
      */
     @Test
-    public void testFindCatHint() {
-        System.out.println("findCatHint"); // NOI18N.
+    public void testFindAccountHomeCatHint() {
+        System.out.println("findAccountHomeCatHint"); // NOI18N.
         final String[] values = {
             "chicken", // NOI18N.
             "grilled_chicken", // NOI18N.
@@ -83,47 +83,47 @@ public final class CatsUtilsTest {
             null,
             "" // NOI18N.
         };
-        final CatHint[] expResults = {
-            CatHint.CHICKEN,
-            CatHint.GRILLED_CHICKEN,
-            CatHint.SPICY_FLANK,
-            CatHint.SPICIER_FLANK,
-            CatHint.FIRE_FLANK,
-            CatHint.PRICKLEY_PEAR_SORBET,
-            CatHint.GINGER_LIME_ICECREAM,
-            CatHint.SAFFRON_MANGO_ICECREAM,
-            CatHint.PEACH_RASPBERRY_ICECREAM,
-            CatHint.CHICKEN_DAY,
-            CatHint.CHIKEN_NIGHT,
-            CatHint.WARRIOR,
-            CatHint.MESMER,
-            CatHint.RANGER,
-            CatHint.GUARDIAN,
-            CatHint.ELEMENTALIST,
-            CatHint.ENGINEER,
-            CatHint.REVENANT,
-            CatHint.THIEF,
-            CatHint.NECROMANCER,
-            CatHint.LAVA_SKRITT,
-            CatHint.GHOST_PEPPERS,
-            CatHint.HALLOWEEN,
-            CatHint.SNOW_LEPOARD,
-            CatHint.FROZEN_POULTRY_LEEK,
-            CatHint.ICE_POULTRY_WINTER_VEG,
-            CatHint.FREEZER_POULTRY_LEMONGRASS,
-            CatHint.COLD_SAFFRON_POULTRY,
-            CatHint.CAUDECUS,
-            CatHint.BUNDLE,
-            CatHint.GHOST,
-            CatHint.SAB,
-            CatHint.UNKNOWN,
-            CatHint.UNKNOWN,};
+        final AccountHomeCatHint[] expResults = {
+            AccountHomeCatHint.CHICKEN,
+            AccountHomeCatHint.GRILLED_CHICKEN,
+            AccountHomeCatHint.SPICY_FLANK,
+            AccountHomeCatHint.SPICIER_FLANK,
+            AccountHomeCatHint.FIRE_FLANK,
+            AccountHomeCatHint.PRICKLEY_PEAR_SORBET,
+            AccountHomeCatHint.GINGER_LIME_ICECREAM,
+            AccountHomeCatHint.SAFFRON_MANGO_ICECREAM,
+            AccountHomeCatHint.PEACH_RASPBERRY_ICECREAM,
+            AccountHomeCatHint.CHICKEN_DAY,
+            AccountHomeCatHint.CHIKEN_NIGHT,
+            AccountHomeCatHint.WARRIOR,
+            AccountHomeCatHint.MESMER,
+            AccountHomeCatHint.RANGER,
+            AccountHomeCatHint.GUARDIAN,
+            AccountHomeCatHint.ELEMENTALIST,
+            AccountHomeCatHint.ENGINEER,
+            AccountHomeCatHint.REVENANT,
+            AccountHomeCatHint.THIEF,
+            AccountHomeCatHint.NECROMANCER,
+            AccountHomeCatHint.LAVA_SKRITT,
+            AccountHomeCatHint.GHOST_PEPPERS,
+            AccountHomeCatHint.HALLOWEEN,
+            AccountHomeCatHint.SNOW_LEPOARD,
+            AccountHomeCatHint.FROZEN_POULTRY_LEEK,
+            AccountHomeCatHint.ICE_POULTRY_WINTER_VEG,
+            AccountHomeCatHint.FREEZER_POULTRY_LEMONGRASS,
+            AccountHomeCatHint.COLD_SAFFRON_POULTRY,
+            AccountHomeCatHint.CAUDECUS,
+            AccountHomeCatHint.BUNDLE,
+            AccountHomeCatHint.GHOST,
+            AccountHomeCatHint.SAB,
+            AccountHomeCatHint.UNKNOWN,
+            AccountHomeCatHint.UNKNOWN,};
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
                 forEach(index -> {
                     final String value = values[index];
-                    final CatHint expResult = expResults[index];
-                    final CatHint result = EnumValueFactory.INSTANCE.mapEnumValue(CatHint.class, value);
+                    final AccountHomeCatHint expResult = expResults[index];
+                    final AccountHomeCatHint result = EnumValueFactory.INSTANCE.mapEnumValue(AccountHomeCatHint.class, value);
                     assertEquals(expResult, result);
                 });
 
