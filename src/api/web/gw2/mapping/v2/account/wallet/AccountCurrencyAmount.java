@@ -13,6 +13,7 @@ import api.web.gw2.mapping.v2.APIv2;
 
 /**
  * Defines a currency quantity in the account wallet.
+ * @see api.web.gw2.mapping.v2.currencies.Currency
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/account/wallet", requiresAuthentication = true, scope = "wallet") // NOI18N.
