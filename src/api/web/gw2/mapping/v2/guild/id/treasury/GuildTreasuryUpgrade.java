@@ -21,7 +21,7 @@ public interface GuildTreasuryUpgrade {
     /**
      * Gets the id of the upgrade.
      * @return An {@code int} &gt; 0.
-     * @see api.web.gw2.mapping.v2.guild.upgrades.Upgrade
+     * @see api.web.gw2.mapping.v2.guild.upgrades.GuildUpgrade
      */
     @IdValue
     int getUpgradeId();

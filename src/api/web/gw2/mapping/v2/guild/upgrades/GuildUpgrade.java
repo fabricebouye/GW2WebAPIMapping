@@ -29,7 +29,7 @@ import java.util.Set;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/guild/upgrades") // NOI18N.
-public interface Upgrade {
+public interface GuildUpgrade {
 
     /**
      * Gets the id of this upgrade.
@@ -40,9 +40,9 @@ public interface Upgrade {
 
     /**
      * Gets the type of this upgrade.
-     * @return An {@code UpgradeType} instance, never {@code null}.
+     * @return An {@code GuildUpgradeType} instance, never {@code null}.
      */
-    UpgradeType getType();
+    GuildUpgradeType getType();
     
     /**
      * Gets the i18n name of this upgrade.
@@ -97,10 +97,10 @@ public interface Upgrade {
 
     /**
      * Gets a set of costs required before allowed to build this upgrade.
-     * @return A non-modifiable {@code Set<UpgradeCost>}, never {@code null}.
+     * @return A non-modifiable {@code Set<GuildUpgradeCost>}, never {@code null}.
      */
     @SetValue
-    Set<UpgradeCost> getCosts();
+    Set<GuildUpgradeCost> getCosts();
 
     // @todo Not sure about the need to split into a sub itnerface for those 2 fields.
     /** 

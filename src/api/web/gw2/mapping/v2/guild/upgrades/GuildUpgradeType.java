@@ -15,7 +15,7 @@ import api.web.gw2.mapping.v2.APIv2;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/guild/upgrades") // NOI18N.
-public enum UpgradeType {
+public enum GuildUpgradeType {
     /**
      * Defines the accumulating currency upgrade type (ie: mining capacity upgrades).
      */
@@ -56,7 +56,7 @@ public enum UpgradeType {
 
     final String value;
 
-    private UpgradeType(String value) {
+    private GuildUpgradeType(String value) {
         this.value = value;
     }
 }

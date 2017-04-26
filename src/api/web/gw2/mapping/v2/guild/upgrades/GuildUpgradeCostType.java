@@ -15,7 +15,7 @@ import api.web.gw2.mapping.v2.APIv2;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/guild/upgrades") // NOI18N.
-public enum UpgradeCostType {
+public enum GuildUpgradeCostType {
     /**
      * Defines the item upgrade cost type.
      */
@@ -36,7 +36,7 @@ public enum UpgradeCostType {
 
     final String value;
 
-    private UpgradeCostType(String value) {
+    private GuildUpgradeCostType(String value) {
         this.value = value;
     }
 }

@@ -18,13 +18,13 @@ import java.util.OptionalInt;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/guild/upgrades") // NOI18N.
-public interface UpgradeCost {
+public interface GuildUpgradeCost {
 
     /**
      * Gets the type of this cost.
-     * @return An {@code UpgradeCostType} instance, never {@code null}.
+     * @return An {@code GuildUpgradeCostType} instance, never {@code null}.
      */
-    UpgradeCostType getType();
+    GuildUpgradeCostType getType();
 
     /**
      * Gets the i18n name of this cost.

@@ -20,9 +20,9 @@ import static org.junit.Assert.*;
  * Unit test.
  * @author Fabrice Bouyé
  */
-public class UpgradesUtilsTest {
+public class GuildUpgradesUtilsTest {
 
-    public UpgradesUtilsTest() {
+    public GuildUpgradesUtilsTest() {
     }
 
     @BeforeClass
@@ -42,11 +42,11 @@ public class UpgradesUtilsTest {
     }
 
     /**
-     * Test of UpgradeType.
+     * Test of GuildUpgradeType.
      */
     @Test
-    public void testFindUpgradeType() {
-        System.out.println("findUpgradeType");
+    public void testFindGuildUpgradeType() {
+        System.out.println("findGuildUpgradeType");
         final String[] values = {
             "AccumulatingCurrency", // NOI18N.
             "BankBag", // NOI18N.
@@ -58,33 +58,33 @@ public class UpgradesUtilsTest {
             null,
             "" // NOI18N.
         };
-        final UpgradeType[] expResults = {
-            UpgradeType.ACCUMULATING_CURRENCY,
-            UpgradeType.BANK_BAG,
-            UpgradeType.BOOST,
-            UpgradeType.CLAIMABLE,
-            UpgradeType.CONSUMABLE,
-            UpgradeType.DECORATION,
-            UpgradeType.HUB,
-            UpgradeType.UNKNOWN,
-            UpgradeType.UNKNOWN
+        final GuildUpgradeType[] expResults = {
+            GuildUpgradeType.ACCUMULATING_CURRENCY,
+            GuildUpgradeType.BANK_BAG,
+            GuildUpgradeType.BOOST,
+            GuildUpgradeType.CLAIMABLE,
+            GuildUpgradeType.CONSUMABLE,
+            GuildUpgradeType.DECORATION,
+            GuildUpgradeType.HUB,
+            GuildUpgradeType.UNKNOWN,
+            GuildUpgradeType.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
                 forEach(index -> {
                     final String value = values[index];
-                    final UpgradeType expResult = expResults[index];
-                    final UpgradeType result = EnumValueFactory.INSTANCE.mapEnumValue(UpgradeType.class, value);
+                    final GuildUpgradeType expResult = expResults[index];
+                    final GuildUpgradeType result = EnumValueFactory.INSTANCE.mapEnumValue(GuildUpgradeType.class, value);
                     assertEquals(expResult, result);
                 });
     }
 
     /**
-     * Test of UpgradeCostType.
+     * Test of GuildUpgradeCostType.
      */
     @Test
-    public void testFindUpgradeCostType() {
-        System.out.println("findUpgradeCostType");
+    public void testFindGuildUpgradeCostType() {
+        System.out.println("findGuildUpgradeCostType");
         final String[] values = {
             "Collectible", // NOI18N.
             "Currency", // NOI18N.
@@ -92,19 +92,19 @@ public class UpgradesUtilsTest {
             null,
             "" // NOI18N.
         };
-        final UpgradeCostType[] expResults = {
-            UpgradeCostType.COLLECTIBLE,
-            UpgradeCostType.CURRENCY,
-            UpgradeCostType.ITEM,
-            UpgradeCostType.UNKNOWN,
-            UpgradeCostType.UNKNOWN
+        final GuildUpgradeCostType[] expResults = {
+            GuildUpgradeCostType.COLLECTIBLE,
+            GuildUpgradeCostType.CURRENCY,
+            GuildUpgradeCostType.ITEM,
+            GuildUpgradeCostType.UNKNOWN,
+            GuildUpgradeCostType.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
                 forEach(index -> {
                     final String value = values[index];
-                    final UpgradeCostType expResult = expResults[index];
-                    final UpgradeCostType result = EnumValueFactory.INSTANCE.mapEnumValue(UpgradeCostType.class, value);
+                    final GuildUpgradeCostType expResult = expResults[index];
+                    final GuildUpgradeCostType result = EnumValueFactory.INSTANCE.mapEnumValue(GuildUpgradeCostType.class, value);
                     assertEquals(expResult, result);
                 });
     }
