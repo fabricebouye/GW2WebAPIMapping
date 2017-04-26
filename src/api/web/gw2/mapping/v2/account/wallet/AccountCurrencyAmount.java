@@ -28,7 +28,7 @@ public interface AccountCurrencyAmount {
 
     /**
      * Gets the amount of this currency.
-     * @return An {@code int}.
+     * @return An {@code int} &ge; 0.
      */
     @QuantityValue
     int getValue();
