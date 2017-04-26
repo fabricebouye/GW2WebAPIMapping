@@ -18,8 +18,8 @@ import java.util.Optional;
  * Defines a guild member.
  * @author Fabrice Bouyé
  */
-@APIv2(endpoint = "v2/guild/:id/ranks", requiresAuthentication = true, scope = "guilds") // NOI18N.
-public interface Member {
+@APIv2(endpoint = "v2/guild/:id/member", requiresAuthentication = true, scope = "guilds") // NOI18N.
+public interface GuildMember {
 
     /**
      * Gets the name of the account.
