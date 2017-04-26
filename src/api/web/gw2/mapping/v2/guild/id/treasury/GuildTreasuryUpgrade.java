@@ -16,11 +16,12 @@ import api.web.gw2.mapping.v2.APIv2;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/guild/:id/treasury", requiresAuthentication = true, scope = "guilds") // NOI18N.
-public interface TreasuryUpgrade {
+public interface GuildTreasuryUpgrade {
 
     /**
      * Gets the id of the upgrade.
      * @return An {@code int} &gt; 0.
+     * @see api.web.gw2.mapping.v2.guild.upgrades.Upgrade
      */
     @IdValue
     int getUpgradeId();

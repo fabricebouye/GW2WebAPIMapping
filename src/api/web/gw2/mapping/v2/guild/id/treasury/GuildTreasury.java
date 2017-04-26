@@ -17,11 +17,12 @@ import java.util.Set;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/guild/:id/treasury", requiresAuthentication = true, scope = "guilds") // NOI18N.
-public interface Treasury {
+public interface GuildTreasury {
 
     /**
      * Gets the id of this item this treasury.
      * @return An {@code int} &gt; 0.
+     * @see api.web.gw2.mapping.v2.items.Item
      */
     @IdValue
     int getItemId();
@@ -35,7 +36,7 @@ public interface Treasury {
 
     /**
      * Gets the set of guild upgrades which need this treasury item.
-     * @return A non-modifiable {@code Set<TreasuryUpgrade>}, never {@code null}.
+     * @return A non-modifiable {@code Set<GuildTreasuryUpgrade>}, never {@code null}.
      */
-    Set<TreasuryUpgrade> getNeededBy();
+    Set<GuildTreasuryUpgrade> getNeededBy();
 }
