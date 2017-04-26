@@ -12,7 +12,6 @@ import api.web.gw2.mapping.core.OptionalValue;
 import api.web.gw2.mapping.core.QuantityValue;
 import api.web.gw2.mapping.core.SetValue;
 import api.web.gw2.mapping.v2.APIv2;
-import java.util.Optional;
 import java.util.OptionalInt;
 import java.util.Set;
 
@@ -21,11 +20,12 @@ import java.util.Set;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/account/achievements", requiresAuthentication = true, scope = "progression") // NOI18N.
-public interface Achievement {
+public interface AccountAchievement {
 
     /**
      * Gets the id of this achievement.
      * @return An {@code int}.
+     * @see api.web.gw2.mapping.v2.achievements.Achievement
      */
     @IdValue
     int getId();
