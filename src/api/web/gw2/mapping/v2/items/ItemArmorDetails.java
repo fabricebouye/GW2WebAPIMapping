@@ -75,7 +75,7 @@ public interface ItemArmorDetails extends ItemDetails {
      * Gets the available stats choices for this armor.
      * @return A non-modifiable {@code Set<Integer>} instance, never {@code null}. 
      * <br>May be empty if no stat choice is available.
-     * @see api.web.gw2.mapping.v2.itemstats
+     * @see api.web.gw2.mapping.v2.itemstats.Itemstats#getId() 
      */
     @SetValue
     @IdValue

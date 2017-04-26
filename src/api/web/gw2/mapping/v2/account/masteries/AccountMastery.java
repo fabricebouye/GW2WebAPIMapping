@@ -22,6 +22,7 @@ public interface AccountMastery {
     /**
      * Gets the id of the mastery.
      * @return An {@code int}
+     * @see api.web.gw2.mapping.v2.masteries.Mastery#getId() 
      */
     @IdValue
     int getId();

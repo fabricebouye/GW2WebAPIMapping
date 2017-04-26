@@ -33,7 +33,7 @@ public interface PvpRank {
     /**
      * Gets the id of the finisher of this PvP rank.
      * @return An {@code int} &gt; 0.
-     * @see api.web.gw2.mapping.v2.finishers.Finisher
+     * @see api.web.gw2.mapping.v2.finishers.Finisher#getId() 
      */
     @IdValue
     int getFinisherId();

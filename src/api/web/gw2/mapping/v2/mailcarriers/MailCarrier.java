@@ -33,7 +33,7 @@ public interface MailCarrier {
     /**
      * Gets the set of item ids required to unlock this mail carrier.
      * @return A {@code Set<Integer>} instance; never {@code null}. May be empty.
-     * @see api.web.gw2.mapping.v2.items.Item
+     * @see api.web.gw2.mapping.v2.items.Item#getId() 
      */
     @IdValue
     @SetValue

@@ -40,6 +40,7 @@ public interface Title {
     /**
      * Gets the id of the achievement that grants this title.
      * @return An {@code int}.
+     * @see api.web.gw2.mapping.v2.achievements.Achievement#getId() 
      * @deprecated 
      */
     @Deprecated
@@ -49,7 +50,7 @@ public interface Title {
     /**
      * Gets the set of achievement ids that grants this title.
      * @return A {@code Set<Integer>} instance; never {@code null}. May be empty.
-     * @see api.web.gw2.mapping.v2.achievements.Achievement
+     * @see api.web.gw2.mapping.v2.achievements.Achievement#getId() 
      */
     @IdValue
     @SetValue

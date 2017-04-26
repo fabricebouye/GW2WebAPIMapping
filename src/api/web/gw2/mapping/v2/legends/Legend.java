@@ -29,7 +29,7 @@ public interface Legend {
     /**
      * Gets the id of the swap skill for this legend.
      * @return An {@code int}.
-     * @see api.web.gw2.mapping.v2.skills.Skill
+     * @see api.web.gw2.mapping.v2.skills.Skill#getId() 
      */
     @IdValue
     int getSwap();
@@ -37,7 +37,7 @@ public interface Legend {
     /**
      * Gets the id of the heal skill for this legend.
      * @return An {@code int}.
-     * @see api.web.gw2.mapping.v2.skills.Skill
+     * @see api.web.gw2.mapping.v2.skills.Skill#getId() 
      */
     @IdValue
     int getHeal();
@@ -45,7 +45,7 @@ public interface Legend {
     /**
      * Gets the id of the elite skill for this legend.
      * @return An {@code int}.
-     * @see api.web.gw2.mapping.v2.skills.Skill
+     * @see api.web.gw2.mapping.v2.skills.Skill#getId() 
      */
     @IdValue
     int getElite();
@@ -53,7 +53,7 @@ public interface Legend {
     /**
      * Gets the ids of the utility skills for this legend.
      * @return A {@code Set<Integer>} instance, never {@code null}.
-     * @see api.web.gw2.mapping.v2.skills.Skill
+     * @see api.web.gw2.mapping.v2.skills.Skill#getId() 
      */
     @IdValue
     @SetValue

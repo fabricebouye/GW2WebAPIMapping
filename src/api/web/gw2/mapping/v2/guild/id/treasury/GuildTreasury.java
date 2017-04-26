@@ -22,7 +22,7 @@ public interface GuildTreasury {
     /**
      * Gets the id of this item this treasury.
      * @return An {@code int} &gt; 0.
-     * @see api.web.gw2.mapping.v2.items.Item
+     * @see api.web.gw2.mapping.v2.items.Item#getId() 
      */
     @IdValue
     int getItemId();

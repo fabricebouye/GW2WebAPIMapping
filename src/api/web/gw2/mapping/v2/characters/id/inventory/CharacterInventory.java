@@ -28,6 +28,7 @@ public interface CharacterInventory {
     /**
      * Gets the Id of this object in inventory.
      * @return An {@code int}.
+     * @see api.web.gw2.mapping.v2.items.Item#getId() 
      */
     @IdValue
     int getId();
@@ -42,7 +43,8 @@ public interface CharacterInventory {
     /**
      * Gets the skin of this object in inventory.
      * @return An {@code OtionalInt} instance, never {@code null}.
-     */
+    * @see api.web.gw2.mapping.v2.skins.Skin#getId() 
+    */
     @OptionalValue
     @IdValue
     OptionalInt getSkin();
@@ -50,7 +52,8 @@ public interface CharacterInventory {
     /**
      * Gets the list of upgrades ids on this object in inventory.
      * @return A non-modifiable {@code List<Integer>} instance, never {@code null}; may be empty.
-     */
+    * @see api.web.gw2.mapping.v2.items.Item#getId() 
+    */
     @IdValue
     @ListValue
     List<Integer> getUpgrades();
@@ -58,6 +61,7 @@ public interface CharacterInventory {
     /**
      * Gets the list of infusions ids on this object in inventory.
      * @return A non-modifiable {@code List<Integer>} instance, never {@code null}; may be empty.
+     * @see api.web.gw2.mapping.v2.items.Item#getId() 
      */
     @IdValue
     @ListValue
@@ -92,10 +96,10 @@ public interface CharacterInventory {
     @OptionalValue
     @QuantityValue
     OptionalInt getCharges();
-    
+
     /**
-    * @return An {@code Optional<CharacterEquipmentStats>} instance, never {@code null}.
-    */
+     * @return An {@code Optional<CharacterEquipmentStats>} instance, never {@code null}.
+     */
     @OptionalValue
     Optional<CharacterEquipmentStats> getStats();
 }

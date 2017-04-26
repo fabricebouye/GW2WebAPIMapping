@@ -21,6 +21,7 @@ public interface Price {
     /**
      * Gets the id of the item.
      * @return And {@code int}.
+     * @see api.web.gw2.mapping.v2.items.Item#getId() 
      */
     @IdValue
     int getId();
@@ -36,10 +37,10 @@ public interface Price {
      * @return An {@code PriceOrder} instance, never {@code null}.
      */
     PriceOrder getSells();
-    
+
     /**
-    * Indicates whether or not a free to play account can purchase or sell this item on the trading post.
-    * @return A {@code boolean}.
-    */
+     * Indicates whether or not a free to play account can purchase or sell this item on the trading post.
+     * @return A {@code boolean}.
+     */
     boolean isWhitelisted();
 }

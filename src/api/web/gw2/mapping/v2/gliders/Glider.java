@@ -71,7 +71,7 @@ public interface Glider {
     /**
      * Gets the list of default dye ids for this glider.
      * @return A {@code List<Integer>}, never {@code null}. May be empty.
-     * @see api.web.gw2.mapping.v2.colors.ColorDye
+     * @see api.web.gw2.mapping.v2.colors.ColorDye#getId() 
      */
     @IdValue
     @ListValue

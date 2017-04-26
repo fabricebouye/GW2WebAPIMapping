@@ -23,6 +23,7 @@ public interface CharacterInventoryBag {
     /**
      * Gets the Id of this bag.
      * @return An {@code int}.
+     * @see api.web.gw2.mapping.v2.items.Item#getId() 
      */
     @IdValue
     int getId();
