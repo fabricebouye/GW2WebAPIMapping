@@ -13,7 +13,7 @@ import api.web.gw2.mapping.core.SetValue;
 import api.web.gw2.mapping.core.URLReference;
 import api.web.gw2.mapping.core.URLValue;
 import api.web.gw2.mapping.v2.APIv2;
-import api.web.gw2.mapping.v2.guild.permissions.PermissionId;
+import api.web.gw2.mapping.v2.guild.permissions.GuildPermissionId;
 import java.util.Set;
 
 /**
@@ -40,11 +40,11 @@ public interface GuildRank {
 
     /**
      * Gets a set of permissions for this rank.
-     * @return A non-modifiable {@code Set<PermissionId>} instance, never {@code null}.
-     * @see api.web.gw2.mapping.v2.guild.permissions.PermissionId
+     * @return A non-modifiable {@code Set<GuildPermissionId>} instance, never {@code null}.
+     * @see api.web.gw2.mapping.v2.guild.permissions.GuildPermissionId
      */
     @SetValue
-    Set<PermissionId> getPermissions();
+    Set<GuildPermissionId> getPermissions();
 
     /**
      * Gets the URL to the icon of this item.

@@ -15,7 +15,7 @@ import api.web.gw2.mapping.v2.APIv2;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/guild/permissions") // NOI18N.
-public enum PermissionId {
+public enum GuildPermissionId {
     ACTIVATE_PLACEABLES("ActivatePlaceables"),
     ACTIVATE_WORLD_EVENT("ActivateWorldEvent"),
     /**
@@ -63,7 +63,7 @@ public enum PermissionId {
 
     final String value;
 
-    private PermissionId(String value) {
+    private GuildPermissionId(String value) {
         this.value = value;
     }
 }

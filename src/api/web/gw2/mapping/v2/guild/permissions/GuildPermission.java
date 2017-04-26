@@ -16,14 +16,14 @@ import api.web.gw2.mapping.v2.APIv2;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/guild/permissions") // NOI18N.
-public interface Permission {
+public interface GuildPermission {
     /**
     * Gets this permission's id.
     * @return A {@code GuildPermissionId} instance, never {@code null}.
     */
     @IdValue
     // @todo id values looks suspiciously like enum values!
-    PermissionId getId();
+    GuildPermissionId getId();
     
     /**
     * Gets this permission's i18n name.

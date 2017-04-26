@@ -20,9 +20,9 @@ import static org.junit.Assert.*;
  * Unit test.
  * @author Fabrice Bouyé
  */
-public class PermissionsUtilsTest {
+public class GuildPermissionsUtilsTest {
 
-    public PermissionsUtilsTest() {
+    public GuildPermissionsUtilsTest() {
     }
 
     @BeforeClass
@@ -42,11 +42,11 @@ public class PermissionsUtilsTest {
     }
 
     /**
-     * Test of PermissionId.
+     * Test of GuildPermissionId.
      */
     @Test
-    public void testFindPermissionId() {
-        System.out.println("findPermissionId");
+    public void testFindGuildPermissionId() {
+        System.out.println("findGuildPermissionId");
         final String[] values = {
             "ActivatePlaceables", // NOI18N.
             "ActivateWorldEvent", // NOI18N.
@@ -81,46 +81,46 @@ public class PermissionsUtilsTest {
             null,
             "" // NOI18N.
         };
-        final PermissionId[] expResults = {
-            PermissionId.ACTIVATE_PLACEABLES,
-            PermissionId.ACTIVATE_WORLD_EVENT,
-            PermissionId.ADMIN,
-            PermissionId.CLAIMABLE_ACTIVATE,
-            PermissionId.CLAIMABLE_CLAIM,
-            PermissionId.CLAIMABLE_EDIT_OPTIONS,
-            PermissionId.CLAIMABLE_SPEND,
-            PermissionId.DECORATION_ADMIN,
-            PermissionId.DEPOSIT_COINS_STASH,
-            PermissionId.DEPOSIT_COINS_TROVE,
-            PermissionId.DEPOSIT_ITEMS_STASH,
-            PermissionId.DEPOSIT_ITEMS_TROVE,
-            PermissionId.EDIT_ANTHEM,
-            PermissionId.EDIT_ASSEMBLY_QUEUE,
-            PermissionId.EDIT_BGM,
-            PermissionId.EDIT_EMBLEM,
-            PermissionId.EDIT_MOTD,
-            PermissionId.EDIT_ROLES,
-            PermissionId.MISSION_CONTROL,
-            PermissionId.OPEN_PORTAL,
-            PermissionId.PLACE_ARENA_DECORATION,
-            PermissionId.PLACE_DECORATION,
-            PermissionId.PURCHASE_UPGRADES,
-            PermissionId.SET_GUILD_HALL,
-            PermissionId.SPEND_FUEL,
-            PermissionId.TEAM_ADMIN,
-            PermissionId.WITHDRAW_COINS_STASH,
-            PermissionId.WITHDRAW_COINS_TROVE,
-            PermissionId.WITHDRAW_ITEMS_STASH,
-            PermissionId.WITHDRAW_ITEMS_TROVE,
-            PermissionId.UNKNOWN,
-            PermissionId.UNKNOWN
+        final GuildPermissionId[] expResults = {
+            GuildPermissionId.ACTIVATE_PLACEABLES,
+            GuildPermissionId.ACTIVATE_WORLD_EVENT,
+            GuildPermissionId.ADMIN,
+            GuildPermissionId.CLAIMABLE_ACTIVATE,
+            GuildPermissionId.CLAIMABLE_CLAIM,
+            GuildPermissionId.CLAIMABLE_EDIT_OPTIONS,
+            GuildPermissionId.CLAIMABLE_SPEND,
+            GuildPermissionId.DECORATION_ADMIN,
+            GuildPermissionId.DEPOSIT_COINS_STASH,
+            GuildPermissionId.DEPOSIT_COINS_TROVE,
+            GuildPermissionId.DEPOSIT_ITEMS_STASH,
+            GuildPermissionId.DEPOSIT_ITEMS_TROVE,
+            GuildPermissionId.EDIT_ANTHEM,
+            GuildPermissionId.EDIT_ASSEMBLY_QUEUE,
+            GuildPermissionId.EDIT_BGM,
+            GuildPermissionId.EDIT_EMBLEM,
+            GuildPermissionId.EDIT_MOTD,
+            GuildPermissionId.EDIT_ROLES,
+            GuildPermissionId.MISSION_CONTROL,
+            GuildPermissionId.OPEN_PORTAL,
+            GuildPermissionId.PLACE_ARENA_DECORATION,
+            GuildPermissionId.PLACE_DECORATION,
+            GuildPermissionId.PURCHASE_UPGRADES,
+            GuildPermissionId.SET_GUILD_HALL,
+            GuildPermissionId.SPEND_FUEL,
+            GuildPermissionId.TEAM_ADMIN,
+            GuildPermissionId.WITHDRAW_COINS_STASH,
+            GuildPermissionId.WITHDRAW_COINS_TROVE,
+            GuildPermissionId.WITHDRAW_ITEMS_STASH,
+            GuildPermissionId.WITHDRAW_ITEMS_TROVE,
+            GuildPermissionId.UNKNOWN,
+            GuildPermissionId.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
                 forEach(index -> {
                     final String value = values[index];
-                    final PermissionId expResult = expResults[index];
-                    final PermissionId result = EnumValueFactory.INSTANCE.mapEnumValue(PermissionId.class, value);
+                    final GuildPermissionId expResult = expResults[index];
+                    final GuildPermissionId result = EnumValueFactory.INSTANCE.mapEnumValue(GuildPermissionId.class, value);
                     assertEquals(expResult, result);
                 });
     }
