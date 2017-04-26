@@ -19,7 +19,7 @@ import java.util.OptionalInt;
  * Defines a guild.
  * @author Fabrice Bouyé
  */
-@APIv2(endpoint = "v2/guid/:id", requiresAuthentication = true, scope = "guilds") // NOI18N.
+@APIv2(endpoint = "v2/guild/:id", requiresAuthentication = true, scope = "guilds") // NOI18N.
 public interface Guild {
 
     /**

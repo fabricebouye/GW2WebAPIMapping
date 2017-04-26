@@ -16,7 +16,7 @@ import java.util.Set;
  * Defines a guild treasury (items needed for guild upgrades).
  * @author Fabrice Bouyé
  */
-@APIv2(endpoint = "v2/guid/:id/treasury", requiresAuthentication = true, scope = "guilds") // NOI18N.
+@APIv2(endpoint = "v2/guild/:id/treasury", requiresAuthentication = true, scope = "guilds") // NOI18N.
 public interface Treasury {
 
     /**

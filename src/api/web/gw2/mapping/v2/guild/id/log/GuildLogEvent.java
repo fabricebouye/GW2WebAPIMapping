@@ -24,7 +24,7 @@ import java.util.Set;
  * Defines a guild log event.
  * @author Fabrice Bouyé
  */
-@APIv2(endpoint = "v2/guid/:id/log", requiresAuthentication = true, scope = "guilds") // NOI18N.
+@APIv2(endpoint = "v2/guild/:id/log", requiresAuthentication = true, scope = "guilds") // NOI18N.
 public interface GuildLogEvent {
 
     /**

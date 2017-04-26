@@ -18,7 +18,7 @@ import java.util.List;
  * Defines a guild stash.
  * @author Fabrice Bouyé
  */
-@APIv2(endpoint = "v2/guid/:id/stash", requiresAuthentication = true, scope = "guilds") // NOI18N.
+@APIv2(endpoint = "v2/guild/:id/stash", requiresAuthentication = true, scope = "guilds") // NOI18N.
 public interface Stash {
 
     /**

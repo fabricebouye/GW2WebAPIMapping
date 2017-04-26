@@ -15,7 +15,7 @@ import api.web.gw2.mapping.v2.APIv2;
  * Defines a guild upgrade simple description (the reference of a guild upgrade used by the treasury).
  * @author Fabrice Bouyé
  */
-@APIv2(endpoint = "v2/guid/:id/treasury", requiresAuthentication = true, scope = "guilds") // NOI18N.
+@APIv2(endpoint = "v2/guild/:id/treasury", requiresAuthentication = true, scope = "guilds") // NOI18N.
 public interface TreasuryUpgrade {
 
     /**

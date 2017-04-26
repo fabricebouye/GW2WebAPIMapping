@@ -14,7 +14,7 @@ import api.web.gw2.mapping.v2.APIv2;
  * Defines all types activities for the influence log event type.
  * @author Fabrice Bouyé
  */
-@APIv2(endpoint = "v2/guid/:id/log", requiresAuthentication = true, scope = "guilds") // NOI18N.
+@APIv2(endpoint = "v2/guild/:id/log", requiresAuthentication = true, scope = "guilds") // NOI18N.
 public enum GuildLogEventInfluenceActivity {
     /**
      * Defines daily login influence activity.

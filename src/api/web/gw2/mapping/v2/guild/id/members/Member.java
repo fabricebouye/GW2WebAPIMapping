@@ -18,7 +18,7 @@ import java.util.Optional;
  * Defines a guild member.
  * @author Fabrice Bouyé
  */
-@APIv2(endpoint = "v2/guid/:id/ranks", requiresAuthentication = true, scope = "guilds") // NOI18N.
+@APIv2(endpoint = "v2/guild/:id/ranks", requiresAuthentication = true, scope = "guilds") // NOI18N.
 public interface Member {
 
     /**

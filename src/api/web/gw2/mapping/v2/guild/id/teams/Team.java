@@ -19,7 +19,7 @@ import java.util.Set;
  * Defines a guild team.
  * @author Fabrice Bouyé
  */
-@APIv2(endpoint = "v2/guid/:id/teams", requiresAuthentication = true, scope = "guilds") // NOI18N.
+@APIv2(endpoint = "v2/guild/:id/teams", requiresAuthentication = true, scope = "guilds") // NOI18N.
 public interface Team {
 
     /**

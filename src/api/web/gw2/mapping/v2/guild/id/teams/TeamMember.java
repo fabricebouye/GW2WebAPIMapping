@@ -14,7 +14,7 @@ import api.web.gw2.mapping.v2.APIv2;
  * Defines a guild team member.
  * @author Fabrice Bouyé
  */
-@APIv2(endpoint = "v2/guid/:id/teams", requiresAuthentication = true, scope = "guilds") // NOI18N.
+@APIv2(endpoint = "v2/guild/:id/teams", requiresAuthentication = true, scope = "guilds") // NOI18N.
 public interface TeamMember {
 
     /**
