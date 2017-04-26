@@ -11,19 +11,15 @@ import api.web.gw2.mapping.core.ImplementationSpecific;
 import api.web.gw2.mapping.v2.APIv2;
 
 /**
- * Defines all types activities for the influence log event type.
+ * Defines all types of log event upgrade actions.
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/guid/:id/log", requiresAuthentication = true, scope = "guilds") // NOI18N.
-public enum LogEventInfluenceActivity {
+public enum GuildLogEventUpgradeAction {
     /**
-     * Defines daily login influence activity.
+     * Defines the treasury log event type.
      */
-    DAILY_LOGIN("daily_login"),
-    /**
-     * Defines gifted influence activity.
-     */
-    GIFTED("gifted"),
+    QUEUED("queued"),
     /**
      * Fail safe value.
      */
@@ -32,7 +28,7 @@ public enum LogEventInfluenceActivity {
 
     final String value;
 
-    private LogEventInfluenceActivity(final String value) {
+    private GuildLogEventUpgradeAction(final String value) {
         this.value = value;
     }
 }

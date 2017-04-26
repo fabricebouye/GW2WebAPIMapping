@@ -15,7 +15,7 @@ import api.web.gw2.mapping.v2.APIv2;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/guid/:id/log", requiresAuthentication = true, scope = "guilds") // NOI18N.
-public enum LogEventType {
+public enum GuildLogEventType {
     /**
      * Defines the treasury log event type.
      */
@@ -64,7 +64,7 @@ public enum LogEventType {
 
     final String value;
 
-    private LogEventType(final String value) {
+    private GuildLogEventType(final String value) {
         this.value = value;
     }
 }

@@ -25,7 +25,7 @@ import java.util.Set;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/guid/:id/log", requiresAuthentication = true, scope = "guilds") // NOI18N.
-public interface LogEvent {
+public interface GuildLogEvent {
 
     /**
      * Gets the id of this log event.
@@ -50,15 +50,15 @@ public interface LogEvent {
 
     /**
      * Gets the type of this log event.
-     * @return A {@code LogEventType} instance, never {@code null}.
+     * @return A {@code GuildLogEventType} instance, never {@code null}.
      */
-    LogEventType getType();
+    GuildLogEventType getType();
 
     /**
      * Gets the id of the item for a treasury or stash log event.
      * @return An {@code OptionalInt} instance, never {@code null}.
-     * @see LogEventType#TREASURY
-     * @see LogEventType#STASH
+     * @see GuildLogEventType#TREASURY
+     * @see GuildLogEventType#STASH
      */
     @IdValue
     @OptionalValue
@@ -67,8 +67,8 @@ public interface LogEvent {
     /**
      * Gets the count of the item for a treasury or stash log event.
      * @return An {@code OptionalInt} instance, never {@code null}.
-     * @see LogEventType#TREASURY
-     * @see LogEventType#STASH
+     * @see GuildLogEventType#TREASURY
+     * @see GuildLogEventType#STASH
      */
     @QuantityValue
     @OptionalValue
@@ -77,7 +77,7 @@ public interface LogEvent {
     /**
      * Gets the message of the day for a motd log event.
      * @return An {@code Optional<String>} instance, never {@code null}.
-     * @see LogEventType#MOTD
+     * @see GuildLogEventType#MOTD
      */
     @OptionalValue
     Optional<String> getMotd();
@@ -85,7 +85,7 @@ public interface LogEvent {
     /**
      * Gets the upgrade id of an upgrade log event.
      * @return An {@code OptionalInt} instance, never {@code null}.
-     * @see LogEventType#UPGRADE
+     * @see GuildLogEventType#UPGRADE
      */
     @IdValue
     @OptionalValue
@@ -93,16 +93,16 @@ public interface LogEvent {
 
     /**
      * Gets the operation of a stash log event.
-     * @return An {@code Optional<LogEventStashOperation>} instance, never {@code null}.
-     * @see LogEventType#STASH
+     * @return An {@code Optional<GuildLogEventStashOperation>} instance, never {@code null}.
+     * @see GuildLogEventType#STASH
      */
     @OptionalValue
-    Optional<LogEventStashOperation> getOperation();
+    Optional<GuildLogEventStashOperation> getOperation();
 
     /**
      * Gets the amount of coin of a stash log event.
      * @return An {@code Optional<CoinAmount>} instance, never {@code null}.
-     * @see LogEventType#STASH
+     * @see GuildLogEventType#STASH
      */
     @CoinValue
     @OptionalValue
@@ -110,25 +110,25 @@ public interface LogEvent {
 
     /**
      * Gets the action of an upgrade log event.
-     * @return An {@code Optional<LogEventUpgradeAction>} instance, never {@code null}.
-     * @see LogEventType#UPGRADE
+     * @return An {@code Optional<GuildLogEventUpgradeAction>} instance, never {@code null}.
+     * @see GuildLogEventType#UPGRADE
      */
     @OptionalValue
-    Optional<LogEventUpgradeAction> getAction();
+    Optional<GuildLogEventUpgradeAction> getAction();
 
     /**
      * Gets the activity of an influence log event.
-     * @return An {@code Optional<LogEventUpgradeAction>} instance, never {@code null}.
-     * @see LogEventType#INFLUENCE
+     * @return An {@code Optional<GuildLogEventUpgradeAction>} instance, never {@code null}.
+     * @see GuildLogEventType#INFLUENCE
      */
     @OptionalValue
-    Optional<LogEventInfluenceActivity> getActivity();
+    Optional<GuildLogEventInfluenceActivity> getActivity();
 
     /**
      * Gets the total number of participants of an influence log event.
      * @return An {@code OptionalInt} instance, never {@code null}.
      * <br>May be empty.
-     * @see LogEventType#INFLUENCE
+     * @see GuildLogEventType#INFLUENCE
      */
     @QuantityValue
     @OptionalValue
@@ -137,7 +137,7 @@ public interface LogEvent {
     /**
      * Gets the list of participants of an influence log event.
      * @return A non-modifiable {@code Set<String>} instance, never {@code null}; May be empty.
-     * @see LogEventType#INFLUENCE
+     * @see GuildLogEventType#INFLUENCE
      */
     @IdValue(flavor = IdValue.Flavor.STRING)
     @SetValue
@@ -146,7 +146,7 @@ public interface LogEvent {
     /**
      * Gets the initiator of an invited log event.
      * @return An {@code Optional<String>} instance, never {@code null}.
-     * @see LogEventType#RANK_CHANGE
+     * @see GuildLogEventType#RANK_CHANGE
      */
     @IdValue(flavor = IdValue.Flavor.STRING)
     @OptionalValue
@@ -155,7 +155,7 @@ public interface LogEvent {
     /**
      * Gets the initiator of a kick log event.
      * @return An {@code Optional<String>} instance, never {@code null}.
-     * @see LogEventType#KICK
+     * @see GuildLogEventType#KICK
      */
     @IdValue(flavor = IdValue.Flavor.STRING)
     @OptionalValue
@@ -164,7 +164,7 @@ public interface LogEvent {
     /**
      * Gets the initiator of a rank change log event.
      * @return An {@code Optional<String>} instance, never {@code null}.
-     * @see LogEventType#RANK_CHANGE
+     * @see GuildLogEventType#RANK_CHANGE
      */
     @IdValue(flavor = IdValue.Flavor.STRING)
     @OptionalValue
@@ -173,7 +173,7 @@ public interface LogEvent {
     /**
      * Gets the old rank of a rank change log event.
      * @return An {@code Optional<String>} instance, never {@code null}.
-     * @see LogEventType#RANK_CHANGE
+     * @see GuildLogEventType#RANK_CHANGE
      */
     @OptionalValue
     Optional<String> getOldRank();
@@ -181,7 +181,7 @@ public interface LogEvent {
     /**
      * Gets the new rank of a rank change log event.
      * @return An {@code Optional<String>} instance, never {@code null}.
-     * @see LogEventType#RANK_CHANGE
+     * @see GuildLogEventType#RANK_CHANGE
      */
     @OptionalValue
     Optional<String> getNewRank();
@@ -189,7 +189,7 @@ public interface LogEvent {
     /**
      * Gets the initiator of an invite decline log event.
      * @return An {@code Optional<String>} instance, never {@code null}.
-     * @see LogEventType#INVITE_DECLINED
+     * @see GuildLogEventType#INVITE_DECLINED
      */
     @IdValue(flavor = IdValue.Flavor.STRING)
     @OptionalValue

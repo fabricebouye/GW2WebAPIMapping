@@ -11,15 +11,19 @@ import api.web.gw2.mapping.core.ImplementationSpecific;
 import api.web.gw2.mapping.v2.APIv2;
 
 /**
- * Defines all types of log event upgrade actions.
+ * Defines all types of log event stash operations.
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/guid/:id/log", requiresAuthentication = true, scope = "guilds") // NOI18N.
-public enum LogEventUpgradeAction {
+public enum GuildLogEventStashOperation {
     /**
-     * Defines the treasury log event type.
+     * Defines the deposit stash operation.
      */
-    QUEUED("queued"),
+    DEPOSIT("deposit"),
+    /**
+     * Defines the withdraw stash operation.
+     */
+    WITHDRAW("withdraw"),
     /**
      * Fail safe value.
      */
@@ -28,7 +32,7 @@ public enum LogEventUpgradeAction {
 
     final String value;
 
-    private LogEventUpgradeAction(final String value) {
+    private GuildLogEventStashOperation(final String value) {
         this.value = value;
     }
 }

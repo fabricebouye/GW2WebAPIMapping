@@ -11,19 +11,19 @@ import api.web.gw2.mapping.core.ImplementationSpecific;
 import api.web.gw2.mapping.v2.APIv2;
 
 /**
- * Defines all types of log event stash operations.
+ * Defines all types activities for the influence log event type.
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/guid/:id/log", requiresAuthentication = true, scope = "guilds") // NOI18N.
-public enum LogEventStashOperation {
+public enum GuildLogEventInfluenceActivity {
     /**
-     * Defines the deposit stash operation.
+     * Defines daily login influence activity.
      */
-    DEPOSIT("deposit"),
+    DAILY_LOGIN("daily_login"),
     /**
-     * Defines the withdraw stash operation.
+     * Defines gifted influence activity.
      */
-    WITHDRAW("withdraw"),
+    GIFTED("gifted"),
     /**
      * Fail safe value.
      */
@@ -32,7 +32,7 @@ public enum LogEventStashOperation {
 
     final String value;
 
-    private LogEventStashOperation(final String value) {
+    private GuildLogEventInfluenceActivity(final String value) {
         this.value = value;
     }
 }

@@ -20,9 +20,9 @@ import static org.junit.Assert.*;
  * Unit test.
  * @author Fabrice Bouyé
  */
-public final class LogEventUtilsTest {
+public final class GuildLogEventUtilsTest {
 
-    public LogEventUtilsTest() {
+    public GuildLogEventUtilsTest() {
     }
 
     @BeforeClass
@@ -42,11 +42,11 @@ public final class LogEventUtilsTest {
     }
 
     /**
-     * Test of LogEventType.
+     * Test of GuildLogEventType.
      */
     @Test
-    public void testFindLogEventType() {
-        System.out.println("findLogEventType");
+    public void testFindGuildLogEventType() {
+        System.out.println("findGuildLogEventType");
         final String[] values = {
             "stash", // NOI18N.
             "treasury", // NOI18N.
@@ -61,108 +61,108 @@ public final class LogEventUtilsTest {
             null,
             "" // NOI18N.
         };
-        final LogEventType[] expResults = {
-            LogEventType.STASH,
-            LogEventType.TREASURY,
-            LogEventType.MOTD,
-            LogEventType.INFLUENCE,
-            LogEventType.UPGRADE,
-            LogEventType.INVITED,
-            LogEventType.INVITE_DECLINED,
-            LogEventType.JOINED,
-            LogEventType.KICK,
-            LogEventType.RANK_CHANGE,
-            LogEventType.UNKNOWN,
-            LogEventType.UNKNOWN
+        final GuildLogEventType[] expResults = {
+            GuildLogEventType.STASH,
+            GuildLogEventType.TREASURY,
+            GuildLogEventType.MOTD,
+            GuildLogEventType.INFLUENCE,
+            GuildLogEventType.UPGRADE,
+            GuildLogEventType.INVITED,
+            GuildLogEventType.INVITE_DECLINED,
+            GuildLogEventType.JOINED,
+            GuildLogEventType.KICK,
+            GuildLogEventType.RANK_CHANGE,
+            GuildLogEventType.UNKNOWN,
+            GuildLogEventType.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
                 forEach(index -> {
                     final String value = values[index];
-                    final LogEventType expResult = expResults[index];
-                    final LogEventType result = EnumValueFactory.INSTANCE.mapEnumValue(LogEventType.class, value);
+                    final GuildLogEventType expResult = expResults[index];
+                    final GuildLogEventType result = EnumValueFactory.INSTANCE.mapEnumValue(GuildLogEventType.class, value);
                     assertEquals(expResult, result);
                 });
     }
 
     /**
-     * Test of LogEventInfluenceActivity.
+     * Test of GuildLogEventInfluenceActivity.
      */
     @Test
-    public void testFindLogEventInfluenceActivity() {
-        System.out.println("findLogEventInfluenceActivity");
+    public void testFindGuildLogEventInfluenceActivity() {
+        System.out.println("findGuildLogEventInfluenceActivity");
         final String[] values = {
             "daily_login", // NOI18N.
             "gifted", // NOI18N.
             null,
             "" // NOI18N.
         };
-        final LogEventInfluenceActivity[] expResults = {
-            LogEventInfluenceActivity.DAILY_LOGIN,
-            LogEventInfluenceActivity.GIFTED,
-            LogEventInfluenceActivity.UNKNOWN,
-            LogEventInfluenceActivity.UNKNOWN
+        final GuildLogEventInfluenceActivity[] expResults = {
+            GuildLogEventInfluenceActivity.DAILY_LOGIN,
+            GuildLogEventInfluenceActivity.GIFTED,
+            GuildLogEventInfluenceActivity.UNKNOWN,
+            GuildLogEventInfluenceActivity.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
                 forEach(index -> {
                     final String value = values[index];
-                    final LogEventInfluenceActivity expResult = expResults[index];
-                    final LogEventInfluenceActivity result = EnumValueFactory.INSTANCE.mapEnumValue(LogEventInfluenceActivity.class, value);
+                    final GuildLogEventInfluenceActivity expResult = expResults[index];
+                    final GuildLogEventInfluenceActivity result = EnumValueFactory.INSTANCE.mapEnumValue(GuildLogEventInfluenceActivity.class, value);
                     assertEquals(expResult, result);
                 });
     }
 
     /**
-     * Test of LogEventStashOperation.
+     * Test of GuildLogEventStashOperation.
      */
     @Test
-    public void testFindLogEventStashOperation() {
-        System.out.println("findLogEventStashOperation");
+    public void testFindGuildLogEventStashOperation() {
+        System.out.println("findGuildLogEventStashOperation");
         final String[] values = {
             "deposit", // NOI18N.
             "withdraw", // NOI18N.
             null,
             "" // NOI18N.
         };
-        final LogEventStashOperation[] expResults = {
-            LogEventStashOperation.DEPOSIT,
-            LogEventStashOperation.WITHDRAW,
-            LogEventStashOperation.UNKNOWN,
-            LogEventStashOperation.UNKNOWN
+        final GuildLogEventStashOperation[] expResults = {
+            GuildLogEventStashOperation.DEPOSIT,
+            GuildLogEventStashOperation.WITHDRAW,
+            GuildLogEventStashOperation.UNKNOWN,
+            GuildLogEventStashOperation.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
                 forEach(index -> {
                     final String value = values[index];
-                    final LogEventStashOperation expResult = expResults[index];
-                    final LogEventStashOperation result = EnumValueFactory.INSTANCE.mapEnumValue(LogEventStashOperation.class, value);
+                    final GuildLogEventStashOperation expResult = expResults[index];
+                    final GuildLogEventStashOperation result = EnumValueFactory.INSTANCE.mapEnumValue(GuildLogEventStashOperation.class, value);
                     assertEquals(expResult, result);
                 });
     }
 
     /**
-     * Test of LogEventUpgradeAction.
+     * Test of GuildLogEventUpgradeAction.
      */
     @Test
-    public void testFindLogEventUpgradeAction() {
-        System.out.println("findLogEventUpgradeAction");
+    public void testFindGuildLogEventUpgradeAction() {
+        System.out.println("findGuildLogEventUpgradeAction");
         final String[] values = {
             "queued", // NOI18N.
             null,
             "" // NOI18N.
         };
-        final LogEventUpgradeAction[] expResults = {
-            LogEventUpgradeAction.QUEUED,
-            LogEventUpgradeAction.UNKNOWN,
-            LogEventUpgradeAction.UNKNOWN
+        final GuildLogEventUpgradeAction[] expResults = {
+            GuildLogEventUpgradeAction.QUEUED,
+            GuildLogEventUpgradeAction.UNKNOWN,
+            GuildLogEventUpgradeAction.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
                 forEach(index -> {
                     final String value = values[index];
-                    final LogEventUpgradeAction expResult = expResults[index];
-                    final LogEventUpgradeAction result = EnumValueFactory.INSTANCE.mapEnumValue(LogEventUpgradeAction.class, value);
+                    final GuildLogEventUpgradeAction expResult = expResults[index];
+                    final GuildLogEventUpgradeAction result = EnumValueFactory.INSTANCE.mapEnumValue(GuildLogEventUpgradeAction.class, value);
                     assertEquals(expResult, result);
                 });
     }
