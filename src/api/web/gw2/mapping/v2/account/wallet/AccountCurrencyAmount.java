@@ -21,6 +21,7 @@ public interface AccountCurrencyAmount {
     /**
      * The id of the currency.
      * @return An {@code int}.
+     * @see api.web.gw2.mapping.v2.currencies.Currency#getId() 
      */
     @IdValue
     public int getId();
