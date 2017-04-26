@@ -21,6 +21,7 @@ public interface MaterialStorage {
     /**
      * Gets the id of this material storage.
      * @return An {@code int}.
+     * @see api.web.gw2.mapping.v2.items.Item#getId() 
      */
     @IdValue
     int getId();

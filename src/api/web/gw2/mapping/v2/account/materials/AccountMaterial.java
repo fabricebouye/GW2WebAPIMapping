@@ -12,15 +12,16 @@ import api.web.gw2.mapping.core.QuantityValue;
 import api.web.gw2.mapping.v2.APIv2;
 
 /**
- * Defines an account material.
+ * Defines an account material in the bank's material storage.
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/account/materials", requiresAuthentication = true, scope = "inventories") // NOI18N.
-public interface Material {
+public interface AccountMaterial {
 
     /**
      * Gets the id of this account material.
      * @return An {@code int}.
+     * @see api.web.gw2.mapping.v2.items.Item#getId() 
      */
     @IdValue
     int getId();
@@ -35,7 +36,7 @@ public interface Material {
 
     /**
      * Gets the quantity of this account material.
-     * @return An {@code int}.
+     * @return An {@code int} &ge;0 .
      */
     @QuantityValue
     int getCount();
