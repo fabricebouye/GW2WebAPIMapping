@@ -20,7 +20,7 @@ import java.util.Set;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/guild/:id/teams", requiresAuthentication = true, scope = "guilds") // NOI18N.
-public interface Team {
+public interface GuildTeam {
 
     /**
      * Gets the id of the team.
@@ -31,11 +31,11 @@ public interface Team {
 
     /**
      * Gets the set of members of this team.
-     * @return A non-modifiable {@code Set<TeamMember>} instance, never {@code null}.
+     * @return A non-modifiable {@code Set<GuildTeamMember>} instance, never {@code null}.
      * <br>May be empty.
      */
     @SetValue
-    Set<TeamMember> getMembers();
+    Set<GuildTeamMember> getMembers();
 
     /**
      * Gets the name of the team.
@@ -45,21 +45,21 @@ public interface Team {
 
     /**
      * Gets the state of the team.
-     * @return A {@code TeamState} instance, never {@code null}.
+     * @return A {@code GuildTeamState} instance, never {@code null}.
      */
-    TeamState getState();
+    GuildTeamState getState();
 
     /**
      * Gets the aggregate ladder result for this team.
-     * @return A {@code TeamLadderResult} instance, never {@code null}.
+     * @return A {@code GuildTeamLadderResult} instance, never {@code null}.
      */
-    TeamLadderResult getAggregate();
+    GuildTeamLadderResult getAggregate();
 
     /**
      * Gets the aggregate ladder results for each ladders for this team.
-     * @return A non-nodifiable {@code Map<PvPLadder, TeamLadderResult>} instance, never {@code null}.
+     * @return A non-nodifiable {@code Map<PvPLadder, GuildTeamLadderResult>} instance, never {@code null}.
      * <br>May be empty.
      */
     @MapValue
-    Map<PvpLadder, TeamLadderResult> getLadders();
+    Map<PvpLadder, GuildTeamLadderResult> getLadders();
 }

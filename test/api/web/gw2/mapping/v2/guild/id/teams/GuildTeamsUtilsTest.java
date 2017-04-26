@@ -7,7 +7,6 @@
  */
 package api.web.gw2.mapping.v2.guild.id.teams;
 
-import api.web.gw2.mapping.v2.guild.id.log.*;
 import api.web.gw2.mapping.core.EnumValueFactory;
 import java.util.stream.IntStream;
 import org.junit.After;
@@ -21,9 +20,9 @@ import static org.junit.Assert.*;
  * Unit test.
  * @author Fabrice Bouyé
  */
-public final class TeamsUtilsTest {
+public final class GuildTeamsUtilsTest {
 
-    public TeamsUtilsTest() {
+    public GuildTeamsUtilsTest() {
     }
 
     @BeforeClass
@@ -43,55 +42,55 @@ public final class TeamsUtilsTest {
     }
 
     /**
-     * Test of TeamMemberRole.
+     * Test of GuildTeamMemberRole.
      */
     @Test
-    public void testFindTeamMemberRole() {
-        System.out.println("findTeamMemberRole");
+    public void testFindGuildTeamMemberRole() {
+        System.out.println("findGuildTeamMemberRole");
         final String[] values = {
             "Captain", // NOI18N.
             "Member", // NOI18N.
             null,
             "" // NOI18N.
         };
-        final TeamMemberRole[] expResults = {
-            TeamMemberRole.CAPTAIN,
-            TeamMemberRole.MEMBER,
-            TeamMemberRole.UNKNOWN,
-            TeamMemberRole.UNKNOWN
+        final GuildTeamMemberRole[] expResults = {
+            GuildTeamMemberRole.CAPTAIN,
+            GuildTeamMemberRole.MEMBER,
+            GuildTeamMemberRole.UNKNOWN,
+            GuildTeamMemberRole.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
                 forEach(index -> {
                     final String value = values[index];
-                    final TeamMemberRole expResult = expResults[index];
-                    final TeamMemberRole result = EnumValueFactory.INSTANCE.mapEnumValue(TeamMemberRole.class, value);
+                    final GuildTeamMemberRole expResult = expResults[index];
+                    final GuildTeamMemberRole result = EnumValueFactory.INSTANCE.mapEnumValue(GuildTeamMemberRole.class, value);
                     assertEquals(expResult, result);
                 });
     }
 
     /**
-     * Test of TeamState.
+     * Test of GuildTeamState.
      */
     @Test
-    public void testFindTeamState() {
-        System.out.println("findTeamState");
+    public void testFindGuildTeamState() {
+        System.out.println("findGuildTeamState");
         final String[] values = {
             "Active", // NOI18N.
             null,
             "" // NOI18N.
         };
-        final TeamState[] expResults = {
-            TeamState.ACTIVE,
-            TeamState.UNKNOWN,
-            TeamState.UNKNOWN
+        final GuildTeamState[] expResults = {
+            GuildTeamState.ACTIVE,
+            GuildTeamState.UNKNOWN,
+            GuildTeamState.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
                 forEach(index -> {
                     final String value = values[index];
-                    final TeamState expResult = expResults[index];
-                    final TeamState result = EnumValueFactory.INSTANCE.mapEnumValue(TeamState.class, value);
+                    final GuildTeamState expResult = expResults[index];
+                    final GuildTeamState result = EnumValueFactory.INSTANCE.mapEnumValue(GuildTeamState.class, value);
                     assertEquals(expResult, result);
                 });
     }

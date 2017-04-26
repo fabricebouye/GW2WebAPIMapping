@@ -7,28 +7,26 @@
  */
 package api.web.gw2.mapping.v2.guild.id.teams;
 
-import api.web.gw2.mapping.core.ImplementationSpecific;
+import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.v2.APIv2;
 
 /**
- * Defines a guild team state.
+ * Defines a guild team member.
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/guild/:id/teams", requiresAuthentication = true, scope = "guilds") // NOI18N.
-public enum TeamState {
-    /**
-     * The team is active.
-     */
-    ACTIVE("Active"),
-    /**
-     * Fail safe value.
-     */
-    @ImplementationSpecific
-    UNKNOWN(null);
+public interface GuildTeamMember {
 
-    final String value;
+    /**
+     * Gets the player id of the member.
+     * @return A {@code String} instance, never {@code null}.
+     */
+    @IdValue(flavor = IdValue.Flavor.STRING)
+    String getName();
 
-    private TeamState(final String value) {
-        this.value = value;
-    }
+    /**
+     * Gets the role of the member
+     * @return A {@code GuildTeamMemberRole} instance, never {@code null}.
+     */
+    GuildTeamMemberRole getRole();
 }

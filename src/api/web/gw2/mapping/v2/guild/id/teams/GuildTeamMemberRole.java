@@ -15,7 +15,7 @@ import api.web.gw2.mapping.v2.APIv2;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/guild/:id/teams", requiresAuthentication = true, scope = "guilds") // NOI18N.
-public enum TeamMemberRole {
+public enum GuildTeamMemberRole {
     /**
      * The member is the captain of the team.
      */
@@ -32,7 +32,7 @@ public enum TeamMemberRole {
 
     final String value;
 
-    private TeamMemberRole(final String value) {
+    private GuildTeamMemberRole(final String value) {
         this.value = value;
     }
 }

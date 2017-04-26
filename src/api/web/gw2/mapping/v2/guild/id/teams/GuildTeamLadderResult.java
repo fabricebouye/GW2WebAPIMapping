@@ -15,12 +15,12 @@ import api.web.gw2.mapping.v2.APIv2;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/guild/:id/teams", requiresAuthentication = true, scope = "guilds") // NOI18N.
-public interface TeamLadderResult {
+public interface GuildTeamLadderResult {
 
     /**
      * The singleton empty instance.
      */
-    public static final TeamLadderResult EMPTY = new TeamLadderResult() {
+    public static final GuildTeamLadderResult EMPTY = new GuildTeamLadderResult() {
         @Override
         public int getWins() {
             return 0;
