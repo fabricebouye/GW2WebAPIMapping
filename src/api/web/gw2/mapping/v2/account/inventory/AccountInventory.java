@@ -17,17 +17,18 @@ import java.util.List;
 import java.util.OptionalInt;
 
 /**
- * Defines an inventory slot.
+ * Defines an inventory slot in the account's shared inventory.
  * @author Fabrice Bouyé
  * @see api.web.gw2.mapping.v2.characters.id.inventory.CharacterInventory
  * @see api.web.gw2.mapping.v2.characters.id.inventory.CharacterInventoryBag
  */
 @APIv2(endpoint = "v2/account/inventory", requiresAuthentication = true, scope = "inventories") // NOI18N.
-public interface SharedInventory {
+public interface AccountInventory {
 
     /**
      * Gets the Id of the object in this inventory slot.
      * @return An {@code int}.
+     * @see api.web.gw2.mapping.v2.items.Item#getId() 
      */
     @IdValue
     int getId();
@@ -59,6 +60,7 @@ public interface SharedInventory {
     /**
      * Gets the list of infusions ids on this object in inventory slot.
      * @return A non-modifiable {@code List<Integer>} instance, never {@code null}; may be empty.
+     * @see api.web.gw2.mapping.v2.items.Item#getId() 
      */
     @IdValue
     @ListValue
