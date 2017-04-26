@@ -18,7 +18,7 @@ import java.util.OptionalInt;
  */
 // @todo Check if unlocks permission required or not.
 @APIv2(endpoint = "v2/account/finishers", requiresAuthentication = true, scope = "unlocks") // NOI18N.
-public interface AccountFinisherUnlock {
+public interface AccountFinisher {
 
     /**
      * Gets the id of the finisher unlocked.
