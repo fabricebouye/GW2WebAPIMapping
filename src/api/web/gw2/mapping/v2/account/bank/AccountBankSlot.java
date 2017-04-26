@@ -23,7 +23,7 @@ import java.util.List;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/account/bank", requiresAuthentication = true, scope = "inventories") // NOI18N.
-public interface BankSlot {
+public interface AccountBankSlot {
 
     /**
      * Gets the id of this account bank slot.
