@@ -16,7 +16,7 @@ import api.web.gw2.mapping.v2.APIv2;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/account/wallet", requiresAuthentication = true, scope = "wallet") // NOI18N.
-public interface CurrencyAmount {
+public interface AccountCurrencyAmount {
 
     /**
      * The id of the currency.
