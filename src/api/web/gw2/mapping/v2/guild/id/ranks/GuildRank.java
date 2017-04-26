@@ -21,7 +21,7 @@ import java.util.Set;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/guild/:id/ranks", requiresAuthentication = true, scope = "guilds") // NOI18N.
-public interface Rank {
+public interface GuildRank {
 
     /**
      * Gets the id of this rank.
