@@ -20,9 +20,9 @@ import static org.junit.Assert.*;
  * Unit test.
  * @author Fabrice Bouyé
  */
-public final class NodesUtilsTest {
+public final class AccountNodesUtilsTest {
 
-    public NodesUtilsTest() {
+    public AccountNodesUtilsTest() {
     }
 
     @BeforeClass
@@ -45,8 +45,8 @@ public final class NodesUtilsTest {
      * Test of AccountAccessType.
      */
     @Test
-    public void testFindNodeType() {
-        System.out.println("findNodeType"); // NOI18N.
+    public void testFindAccountNodeType() {
+        System.out.println("findAccountNodeType"); // NOI18N.
         final String[] values = {
             "basic_ore_nodes", // NOI18N.
             "basic_lumber_nodes", // NOI18N.
@@ -86,50 +86,50 @@ public final class NodesUtilsTest {
             null,
             "" // NOI18N.
         };
-        final NodeType[] expResults = {
-            NodeType.BASIC_ORE_NODES,
-            NodeType.BASIC_LUMBER_NODES,
-            NodeType.BASIC_HARVESTING_NODES,
-            NodeType.BASIC_CLOTH_RACK,
-            NodeType.BASIC_LEATHER_RACK,
-            NodeType.HARD_WOOD_NODE,
-            NodeType.ANCIENT_WOOD_NODE,
-            NodeType.ELDER_WOOD_NODE,
-            NodeType.IRON_ORE_NODE,
-            NodeType.PLATINUM_ORE_NODE,
-            NodeType.MITHRIL_ORE_NODE,
-            NodeType.ORICHALCUM_ORE_NODE,
-            NodeType.OMNOMBERRY_NODE,
-            NodeType.SNOW_TRUFFLE_NODE,
-            NodeType.LOTUS_NODE,
-            NodeType.ORRIAN_TRUFFLE_NODE,
-            NodeType.FLAXSEED_NODE,
-            NodeType.GHOST_PEPPER_NODE,
-            NodeType.AURILIUM_NODE,
-            NodeType.ENCHANTED_TREASURE_CHEST,
-            NodeType.CANDY_CORN_NODE,
-            NodeType.WINTERSDAY_TREE,
-            NodeType.QUARTZ_NODE,
-            NodeType.SPROKET_GENERATOR,
-            NodeType.KRAIT_OBELISK,
-            NodeType.BANDIT_CHEST,
-            NodeType.BLOODSTONE_KRYSTAL,
-            NodeType.KING_SIZED_CANDY_CORN,
-            NodeType.AIRSHIP_CARGO,
-            NodeType.CRYSTALLIZED_SUPPLY_CACHE,
-            NodeType.EXALTED_CHEST,
-            NodeType.PETRIFIED_STUMP,
-            NodeType.WINTERBERRY_BUSH,
-            NodeType.JADE_FRAGMENT,
-            NodeType.NOXIOUS_POD,
-            NodeType.UNKNOWN,
-            NodeType.UNKNOWN,};
+        final AccountNodeType[] expResults = {
+            AccountNodeType.BASIC_ORE_NODES,
+            AccountNodeType.BASIC_LUMBER_NODES,
+            AccountNodeType.BASIC_HARVESTING_NODES,
+            AccountNodeType.BASIC_CLOTH_RACK,
+            AccountNodeType.BASIC_LEATHER_RACK,
+            AccountNodeType.HARD_WOOD_NODE,
+            AccountNodeType.ANCIENT_WOOD_NODE,
+            AccountNodeType.ELDER_WOOD_NODE,
+            AccountNodeType.IRON_ORE_NODE,
+            AccountNodeType.PLATINUM_ORE_NODE,
+            AccountNodeType.MITHRIL_ORE_NODE,
+            AccountNodeType.ORICHALCUM_ORE_NODE,
+            AccountNodeType.OMNOMBERRY_NODE,
+            AccountNodeType.SNOW_TRUFFLE_NODE,
+            AccountNodeType.LOTUS_NODE,
+            AccountNodeType.ORRIAN_TRUFFLE_NODE,
+            AccountNodeType.FLAXSEED_NODE,
+            AccountNodeType.GHOST_PEPPER_NODE,
+            AccountNodeType.AURILIUM_NODE,
+            AccountNodeType.ENCHANTED_TREASURE_CHEST,
+            AccountNodeType.CANDY_CORN_NODE,
+            AccountNodeType.WINTERSDAY_TREE,
+            AccountNodeType.QUARTZ_NODE,
+            AccountNodeType.SPROKET_GENERATOR,
+            AccountNodeType.KRAIT_OBELISK,
+            AccountNodeType.BANDIT_CHEST,
+            AccountNodeType.BLOODSTONE_KRYSTAL,
+            AccountNodeType.KING_SIZED_CANDY_CORN,
+            AccountNodeType.AIRSHIP_CARGO,
+            AccountNodeType.CRYSTALLIZED_SUPPLY_CACHE,
+            AccountNodeType.EXALTED_CHEST,
+            AccountNodeType.PETRIFIED_STUMP,
+            AccountNodeType.WINTERBERRY_BUSH,
+            AccountNodeType.JADE_FRAGMENT,
+            AccountNodeType.NOXIOUS_POD,
+            AccountNodeType.UNKNOWN,
+            AccountNodeType.UNKNOWN,};
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
                 forEach(index -> {
                     final String value = values[index];
-                    final NodeType expResult = expResults[index];
-                    final NodeType result = EnumValueFactory.INSTANCE.mapEnumValue(NodeType.class, value);
+                    final AccountNodeType expResult = expResults[index];
+                    final AccountNodeType result = EnumValueFactory.INSTANCE.mapEnumValue(AccountNodeType.class, value);
                     assertEquals(expResult, result);
                 });
 

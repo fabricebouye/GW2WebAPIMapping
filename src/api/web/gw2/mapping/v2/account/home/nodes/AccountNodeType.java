@@ -15,7 +15,7 @@ import api.web.gw2.mapping.v2.APIv2;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/account/home/nodes", requiresAuthentication = true, scope = "progression") // NOI18N.
-public enum NodeType {
+public enum AccountNodeType {
     BASIC_ORE_NODES("basic_ore_nodes"), // NOI18N.
     BASIC_LUMBER_NODES("basic_lumber_nodes"), // NOI18N.
     BASIC_HARVESTING_NODES("basic_harvesting_nodes"), // NOI18N.
@@ -59,7 +59,7 @@ public enum NodeType {
 
     final String value;
 
-    private NodeType(final String value) {
+    private AccountNodeType(final String value) {
         this.value = value;
     }
 }
