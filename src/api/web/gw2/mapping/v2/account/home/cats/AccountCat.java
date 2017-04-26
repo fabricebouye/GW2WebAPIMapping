@@ -15,7 +15,7 @@ import api.web.gw2.mapping.v2.APIv2;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/account/home/cats", requiresAuthentication = true, scope = "progression") // NOI18N.
-public interface AccountHomeCat {
+public interface AccountCat {
 
     /**
      * Gets the id of this cat.
@@ -26,7 +26,7 @@ public interface AccountHomeCat {
 
     /**
      * Gets the hint on how to unlock the cat.
-     * @return A {@code AccountHomeCatHint} instance, never {@code null}.
+     * @return A {@code AccountCatHint} instance, never {@code null}.
      */
-    AccountHomeCatHint getHint();
+    AccountCatHint getHint();
 }

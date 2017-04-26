@@ -20,9 +20,9 @@ import static org.junit.Assert.*;
  * Unit test.
  * @author Fabrice Bouyé
  */
-public final class AccountHomeCatsUtilsTest {
+public final class AccountCatsUtilsTest {
 
-    public AccountHomeCatsUtilsTest() {
+    public AccountCatsUtilsTest() {
     }
 
     @BeforeClass
@@ -83,47 +83,47 @@ public final class AccountHomeCatsUtilsTest {
             null,
             "" // NOI18N.
         };
-        final AccountHomeCatHint[] expResults = {
-            AccountHomeCatHint.CHICKEN,
-            AccountHomeCatHint.GRILLED_CHICKEN,
-            AccountHomeCatHint.SPICY_FLANK,
-            AccountHomeCatHint.SPICIER_FLANK,
-            AccountHomeCatHint.FIRE_FLANK,
-            AccountHomeCatHint.PRICKLEY_PEAR_SORBET,
-            AccountHomeCatHint.GINGER_LIME_ICECREAM,
-            AccountHomeCatHint.SAFFRON_MANGO_ICECREAM,
-            AccountHomeCatHint.PEACH_RASPBERRY_ICECREAM,
-            AccountHomeCatHint.CHICKEN_DAY,
-            AccountHomeCatHint.CHIKEN_NIGHT,
-            AccountHomeCatHint.WARRIOR,
-            AccountHomeCatHint.MESMER,
-            AccountHomeCatHint.RANGER,
-            AccountHomeCatHint.GUARDIAN,
-            AccountHomeCatHint.ELEMENTALIST,
-            AccountHomeCatHint.ENGINEER,
-            AccountHomeCatHint.REVENANT,
-            AccountHomeCatHint.THIEF,
-            AccountHomeCatHint.NECROMANCER,
-            AccountHomeCatHint.LAVA_SKRITT,
-            AccountHomeCatHint.GHOST_PEPPERS,
-            AccountHomeCatHint.HALLOWEEN,
-            AccountHomeCatHint.SNOW_LEPOARD,
-            AccountHomeCatHint.FROZEN_POULTRY_LEEK,
-            AccountHomeCatHint.ICE_POULTRY_WINTER_VEG,
-            AccountHomeCatHint.FREEZER_POULTRY_LEMONGRASS,
-            AccountHomeCatHint.COLD_SAFFRON_POULTRY,
-            AccountHomeCatHint.CAUDECUS,
-            AccountHomeCatHint.BUNDLE,
-            AccountHomeCatHint.GHOST,
-            AccountHomeCatHint.SAB,
-            AccountHomeCatHint.UNKNOWN,
-            AccountHomeCatHint.UNKNOWN,};
+        final AccountCatHint[] expResults = {
+            AccountCatHint.CHICKEN,
+            AccountCatHint.GRILLED_CHICKEN,
+            AccountCatHint.SPICY_FLANK,
+            AccountCatHint.SPICIER_FLANK,
+            AccountCatHint.FIRE_FLANK,
+            AccountCatHint.PRICKLEY_PEAR_SORBET,
+            AccountCatHint.GINGER_LIME_ICECREAM,
+            AccountCatHint.SAFFRON_MANGO_ICECREAM,
+            AccountCatHint.PEACH_RASPBERRY_ICECREAM,
+            AccountCatHint.CHICKEN_DAY,
+            AccountCatHint.CHIKEN_NIGHT,
+            AccountCatHint.WARRIOR,
+            AccountCatHint.MESMER,
+            AccountCatHint.RANGER,
+            AccountCatHint.GUARDIAN,
+            AccountCatHint.ELEMENTALIST,
+            AccountCatHint.ENGINEER,
+            AccountCatHint.REVENANT,
+            AccountCatHint.THIEF,
+            AccountCatHint.NECROMANCER,
+            AccountCatHint.LAVA_SKRITT,
+            AccountCatHint.GHOST_PEPPERS,
+            AccountCatHint.HALLOWEEN,
+            AccountCatHint.SNOW_LEPOARD,
+            AccountCatHint.FROZEN_POULTRY_LEEK,
+            AccountCatHint.ICE_POULTRY_WINTER_VEG,
+            AccountCatHint.FREEZER_POULTRY_LEMONGRASS,
+            AccountCatHint.COLD_SAFFRON_POULTRY,
+            AccountCatHint.CAUDECUS,
+            AccountCatHint.BUNDLE,
+            AccountCatHint.GHOST,
+            AccountCatHint.SAB,
+            AccountCatHint.UNKNOWN,
+            AccountCatHint.UNKNOWN,};
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
                 forEach(index -> {
                     final String value = values[index];
-                    final AccountHomeCatHint expResult = expResults[index];
-                    final AccountHomeCatHint result = EnumValueFactory.INSTANCE.mapEnumValue(AccountHomeCatHint.class, value);
+                    final AccountCatHint expResult = expResults[index];
+                    final AccountCatHint result = EnumValueFactory.INSTANCE.mapEnumValue(AccountCatHint.class, value);
                     assertEquals(expResult, result);
                 });
 
