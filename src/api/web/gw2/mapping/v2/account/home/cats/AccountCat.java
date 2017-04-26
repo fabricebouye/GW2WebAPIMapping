@@ -11,7 +11,7 @@ import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.v2.APIv2;
 
 /**
- * Defines an cat unlocked by the account.
+ * Defines a cat unlocked by the account.
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/account/home/cats", requiresAuthentication = true, scope = "progression") // NOI18N.
