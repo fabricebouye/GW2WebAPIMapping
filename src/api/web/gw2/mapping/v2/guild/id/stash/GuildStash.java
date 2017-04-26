@@ -19,7 +19,7 @@ import java.util.List;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/guild/:id/stash", requiresAuthentication = true, scope = "guilds") // NOI18N.
-public interface Stash {
+public interface GuildStash {
 
     /**
      * Gets the id the guild upgrade that granted access to this section of the guild vault.
@@ -50,8 +50,8 @@ public interface Stash {
 
     /**
      * Gets the list of inventory slots of the stash.
-     * @return A non-modifiable {@code List<StashInventory>} instance, never {@code null}.
+     * @return A non-modifiable {@code List<GuildStashInventory>} instance, never {@code null}.
      * <br>Can be empty.
      */
-    List<StashInventory> getInventory();
+    List<GuildStashInventory> getInventory();
 }

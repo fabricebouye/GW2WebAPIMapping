@@ -16,7 +16,7 @@ import api.web.gw2.mapping.v2.APIv2;
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/characters/:id/stash", requiresAuthentication = true, scope = "guild") // NOI18N.
-public interface StashInventory {
+public interface GuildStashInventory {
 
     /**
      * Gets the Id of this object in inventory.
