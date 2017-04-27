@@ -14,7 +14,7 @@ import api.web.gw2.mapping.v2.APIv2;
  * Defines the rarity of a skin.
  * @author Fabrice Bouyé
  */
-@APIv2(endpoint = "v2/items") // NOI18N.
+@APIv2(endpoint = "v2/skins") // NOI18N.
 public enum SkinRarity {
 
     /**
