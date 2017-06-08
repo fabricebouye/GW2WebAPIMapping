@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2015-2017 Fabrice Bouyé
  * All rights reserved.
  *
@@ -60,11 +60,10 @@ public interface Mastery {
     URLReference getBackground();
 
     /**
-     * Gets the id of the region in which this mastery is enabled.
-     * @return A {@code String} instance, never {@code null}.
+     * Gets the region in which this mastery is enabled.
+     * @return A {@code MasteryRegion} instance, never {@code null}.
      */
-    @IdValue(flavor = IdValue.Flavor.STRING)
-    String getRegion();
+    MasteryRegion getRegion();
 
     /**
      * Gets a set of all levels in this mastery.

@@ -8,11 +8,13 @@
 package api.web.gw2.mapping.v2.professions;
 
 import api.web.gw2.mapping.core.ImplementationSpecific;
+import api.web.gw2.mapping.v2.APIv2;
 
 /**
  * Defines all weapon slots.
  * @author Fabrice Bouyé
  */
+@APIv2(endpoint = "v2/professions") // NOI18N.
 public enum ProfessionWeaponSlot {
     /**
      * Defines weapon slot #1.
