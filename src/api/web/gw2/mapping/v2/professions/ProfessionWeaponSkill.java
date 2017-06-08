@@ -9,12 +9,14 @@ package api.web.gw2.mapping.v2.professions;
 
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.OptionalValue;
+import api.web.gw2.mapping.v2.APIv2;
 import java.util.Optional;
 
 /**
  * Defines a profession weapon skill.
  * @author Fabrice Bouyé
  */
+@APIv2(endpoint = "v2/professions") // NOI18N.
 public interface ProfessionWeaponSkill {
 
     /**

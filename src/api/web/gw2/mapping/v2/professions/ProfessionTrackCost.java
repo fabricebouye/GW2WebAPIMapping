@@ -10,12 +10,14 @@ package api.web.gw2.mapping.v2.professions;
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.OptionalValue;
 import api.web.gw2.mapping.core.QuantityValue;
+import api.web.gw2.mapping.v2.APIv2;
 import java.util.OptionalInt;
 
 /**
  * Base interface for a track cost.
  * @author Fabrice Bouyé
  */
+@APIv2(endpoint = "v2/professions") // NOI18N.
 public interface ProfessionTrackCost {
 
     /**

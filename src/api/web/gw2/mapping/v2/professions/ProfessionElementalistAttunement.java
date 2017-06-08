@@ -8,11 +8,13 @@
 package api.web.gw2.mapping.v2.professions;
 
 import api.web.gw2.mapping.core.ImplementationSpecific;
+import api.web.gw2.mapping.v2.APIv2;
 
 /**
- * Defines all elementaliste attunement.
+ * Defines all elementalist attunement.
  * @author Fabrice Bouyé
  */
+@APIv2(endpoint = "v2/professions") // NOI18N.
 public enum ProfessionElementalistAttunement {
     /**
      * Defines the air attunement.

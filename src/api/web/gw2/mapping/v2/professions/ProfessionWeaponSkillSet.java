@@ -10,6 +10,7 @@ package api.web.gw2.mapping.v2.professions;
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.OptionalValue;
 import api.web.gw2.mapping.core.SetValue;
+import api.web.gw2.mapping.v2.APIv2;
 import java.util.OptionalInt;
 import java.util.Set;
 
@@ -17,6 +18,7 @@ import java.util.Set;
  * Defines a weapon skill set for a profession.
  * @author Fabrice Bouyé
  */
+@APIv2(endpoint = "v2/professions") // NOI18N.
 public interface ProfessionWeaponSkillSet {
 
     /**
