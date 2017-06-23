@@ -26,7 +26,8 @@ public interface AccountCat {
 
     /**
      * Gets the hint on how to unlock the cat.
-     * @return A {@code AccountCatHint} instance, never {@code null}.
+     * @return A {@code String} instance, never {@code null}.
      */
-    AccountCatHint getHint();
+    @IdValue(flavor = IdValue.Flavor.STRING)
+    String getHint();
 }
