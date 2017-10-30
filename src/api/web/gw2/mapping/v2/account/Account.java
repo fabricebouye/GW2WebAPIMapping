@@ -62,10 +62,11 @@ public interface Account {
     ZonedDateTime getCreated();
 
     /**
-     * Gets the acess type of this account.
-     * @return A {@code AccountAccessType} instance, never {@code null}.
+     * Gets the set of access types for this account.
+     * @return A non-modifiable {@code Set<AccountAccessType>} instance, never {@code null}.
      */
-    AccountAccessType getAccess();
+    @SetValue
+    Set<AccountAccessType> getAccess();
 
     /**
      * Gets the fractal level of this account.

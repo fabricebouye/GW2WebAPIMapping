@@ -12,6 +12,7 @@ import api.web.gw2.mapping.v2.APIv2;
 
 /**
  * Defines all account access types.
+ * <br>Initially the player's account would only have one of such value; but this was changed after Path of Fire was released so an account now as a combination or valid content the player can access to.
  * @author Fabrice Bouyé
  */
 @APIv2(endpoint = "v2/account", requiresAuthentication = true, scope = "account") // NOI18N.
@@ -25,13 +26,17 @@ public enum AccountAccessType {
      */
     PLAY_FOR_FREE("PlayForFree"),
     /**
-     * Player has access to the base game only.
+     * Player has access to the base game.
      */
     GUILD_WARS_2("GuildWars2"),
     /**
-     * Player has access to Heart of Thorns only.
+     * Player has access to Heart of Thorns.
      */
     HEART_OF_THORNS("HeartOfThorns"),
+    /**
+     * Player has access to Path of Fire.
+     */
+    PATH_OF_FIRE("PathOfFire"),
     /**
      * Fail safe value.
      */

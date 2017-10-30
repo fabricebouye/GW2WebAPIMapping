@@ -52,6 +52,7 @@ public final class AccountUtilsTest {
             "PlayForFree", // NOI18N.
             "GuildWars2", // NOI18N.
             "HeartOfThorns", // NOI18N.
+            "PathOfFire", // NOI18N.
             null,
             "" // NOI18N.
         };
@@ -60,6 +61,7 @@ public final class AccountUtilsTest {
             AccountAccessType.PLAY_FOR_FREE,
             AccountAccessType.GUILD_WARS_2,
             AccountAccessType.HEART_OF_THORNS,
+            AccountAccessType.PATH_OF_FIRE,
             AccountAccessType.UNKNOWN,
             AccountAccessType.UNKNOWN
         };
