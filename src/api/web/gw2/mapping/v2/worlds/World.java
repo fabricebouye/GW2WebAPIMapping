@@ -12,7 +12,6 @@ import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.ImplementationSpecific;
 import api.web.gw2.mapping.core.LocalizedResource;
 import api.web.gw2.mapping.v2.APIv2;
-import static javax.management.Query.value;
 
 /**
  * Defines a world.
