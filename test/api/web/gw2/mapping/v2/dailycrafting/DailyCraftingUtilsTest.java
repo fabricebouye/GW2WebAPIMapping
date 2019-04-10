@@ -44,7 +44,7 @@ public class DailyCraftingUtilsTest {
      */
     @Test
     public void testFindDailyCrafting() {
-        System.out.println("findSkinFlag");
+        System.out.println("testFindDailyCrafting");
         final String[] values = {
                 "charged_quartz_crystal", // NOI18N.
                 "glob_of_elder_spirit_residue", // NOI18N.
