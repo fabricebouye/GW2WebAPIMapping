@@ -10,7 +10,10 @@ package api.web.gw2.mapping.v2.colors;
 import api.web.gw2.mapping.core.IdValue;
 import api.web.gw2.mapping.core.ImplementationSpecific;
 import api.web.gw2.mapping.core.LocalizedResource;
+import api.web.gw2.mapping.core.SetValue;
 import api.web.gw2.mapping.v2.APIv2;
+
+import java.util.Set;
 
 /**
  * Defines a color or dye.
@@ -57,4 +60,24 @@ public interface ColorDye {
      * @return A {@code ColorMaterial} instance, never {@code null}.
      */
     ColorMaterial getMetal();
+
+    /**
+     * Gets the fur material for this dye.
+     * @return A {@code ColorMaterial} instance, never {@code null}.
+     */
+    ColorMaterial getFur();
+
+    /**
+     * Gets the id of the item associated with this dye.
+     * @return An {@code int}.
+     */
+    @IdValue
+    int getItem();
+
+    /**
+     * Gets the categories for this dye.
+     * @return A non-modifiable {@code Set<ColorCategories>} instance, never {@code null}, maybe empty.
+     */
+    @SetValue
+    Set<ColorCategories> getCategories();
 }
