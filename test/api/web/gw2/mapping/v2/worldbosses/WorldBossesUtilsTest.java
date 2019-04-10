@@ -41,7 +41,7 @@ public class WorldBossesUtilsTest {
     }
 
     /**
-     * Test of SkinFlag.
+     * Test of {@code WorldBoss}.
      */
     @Test
     public void testFindWorldBoss() {

@@ -38,7 +38,7 @@ public class MapChestsUtilsTest {
     }
 
     /**
-     * Test of SkinFlag.
+     * Test of {@code MapChest}.
      */
     @Test
     public void testFindMapChest() {
