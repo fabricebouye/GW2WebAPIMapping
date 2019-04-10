@@ -40,7 +40,7 @@ public class MountsTypesUtilsTest {
     }
 
     /**
-     * Test of {@code MounType}.
+     * Test of {@code MountType}.
      */
     @Test
     public void testFindMountType() {
