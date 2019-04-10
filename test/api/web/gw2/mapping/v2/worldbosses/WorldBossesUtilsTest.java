@@ -45,7 +45,7 @@ public class WorldBossesUtilsTest {
      */
     @Test
     public void testFindWorldBoss() {
-        System.out.println("findSkinFlag");
+        System.out.println("testFindWorldBoss");
         final String[] values = {
                 "admiral_taidha_covington", // NOI18N.
                 "claw_of_jormag", // NOI18N.

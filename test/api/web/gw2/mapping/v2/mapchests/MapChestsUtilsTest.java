@@ -42,7 +42,7 @@ public class MapChestsUtilsTest {
      */
     @Test
     public void testFindMapChest() {
-        System.out.println("findSkinFlag");
+        System.out.println("testFindMapChest");
         final String[] values = {
                 "auric_basin_heros_choice_chest", // NOI18N.
                 "dragons_stand_heros_choice_chest", // NOI18N.
