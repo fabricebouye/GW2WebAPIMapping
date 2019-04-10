@@ -41,7 +41,7 @@ public class MapChestsUtilsTest {
      * Test of SkinFlag.
      */
     @Test
-    public void testFindWorldBoss() {
+    public void testFindMapChest() {
         System.out.println("findSkinFlag");
         final String[] values = {
                 "auric_basin_heros_choice_chest", // NOI18N.
