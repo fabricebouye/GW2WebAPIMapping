@@ -12,6 +12,7 @@ import api.web.gw2.mapping.v2.APIv2;
 
 /**
  * Defines a worldboss.
+ * <br>As of 2019/04, this only includes Core Tyria world bosses.
  *
  * @author Fabrice Bouyé
  */
