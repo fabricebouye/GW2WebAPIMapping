@@ -48,14 +48,16 @@ public class MasteriesUtilsTest {
     public void testFindMasteryRegion() {
         System.out.println("findMasteryRegion");
         final String[] values = {
-            "Tyria", // NOI18N.
+            "Desert", // NOI18N.
             "Maguuma", // NOI18N.
+            "Tyria", // NOI18N.
             null,
             "" // NOI18N.
         };
         final MasteryRegion[] expResults = {
-            MasteryRegion.TYRIA,
+            MasteryRegion.DESERT,
             MasteryRegion.MAGUUMA,
+            MasteryRegion.TYRIA,
             MasteryRegion.UNKNOWN,
             MasteryRegion.UNKNOWN
         };

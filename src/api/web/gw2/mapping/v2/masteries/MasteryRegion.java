@@ -17,6 +17,10 @@ import api.web.gw2.mapping.v2.APIv2;
 @APIv2(endpoint = "v2/masteries") // NOI18N.
 public enum MasteryRegion {
     /**
+     * Defines the Desert mastery region (Path of Fire, Living World Season 4).
+     */
+    DESERT("Desert"), // NOI18N.
+    /**
      * Defines the Maguuma mastery region (Heart of Thorns, Raid, Living World Season 3).
      */
     MAGUUMA("Maguuma"), // NOI18N.
