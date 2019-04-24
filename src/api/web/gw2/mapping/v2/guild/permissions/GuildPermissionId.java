@@ -16,45 +16,47 @@ import api.web.gw2.mapping.v2.APIv2;
  */
 @APIv2(endpoint = "v2/guild/permissions") // NOI18N.
 public enum GuildPermissionId {
-    ACTIVATE_PLACEABLES("ActivatePlaceables"),
-    ACTIVATE_WORLD_EVENT("ActivateWorldEvent"),
+    ACTIVATE_PLACEABLES("ActivatePlaceables"), // NOI18N.
+    ACTIVATE_WORLD_EVENT("ActivateWorldEvent"), // NOI18N.
     /**
      * Allows to administrate lower ranks.
      */
     ADMIN("Admin"),
-    CLAIMABLE_ACTIVATE("ClaimableActivate"),
-    CLAIMABLE_CLAIM("ClaimableClaim"),
+    CLAIMABLE_ACTIVATE("ClaimableActivate"), // NOI18N.
+    CLAIMABLE_CLAIM("ClaimableClaim"), // NOI18N.
     /**
      * Allows to edit guild-owned claimables.
      */
-    CLAIMABLE_EDIT_OPTIONS("ClaimableEditOptions"),
-    CLAIMABLE_SPEND("ClaimableSpend"),
-    DECORATION_ADMIN("DecorationAdmin"),
-    DEPOSIT_COINS_STASH("DepositCoinsStash"),
-    DEPOSIT_COINS_TROVE("DepositCoinsTrove"),
-    DEPOSIT_ITEMS_TROVE("DepositItemsTrove"),
-    DEPOSIT_ITEMS_STASH("DepositItemsStash"),
-    EDIT_ASSEMBLY_QUEUE("EditAssemblyQueue"),
+    CLAIMABLE_EDIT_OPTIONS("ClaimableEditOptions"), // NOI18N.
+    CLAIMABLE_SPEND("ClaimableSpend"), // NOI18N.
+    DECORATION_ADMIN("DecorationAdmin"), // NOI18N.
+    DEPOSIT_COINS_STASH("DepositCoinsStash"), // NOI18N.
+    DEPOSIT_COINS_TROVE("DepositCoinsTrove"), // NOI18N.
+    DEPOSIT_ITEMS_TROVE("DepositItemsTrove"), // NOI18N.
+    DEPOSIT_ITEMS_STASH("DepositItemsStash"), // NOI18N.
+    EDIT_ASSEMBLY_QUEUE("EditAssemblyQueue"), // NOI18N.
     /**
      * Allows to edit guild anthem.
      */
-    EDIT_ANTHEM("EditAnthem"),
-    EDIT_BGM("EditBGM"),
-    EDIT_EMBLEM("EditEmblem"),
-    EDIT_MOTD("EditMOTD"),
-    EDIT_ROLES("EditRoles"),
-    MISSION_CONTROL("MissionControl"),
-    OPEN_PORTAL("OpenPortal"),
-    PLACE_ARENA_DECORATION("PlaceArenaDecoration"),
-    PLACE_DECORATION("PlaceDecoration"),
-    PURCHASE_UPGRADES("PurchaseUpgrades"),
-    SET_GUILD_HALL("SetGuildHall"),
-    SPEND_FUEL("SpendFuel"),
-    TEAM_ADMIN("TeamAdmin"),
-    WITHDRAW_COINS_STASH("WithdrawCoinsStash"),
-    WITHDRAW_COINS_TROVE("WithdrawCoinsTrove"),
-    WITHDRAW_ITEMS_STASH("WithdrawItemsStash"),
-    WITHDRAW_ITEMS_TROVE("WithdrawItemsTrove"),
+    EDIT_ANTHEM("EditAnthem"), // NOI18N.
+    EDIT_BGM("EditBGM"), // NOI18N.
+    EDIT_EMBLEM("EditEmblem"), // NOI18N.
+    EDIT_MONUMENT("EditMonument"), // NOI18N.
+    EDIT_MOTD("EditMOTD"), // NOI18N.
+    EDIT_ROLES("EditRoles"), // NOI18N.
+    MISSION_CONTROL("MissionControl"), // NOI18N.
+    OPEN_PORTAL("OpenPortal"), // NOI18N.
+    PLACE_ARENA_DECORATION("PlaceArenaDecoration"), // NOI18N.
+    PLACE_DECORATION("PlaceDecoration"), // NOI18N.
+    PURCHASE_UPGRADES("PurchaseUpgrades"), // NOI18N.
+    SET_GUILD_HALL("SetGuildHall"), // NOI18N.
+    SPEND_FUEL("SpendFuel"), // NOI18N.
+    STARTING_ROLE("StartingRole"), // NOI18N.
+    TEAM_ADMIN("TeamAdmin"), // NOI18N.
+    WITHDRAW_COINS_STASH("WithdrawCoinsStash"), // NOI18N.
+    WITHDRAW_COINS_TROVE("WithdrawCoinsTrove"), // NOI18N.
+    WITHDRAW_ITEMS_STASH("WithdrawItemsStash"), // NOI18N.
+    WITHDRAW_ITEMS_TROVE("WithdrawItemsTrove"), // NOI18N.
     /**
      * Fail safe value.
      */

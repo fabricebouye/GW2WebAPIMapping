@@ -69,6 +69,7 @@ public class GuildPermissionsUtilsTest {
                 "EditAssemblyQueue", // NOI18N.
                 "EditBGM", // NOI18N.
                 "EditEmblem", // NOI18N.
+                "EditMonument", // NOI18N.
                 "EditMOTD", // NOI18N.
                 "EditRoles", // NOI18N.
                 "MissionControl", // NOI18N.
@@ -78,6 +79,7 @@ public class GuildPermissionsUtilsTest {
                 "PurchaseUpgrades", // NOI18N.
                 "SetGuildHall", // NOI18N.
                 "SpendFuel", // NOI18N.
+                "StartingRole", // NOI18N.
                 "TeamAdmin", // NOI18N.
                 "WithdrawCoinsStash", // NOI18N.
                 "WithdrawCoinsTrove", // NOI18N.
@@ -103,6 +105,7 @@ public class GuildPermissionsUtilsTest {
                 GuildPermissionId.EDIT_ASSEMBLY_QUEUE,
                 GuildPermissionId.EDIT_BGM,
                 GuildPermissionId.EDIT_EMBLEM,
+                GuildPermissionId.EDIT_MONUMENT,
                 GuildPermissionId.EDIT_MOTD,
                 GuildPermissionId.EDIT_ROLES,
                 GuildPermissionId.MISSION_CONTROL,
@@ -112,6 +115,7 @@ public class GuildPermissionsUtilsTest {
                 GuildPermissionId.PURCHASE_UPGRADES,
                 GuildPermissionId.SET_GUILD_HALL,
                 GuildPermissionId.SPEND_FUEL,
+                GuildPermissionId.STARTING_ROLE,
                 GuildPermissionId.TEAM_ADMIN,
                 GuildPermissionId.WITHDRAW_COINS_STASH,
                 GuildPermissionId.WITHDRAW_COINS_TROVE,
