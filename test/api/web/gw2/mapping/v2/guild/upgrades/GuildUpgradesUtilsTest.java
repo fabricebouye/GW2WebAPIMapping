@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2015-2019 Fabrice Bouyé
  * All rights reserved.
  *
@@ -8,16 +8,21 @@
 package api.web.gw2.mapping.v2.guild.upgrades;
 
 import api.web.gw2.mapping.core.EnumValueFactory;
+
 import java.util.stream.IntStream;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 /**
  * Unit test.
+ *
  * @author Fabrice Bouyé
  */
 public class GuildUpgradesUtilsTest {
@@ -25,19 +30,19 @@ public class GuildUpgradesUtilsTest {
     public GuildUpgradesUtilsTest() {
     }
 
-    @BeforeClass
+    @BeforeAll
     public static void setUpClass() {
     }
 
-    @AfterClass
+    @AfterAll
     public static void tearDownClass() {
     }
 
-    @Before
+    @BeforeEach
     public void setUp() {
     }
 
-    @After
+    @AfterEach
     public void tearDown() {
     }
 
@@ -48,26 +53,26 @@ public class GuildUpgradesUtilsTest {
     public void testFindGuildUpgradeType() {
         System.out.println("findGuildUpgradeType");
         final String[] values = {
-            "AccumulatingCurrency", // NOI18N.
-            "BankBag", // NOI18N.
-            "Boost", // NOI18N.
-            "Claimable", // NOI18N.
-            "Consumable", // NOI18N.
-            "Decoration", // NOI18N.
-            "Hub", // NOI18N.
-            null,
-            "" // NOI18N.
+                "AccumulatingCurrency", // NOI18N.
+                "BankBag", // NOI18N.
+                "Boost", // NOI18N.
+                "Claimable", // NOI18N.
+                "Consumable", // NOI18N.
+                "Decoration", // NOI18N.
+                "Hub", // NOI18N.
+                null,
+                "" // NOI18N.
         };
         final GuildUpgradeType[] expResults = {
-            GuildUpgradeType.ACCUMULATING_CURRENCY,
-            GuildUpgradeType.BANK_BAG,
-            GuildUpgradeType.BOOST,
-            GuildUpgradeType.CLAIMABLE,
-            GuildUpgradeType.CONSUMABLE,
-            GuildUpgradeType.DECORATION,
-            GuildUpgradeType.HUB,
-            GuildUpgradeType.UNKNOWN,
-            GuildUpgradeType.UNKNOWN
+                GuildUpgradeType.ACCUMULATING_CURRENCY,
+                GuildUpgradeType.BANK_BAG,
+                GuildUpgradeType.BOOST,
+                GuildUpgradeType.CLAIMABLE,
+                GuildUpgradeType.CONSUMABLE,
+                GuildUpgradeType.DECORATION,
+                GuildUpgradeType.HUB,
+                GuildUpgradeType.UNKNOWN,
+                GuildUpgradeType.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
@@ -86,18 +91,18 @@ public class GuildUpgradesUtilsTest {
     public void testFindGuildUpgradeCostType() {
         System.out.println("findGuildUpgradeCostType");
         final String[] values = {
-            "Collectible", // NOI18N.
-            "Currency", // NOI18N.
-            "Item", // NOI18N.
-            null,
-            "" // NOI18N.
+                "Collectible", // NOI18N.
+                "Currency", // NOI18N.
+                "Item", // NOI18N.
+                null,
+                "" // NOI18N.
         };
         final GuildUpgradeCostType[] expResults = {
-            GuildUpgradeCostType.COLLECTIBLE,
-            GuildUpgradeCostType.CURRENCY,
-            GuildUpgradeCostType.ITEM,
-            GuildUpgradeCostType.UNKNOWN,
-            GuildUpgradeCostType.UNKNOWN
+                GuildUpgradeCostType.COLLECTIBLE,
+                GuildUpgradeCostType.CURRENCY,
+                GuildUpgradeCostType.ITEM,
+                GuildUpgradeCostType.UNKNOWN,
+                GuildUpgradeCostType.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).

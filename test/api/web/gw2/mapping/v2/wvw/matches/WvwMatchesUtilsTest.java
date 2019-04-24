@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2015-2019 Fabrice Bouyé
  * All rights reserved.
  *
@@ -8,16 +8,20 @@
 package api.web.gw2.mapping.v2.wvw.matches;
 
 import api.web.gw2.mapping.core.EnumValueFactory;
+
 import java.util.stream.IntStream;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Unit test.
+ *
  * @author Fabrice Bouyé
  */
 public class WvwMatchesUtilsTest {
@@ -25,19 +29,19 @@ public class WvwMatchesUtilsTest {
     public WvwMatchesUtilsTest() {
     }
 
-    @BeforeClass
+    @BeforeAll
     public static void setUpClass() {
     }
 
-    @AfterClass
+    @AfterAll
     public static void tearDownClass() {
     }
 
-    @Before
+    @BeforeEach
     public void setUp() {
     }
 
-    @After
+    @AfterEach
     public void tearDown() {
     }
 
@@ -48,16 +52,16 @@ public class WvwMatchesUtilsTest {
     public void testFindWvwMatchMapBonusType() {
         System.out.println("findWvwMatchMapBonusType");
         final String[] values = {
-            "Bloodlust", // NOI18N.
-            "Center", // NOI18N.
-            null,
-            "" // NOI18N.
+                "Bloodlust", // NOI18N.
+                "Center", // NOI18N.
+                null,
+                "" // NOI18N.
         };
         final WvwMatchMapBonusType[] expResults = {
-            WvwMatchMapBonusType.BLOODLUST,
-            WvwMatchMapBonusType.CENTER,
-            WvwMatchMapBonusType.UNKNOWN,
-            WvwMatchMapBonusType.UNKNOWN
+                WvwMatchMapBonusType.BLOODLUST,
+                WvwMatchMapBonusType.CENTER,
+                WvwMatchMapBonusType.UNKNOWN,
+                WvwMatchMapBonusType.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
@@ -76,20 +80,20 @@ public class WvwMatchesUtilsTest {
     public void testFindWvwMatchMapType() {
         System.out.println("findWvwMatchMapType");
         final String[] values = {
-            "BlueHome", // NOI18N.
-            "Center", // NOI18N.
-            "GreenHome", // NOI18N.
-            "RedHome", // NOI18N.
-            null,
-            "" // NOI18N.
+                "BlueHome", // NOI18N.
+                "Center", // NOI18N.
+                "GreenHome", // NOI18N.
+                "RedHome", // NOI18N.
+                null,
+                "" // NOI18N.
         };
         final WvwMatchMapType[] expResults = {
-            WvwMatchMapType.BLUE_HOME,
-            WvwMatchMapType.CENTER,
-            WvwMatchMapType.GREEN_HOME,
-            WvwMatchMapType.RED_HOME,
-            WvwMatchMapType.UNKNOWN,
-            WvwMatchMapType.UNKNOWN
+                WvwMatchMapType.BLUE_HOME,
+                WvwMatchMapType.CENTER,
+                WvwMatchMapType.GREEN_HOME,
+                WvwMatchMapType.RED_HOME,
+                WvwMatchMapType.UNKNOWN,
+                WvwMatchMapType.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
@@ -108,20 +112,20 @@ public class WvwMatchesUtilsTest {
     public void testFindWvwMatchTeam() {
         System.out.println("findWvwMatchTeam");
         final String[] values = {
-            "Blue", // NOI18N.
-            "Green", // NOI18N.
-            "Neutral", // NOI18N.
-            "Red", // NOI18N.
-            null,
-            "" // NOI18N.
+                "Blue", // NOI18N.
+                "Green", // NOI18N.
+                "Neutral", // NOI18N.
+                "Red", // NOI18N.
+                null,
+                "" // NOI18N.
         };
         final WvwMatchTeam[] expResults = {
-            WvwMatchTeam.BLUE,
-            WvwMatchTeam.GREEN,
-            WvwMatchTeam.NEUTRAL,
-            WvwMatchTeam.RED,
-            WvwMatchTeam.UNKNOWN,
-            WvwMatchTeam.UNKNOWN
+                WvwMatchTeam.BLUE,
+                WvwMatchTeam.GREEN,
+                WvwMatchTeam.NEUTRAL,
+                WvwMatchTeam.RED,
+                WvwMatchTeam.UNKNOWN,
+                WvwMatchTeam.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).

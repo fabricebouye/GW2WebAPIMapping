@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2015-2019 Fabrice Bouyé
  * All rights reserved.
  *
@@ -8,16 +8,21 @@
 package api.web.gw2.mapping.v2.tokeninfo;
 
 import api.web.gw2.mapping.core.EnumValueFactory;
+
 import java.util.stream.IntStream;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 /**
  * Unit test.
+ *
  * @author Fabrice Bouyé
  */
 public class TokenInfoUtilsTest {
@@ -25,19 +30,19 @@ public class TokenInfoUtilsTest {
     public TokenInfoUtilsTest() {
     }
 
-    @BeforeClass
+    @BeforeAll
     public static void setUpClass() {
     }
 
-    @AfterClass
+    @AfterAll
     public static void tearDownClass() {
     }
 
-    @Before
+    @BeforeEach
     public void setUp() {
     }
 
-    @After
+    @AfterEach
     public void tearDown() {
     }
 
@@ -48,32 +53,32 @@ public class TokenInfoUtilsTest {
     public void testFindTokenInfoPermission() {
         System.out.println("findTokenInfoPermission");
         final String[] values = {
-            "account", // NOI18N.
-            "characters", // NOI18N.
-            "inventories", // NOI18N.
-            "tradingpost", // NOI18N.
-            "builds", // NOI18N.
-            "unlocks", // NOI18N.
-            "pvp", // NOI18N.
-            "wallet", // NOI18N.
-            "progression", //NOI18N.
-            "guilds", //NOI18N.
-            null,
-            "" // NOI18N.
+                "account", // NOI18N.
+                "characters", // NOI18N.
+                "inventories", // NOI18N.
+                "tradingpost", // NOI18N.
+                "builds", // NOI18N.
+                "unlocks", // NOI18N.
+                "pvp", // NOI18N.
+                "wallet", // NOI18N.
+                "progression", //NOI18N.
+                "guilds", //NOI18N.
+                null,
+                "" // NOI18N.
         };
         final TokenInfoPermission[] expResults = {
-            TokenInfoPermission.ACCOUNT,
-            TokenInfoPermission.CHARACTERS,
-            TokenInfoPermission.INVENTORIES,
-            TokenInfoPermission.TRADINGPOST,
-            TokenInfoPermission.BUILDS,
-            TokenInfoPermission.UNLOCKS,
-            TokenInfoPermission.PVP,
-            TokenInfoPermission.WALLET,
-            TokenInfoPermission.PROGRESSION,
-            TokenInfoPermission.GUILDS,
-            TokenInfoPermission.UNKNOWN,
-            TokenInfoPermission.UNKNOWN
+                TokenInfoPermission.ACCOUNT,
+                TokenInfoPermission.CHARACTERS,
+                TokenInfoPermission.INVENTORIES,
+                TokenInfoPermission.TRADINGPOST,
+                TokenInfoPermission.BUILDS,
+                TokenInfoPermission.UNLOCKS,
+                TokenInfoPermission.PVP,
+                TokenInfoPermission.WALLET,
+                TokenInfoPermission.PROGRESSION,
+                TokenInfoPermission.GUILDS,
+                TokenInfoPermission.UNKNOWN,
+                TokenInfoPermission.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).

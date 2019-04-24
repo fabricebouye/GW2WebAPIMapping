@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2015-2019 Fabrice Bouyé
  * All rights reserved.
  *
@@ -8,16 +8,20 @@
 package api.web.gw2.mapping.v2.worlds;
 
 import api.web.gw2.mapping.core.EnumValueFactory;
+
 import java.util.stream.IntStream;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Unit test.
+ *
  * @author Fabrice Bouyé
  */
 public class WorldsUtilsTest {
@@ -25,19 +29,19 @@ public class WorldsUtilsTest {
     public WorldsUtilsTest() {
     }
 
-    @BeforeClass
+    @BeforeAll
     public static void setUpClass() {
     }
 
-    @AfterClass
+    @AfterAll
     public static void tearDownClass() {
     }
 
-    @Before
+    @BeforeEach
     public void setUp() {
     }
 
-    @After
+    @AfterEach
     public void tearDown() {
     }
 
@@ -48,22 +52,22 @@ public class WorldsUtilsTest {
     public void testFindWorldPopulation() {
         System.out.println("findWorldPopulation");
         final String[] values = {
-            "Low", // NOI18N.
-            "Medium", // NOI18N.
-            "High", // NOI18N.
-            "VeryHigh", // NOI18N.
-            "Full", // NOI18N.
-            null,
-            "" // NOI18N.
+                "Low", // NOI18N.
+                "Medium", // NOI18N.
+                "High", // NOI18N.
+                "VeryHigh", // NOI18N.
+                "Full", // NOI18N.
+                null,
+                "" // NOI18N.
         };
         final WorldPopulation[] expResults = {
-            WorldPopulation.LOW,
-            WorldPopulation.MEDIUM,
-            WorldPopulation.HIGH,
-            WorldPopulation.VERY_HIGH,
-            WorldPopulation.FULL,
-            WorldPopulation.UNKNOWN,
-            WorldPopulation.UNKNOWN
+                WorldPopulation.LOW,
+                WorldPopulation.MEDIUM,
+                WorldPopulation.HIGH,
+                WorldPopulation.VERY_HIGH,
+                WorldPopulation.FULL,
+                WorldPopulation.UNKNOWN,
+                WorldPopulation.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
@@ -82,16 +86,16 @@ public class WorldsUtilsTest {
     public void testFindWorldRegion() {
         System.out.println("findWorldRegion");
         final String[] values = {
-            "1", // NOI18N.
-            "2", // NOI18N.
-            null,
-            "" // NOI18N.
+                "1", // NOI18N.
+                "2", // NOI18N.
+                null,
+                "" // NOI18N.
         };
         final WorldRegion[] expResults = {
-            WorldRegion.US,
-            WorldRegion.EU,
-            WorldRegion.UNKNOWN,
-            WorldRegion.UNKNOWN
+                WorldRegion.US,
+                WorldRegion.EU,
+                WorldRegion.UNKNOWN,
+                WorldRegion.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
@@ -110,20 +114,20 @@ public class WorldsUtilsTest {
     public void testFindWorldLanguage() {
         System.out.println("findWorldLanguage");
         final String[] values = {
-            "0", // NOI18N.
-            "1", // NOI18N.
-            "2", // NOI18N.
-            "3", // NOI18N.
-            null,
-            "" // NOI18N.
+                "0", // NOI18N.
+                "1", // NOI18N.
+                "2", // NOI18N.
+                "3", // NOI18N.
+                null,
+                "" // NOI18N.
         };
         final WorldLanguage[] expResults = {
-            WorldLanguage.EN,
-            WorldLanguage.FR,
-            WorldLanguage.DE,
-            WorldLanguage.ES,
-            WorldLanguage.UNKNOWN,
-            WorldLanguage.UNKNOWN
+                WorldLanguage.EN,
+                WorldLanguage.FR,
+                WorldLanguage.DE,
+                WorldLanguage.ES,
+                WorldLanguage.UNKNOWN,
+                WorldLanguage.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).

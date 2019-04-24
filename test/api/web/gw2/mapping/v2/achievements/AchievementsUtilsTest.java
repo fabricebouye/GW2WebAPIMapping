@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2015-2019 Fabrice Bouyé
  * All rights reserved.
  *
@@ -8,16 +8,21 @@
 package api.web.gw2.mapping.v2.achievements;
 
 import api.web.gw2.mapping.core.EnumValueFactory;
+
 import java.util.stream.IntStream;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 /**
  * Unit test.
+ *
  * @author Fabrice Bouyé
  */
 public class AchievementsUtilsTest {
@@ -25,19 +30,19 @@ public class AchievementsUtilsTest {
     public AchievementsUtilsTest() {
     }
 
-    @BeforeClass
+    @BeforeAll
     public static void setUpClass() {
     }
 
-    @AfterClass
+    @AfterAll
     public static void tearDownClass() {
     }
 
-    @Before
+    @BeforeEach
     public void setUp() {
     }
 
-    @After
+    @AfterEach
     public void tearDown() {
     }
 
@@ -48,16 +53,16 @@ public class AchievementsUtilsTest {
     public void testFindAchievementType() {
         System.out.println("findAchievementType"); // NOI18N.
         final String[] values = {
-            "Default", // NOI18N.
-            "ItemSet", // NOI18N.
-            null,
-            "" // NOI18N.
+                "Default", // NOI18N.
+                "ItemSet", // NOI18N.
+                null,
+                "" // NOI18N.
         };
         final AchievementType[] expResults = {
-            AchievementType.DEFAULT,
-            AchievementType.ITEM_SET,
-            AchievementType.UNKNOWN,
-            AchievementType.UNKNOWN
+                AchievementType.DEFAULT,
+                AchievementType.ITEM_SET,
+                AchievementType.UNKNOWN,
+                AchievementType.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
@@ -76,28 +81,28 @@ public class AchievementsUtilsTest {
     public void testFindAchievementFlag() {
         System.out.println("findAchievementFlag"); // NOI18N.
         final String[] values = {
-            "CategoryDisplay", // NOI18N.
-            "IgnoreNearlyComplete", // NOI18N.
-            "MoveToTop", // NOI18N.
-            "Pvp", // NOI18N.
-            "RepairOnLogin", // NOI18N.
-            "Hidden", // NOI18N.
-            "Repeatable", // NOI18N.
-            "RequiresUnlock", // NOI18N.
-            null,
-            "" // NOI18N.
+                "CategoryDisplay", // NOI18N.
+                "IgnoreNearlyComplete", // NOI18N.
+                "MoveToTop", // NOI18N.
+                "Pvp", // NOI18N.
+                "RepairOnLogin", // NOI18N.
+                "Hidden", // NOI18N.
+                "Repeatable", // NOI18N.
+                "RequiresUnlock", // NOI18N.
+                null,
+                "" // NOI18N.
         };
         final AchievementFlag[] expResults = {
-            AchievementFlag.CATEGORY_DISPLAY,
-            AchievementFlag.IGNORE_NEARLY_COMPLETE,
-            AchievementFlag.MOVE_TO_TOP,
-            AchievementFlag.PVP,
-            AchievementFlag.REPAIR_ON_LOGIN,
-            AchievementFlag.HIDDEN,
-            AchievementFlag.REPEATABLE,
-            AchievementFlag.REQUIRES_UNLOCK,
-            AchievementFlag.UNKNOWN,
-            AchievementFlag.UNKNOWN
+                AchievementFlag.CATEGORY_DISPLAY,
+                AchievementFlag.IGNORE_NEARLY_COMPLETE,
+                AchievementFlag.MOVE_TO_TOP,
+                AchievementFlag.PVP,
+                AchievementFlag.REPAIR_ON_LOGIN,
+                AchievementFlag.HIDDEN,
+                AchievementFlag.REPEATABLE,
+                AchievementFlag.REQUIRES_UNLOCK,
+                AchievementFlag.UNKNOWN,
+                AchievementFlag.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
@@ -116,16 +121,16 @@ public class AchievementsUtilsTest {
     public void testFindAchievementRewardType() {
         System.out.println("findAchievementRewardType"); // NOI18N.
         final String[] values = {
-            "Item", // NOI18N.
-            "Mastery", // NOI18N.
-            null,
-            "" // NOI18N.
+                "Item", // NOI18N.
+                "Mastery", // NOI18N.
+                null,
+                "" // NOI18N.
         };
         final AchievementRewardType[] expResults = {
-            AchievementRewardType.ITEM,
-            AchievementRewardType.MASTERY,
-            AchievementRewardType.UNKNOWN,
-            AchievementRewardType.UNKNOWN
+                AchievementRewardType.ITEM,
+                AchievementRewardType.MASTERY,
+                AchievementRewardType.UNKNOWN,
+                AchievementRewardType.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
@@ -144,16 +149,16 @@ public class AchievementsUtilsTest {
     public void testFindAchievementRewardRegion() {
         System.out.println("findAchievementRewardRegion"); // NOI18N.
         final String[] values = {
-            "Maguuma", // NOI18N.
-            "Tyria", // NOI18N.
-            null,
-            "" // NOI18N.
+                "Maguuma", // NOI18N.
+                "Tyria", // NOI18N.
+                null,
+                "" // NOI18N.
         };
         final AchievementRewardRegion[] expResults = {
-            AchievementRewardRegion.MAGUUMA,
-            AchievementRewardRegion.TYRIA,
-            AchievementRewardRegion.UNKNOWN,
-            AchievementRewardRegion.UNKNOWN
+                AchievementRewardRegion.MAGUUMA,
+                AchievementRewardRegion.TYRIA,
+                AchievementRewardRegion.UNKNOWN,
+                AchievementRewardRegion.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
@@ -172,20 +177,20 @@ public class AchievementsUtilsTest {
     public void testFindAchievementBitType() {
         System.out.println("findAchievementBitType"); // NOI18N.
         final String[] values = {
-            "Item", // NOI18N.
-            "Minipet", // NOI18N.
-            "Skin", // NOI18N.
-            "Text", // NOI18N.
-            null,
-            "" // NOI18N.
+                "Item", // NOI18N.
+                "Minipet", // NOI18N.
+                "Skin", // NOI18N.
+                "Text", // NOI18N.
+                null,
+                "" // NOI18N.
         };
         final AchievementBitType[] expResults = {
-            AchievementBitType.ITEM,
-            AchievementBitType.MINIPET,
-            AchievementBitType.SKIN,
-            AchievementBitType.TEXT,
-            AchievementBitType.UNKNOWN,
-            AchievementBitType.UNKNOWN
+                AchievementBitType.ITEM,
+                AchievementBitType.MINIPET,
+                AchievementBitType.SKIN,
+                AchievementBitType.TEXT,
+                AchievementBitType.UNKNOWN,
+                AchievementBitType.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).

@@ -8,16 +8,21 @@
 package api.web.gw2.mapping.v2.masteries;
 
 import api.web.gw2.mapping.core.EnumValueFactory;
+
 import java.util.stream.IntStream;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 /**
  * Unit test.
+ *
  * @author Fabrice Bouyé
  */
 public class MasteriesUtilsTest {
@@ -25,19 +30,19 @@ public class MasteriesUtilsTest {
     public MasteriesUtilsTest() {
     }
 
-    @BeforeClass
+    @BeforeAll
     public static void setUpClass() {
     }
 
-    @AfterClass
+    @AfterAll
     public static void tearDownClass() {
     }
 
-    @Before
+    @BeforeEach
     public void setUp() {
     }
 
-    @After
+    @AfterEach
     public void tearDown() {
     }
 
@@ -48,18 +53,18 @@ public class MasteriesUtilsTest {
     public void testFindMasteryRegion() {
         System.out.println("findMasteryRegion");
         final String[] values = {
-            "Desert", // NOI18N.
-            "Maguuma", // NOI18N.
-            "Tyria", // NOI18N.
-            null,
-            "" // NOI18N.
+                "Desert", // NOI18N.
+                "Maguuma", // NOI18N.
+                "Tyria", // NOI18N.
+                null,
+                "" // NOI18N.
         };
         final MasteryRegion[] expResults = {
-            MasteryRegion.DESERT,
-            MasteryRegion.MAGUUMA,
-            MasteryRegion.TYRIA,
-            MasteryRegion.UNKNOWN,
-            MasteryRegion.UNKNOWN
+                MasteryRegion.DESERT,
+                MasteryRegion.MAGUUMA,
+                MasteryRegion.TYRIA,
+                MasteryRegion.UNKNOWN,
+                MasteryRegion.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).

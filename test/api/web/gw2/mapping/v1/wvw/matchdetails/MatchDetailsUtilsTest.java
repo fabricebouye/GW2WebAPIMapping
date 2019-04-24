@@ -6,16 +6,20 @@
 package api.web.gw2.mapping.v1.wvw.matchdetails;
 
 import api.web.gw2.mapping.core.EnumValueFactory;
+
 import java.util.stream.IntStream;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Unit test.
+ *
  * @author Fabrice Bouyé
  */
 public class MatchDetailsUtilsTest {
@@ -23,19 +27,19 @@ public class MatchDetailsUtilsTest {
     public MatchDetailsUtilsTest() {
     }
 
-    @BeforeClass
+    @BeforeAll
     public static void setUpClass() {
     }
 
-    @AfterClass
+    @AfterAll
     public static void tearDownClass() {
     }
 
-    @Before
+    @BeforeEach
     public void setUp() {
     }
 
-    @After
+    @AfterEach
     public void tearDown() {
     }
 
@@ -46,20 +50,20 @@ public class MatchDetailsUtilsTest {
     public void testFindMatchDetailsMapType() {
         System.out.println("findMatchDetailsMapType");
         final String[] values = {
-            "BlueHome", // NOI18N.
-            "Center", // NOI18N.
-            "GreenHome", // NOI18N.
-            "RedHome", // NOI18N.
-            null,
-            "" // NOI18N.
+                "BlueHome", // NOI18N.
+                "Center", // NOI18N.
+                "GreenHome", // NOI18N.
+                "RedHome", // NOI18N.
+                null,
+                "" // NOI18N.
         };
         final MatchDetailsMapType[] expResults = {
-            MatchDetailsMapType.BLUE_HOME,
-            MatchDetailsMapType.CENTER,
-            MatchDetailsMapType.GREEN_HOME,
-            MatchDetailsMapType.RED_HOME,
-            MatchDetailsMapType.UNKNOWN,
-            MatchDetailsMapType.UNKNOWN
+                MatchDetailsMapType.BLUE_HOME,
+                MatchDetailsMapType.CENTER,
+                MatchDetailsMapType.GREEN_HOME,
+                MatchDetailsMapType.RED_HOME,
+                MatchDetailsMapType.UNKNOWN,
+                MatchDetailsMapType.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
@@ -78,18 +82,18 @@ public class MatchDetailsUtilsTest {
     public void testFindMatchDetailsBonusOwner() {
         System.out.println("findMatchDetailsBonusOwner");
         final String[] values = {
-            "Blue", // NOI18N.
-            "Green", // NOI18N.
-            "Red", // NOI18N.
-            null,
-            "" // NOI18N.
+                "Blue", // NOI18N.
+                "Green", // NOI18N.
+                "Red", // NOI18N.
+                null,
+                "" // NOI18N.
         };
         final MatchDetailsBonusOwner[] expResults = {
-            MatchDetailsBonusOwner.BLUE,
-            MatchDetailsBonusOwner.GREEN,
-            MatchDetailsBonusOwner.RED,
-            MatchDetailsBonusOwner.UNKNOWN,
-            MatchDetailsBonusOwner.UNKNOWN
+                MatchDetailsBonusOwner.BLUE,
+                MatchDetailsBonusOwner.GREEN,
+                MatchDetailsBonusOwner.RED,
+                MatchDetailsBonusOwner.UNKNOWN,
+                MatchDetailsBonusOwner.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
@@ -108,20 +112,20 @@ public class MatchDetailsUtilsTest {
     public void testFindMatchDetailsObjectiveOwner() {
         System.out.println("findMatchDetailsObjectiveOwner");
         final String[] values = {
-            "Blue", // NOI18N.
-            "Green", // NOI18N.
-            "Neutral", // NOI18N.
-            "Red", // NOI18N.
-            null,
-            "" // NOI18N.
+                "Blue", // NOI18N.
+                "Green", // NOI18N.
+                "Neutral", // NOI18N.
+                "Red", // NOI18N.
+                null,
+                "" // NOI18N.
         };
         final MatchDetailsObjectiveOwner[] expResults = {
-            MatchDetailsObjectiveOwner.BLUE,
-            MatchDetailsObjectiveOwner.GREEN,
-            MatchDetailsObjectiveOwner.NEUTRAL,
-            MatchDetailsObjectiveOwner.RED,
-            MatchDetailsObjectiveOwner.UNKNOWN,
-            MatchDetailsObjectiveOwner.UNKNOWN
+                MatchDetailsObjectiveOwner.BLUE,
+                MatchDetailsObjectiveOwner.GREEN,
+                MatchDetailsObjectiveOwner.NEUTRAL,
+                MatchDetailsObjectiveOwner.RED,
+                MatchDetailsObjectiveOwner.UNKNOWN,
+                MatchDetailsObjectiveOwner.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).

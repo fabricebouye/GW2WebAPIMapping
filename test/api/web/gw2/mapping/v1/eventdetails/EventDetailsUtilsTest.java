@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2015-2019 Fabrice Bouyé
  * All rights reserved.
  *
@@ -8,16 +8,20 @@
 package api.web.gw2.mapping.v1.eventdetails;
 
 import api.web.gw2.mapping.core.EnumValueFactory;
+
 import java.util.stream.IntStream;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Unit test.
+ *
  * @author Fabrice Bouyé
  */
 public class EventDetailsUtilsTest {
@@ -25,19 +29,19 @@ public class EventDetailsUtilsTest {
     public EventDetailsUtilsTest() {
     }
 
-    @BeforeClass
+    @BeforeAll
     public static void setUpClass() {
     }
 
-    @AfterClass
+    @AfterAll
     public static void tearDownClass() {
     }
 
-    @Before
+    @BeforeEach
     public void setUp() {
     }
 
-    @After
+    @AfterEach
     public void tearDown() {
     }
 
@@ -48,16 +52,16 @@ public class EventDetailsUtilsTest {
     public void testFindEventDetailsFlag() {
         System.out.println("findEventDetailsFlag");
         final String[] values = {
-            "group_event", // NOI18N.
-            "map_wide", // NOI18N.
-            null,
-            "" // NOI18N.
+                "group_event", // NOI18N.
+                "map_wide", // NOI18N.
+                null,
+                "" // NOI18N.
         };
         final EventDetailsFlag[] expResults = {
-            EventDetailsFlag.GROUP_EVENT,
-            EventDetailsFlag.MAP_WIDE,
-            EventDetailsFlag.UNKNOWN,
-            EventDetailsFlag.UNKNOWN
+                EventDetailsFlag.GROUP_EVENT,
+                EventDetailsFlag.MAP_WIDE,
+                EventDetailsFlag.UNKNOWN,
+                EventDetailsFlag.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
@@ -76,18 +80,18 @@ public class EventDetailsUtilsTest {
     public void testFindEventDetailsLocationType() {
         System.out.println("findEventDetailsLocationType");
         final String[] values = {
-            "cylinder", // NOI18N.
-            "poly", // NOI18N.
-            "sphere", // NOI18N.
-            null,
-            "" // NOI18N.
+                "cylinder", // NOI18N.
+                "poly", // NOI18N.
+                "sphere", // NOI18N.
+                null,
+                "" // NOI18N.
         };
         final EventDetailsLocationType[] expResults = {
-            EventDetailsLocationType.CYLINDER,
-            EventDetailsLocationType.POLY,
-            EventDetailsLocationType.SPHERE,
-            EventDetailsLocationType.UNKNOWN,
-            EventDetailsLocationType.UNKNOWN
+                EventDetailsLocationType.CYLINDER,
+                EventDetailsLocationType.POLY,
+                EventDetailsLocationType.SPHERE,
+                EventDetailsLocationType.UNKNOWN,
+                EventDetailsLocationType.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).

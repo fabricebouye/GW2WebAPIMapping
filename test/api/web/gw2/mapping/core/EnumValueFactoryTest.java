@@ -6,16 +6,20 @@
 package api.web.gw2.mapping.core;
 
 import api.web.gw2.mapping.v2.characters.CharacterGender;
+
 import java.util.stream.IntStream;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Unit test.
+ *
  * @author Fabrice Bouyé
  */
 public class EnumValueFactoryTest {
@@ -23,19 +27,19 @@ public class EnumValueFactoryTest {
     public EnumValueFactoryTest() {
     }
 
-    @BeforeClass
+    @BeforeAll
     public static void setUpClass() {
     }
 
-    @AfterClass
+    @AfterAll
     public static void tearDownClass() {
     }
 
-    @Before
+    @BeforeEach
     public void setUp() {
     }
 
-    @After
+    @AfterEach
     public void tearDown() {
     }
 
@@ -47,16 +51,16 @@ public class EnumValueFactoryTest {
         System.out.println("mapEnumValue_CharacterGender");
         EnumValueFactory instance = EnumValueFactory.INSTANCE;
         final String[] values = {
-            "Female", // NOI18N.
-            "Male", // NOI18N.
-            "", // NOI18N.
-            null
+                "Female", // NOI18N.
+                "Male", // NOI18N.
+                "", // NOI18N.
+                null
         };
         final CharacterGender[] expResults = {
-            CharacterGender.FEMALE,
-            CharacterGender.MALE,
-            CharacterGender.UNKNOWN,
-            CharacterGender.UNKNOWN
+                CharacterGender.FEMALE,
+                CharacterGender.MALE,
+                CharacterGender.UNKNOWN,
+                CharacterGender.UNKNOWN
 
         };
         assertEquals(values.length, expResults.length);

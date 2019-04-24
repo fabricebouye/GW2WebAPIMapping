@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2015-2019 Fabrice Bouyé
  * All rights reserved.
  *
@@ -8,16 +8,21 @@
 package api.web.gw2.mapping.v2.guild.id.log;
 
 import api.web.gw2.mapping.core.EnumValueFactory;
+
 import java.util.stream.IntStream;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 /**
  * Unit test.
+ *
  * @author Fabrice Bouyé
  */
 public final class GuildLogEventUtilsTest {
@@ -25,19 +30,19 @@ public final class GuildLogEventUtilsTest {
     public GuildLogEventUtilsTest() {
     }
 
-    @BeforeClass
+    @BeforeAll
     public static void setUpClass() {
     }
 
-    @AfterClass
+    @AfterAll
     public static void tearDownClass() {
     }
 
-    @Before
+    @BeforeEach
     public void setUp() {
     }
 
-    @After
+    @AfterEach
     public void tearDown() {
     }
 
@@ -48,32 +53,32 @@ public final class GuildLogEventUtilsTest {
     public void testFindGuildLogEventType() {
         System.out.println("findGuildLogEventType");
         final String[] values = {
-            "stash", // NOI18N.
-            "treasury", // NOI18N.
-            "motd", // NOI18N.
-            "influence", // NOI18N.
-            "upgrade", // NOI18N.
-            "invited", // NOI18N.
-            "invite_declined", // NOI18N.
-            "joined", // NOI18N.
-            "kick", // NOI18N.
-            "rank_change", // NOI18N.
-            null,
-            "" // NOI18N.
+                "stash", // NOI18N.
+                "treasury", // NOI18N.
+                "motd", // NOI18N.
+                "influence", // NOI18N.
+                "upgrade", // NOI18N.
+                "invited", // NOI18N.
+                "invite_declined", // NOI18N.
+                "joined", // NOI18N.
+                "kick", // NOI18N.
+                "rank_change", // NOI18N.
+                null,
+                "" // NOI18N.
         };
         final GuildLogEventType[] expResults = {
-            GuildLogEventType.STASH,
-            GuildLogEventType.TREASURY,
-            GuildLogEventType.MOTD,
-            GuildLogEventType.INFLUENCE,
-            GuildLogEventType.UPGRADE,
-            GuildLogEventType.INVITED,
-            GuildLogEventType.INVITE_DECLINED,
-            GuildLogEventType.JOINED,
-            GuildLogEventType.KICK,
-            GuildLogEventType.RANK_CHANGE,
-            GuildLogEventType.UNKNOWN,
-            GuildLogEventType.UNKNOWN
+                GuildLogEventType.STASH,
+                GuildLogEventType.TREASURY,
+                GuildLogEventType.MOTD,
+                GuildLogEventType.INFLUENCE,
+                GuildLogEventType.UPGRADE,
+                GuildLogEventType.INVITED,
+                GuildLogEventType.INVITE_DECLINED,
+                GuildLogEventType.JOINED,
+                GuildLogEventType.KICK,
+                GuildLogEventType.RANK_CHANGE,
+                GuildLogEventType.UNKNOWN,
+                GuildLogEventType.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
@@ -92,16 +97,16 @@ public final class GuildLogEventUtilsTest {
     public void testFindGuildLogEventInfluenceActivity() {
         System.out.println("findGuildLogEventInfluenceActivity");
         final String[] values = {
-            "daily_login", // NOI18N.
-            "gifted", // NOI18N.
-            null,
-            "" // NOI18N.
+                "daily_login", // NOI18N.
+                "gifted", // NOI18N.
+                null,
+                "" // NOI18N.
         };
         final GuildLogEventInfluenceActivity[] expResults = {
-            GuildLogEventInfluenceActivity.DAILY_LOGIN,
-            GuildLogEventInfluenceActivity.GIFTED,
-            GuildLogEventInfluenceActivity.UNKNOWN,
-            GuildLogEventInfluenceActivity.UNKNOWN
+                GuildLogEventInfluenceActivity.DAILY_LOGIN,
+                GuildLogEventInfluenceActivity.GIFTED,
+                GuildLogEventInfluenceActivity.UNKNOWN,
+                GuildLogEventInfluenceActivity.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
@@ -120,16 +125,16 @@ public final class GuildLogEventUtilsTest {
     public void testFindGuildLogEventStashOperation() {
         System.out.println("findGuildLogEventStashOperation");
         final String[] values = {
-            "deposit", // NOI18N.
-            "withdraw", // NOI18N.
-            null,
-            "" // NOI18N.
+                "deposit", // NOI18N.
+                "withdraw", // NOI18N.
+                null,
+                "" // NOI18N.
         };
         final GuildLogEventStashOperation[] expResults = {
-            GuildLogEventStashOperation.DEPOSIT,
-            GuildLogEventStashOperation.WITHDRAW,
-            GuildLogEventStashOperation.UNKNOWN,
-            GuildLogEventStashOperation.UNKNOWN
+                GuildLogEventStashOperation.DEPOSIT,
+                GuildLogEventStashOperation.WITHDRAW,
+                GuildLogEventStashOperation.UNKNOWN,
+                GuildLogEventStashOperation.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
@@ -148,14 +153,14 @@ public final class GuildLogEventUtilsTest {
     public void testFindGuildLogEventUpgradeAction() {
         System.out.println("findGuildLogEventUpgradeAction");
         final String[] values = {
-            "queued", // NOI18N.
-            null,
-            "" // NOI18N.
+                "queued", // NOI18N.
+                null,
+                "" // NOI18N.
         };
         final GuildLogEventUpgradeAction[] expResults = {
-            GuildLogEventUpgradeAction.QUEUED,
-            GuildLogEventUpgradeAction.UNKNOWN,
-            GuildLogEventUpgradeAction.UNKNOWN
+                GuildLogEventUpgradeAction.QUEUED,
+                GuildLogEventUpgradeAction.UNKNOWN,
+                GuildLogEventUpgradeAction.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).

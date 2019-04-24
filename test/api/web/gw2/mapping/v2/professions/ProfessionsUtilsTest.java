@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2015-2019 Fabrice Bouyé
  * All rights reserved.
  *
@@ -8,16 +8,21 @@
 package api.web.gw2.mapping.v2.professions;
 
 import api.web.gw2.mapping.core.EnumValueFactory;
+
 import java.util.stream.IntStream;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 /**
  * Unit test.
+ *
  * @author Fabrice Bouyé
  */
 public class ProfessionsUtilsTest {
@@ -25,19 +30,19 @@ public class ProfessionsUtilsTest {
     public ProfessionsUtilsTest() {
     }
 
-    @BeforeClass
+    @BeforeAll
     public static void setUpClass() {
     }
 
-    @AfterClass
+    @AfterAll
     public static void tearDownClass() {
     }
 
-    @Before
+    @BeforeEach
     public void setUp() {
     }
 
-    @After
+    @AfterEach
     public void tearDown() {
     }
 
@@ -48,18 +53,18 @@ public class ProfessionsUtilsTest {
     public void testFindProfessionTrackCategory() {
         System.out.println("findProfessionTrackCategory");
         final String[] values = {
-            "Skills", // NOI18N.
-            "Specializations", // NOI18N.
-            "EliteSpecializations", // NOI18N.
-            null,
-            "" // NOI18N.
+                "Skills", // NOI18N.
+                "Specializations", // NOI18N.
+                "EliteSpecializations", // NOI18N.
+                null,
+                "" // NOI18N.
         };
         final ProfessionTrackCategory[] expResults = {
-            ProfessionTrackCategory.SKILLS,
-            ProfessionTrackCategory.SPECIALIZATIONS,
-            ProfessionTrackCategory.ELITE_SPECIALIZATIONS,
-            ProfessionTrackCategory.UNKNOWN,
-            ProfessionTrackCategory.UNKNOWN
+                ProfessionTrackCategory.SKILLS,
+                ProfessionTrackCategory.SPECIALIZATIONS,
+                ProfessionTrackCategory.ELITE_SPECIALIZATIONS,
+                ProfessionTrackCategory.UNKNOWN,
+                ProfessionTrackCategory.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
@@ -78,16 +83,16 @@ public class ProfessionsUtilsTest {
     public void testFindProfessionTrackCostType() {
         System.out.println("findProfessionTrackCostType");
         final String[] values = {
-            "Skill", // NOI18N.
-            "Trait", // NOI18N.
-            null,
-            "" // NOI18N.
+                "Skill", // NOI18N.
+                "Trait", // NOI18N.
+                null,
+                "" // NOI18N.
         };
         final ProfessionTrackCostType[] expResults = {
-            ProfessionTrackCostType.SKILL,
-            ProfessionTrackCostType.TRAIT,
-            ProfessionTrackCostType.UNKNOWN,
-            ProfessionTrackCostType.UNKNOWN
+                ProfessionTrackCostType.SKILL,
+                ProfessionTrackCostType.TRAIT,
+                ProfessionTrackCostType.UNKNOWN,
+                ProfessionTrackCostType.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
@@ -106,22 +111,22 @@ public class ProfessionsUtilsTest {
     public void testFindProfessionWeaponSlot() {
         System.out.println("findProfessionWeaponSlot");
         final String[] values = {
-            "Weapon_1", // NOI18N.
-            "Weapon_2", // NOI18N.
-            "Weapon_3", // NOI18N.
-            "Weapon_4", // NOI18N.
-            "Weapon_5", // NOI18N.
-            null,
-            "" // NOI18N.
+                "Weapon_1", // NOI18N.
+                "Weapon_2", // NOI18N.
+                "Weapon_3", // NOI18N.
+                "Weapon_4", // NOI18N.
+                "Weapon_5", // NOI18N.
+                null,
+                "" // NOI18N.
         };
         final ProfessionWeaponSlot[] expResults = {
-            ProfessionWeaponSlot.WEAPON_1,
-            ProfessionWeaponSlot.WEAPON_2,
-            ProfessionWeaponSlot.WEAPON_3,
-            ProfessionWeaponSlot.WEAPON_4,
-            ProfessionWeaponSlot.WEAPON_5,
-            ProfessionWeaponSlot.UNKNOWN,
-            ProfessionWeaponSlot.UNKNOWN
+                ProfessionWeaponSlot.WEAPON_1,
+                ProfessionWeaponSlot.WEAPON_2,
+                ProfessionWeaponSlot.WEAPON_3,
+                ProfessionWeaponSlot.WEAPON_4,
+                ProfessionWeaponSlot.WEAPON_5,
+                ProfessionWeaponSlot.UNKNOWN,
+                ProfessionWeaponSlot.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
@@ -140,20 +145,20 @@ public class ProfessionsUtilsTest {
     public void testFindProfessionElementalistAttunement() {
         System.out.println("findProfessionElementalistAttunement");
         final String[] values = {
-            "Air", // NOI18N.
-            "Earth", // NOI18N.
-            "Fire", // NOI18N.
-            "Water", // NOI18N.
-            null,
-            "" // NOI18N.
+                "Air", // NOI18N.
+                "Earth", // NOI18N.
+                "Fire", // NOI18N.
+                "Water", // NOI18N.
+                null,
+                "" // NOI18N.
         };
         final ProfessionElementalistAttunement[] expResults = {
-            ProfessionElementalistAttunement.AIR,
-            ProfessionElementalistAttunement.EARTH,
-            ProfessionElementalistAttunement.FIRE,
-            ProfessionElementalistAttunement.WATER,
-            ProfessionElementalistAttunement.UNKNOWN,
-            ProfessionElementalistAttunement.UNKNOWN
+                ProfessionElementalistAttunement.AIR,
+                ProfessionElementalistAttunement.EARTH,
+                ProfessionElementalistAttunement.FIRE,
+                ProfessionElementalistAttunement.WATER,
+                ProfessionElementalistAttunement.UNKNOWN,
+                ProfessionElementalistAttunement.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
@@ -172,52 +177,52 @@ public class ProfessionsUtilsTest {
     public void testFindProfessionWeaponType() {
         System.out.println("findWeaponType");
         final String[] values = {
-            "Axe", // NOI18N.
-            "Dagger", // NOI18N.
-            "Focus", // NOI18N.
-            "Greatsword", // NOI18N.
-            "Hammer", // NOI18N.
-            "LongBow", // NOI18N.
-            "Mace", // NOI18N.
-            "Nothing", // NOI18N.
-            "Pistol", // NOI18N.
-            "Rifle", // NOI18N.
-            "Scepter", // NOI18N.
-            "Shield", // NOI18N.
-            "ShortBow", // NOI18N.
-            "Spear", // NOI18N.
-            "Speargun", // NOI18N.
-            "Staff", // NOI18N.
-            "Sword", // NOI18N.
-            "Torch", // NOI18N.
-            "Trident", // NOI18N.
-            "Warhorn", // NOI18N.
-            null,
-            "" // NOI18N.
+                "Axe", // NOI18N.
+                "Dagger", // NOI18N.
+                "Focus", // NOI18N.
+                "Greatsword", // NOI18N.
+                "Hammer", // NOI18N.
+                "LongBow", // NOI18N.
+                "Mace", // NOI18N.
+                "Nothing", // NOI18N.
+                "Pistol", // NOI18N.
+                "Rifle", // NOI18N.
+                "Scepter", // NOI18N.
+                "Shield", // NOI18N.
+                "ShortBow", // NOI18N.
+                "Spear", // NOI18N.
+                "Speargun", // NOI18N.
+                "Staff", // NOI18N.
+                "Sword", // NOI18N.
+                "Torch", // NOI18N.
+                "Trident", // NOI18N.
+                "Warhorn", // NOI18N.
+                null,
+                "" // NOI18N.
         };
         final ProfessionWeaponType[] expResults = {
-            ProfessionWeaponType.AXE,
-            ProfessionWeaponType.DAGGER,
-            ProfessionWeaponType.FOCUS,
-            ProfessionWeaponType.GREATSWORD,
-            ProfessionWeaponType.HAMMER,
-            ProfessionWeaponType.LONG_BOW,
-            ProfessionWeaponType.MACE,
-            ProfessionWeaponType.NOTHING,
-            ProfessionWeaponType.PISTOL,
-            ProfessionWeaponType.RIFLE,
-            ProfessionWeaponType.SCEPTER,
-            ProfessionWeaponType.SHIELD,
-            ProfessionWeaponType.SHORT_BOW,
-            ProfessionWeaponType.SPEAR,
-            ProfessionWeaponType.SPEARGUN,
-            ProfessionWeaponType.STAFF,
-            ProfessionWeaponType.SWORD,
-            ProfessionWeaponType.TORCH,
-            ProfessionWeaponType.TRIDENT,
-            ProfessionWeaponType.WARHORN,
-            ProfessionWeaponType.UNKNOWN,
-            ProfessionWeaponType.UNKNOWN
+                ProfessionWeaponType.AXE,
+                ProfessionWeaponType.DAGGER,
+                ProfessionWeaponType.FOCUS,
+                ProfessionWeaponType.GREATSWORD,
+                ProfessionWeaponType.HAMMER,
+                ProfessionWeaponType.LONG_BOW,
+                ProfessionWeaponType.MACE,
+                ProfessionWeaponType.NOTHING,
+                ProfessionWeaponType.PISTOL,
+                ProfessionWeaponType.RIFLE,
+                ProfessionWeaponType.SCEPTER,
+                ProfessionWeaponType.SHIELD,
+                ProfessionWeaponType.SHORT_BOW,
+                ProfessionWeaponType.SPEAR,
+                ProfessionWeaponType.SPEARGUN,
+                ProfessionWeaponType.STAFF,
+                ProfessionWeaponType.SWORD,
+                ProfessionWeaponType.TORCH,
+                ProfessionWeaponType.TRIDENT,
+                ProfessionWeaponType.WARHORN,
+                ProfessionWeaponType.UNKNOWN,
+                ProfessionWeaponType.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).

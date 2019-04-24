@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2015-2019 Fabrice Bouyé
  * All rights reserved.
  *
@@ -8,16 +8,21 @@
 package api.web.gw2.mapping.v2.characters.id.inventory;
 
 import api.web.gw2.mapping.core.EnumValueFactory;
+
 import java.util.stream.IntStream;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 /**
  * Unit test.
+ *
  * @author Fabrice Bouyé
  */
 public class CharacterInventoryUtilsTest {
@@ -25,19 +30,19 @@ public class CharacterInventoryUtilsTest {
     public CharacterInventoryUtilsTest() {
     }
 
-    @BeforeClass
+    @BeforeAll
     public static void setUpClass() {
     }
 
-    @AfterClass
+    @AfterAll
     public static void tearDownClass() {
     }
 
-    @Before
+    @BeforeEach
     public void setUp() {
     }
 
-    @After
+    @AfterEach
     public void tearDown() {
     }
 
@@ -48,16 +53,16 @@ public class CharacterInventoryUtilsTest {
     public void testFindCharacterInventoryBinding() {
         System.out.println("findCharacterInventoryBinding");
         final String[] values = {
-            "Account", // NOI18N.
-            "Character", // NOI18N.
-            null,
-            "" // NOI18N.
+                "Account", // NOI18N.
+                "Character", // NOI18N.
+                null,
+                "" // NOI18N.
         };
         final CharacterInventoryBinding[] expResults = {
-            CharacterInventoryBinding.ACCOUNT,
-            CharacterInventoryBinding.CHARACTER,
-            CharacterInventoryBinding.UNKNOWN,
-            CharacterInventoryBinding.UNKNOWN
+                CharacterInventoryBinding.ACCOUNT,
+                CharacterInventoryBinding.CHARACTER,
+                CharacterInventoryBinding.UNKNOWN,
+                CharacterInventoryBinding.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).

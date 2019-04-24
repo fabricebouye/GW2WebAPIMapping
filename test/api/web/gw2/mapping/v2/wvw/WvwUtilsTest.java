@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2015-2019 Fabrice Bouyé
  * All rights reserved.
  *
@@ -8,16 +8,20 @@
 package api.web.gw2.mapping.v2.wvw;
 
 import api.web.gw2.mapping.core.EnumValueFactory;
+
 import java.util.stream.IntStream;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Unit test.
+ *
  * @author Fabrice Bouyé
  */
 public class WvwUtilsTest {
@@ -25,19 +29,19 @@ public class WvwUtilsTest {
     public WvwUtilsTest() {
     }
 
-    @BeforeClass
+    @BeforeAll
     public static void setUpClass() {
     }
 
-    @AfterClass
+    @AfterAll
     public static void tearDownClass() {
     }
 
-    @Before
+    @BeforeEach
     public void setUp() {
     }
 
-    @After
+    @AfterEach
     public void tearDown() {
     }
 
@@ -48,22 +52,22 @@ public class WvwUtilsTest {
     public void testWvwFindMapType() {
         System.out.println("findWvwMapType");
         final String[] values = {
-            "Center", // NOI18N.
-            "BlueHome", // NOI18N.
-            "GreenHome", // NOI18N.
-            "RedHome", // NOI18N.
-            "EdgeOfTheMists", // NOI18N.
-            null,
-            "" // NOI18N.
+                "Center", // NOI18N.
+                "BlueHome", // NOI18N.
+                "GreenHome", // NOI18N.
+                "RedHome", // NOI18N.
+                "EdgeOfTheMists", // NOI18N.
+                null,
+                "" // NOI18N.
         };
         final WvwMapType[] expResults = {
-            WvwMapType.CENTER,
-            WvwMapType.BLUE_HOME,
-            WvwMapType.GREEN_HOME,
-            WvwMapType.RED_HOME,
-            WvwMapType.EDGE_OF_THE_MISTS,
-            WvwMapType.UNKNOWN,
-            WvwMapType.UNKNOWN
+                WvwMapType.CENTER,
+                WvwMapType.BLUE_HOME,
+                WvwMapType.GREEN_HOME,
+                WvwMapType.RED_HOME,
+                WvwMapType.EDGE_OF_THE_MISTS,
+                WvwMapType.UNKNOWN,
+                WvwMapType.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).

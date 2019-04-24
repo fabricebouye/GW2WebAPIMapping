@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2015-2019 Fabrice Bouyé
  * All rights reserved.
  *
@@ -8,17 +8,20 @@
 package api.web.gw2.mapping.v2.traits;
 
 import api.web.gw2.mapping.core.EnumValueFactory;
-import api.web.gw2.mapping.v2.tokeninfo.TokenInfoPermission;
+
 import java.util.stream.IntStream;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Unit test.
+ *
  * @author Fabrice Bouyé
  */
 public class TraitsUtilsTest {
@@ -26,19 +29,19 @@ public class TraitsUtilsTest {
     public TraitsUtilsTest() {
     }
 
-    @BeforeClass
+    @BeforeAll
     public static void setUpClass() {
     }
 
-    @AfterClass
+    @AfterAll
     public static void tearDownClass() {
     }
 
-    @Before
+    @BeforeEach
     public void setUp() {
     }
 
-    @After
+    @AfterEach
     public void tearDown() {
     }
 
@@ -49,28 +52,28 @@ public class TraitsUtilsTest {
     public void testFindTraitAttribute() {
         System.out.println("findTraitAttribute");
         final String[] values = {
-            "ConditionDamage", // NOI18N.
-            "CritDamage", // NOI18N.
-            "Healing", // NOI18N.
-            "None", // NOI18N.
-            "Power", // NOI18N.
-            "Precision", // NOI18N.
-            "Toughness", // NOI18N.
-            "Vitality", // NOI18N.
-            null,
-            "" // NOI18N.
+                "ConditionDamage", // NOI18N.
+                "CritDamage", // NOI18N.
+                "Healing", // NOI18N.
+                "None", // NOI18N.
+                "Power", // NOI18N.
+                "Precision", // NOI18N.
+                "Toughness", // NOI18N.
+                "Vitality", // NOI18N.
+                null,
+                "" // NOI18N.
         };
         final TraitAttribute[] expResults = {
-            TraitAttribute.CONDITION_DAMAGE,
-            TraitAttribute.FEROCITY,
-            TraitAttribute.HEALING,
-            TraitAttribute.NONE,
-            TraitAttribute.POWER,
-            TraitAttribute.PRECISION,
-            TraitAttribute.TOUGHNESS,
-            TraitAttribute.VITALITY,
-            TraitAttribute.UNKNOWN,
-            TraitAttribute.UNKNOWN
+                TraitAttribute.CONDITION_DAMAGE,
+                TraitAttribute.FEROCITY,
+                TraitAttribute.HEALING,
+                TraitAttribute.NONE,
+                TraitAttribute.POWER,
+                TraitAttribute.PRECISION,
+                TraitAttribute.TOUGHNESS,
+                TraitAttribute.VITALITY,
+                TraitAttribute.UNKNOWN,
+                TraitAttribute.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
@@ -89,32 +92,32 @@ public class TraitsUtilsTest {
     public void testFindTraitComboFieldType() {
         System.out.println("findTraitComboFieldType");
         final String[] values = {
-            "Air", // NOI18N.
-            "Dark", // NOI18N.
-            "Ethereal", // NOI18N.
-            "Fire", // NOI18N.
-            "Ice", // NOI18N.
-            "Light", // NOI18N.
-            "Lightning", // NOI18N.
-            "Poison", // NOI18N.
-            "Smoke", // NOI18N.
-            "Water", // NOI18N.
-            null,
-            "" // NOI18N.
+                "Air", // NOI18N.
+                "Dark", // NOI18N.
+                "Ethereal", // NOI18N.
+                "Fire", // NOI18N.
+                "Ice", // NOI18N.
+                "Light", // NOI18N.
+                "Lightning", // NOI18N.
+                "Poison", // NOI18N.
+                "Smoke", // NOI18N.
+                "Water", // NOI18N.
+                null,
+                "" // NOI18N.
         };
         final TraitComboFieldType[] expResults = {
-            TraitComboFieldType.AIR,
-            TraitComboFieldType.DARK,
-            TraitComboFieldType.ETHEREAL,
-            TraitComboFieldType.FIRE,
-            TraitComboFieldType.ICE,
-            TraitComboFieldType.LIGHT,
-            TraitComboFieldType.LIGHTNING,
-            TraitComboFieldType.POISON,
-            TraitComboFieldType.SMOKE,
-            TraitComboFieldType.WATER,
-            TraitComboFieldType.UNKNOWN,
-            TraitComboFieldType.UNKNOWN
+                TraitComboFieldType.AIR,
+                TraitComboFieldType.DARK,
+                TraitComboFieldType.ETHEREAL,
+                TraitComboFieldType.FIRE,
+                TraitComboFieldType.ICE,
+                TraitComboFieldType.LIGHT,
+                TraitComboFieldType.LIGHTNING,
+                TraitComboFieldType.POISON,
+                TraitComboFieldType.SMOKE,
+                TraitComboFieldType.WATER,
+                TraitComboFieldType.UNKNOWN,
+                TraitComboFieldType.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
@@ -133,20 +136,20 @@ public class TraitsUtilsTest {
     public void testFindTraitComboFinisherType() {
         System.out.println("findTraitComboFinisherType");
         final String[] values = {
-            "Blast", // NOI18N.
-            "Leap", // NOI18N.
-            "Projectile", // NOI18N.
-            "Whirl", // NOI18N.
-            null,
-            "" // NOI18N.
+                "Blast", // NOI18N.
+                "Leap", // NOI18N.
+                "Projectile", // NOI18N.
+                "Whirl", // NOI18N.
+                null,
+                "" // NOI18N.
         };
         final TraitComboFinisherType[] expResults = {
-            TraitComboFinisherType.BLAST,
-            TraitComboFinisherType.LEAP,
-            TraitComboFinisherType.PROJECTILE,
-            TraitComboFinisherType.WHIRL,
-            TraitComboFinisherType.UNKNOWN,
-            TraitComboFinisherType.UNKNOWN
+                TraitComboFinisherType.BLAST,
+                TraitComboFinisherType.LEAP,
+                TraitComboFinisherType.PROJECTILE,
+                TraitComboFinisherType.WHIRL,
+                TraitComboFinisherType.UNKNOWN,
+                TraitComboFinisherType.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
@@ -165,44 +168,44 @@ public class TraitsUtilsTest {
     public void testFindTraitFactType() {
         System.out.println("findTraitFactType");
         final String[] values = {
-            "AttributeAdjust", // NOI18N.
-            "Buff", // NOI18N.
-            "BuffConversion", // NOI18N.
-            "ComboField", // NOI18N.
-            "ComboFinisher", // NOI18N.
-            "Damage", // NOI18N.
-            "Distance", // NOI18N.
-            "NoData", // NOI18N.
-            "Number", // NOI18N.
-            "Percent", // NOI18N.
-            "PrefixedBuff", // NOI18N.
-            "Radius", // NOI18N.
-            "Range", // NOI18N.
-            "Recharge", // NOI18N.
-            "Time", // NOI18N.
-            "Unblockable", // NOI18N.
-            null,
-            "" // NOI18N.
+                "AttributeAdjust", // NOI18N.
+                "Buff", // NOI18N.
+                "BuffConversion", // NOI18N.
+                "ComboField", // NOI18N.
+                "ComboFinisher", // NOI18N.
+                "Damage", // NOI18N.
+                "Distance", // NOI18N.
+                "NoData", // NOI18N.
+                "Number", // NOI18N.
+                "Percent", // NOI18N.
+                "PrefixedBuff", // NOI18N.
+                "Radius", // NOI18N.
+                "Range", // NOI18N.
+                "Recharge", // NOI18N.
+                "Time", // NOI18N.
+                "Unblockable", // NOI18N.
+                null,
+                "" // NOI18N.
         };
         final TraitFactType[] expResults = {
-            TraitFactType.ATTRIBUTE_ADJUST,
-            TraitFactType.BUFF,
-            TraitFactType.BUFF_CONVERSION,
-            TraitFactType.COMBO_FIELD,
-            TraitFactType.COMBO_FINISHER,
-            TraitFactType.DAMAGE,
-            TraitFactType.DISTANCE,
-            TraitFactType.NO_DATA,
-            TraitFactType.NUMBER,
-            TraitFactType.PERCENT,
-            TraitFactType.PREFIXED_BUFF,
-            TraitFactType.RADIUS,
-            TraitFactType.RANGE,
-            TraitFactType.RECHARGE,
-            TraitFactType.TIME,
-            TraitFactType.UNBLOCKABLE,
-            TraitFactType.UNKNOWN,
-            TraitFactType.UNKNOWN
+                TraitFactType.ATTRIBUTE_ADJUST,
+                TraitFactType.BUFF,
+                TraitFactType.BUFF_CONVERSION,
+                TraitFactType.COMBO_FIELD,
+                TraitFactType.COMBO_FINISHER,
+                TraitFactType.DAMAGE,
+                TraitFactType.DISTANCE,
+                TraitFactType.NO_DATA,
+                TraitFactType.NUMBER,
+                TraitFactType.PERCENT,
+                TraitFactType.PREFIXED_BUFF,
+                TraitFactType.RADIUS,
+                TraitFactType.RANGE,
+                TraitFactType.RECHARGE,
+                TraitFactType.TIME,
+                TraitFactType.UNBLOCKABLE,
+                TraitFactType.UNKNOWN,
+                TraitFactType.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
@@ -221,16 +224,16 @@ public class TraitsUtilsTest {
     public void testFindTraitSlotType() {
         System.out.println("findTraitSlotType");
         final String[] values = {
-            "major", // NOI18N.
-            "minor", // NOI18N.
-            null,
-            "" // NOI18N.
+                "major", // NOI18N.
+                "minor", // NOI18N.
+                null,
+                "" // NOI18N.
         };
         final TraitSlotType[] expResults = {
-            TraitSlotType.MAJOR,
-            TraitSlotType.MINOR,
-            TraitSlotType.UNKNOWN,
-            TraitSlotType.UNKNOWN
+                TraitSlotType.MAJOR,
+                TraitSlotType.MINOR,
+                TraitSlotType.UNKNOWN,
+                TraitSlotType.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
@@ -249,20 +252,20 @@ public class TraitsUtilsTest {
     public void testFindTraitTier() {
         System.out.println("findTraitTier");
         final int[] values = {
-            0,
-            1,
-            2,
-            3,
-            -1,
-            Integer.MAX_VALUE
+                0,
+                1,
+                2,
+                3,
+                -1,
+                Integer.MAX_VALUE
         };
         final TraitTier[] expResults = {
-            TraitTier.TIER_0,
-            TraitTier.TIER_1,
-            TraitTier.TIER_2,
-            TraitTier.TIER_3,
-            TraitTier.UNKNOWN,
-            TraitTier.UNKNOWN
+                TraitTier.TIER_0,
+                TraitTier.TIER_1,
+                TraitTier.TIER_2,
+                TraitTier.TIER_3,
+                TraitTier.UNKNOWN,
+                TraitTier.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).

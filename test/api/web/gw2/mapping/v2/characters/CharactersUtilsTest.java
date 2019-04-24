@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2015-2019 Fabrice Bouyé
  * All rights reserved.
  *
@@ -8,16 +8,20 @@
 package api.web.gw2.mapping.v2.characters;
 
 import api.web.gw2.mapping.core.EnumValueFactory;
+
 import java.util.stream.IntStream;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Unit test.
+ *
  * @author Fabrice Bouyé
  */
 public class CharactersUtilsTest {
@@ -25,19 +29,19 @@ public class CharactersUtilsTest {
     public CharactersUtilsTest() {
     }
 
-    @BeforeClass
+    @BeforeAll
     public static void setUpClass() {
     }
 
-    @AfterClass
+    @AfterAll
     public static void tearDownClass() {
     }
 
-    @Before
+    @BeforeEach
     public void setUp() {
     }
 
-    @After
+    @AfterEach
     public void tearDown() {
     }
 
@@ -48,22 +52,22 @@ public class CharactersUtilsTest {
     public void testFindCharacterRace() {
         System.out.println("findCharacterRace");
         final String[] values = {
-            "Asura", // NOI18N.
-            "Charr", // NOI18N.
-            "Human", // NOI18N.
-            "Norn", // NOI18N.
-            "Sylvari", // NOI18N.
-            null,
-            "" // NOI18N.
+                "Asura", // NOI18N.
+                "Charr", // NOI18N.
+                "Human", // NOI18N.
+                "Norn", // NOI18N.
+                "Sylvari", // NOI18N.
+                null,
+                "" // NOI18N.
         };
         final CharacterRace[] expResults = {
-            CharacterRace.ASURA,
-            CharacterRace.CHARR,
-            CharacterRace.HUMAN,
-            CharacterRace.NORN,
-            CharacterRace.SYLVARI,
-            CharacterRace.UNKNOWN,
-            CharacterRace.UNKNOWN
+                CharacterRace.ASURA,
+                CharacterRace.CHARR,
+                CharacterRace.HUMAN,
+                CharacterRace.NORN,
+                CharacterRace.SYLVARI,
+                CharacterRace.UNKNOWN,
+                CharacterRace.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
@@ -82,30 +86,30 @@ public class CharactersUtilsTest {
     public void testFindCharacterProfession() {
         System.out.println("findCharacterProfession");
         final String[] values = {
-            "Elementalist", // NOI18N.
-            "Engineer", // NOI18N.
-            "Guardian", // NOI18N.
-            "Mesmer", // NOI18N.
-            "Necromancer", // NOI18N.
-            "Ranger", // NOI18N.
-            "Revenant", // NOI18N.
-            "Thief", // NOI18N.
-            "Warrior", // NOI18N.
-            null,
-            "" // NOI18N.
+                "Elementalist", // NOI18N.
+                "Engineer", // NOI18N.
+                "Guardian", // NOI18N.
+                "Mesmer", // NOI18N.
+                "Necromancer", // NOI18N.
+                "Ranger", // NOI18N.
+                "Revenant", // NOI18N.
+                "Thief", // NOI18N.
+                "Warrior", // NOI18N.
+                null,
+                "" // NOI18N.
         };
         final CharacterProfession[] expResults = {
-            CharacterProfession.ELEMENTALIST,
-            CharacterProfession.ENGINEER,
-            CharacterProfession.GUARDIAN,
-            CharacterProfession.MESMER,
-            CharacterProfession.NECROMANCER,
-            CharacterProfession.RANGER,
-            CharacterProfession.REVENANT,
-            CharacterProfession.THIEF,
-            CharacterProfession.WARRIOR,
-            CharacterProfession.UNKNOWN,
-            CharacterProfession.UNKNOWN
+                CharacterProfession.ELEMENTALIST,
+                CharacterProfession.ENGINEER,
+                CharacterProfession.GUARDIAN,
+                CharacterProfession.MESMER,
+                CharacterProfession.NECROMANCER,
+                CharacterProfession.RANGER,
+                CharacterProfession.REVENANT,
+                CharacterProfession.THIEF,
+                CharacterProfession.WARRIOR,
+                CharacterProfession.UNKNOWN,
+                CharacterProfession.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
@@ -124,16 +128,16 @@ public class CharactersUtilsTest {
     public void testFindCharacterGender() {
         System.out.println("findCharacterGender"); // NOI18N.
         final String[] values = {
-            "Female", // NOI18N.
-            "Male", // NOI18N.
-            null,
-            "" // NOI18N.
+                "Female", // NOI18N.
+                "Male", // NOI18N.
+                null,
+                "" // NOI18N.
         };
         final CharacterGender[] expResults = {
-            CharacterGender.FEMALE,
-            CharacterGender.MALE,
-            CharacterGender.UNKNOWN,
-            CharacterGender.UNKNOWN
+                CharacterGender.FEMALE,
+                CharacterGender.MALE,
+                CharacterGender.UNKNOWN,
+                CharacterGender.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).

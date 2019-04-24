@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2015-2019 Fabrice Bouyé
  * All rights reserved.
  *
@@ -8,16 +8,20 @@
 package api.web.gw2.mapping.v1.guilddetails;
 
 import api.web.gw2.mapping.core.EnumValueFactory;
+
 import java.util.stream.IntStream;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Unit test.
+ *
  * @author Fabrice Bouyé
  */
 public class GuildDetailsUtilsTest {
@@ -25,19 +29,19 @@ public class GuildDetailsUtilsTest {
     public GuildDetailsUtilsTest() {
     }
 
-    @BeforeClass
+    @BeforeAll
     public static void setUpClass() {
     }
 
-    @AfterClass
+    @AfterAll
     public static void tearDownClass() {
     }
 
-    @Before
+    @BeforeEach
     public void setUp() {
     }
 
-    @After
+    @AfterEach
     public void tearDown() {
     }
 
@@ -48,20 +52,20 @@ public class GuildDetailsUtilsTest {
     public void testFindGuildDetailsEmblemFlag() {
         System.out.println("findGuildDetailsEmblemFlag"); // NOI18N.
         final String[] values = {
-            "FlipBackgroundHorizontal", // NOI18N.
-            "FlipBackgroundVertical", // NOI18N.
-            "FlipForegroundHorizontal", // NOI18N.
-            "FlipForegroundVertical", // NOI18N.
-            null,
-            "" // NOI18N.
+                "FlipBackgroundHorizontal", // NOI18N.
+                "FlipBackgroundVertical", // NOI18N.
+                "FlipForegroundHorizontal", // NOI18N.
+                "FlipForegroundVertical", // NOI18N.
+                null,
+                "" // NOI18N.
         };
         final GuildDetailsEmblemFlag[] expResults = {
-            GuildDetailsEmblemFlag.FLIP_BACKGROUND_HORIZONTAL,
-            GuildDetailsEmblemFlag.FLIP_BACKGROUND_VERTICAL,
-            GuildDetailsEmblemFlag.FLIP_FOREGROUND_HORIZONTAL,
-            GuildDetailsEmblemFlag.FLIP_FOREGROUND_VERTICAL,
-            GuildDetailsEmblemFlag.UNKNOWN,
-            GuildDetailsEmblemFlag.UNKNOWN
+                GuildDetailsEmblemFlag.FLIP_BACKGROUND_HORIZONTAL,
+                GuildDetailsEmblemFlag.FLIP_BACKGROUND_VERTICAL,
+                GuildDetailsEmblemFlag.FLIP_FOREGROUND_HORIZONTAL,
+                GuildDetailsEmblemFlag.FLIP_FOREGROUND_VERTICAL,
+                GuildDetailsEmblemFlag.UNKNOWN,
+                GuildDetailsEmblemFlag.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).

@@ -9,11 +9,16 @@ package api.web.gw2.mapping.v2.color;
 
 import api.web.gw2.mapping.core.EnumValueFactory;
 import api.web.gw2.mapping.v2.colors.ColorCategories;
-import org.junit.*;
 
 import java.util.stream.IntStream;
 
-import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Unit test.
@@ -24,19 +29,19 @@ public class ColorUtilsTest {
     public ColorUtilsTest() {
     }
 
-    @BeforeClass
+    @BeforeAll
     public static void setUpClass() {
     }
 
-    @AfterClass
+    @AfterAll
     public static void tearDownClass() {
     }
 
-    @Before
+    @BeforeEach
     public void setUp() {
     }
 
-    @After
+    @AfterEach
     public void tearDown() {
     }
 

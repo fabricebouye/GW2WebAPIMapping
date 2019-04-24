@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2015-2019 Fabrice Bouyé
  * All rights reserved.
  *
@@ -8,16 +8,21 @@
 package api.web.gw2.mapping.v2.dungeons;
 
 import api.web.gw2.mapping.core.EnumValueFactory;
+
 import java.util.stream.IntStream;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 /**
  * Unit test.
+ *
  * @author Fabrice Bouyé
  */
 public class DungeonUtilsTest {
@@ -25,19 +30,19 @@ public class DungeonUtilsTest {
     public DungeonUtilsTest() {
     }
 
-    @BeforeClass
+    @BeforeAll
     public static void setUpClass() {
     }
 
-    @AfterClass
+    @AfterAll
     public static void tearDownClass() {
     }
 
-    @Before
+    @BeforeEach
     public void setUp() {
     }
 
-    @After
+    @AfterEach
     public void tearDown() {
     }
 
@@ -48,16 +53,16 @@ public class DungeonUtilsTest {
     public void testFindDungeonPathType() {
         System.out.println("findPathType");
         final String[] values = {
-            "Explorable", // NOI18N.
-            "Story", // NOI18N.
-            null,
-            "" // NOI18N.
+                "Explorable", // NOI18N.
+                "Story", // NOI18N.
+                null,
+                "" // NOI18N.
         };
         final DungeonPathType[] expResults = {
-            DungeonPathType.EXPLORABLE,
-            DungeonPathType.STORY,
-            DungeonPathType.UNKNOWN,
-            DungeonPathType.UNKNOWN
+                DungeonPathType.EXPLORABLE,
+                DungeonPathType.STORY,
+                DungeonPathType.UNKNOWN,
+                DungeonPathType.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).

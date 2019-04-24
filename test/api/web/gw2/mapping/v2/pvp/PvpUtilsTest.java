@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2015-2019 Fabrice Bouyé
  * All rights reserved.
  *
@@ -8,16 +8,21 @@
 package api.web.gw2.mapping.v2.pvp;
 
 import api.web.gw2.mapping.core.EnumValueFactory;
+
 import java.util.stream.IntStream;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 /**
  * Unit test.
+ *
  * @author Fabrice Bouyé
  */
 public class PvpUtilsTest {
@@ -25,19 +30,19 @@ public class PvpUtilsTest {
     public PvpUtilsTest() {
     }
 
-    @BeforeClass
+    @BeforeAll
     public static void setUpClass() {
     }
 
-    @AfterClass
+    @AfterAll
     public static void tearDownClass() {
     }
 
-    @Before
+    @BeforeEach
     public void setUp() {
     }
 
-    @After
+    @AfterEach
     public void tearDown() {
     }
 
@@ -48,18 +53,18 @@ public class PvpUtilsTest {
     public void testFindPvPLadder() {
         System.out.println("findPvPLadder");
         final String[] values = {
-            "none", // NOI18N.
-            "ranked", // NOI18N.
-            "unranked", // NOI18N.
-            null,
-            "" // NOI18N.
+                "none", // NOI18N.
+                "ranked", // NOI18N.
+                "unranked", // NOI18N.
+                null,
+                "" // NOI18N.
         };
         final PvpLadder[] expResults = {
-            PvpLadder.NONE,
-            PvpLadder.RANKED,
-            PvpLadder.UNRANKED,
-            PvpLadder.UNKNOWN,
-            PvpLadder.UNKNOWN
+                PvpLadder.NONE,
+                PvpLadder.RANKED,
+                PvpLadder.UNRANKED,
+                PvpLadder.UNKNOWN,
+                PvpLadder.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).

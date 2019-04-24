@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2015-2019 Fabrice Bouyé
  * All rights reserved.
  *
@@ -8,16 +8,21 @@
 package api.web.gw2.mapping.v2.guild.id.teams;
 
 import api.web.gw2.mapping.core.EnumValueFactory;
+
 import java.util.stream.IntStream;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 /**
  * Unit test.
+ *
  * @author Fabrice Bouyé
  */
 public final class GuildTeamsUtilsTest {
@@ -25,19 +30,19 @@ public final class GuildTeamsUtilsTest {
     public GuildTeamsUtilsTest() {
     }
 
-    @BeforeClass
+    @BeforeAll
     public static void setUpClass() {
     }
 
-    @AfterClass
+    @AfterAll
     public static void tearDownClass() {
     }
 
-    @Before
+    @BeforeEach
     public void setUp() {
     }
 
-    @After
+    @AfterEach
     public void tearDown() {
     }
 
@@ -48,16 +53,16 @@ public final class GuildTeamsUtilsTest {
     public void testFindGuildTeamMemberRole() {
         System.out.println("findGuildTeamMemberRole");
         final String[] values = {
-            "Captain", // NOI18N.
-            "Member", // NOI18N.
-            null,
-            "" // NOI18N.
+                "Captain", // NOI18N.
+                "Member", // NOI18N.
+                null,
+                "" // NOI18N.
         };
         final GuildTeamMemberRole[] expResults = {
-            GuildTeamMemberRole.CAPTAIN,
-            GuildTeamMemberRole.MEMBER,
-            GuildTeamMemberRole.UNKNOWN,
-            GuildTeamMemberRole.UNKNOWN
+                GuildTeamMemberRole.CAPTAIN,
+                GuildTeamMemberRole.MEMBER,
+                GuildTeamMemberRole.UNKNOWN,
+                GuildTeamMemberRole.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
@@ -76,14 +81,14 @@ public final class GuildTeamsUtilsTest {
     public void testFindGuildTeamState() {
         System.out.println("findGuildTeamState");
         final String[] values = {
-            "Active", // NOI18N.
-            null,
-            "" // NOI18N.
+                "Active", // NOI18N.
+                null,
+                "" // NOI18N.
         };
         final GuildTeamState[] expResults = {
-            GuildTeamState.ACTIVE,
-            GuildTeamState.UNKNOWN,
-            GuildTeamState.UNKNOWN
+                GuildTeamState.ACTIVE,
+                GuildTeamState.UNKNOWN,
+                GuildTeamState.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).

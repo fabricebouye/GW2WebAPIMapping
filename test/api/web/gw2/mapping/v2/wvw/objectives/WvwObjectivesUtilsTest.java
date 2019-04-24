@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2015-2019 Fabrice Bouyé
  * All rights reserved.
  *
@@ -8,16 +8,20 @@
 package api.web.gw2.mapping.v2.wvw.objectives;
 
 import api.web.gw2.mapping.core.EnumValueFactory;
+
 import java.util.stream.IntStream;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Unit test.
+ *
  * @author Fabrice Bouyé
  */
 public class WvwObjectivesUtilsTest {
@@ -25,19 +29,19 @@ public class WvwObjectivesUtilsTest {
     public WvwObjectivesUtilsTest() {
     }
 
-    @BeforeClass
+    @BeforeAll
     public static void setUpClass() {
     }
 
-    @AfterClass
+    @AfterAll
     public static void tearDownClass() {
     }
 
-    @Before
+    @BeforeEach
     public void setUp() {
     }
 
-    @After
+    @AfterEach
     public void tearDown() {
     }
 
@@ -48,30 +52,30 @@ public class WvwObjectivesUtilsTest {
     public void testFindWvwObjectiveType() {
         System.out.println("findWvwObjectiveType");
         final String[] values = {
-            "Camp", // NOI18N.
-            "Generic", // NOI18N.
-            "Keep", // NOI18N.
-            "Resource", // NOI18N.
-            "Ruins", // NOI18N.
-            "Tower", // NOI18N.
-            "Castle", // NOI18N.
-            "Mercenary", // NOI18N.
-            "Spawn", // NOI18N.
-            null,
-            "" // NOI18N.
+                "Camp", // NOI18N.
+                "Generic", // NOI18N.
+                "Keep", // NOI18N.
+                "Resource", // NOI18N.
+                "Ruins", // NOI18N.
+                "Tower", // NOI18N.
+                "Castle", // NOI18N.
+                "Mercenary", // NOI18N.
+                "Spawn", // NOI18N.
+                null,
+                "" // NOI18N.
         };
         final WvwObjectiveType[] expResults = {
-            WvwObjectiveType.CAMP,
-            WvwObjectiveType.GENERIC,
-            WvwObjectiveType.KEEP,
-            WvwObjectiveType.RESOURCE,
-            WvwObjectiveType.RUINS,
-            WvwObjectiveType.TOWER,
-            WvwObjectiveType.CASTLE,
-            WvwObjectiveType.MERCENARY,
-            WvwObjectiveType.SPAWN,
-            WvwObjectiveType.UNKNOWN,
-            WvwObjectiveType.UNKNOWN
+                WvwObjectiveType.CAMP,
+                WvwObjectiveType.GENERIC,
+                WvwObjectiveType.KEEP,
+                WvwObjectiveType.RESOURCE,
+                WvwObjectiveType.RUINS,
+                WvwObjectiveType.TOWER,
+                WvwObjectiveType.CASTLE,
+                WvwObjectiveType.MERCENARY,
+                WvwObjectiveType.SPAWN,
+                WvwObjectiveType.UNKNOWN,
+                WvwObjectiveType.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).

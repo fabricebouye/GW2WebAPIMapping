@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2015-2019 Fabrice Bouyé
  * All rights reserved.
  *
@@ -8,16 +8,21 @@
 package api.web.gw2.mapping.v2.pvp.amulets;
 
 import api.web.gw2.mapping.core.EnumValueFactory;
+
 import java.util.stream.IntStream;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 /**
  * Unit test.
+ *
  * @author Fabrice Bouyé
  */
 public class PvpAmuletsUtilsTest {
@@ -25,19 +30,19 @@ public class PvpAmuletsUtilsTest {
     public PvpAmuletsUtilsTest() {
     }
 
-    @BeforeClass
+    @BeforeAll
     public static void setUpClass() {
     }
 
-    @AfterClass
+    @AfterAll
     public static void tearDownClass() {
     }
 
-    @Before
+    @BeforeEach
     public void setUp() {
     }
 
-    @After
+    @AfterEach
     public void tearDown() {
     }
 
@@ -48,28 +53,28 @@ public class PvpAmuletsUtilsTest {
     public void testFindPvpAmuletAttribute() {
         System.out.println("findPvpAmuletAttribute");
         final String[] values = {
-            "ConditionDamage", // NOI18N.
-            "ConditionDuration", // NOI18N.
-            "CritDamage", // NOI18N.
-            "Healing", // NOI18N.
-            "Power", // NOI18N.
-            "Precision", // NOI18N.
-            "Toughness", // NOI18N.
-            "Vitality", // NOI18N.
-            null,
-            "" // NOI18N.
+                "ConditionDamage", // NOI18N.
+                "ConditionDuration", // NOI18N.
+                "CritDamage", // NOI18N.
+                "Healing", // NOI18N.
+                "Power", // NOI18N.
+                "Precision", // NOI18N.
+                "Toughness", // NOI18N.
+                "Vitality", // NOI18N.
+                null,
+                "" // NOI18N.
         };
         final PvpAmuletAttribute[] expResults = {
-            PvpAmuletAttribute.CONDITION_DAMAGE,
-            PvpAmuletAttribute.CONDITION_DURATION,
-            PvpAmuletAttribute.FEROCITY,
-            PvpAmuletAttribute.HEALING,
-            PvpAmuletAttribute.POWER,
-            PvpAmuletAttribute.PRECISION,
-            PvpAmuletAttribute.TOUGHNESS,
-            PvpAmuletAttribute.VITALITY,
-            PvpAmuletAttribute.UNKNOWN,
-            PvpAmuletAttribute.UNKNOWN
+                PvpAmuletAttribute.CONDITION_DAMAGE,
+                PvpAmuletAttribute.CONDITION_DURATION,
+                PvpAmuletAttribute.FEROCITY,
+                PvpAmuletAttribute.HEALING,
+                PvpAmuletAttribute.POWER,
+                PvpAmuletAttribute.PRECISION,
+                PvpAmuletAttribute.TOUGHNESS,
+                PvpAmuletAttribute.VITALITY,
+                PvpAmuletAttribute.UNKNOWN,
+                PvpAmuletAttribute.UNKNOWN
         };
         assertEquals(values.length, expResults.length);
         IntStream.range(0, values.length).
